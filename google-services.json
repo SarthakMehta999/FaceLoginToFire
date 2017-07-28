@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "732230474751",
+    "firebase_url": "https://fiture-dfae4.firebaseio.com",
+    "project_id": "fiture-dfae4",
+    "storage_bucket": "fiture-dfae4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:732230474751:android:fea83491fb0d2326",
+        "android_client_info": {
+          "package_name": "fiture.quiamco.com.homefiture"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "732230474751-lo2m3q03ta4lrrto8mad5dnctc5fi4m9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "fiture.quiamco.com.homefiture",
+            "certificate_hash": "4b3ec1166f5d9ecff96b928c99eed08e61b6461b"
+          }
+        },
+        {
+          "client_id": "732230474751-oicitt2a4tgk09ndorh08rb00stdbagr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAOPs9_YtfmqPA5saPUkxR1tQ61QcVvlK8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "732230474751-oicitt2a4tgk09ndorh08rb00stdbagr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
