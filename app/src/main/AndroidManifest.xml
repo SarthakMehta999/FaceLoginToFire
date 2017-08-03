@@ -19,7 +19,7 @@
                 <data android:scheme="@string/fb_login_protocol_scheme" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            </intent-filter>x`
         </activity>
 
         <meta-data
