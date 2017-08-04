@@ -29,8 +29,7 @@ import com.google.firebase.auth.FirebaseUser;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.net.MalformedURLException;
-import java.net.URL;
+import java.util.Arrays;
 
 public class FacebookLoginActivity extends AppCompatActivity {
 
@@ -44,7 +43,7 @@ public class FacebookLoginActivity extends AppCompatActivity {
     private AccessTokenTracker accessTokenTracker;
     private ProfileTracker profileTracker;
     private String firstName, lastName, email, birthday, gender;
-    private URL profilePicture;
+    private String profilePicture;
     private String userName;
     private String TAG = "FacebookLoginActivity";
 
@@ -60,7 +59,8 @@ public class FacebookLoginActivity extends AppCompatActivity {
 
         loginButton = (LoginButton) findViewById(R.id.login_button);
 
-        loginButton.setReadPermissions("email", "user_birthday","user_posts","user_photos");
+//        loginButton.setReadPermissions("email", "user_birthday","user_posts","user_photos","public_profile");
+        loginButton.setReadPermissions(Arrays.asList("email", "user_birthday","user_posts","user_photos","public_profile"));
         loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
             @Override
             public void onSuccess(LoginResult loginResult) {
@@ -73,7 +73,9 @@ public class FacebookLoginActivity extends AppCompatActivity {
 
                         try {
                             userName = object.getString("id");
-                            profilePicture = new URL("http://graph.facebook.com/" + userName + "/picture?width=500&height=500");
+//                            profilePicture = new URL("http://graph.facebook.com/" + userName + "/picture?width=500&height=500");
+                            profilePicture = object.getJSONObject("picture").getJSONObject("data").getString("url");
+                            Log.d("deceree",profilePicture);
                             if (object.has("first_name"))
                                 firstName = object.getString("first_name");
                             if (object.has("last_name"))
@@ -92,19 +94,17 @@ public class FacebookLoginActivity extends AppCompatActivity {
                             main.putExtra("gender",gender);
                             main.putExtra("email",email);
                             main.putExtra("userID",userName);
-                            main.putExtra("imageUrl", profilePicture.toString());
+                            main.putExtra("imageUrl", profilePicture);
                             startActivity(main);
                             finish();
                         } catch (JSONException e) {
-                            e.printStackTrace();
-                        } catch (MalformedURLException e) {
                             e.printStackTrace();
                         }
                     }
                 });
                 //Here we put the requested fields to be returned from the JSONObject
                 Bundle parameters = new Bundle();
-                parameters.putString("fields", "id, first_name, last_name, email, birthday, gender");
+                parameters.putString("fields", "id, first_name, last_name, email, birthday, gender, picture.type(large)");
                 request.setParameters(parameters);
                 request.executeAsync();
 

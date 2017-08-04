@@ -1,20 +1,19 @@
 package fiture.quiamco.com.homefiture;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.facebook.AccessToken;
 import com.facebook.GraphRequest;
 import com.facebook.GraphResponse;
 import com.facebook.HttpMethod;
-import com.facebook.Profile;
 import com.facebook.login.LoginManager;
-import com.facebook.login.widget.ProfilePictureView;
 import com.facebook.share.model.ShareHashtag;
 import com.facebook.share.model.ShareLinkContent;
 import com.facebook.share.widget.ShareDialog;
@@ -22,14 +21,15 @@ import com.facebook.share.widget.ShareDialog;
 import java.util.ArrayList;
 import java.util.List;
 
+import static fiture.quiamco.com.homefiture.R.id.profileImage;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
 
     private ShareDialog shareDialog;
     private String name, surname, imageUrl,day,genderOfUser,emailOfUser,userId;
+
     private String TAG = "MainActivity";
-    private int dimensionPixelSize = getResources().getDimensionPixelSize(com.facebook.R.dimen.com_facebook_profilepictureview_preset_size_large);
-    private Uri profilePictureUri= Profile.getCurrentProfile().getProfilePictureUri(dimensionPixelSize , dimensionPixelSize);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,11 +42,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         day = inBundle.getString("birthday");
         genderOfUser = inBundle.getString("gender");
         emailOfUser = inBundle.getString("email");
-        imageUrl = inBundle.getString("profilePicture");
+        imageUrl = inBundle.getString("imageUrl");
         userId = inBundle.getString("userID");
 
         TextView nameView = (TextView) findViewById(R.id.nameAndSurname);
-        ProfilePictureView profileImageUs = (ProfilePictureView) findViewById(R.id.profileImage);
+        ImageView profileImageUs = (ImageView) findViewById(profileImage);
         TextView bday = (TextView) findViewById(R.id.tvBirthday);
         TextView gender = (TextView) findViewById(R.id.tvGender);
         TextView email = (TextView) findViewById(R.id.tvEmail);
@@ -55,15 +55,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         bday.setText(day);
         gender.setText(genderOfUser);
         nameView.setText("" + name + " " + surname);
-        profileImageUs.setProfileId(imageUrl);
 
-//        Uri imageUri = Profile.getCurrentProfile().getProfilePictureUri(400, 400);
-//        Picasso.with(this).load(imageUri).into();
-//        Picasso.with(getApplicationContext()).load(imageUrl).into(profilePictur);
-//        Glide.with(this).load(profilePictureUri)
-//                .diskCacheStrategy(DiskCacheStrategy.SOURCE)
-//                .into;
-//        profileImage.setProfileId(profile);
+        Glide.with(this).load(imageUrl).centerCrop().into(profileImageUs);
+
     }
 
     @Override
