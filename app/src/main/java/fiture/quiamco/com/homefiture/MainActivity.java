@@ -58,13 +58,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         Glide.with(this).load(imageUrl).centerCrop().into(profileImageUs);
 
+
     }
+
 
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.share:
                 share();
+                break;
+
+            case R.id.test:
+                user();
                 break;
 
             case R.id.getPosts:
@@ -105,7 +111,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         ).executeAsync();
     }
 
-
+    private void user(){
+        Intent log = new Intent(MainActivity.this, UserStatus.class);
+        startActivity(log);
+        super.finish();
+    }
     private void logout(){
         LoginManager.getInstance().logOut();
         Intent login = new Intent(MainActivity.this, FacebookLoginActivity.class);
