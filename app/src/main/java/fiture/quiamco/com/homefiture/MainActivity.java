@@ -112,7 +112,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void user(){
-        Intent log = new Intent(MainActivity.this, UserStatus.class);
+        Intent log = new Intent(this, UserStatus.class);
         startActivity(log);
         super.finish();
     }
