@@ -29,8 +29,6 @@ import com.google.firebase.auth.FirebaseUser;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.net.MalformedURLException;
-import java.net.URL;
 import java.util.Arrays;
 
 public class FacebookLoginActivity extends AppCompatActivity {
@@ -45,9 +43,9 @@ public class FacebookLoginActivity extends AppCompatActivity {
     private AccessTokenTracker accessTokenTracker;
     private ProfileTracker profileTracker;
     private String firstName, lastName, email, birthday, gender;
-    private URL profilePicture;
-    private String userId;
-    private String TAG = "LoginActivity";
+    private String profilePicture;
+    private String userName;
+    private String TAG = "FacebookLoginActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,12 +59,57 @@ public class FacebookLoginActivity extends AppCompatActivity {
 
         loginButton = (LoginButton) findViewById(R.id.login_button);
 
-        loginButton.setReadPermissions(Arrays.asList("email"));
+//        loginButton.setReadPermissions("email", "user_birthday","user_posts","user_photos","public_profile");
+        loginButton.setReadPermissions(Arrays.asList("email", "user_birthday","user_posts","user_photos","public_profile"));
         loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
             @Override
             public void onSuccess(LoginResult loginResult) {
                 handleFacebookAccessToken(loginResult.getAccessToken());
-            }
+                GraphRequest request = GraphRequest.newMeRequest(loginResult.getAccessToken(), new GraphRequest.GraphJSONObjectCallback() {
+                    @Override
+                    public void onCompleted(JSONObject object, GraphResponse response) {
+                        Log.e(TAG, object.toString());
+                        Log.e(TAG, response.toString());
+
+                        try {
+                            userName = object.getString("id");
+//                            profilePicture = new URL("http://graph.facebook.com/" + userName + "/picture?width=500&height=500");
+                            profilePicture = object.getJSONObject("picture").getJSONObject("data").getString("url");
+                            Log.d("deceree",profilePicture);
+                            if (object.has("first_name"))
+                                firstName = object.getString("first_name");
+                            if (object.has("last_name"))
+                                lastName = object.getString("last_name");
+                            if (object.has("email"))
+                                email = object.getString("email");
+                            if (object.has("birthday"))
+                                birthday = object.getString("birthday");
+                            if (object.has("gender"))
+                                gender = object.getString("gender");
+
+                            Intent main = new Intent(FacebookLoginActivity.this, MainActivity.class);
+                            main.putExtra("name", firstName);
+                            main.putExtra("surname", lastName);
+                            main.putExtra("birthday",birthday);
+                            main.putExtra("gender",gender);
+                            main.putExtra("email",email);
+                            main.putExtra("userID",userName);
+                            main.putExtra("imageUrl", profilePicture);
+                            startActivity(main);
+                            finish();
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                });
+                //Here we put the requested fields to be returned from the JSONObject
+                Bundle parameters = new Bundle();
+                parameters.putString("fields", "id, first_name, last_name, email, birthday, gender, picture.type(large)");
+                request.setParameters(parameters);
+                request.executeAsync();
+
+
+        }
 
             @Override
             public void onCancel() {
@@ -99,6 +142,7 @@ public class FacebookLoginActivity extends AppCompatActivity {
                 }
             }
         });
+
     }
 
 //    @Override
@@ -119,58 +163,7 @@ public class FacebookLoginActivity extends AppCompatActivity {
         firebaseAuth.removeAuthStateListener(firebaseAuthListner);
     }
 
-    FacebookCallback<LoginResult> callback = new FacebookCallback<LoginResult>() {
-        @Override
-        public void onSuccess(LoginResult loginResult) {
-            GraphRequest request = GraphRequest.newMeRequest(loginResult.getAccessToken(), new GraphRequest.GraphJSONObjectCallback() {
-                @Override
-                public void onCompleted(JSONObject object, GraphResponse response) {
-                    Log.e(TAG, object.toString());
-                    Log.e(TAG, response.toString());
 
-                    try {
-                        userId = object.getString("id");
-                        profilePicture = new URL("https://graph.facebook.com/" + userId + "/picture?width=500&height=500");
-                        if (object.has("first_name"))
-                            firstName = object.getString("first_name");
-                        if (object.has("last_name"))
-                            lastName = object.getString("last_name");
-                        if (object.has("email"))
-                            email = object.getString("email");
-                        if (object.has("birthday"))
-                            birthday = object.getString("birthday");
-                        if (object.has("gender"))
-                            gender = object.getString("gender");
-
-                        Intent main = new Intent(FacebookLoginActivity.this, MainActivity.class);
-                        main.putExtra("name", firstName);
-                        main.putExtra("surname", lastName);
-                        main.putExtra("imageUrl", profilePicture.toString());
-                        startActivity(main);
-                        finish();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    } catch (MalformedURLException e) {
-                        e.printStackTrace();
-                    }
-                }
-            });
-            //Here we put the requested fields to be returned from the JSONObject
-            Bundle parameters = new Bundle();
-            parameters.putString("fields", "id, first_name, last_name, email, birthday, gender");
-            request.setParameters(parameters);
-            request.executeAsync();
-        }
-
-        @Override
-        public void onCancel() {
-        }
-
-        @Override
-        public void onError(FacebookException e) {
-            e.printStackTrace();
-        }
-    };
     @Override
     protected void onActivityResult(int requestCode, int responseCode, Intent intent) {
         super.onActivityResult(requestCode, responseCode, intent);
