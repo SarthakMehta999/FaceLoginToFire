@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.facebook.AccessToken;
@@ -25,6 +26,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FacebookAuthProvider;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.vstechlab.easyfonts.EasyFonts;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -45,6 +47,7 @@ public class FacebookLoginActivity extends AppCompatActivity {
     private String firstName, lastName, email, birthday, gender;
     private String profilePicture;
     private String userName;
+    private TextView appName;
     private String TAG = "FacebookLoginActivity";
 
     @Override
@@ -54,6 +57,8 @@ public class FacebookLoginActivity extends AppCompatActivity {
         callbackManager = CallbackManager.Factory.create();
         FacebookSdk.sdkInitialize(this.getApplicationContext());
 
+         appName = (TextView) findViewById(R.id.nameOfApp);
+        appName.setTypeface(EasyFonts.windSong(this));
 
         callbackManager = CallbackManager.Factory.create();
 

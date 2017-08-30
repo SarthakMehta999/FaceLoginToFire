@@ -17,6 +17,7 @@ import com.facebook.login.LoginManager;
 import com.facebook.share.model.ShareHashtag;
 import com.facebook.share.model.ShareLinkContent;
 import com.facebook.share.widget.ShareDialog;
+import com.vstechlab.easyfonts.EasyFonts;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -45,6 +46,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         imageUrl = inBundle.getString("imageUrl");
         userId = inBundle.getString("userID");
 
+
+
         TextView nameView = (TextView) findViewById(R.id.nameAndSurname);
         ImageView profileImageUs = (ImageView) findViewById(profileImage);
         TextView bday = (TextView) findViewById(R.id.tvBirthday);
@@ -55,6 +58,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         bday.setText(day);
         gender.setText(genderOfUser);
         nameView.setText("" + name + " " + surname);
+
+        nameView.setTypeface(EasyFonts.robotoLight(this));
+        email.setTypeface(EasyFonts.robotoItalic(this));
+        gender.setTypeface(EasyFonts.robotoLight(this));
+        bday.setTypeface(EasyFonts.robotoLight(this));
 
         Glide.with(this).load(imageUrl).centerCrop().into(profileImageUs);
 

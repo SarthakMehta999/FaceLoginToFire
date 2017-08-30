@@ -2,5 +2,6 @@
     <string name="app_name">Fiture</string>
     <string name="facebook_app_id">447582032289540</string>
     <string name="fb_login_protocol_scheme">fb447582032289540</string>
+    <string name="appName1">Fiture</string>
 
 </resources>
