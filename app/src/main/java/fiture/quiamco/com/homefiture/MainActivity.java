@@ -35,7 +35,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.profile_fragment);
+
 
         Bundle inBundle = getIntent().getExtras();
         name = inBundle.getString("name");
@@ -81,9 +82,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 user();
                 break;
 
-            case R.id.getPosts:
-                getPosts();
-                break;
 
             case R.id.logout:
                 logout();
@@ -130,4 +128,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         startActivity(login);
         finish();
     }
+
+
 }

@@ -33,6 +33,8 @@ import org.json.JSONObject;
 
 import java.util.Arrays;
 
+import fiture.quiamco.com.homefiture.models.User;
+
 public class FacebookLoginActivity extends AppCompatActivity {
 
     private LoginButton loginButton;
@@ -92,14 +94,25 @@ public class FacebookLoginActivity extends AppCompatActivity {
                             if (object.has("gender"))
                                 gender = object.getString("gender");
 
-                            Intent main = new Intent(FacebookLoginActivity.this, MainActivity.class);
-                            main.putExtra("name", firstName);
-                            main.putExtra("surname", lastName);
-                            main.putExtra("birthday",birthday);
-                            main.putExtra("gender",gender);
-                            main.putExtra("email",email);
-                            main.putExtra("userID",userName);
-                            main.putExtra("imageUrl", profilePicture);
+                            User user = new User(
+                                    firstName,
+                                    lastName,
+                                    birthday,
+                                    gender,
+                                    email,
+                                    profilePicture
+                            );
+                            Intent main = new Intent(FacebookLoginActivity.this, NavDrawer.class);
+                            Bundle bundle = new Bundle();
+                            bundle.putSerializable("user", user);
+                            main.putExtras(bundle);
+//                            main.putExtra("name", firstName);
+//                            main.putExtra("surname", lastName);
+//                            main.putExtra("birthday",birthday);
+//                            main.putExtra("gender",gender);
+//                            main.putExtra("email",email);
+//                            main.putExtra("userID",userName);
+//                            main.putExtra("imageUrl", profilePicture);
                             startActivity(main);
                             finish();
                         } catch (JSONException e) {
