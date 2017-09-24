@@ -179,7 +179,11 @@ public class FacebookLoginActivity extends AppCompatActivity {
     protected void onStop() {
         super.onStop();
         firebaseAuth.removeAuthStateListener(firebaseAuthListner);
+//        FirebaseUser currentUser = firebaseAuth.getCurrentUser();
+//        updateUI(currentUser);
     }
+
+
 
 
     @Override

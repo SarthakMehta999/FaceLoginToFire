@@ -47,7 +47,9 @@
         <activity
             android:name=".NavDrawer"
             android:label="@string/title_activity_nav_drawer"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
+        <activity android:name=".BMI" />
+        <activity android:name=".Lifestyle"></activity>
     </application>
 
 </manifest>

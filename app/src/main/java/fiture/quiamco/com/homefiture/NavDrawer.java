@@ -1,6 +1,8 @@
 package fiture.quiamco.com.homefiture;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
@@ -73,8 +75,19 @@ public class NavDrawer extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        FragmentManager fam = getSupportFragmentManager();
-        fam.beginTransaction().replace(R.id.content_frame,new ProfileFragment().newInstance(user)).commit();
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                getSupportFragmentManager()
+                        .beginTransaction()
+                        .setCustomAnimations(android.R.anim.fade_in, android.R.anim.fade_out)
+                        .replace(R.id.content_frame, new ProfileFragment().newInstance(user))
+                        .commit();
+            }
+        }, 0);
+
+//        FragmentManager fam = getSupportFragmentManager();
+//        fam.beginTransaction().replace(R.id.content_frame,new ProfileFragment().newInstance(user)).commit();
     }
 
     @Subscribe
@@ -122,14 +135,18 @@ public class NavDrawer extends AppCompatActivity
         FragmentManager fm  = getSupportFragmentManager();
         // Handle navigation view item clicks here.
         int id = item.getItemId();
-
         if (id == R.id.nav_camera) {
-
+            Intent main = new Intent(NavDrawer.this, BMI.class);
+            startActivity(main);
+//            finish();
         } else if (id == R.id.nav_gallery) {
+            Intent main = new Intent(NavDrawer.this, Lifestyle.class);
+            startActivity(main);
 
         } else if (id == R.id.nav_slideshow) {
 
         } else if (id == R.id.nav_manage) {
+
 
         } else if (id == R.id.nav_share) {
 
@@ -141,6 +158,7 @@ public class NavDrawer extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
 
 
 

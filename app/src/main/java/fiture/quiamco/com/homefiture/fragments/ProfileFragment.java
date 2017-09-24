@@ -12,7 +12,12 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.facebook.login.LoginManager;
+import com.facebook.share.model.ShareHashtag;
+import com.facebook.share.model.ShareLinkContent;
 import com.facebook.share.widget.ShareDialog;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 import fiture.quiamco.com.homefiture.FacebookLoginActivity;
@@ -65,6 +70,13 @@ public class ProfileFragment extends Fragment{
                 logout();
             }
         });
+
+        share.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                share();
+            }
+        });
     }
 
     public static ProfileFragment newInstance(User user) {
@@ -73,6 +85,23 @@ public class ProfileFragment extends Fragment{
         ProfileFragment fragment = new ProfileFragment();
         fragment.setArguments(args);
         return fragment;
+    }
+    private void share(){
+        shareDialog = new ShareDialog(this);
+        List<String> taggedUserIds= new ArrayList<>();
+        taggedUserIds.add("{USER_ID}");
+        taggedUserIds.add("{USER_ID}");
+        taggedUserIds.add("{USER_ID}");
+
+        ShareLinkContent content = new ShareLinkContent.Builder()
+                .setContentTitle("This is a content title")
+                .setContentDescription("This is a description")
+                .setShareHashtag(new ShareHashtag.Builder().setHashtag("#Fiture").build())
+                .setPeopleIds(taggedUserIds)
+                .setPlaceId("{PLACE_ID}")
+                .build();
+
+        shareDialog.show(content);
     }
 
     private void logout(){
