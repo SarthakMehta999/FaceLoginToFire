@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -26,7 +28,6 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FacebookAuthProvider;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.vstechlab.easyfonts.EasyFonts;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -39,7 +40,7 @@ public class FacebookLoginActivity extends AppCompatActivity {
 
     private LoginButton loginButton;
     private CallbackManager callbackManager;
-
+    private int mColor;
     private FirebaseAuth firebaseAuth;
     private FirebaseAuth.AuthStateListener firebaseAuthListner;
 
@@ -55,13 +56,15 @@ public class FacebookLoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_facebook_login);
+
         callbackManager = CallbackManager.Factory.create();
         FacebookSdk.sdkInitialize(this.getApplicationContext());
 
-         appName = (TextView) findViewById(R.id.nameOfApp);
-        appName.setTypeface(EasyFonts.windSong(this));
-
+//         appName = (TextView) findViewById(R.id.nameOfApp);
+//        appName.setTypeface(EasyFonts.windSong(this));
         callbackManager = CallbackManager.Factory.create();
 
         loginButton = (LoginButton) findViewById(R.id.login_button);
@@ -102,7 +105,7 @@ public class FacebookLoginActivity extends AppCompatActivity {
                                     email,
                                     profilePicture
                             );
-                            Intent main = new Intent(FacebookLoginActivity.this, NavDrawer.class);
+                            Intent main = new Intent(FacebookLoginActivity.this, Lifestyle.class);
                             Bundle bundle = new Bundle();
                             bundle.putSerializable("user", user);
                             main.putExtras(bundle);

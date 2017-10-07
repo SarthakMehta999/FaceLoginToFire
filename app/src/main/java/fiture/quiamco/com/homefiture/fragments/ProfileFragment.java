@@ -7,7 +7,6 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
@@ -15,6 +14,7 @@ import com.facebook.login.LoginManager;
 import com.facebook.share.model.ShareHashtag;
 import com.facebook.share.model.ShareLinkContent;
 import com.facebook.share.widget.ShareDialog;
+import com.rilixtech.materialfancybutton.MaterialFancyButton;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,6 +22,7 @@ import java.util.List;
 import de.hdodenhof.circleimageview.CircleImageView;
 import fiture.quiamco.com.homefiture.FacebookLoginActivity;
 import fiture.quiamco.com.homefiture.R;
+import fiture.quiamco.com.homefiture.StartActivity;
 import fiture.quiamco.com.homefiture.models.User;
 
 /**
@@ -34,13 +35,14 @@ public class ProfileFragment extends Fragment{
     private String TAG = "ProfileFragment";
     private CircleImageView profileImage;
     private TextView nameAndSurname, tvEmail, tvGender, tvBirthday;
-    private Button share, logout;
+    private MaterialFancyButton share, logout,start;
     private View rootView;
     private User user;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+
         user = (User) getArguments().getSerializable("user");
         rootView = inflater.inflate(R.layout.profile_fragment,container,false);
 
@@ -62,8 +64,10 @@ public class ProfileFragment extends Fragment{
         tvEmail = (TextView) rootView.findViewById(R.id.tvEmail);
         tvGender = (TextView) rootView.findViewById(R.id.tvGender);
         tvBirthday = (TextView) rootView.findViewById(R.id.tvBirthday);
-        share = (Button) rootView.findViewById(R.id.share);
-        logout = (Button) rootView.findViewById(R.id.logout);
+
+        share = (MaterialFancyButton) rootView.findViewById(R.id.share);
+        logout = (MaterialFancyButton) rootView.findViewById(R.id.logout);
+        start = (MaterialFancyButton) rootView.findViewById(R.id.startActivity);
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -77,6 +81,17 @@ public class ProfileFragment extends Fragment{
                 share();
             }
         });
+        start.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                start();
+            }
+        });
+    }
+
+    private void start() {
+        Intent login = new Intent(getActivity(), StartActivity.class);
+        startActivity(login);
     }
 
     public static ProfileFragment newInstance(User user) {
