@@ -7,13 +7,13 @@ import android.os.Handler;
 import android.os.SystemClock;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import fiture.quiamco.com.homefiture.R;
+import pl.droidsonroids.gif.GifTextView;
 
 public class Step_1 extends Activity {
-    ImageView img;
+    GifTextView img;
 //    String url ="http://agile-gorge-65786.herokuapp.com/gallery/images/59d85efb89fe4day2.jpg  ";
 
     private Button startButton;
@@ -34,7 +34,7 @@ public class Step_1 extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_step_1);
-        img = (ImageView) findViewById(R.id.img);
+        img = (GifTextView) findViewById(R.id.gifTextView);
 
 //        loadImage();
 
