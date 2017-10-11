@@ -43,6 +43,7 @@
                 tools:layout_editor_absoluteX="0dp"
                 tools:layout_editor_absoluteY="0dp" />
 
+
             <TextView
                 android:id="@+id/nameAndSurname"
                 android:layout_width="wrap_content"
@@ -84,6 +85,16 @@
                 android:layout_marginBottom="25dp"
                 android:layout_marginLeft="30sp"
                 android:layout_marginTop="6sp"
+                android:textColor="#F5F5F5"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/tvBMI"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:layout_marginLeft="200sp"
+                android:layout_marginTop="1sp"
                 android:textColor="#F5F5F5"
                 android:textSize="16dp"
                 android:textStyle="bold" />

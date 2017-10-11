@@ -20,7 +20,7 @@ public class BMI extends AppCompatActivity {
     private EditText weight;
     private TextView result;
     private MaterialFancyButton proceed;
-    private User user;
+//    private User user;
     private Firebase mRootRef;
 
     @Override
@@ -30,12 +30,13 @@ public class BMI extends AppCompatActivity {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_bmi);
 
-        mRootRef = new Firebase("https://fiture-dfae4.firebaseio.com/");
+//        mRootRef = new Firebase("https://fiture-dfae4.firebaseio.com/");
         height = (EditText) findViewById(R.id.height);
         weight = (EditText) findViewById(R.id.weight);
         result = (TextView) findViewById(R.id.result);
         proceed = (MaterialFancyButton) findViewById(R.id.btnProc);
         proceed.setVisibility(View.GONE);
+
 
         user = (User) getIntent().getExtras().getSerializable("user");
 
@@ -43,6 +44,7 @@ public class BMI extends AppCompatActivity {
         proceed.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 if (height.getText().toString().trim().equals("") || weight.getText().toString().trim().equals("") ){
                     height.setError("Please Input Value");
                     weight.setError("Please Input Value");
@@ -52,19 +54,25 @@ public class BMI extends AppCompatActivity {
                     Intent pt = new Intent(BMI.this, NavDrawer.class);
                     Bundle bundle = new Bundle();
                     bundle.putSerializable("user", user);
-                    Log.d("asdasda", user.getfName());
+                    Log.d("asdasda", String.valueOf(user.getResult()));
                     pt.putExtras(bundle);
                     startActivity(pt);
                 }
             }
         });
+
     }
+    User user = new User(
+            result
+    );
+
+
     public void calculateBMI(View v) {
         String heightStr = height.getText().toString();
         String weightStr = weight.getText().toString();
-        String value1 = height.getText().toString();
-        String value2 = weight.getText().toString();
-        mRootRef.push().setValue(value1,value2);
+//        String value1 = height.getText().toString();
+//        String value2 = weight.getText().toString();
+//        mRootRef.push().setValue(value1,value2);
         if (height.getText().toString().trim().equals("") || weight.getText().toString().trim().equals("") ){
             height.setError("Please Input Value");
             weight.setError("Please Input Value");

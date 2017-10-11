@@ -7,11 +7,14 @@ import android.os.Handler;
 import android.os.SystemClock;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import fiture.quiamco.com.homefiture.R;
 
 public class Step_1 extends Activity {
+    ImageView img;
+//    String url ="http://agile-gorge-65786.herokuapp.com/gallery/images/59d85efb89fe4day2.jpg  ";
 
     private Button startButton;
     private Button pauseButton;
@@ -31,6 +34,9 @@ public class Step_1 extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_step_1);
+        img = (ImageView) findViewById(R.id.img);
+
+//        loadImage();
 
         finish = (Button) findViewById(R.id.btnFinish);
 
@@ -94,6 +100,22 @@ public class Step_1 extends Activity {
         }
 
     };
+//    public void loadImage() {
+//        ImageRequest request = new ImageRequest(url, new Response.Listener<Bitmap>(){
+//            @Override
+//            public void onResponse(Bitmap b) {
+//                img.setImageBitmap(b);
+//            }
+//        }, 0, 0, null,
+//                new Response.ErrorListener(){
+//                    @Override
+//                    public void onErrorResponse(VolleyError volleyError) {
+//                        Toast.makeText(Step_1.this, "Some error occurred!!", Toast.LENGTH_LONG).show();
+//                    }
+//                });
+//        RequestQueue rQueue = Volley.newRequestQueue(Step_1.this);
+//        rQueue.add(request);
+//    }
 
     @Override
     public void onBackPressed() {

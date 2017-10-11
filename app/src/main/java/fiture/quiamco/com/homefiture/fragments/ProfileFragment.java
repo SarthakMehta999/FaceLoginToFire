@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
@@ -34,7 +35,8 @@ public class ProfileFragment extends Fragment{
     private ShareDialog shareDialog;
     private String TAG = "ProfileFragment";
     private CircleImageView profileImage;
-    private TextView nameAndSurname, tvEmail, tvGender, tvBirthday;
+    private TextView nameAndSurname, tvEmail, tvGender, tvBirthday,BMI;
+    private EditText Weight,Height;
     private MaterialFancyButton share, logout,start;
     private View rootView;
     private User user;
@@ -53,7 +55,9 @@ public class ProfileFragment extends Fragment{
         tvEmail.setText(user.getEmail());
         tvGender.setText(user.getGender());
         tvBirthday.setText(user.getBirthDate());
-
+//        Weight.getText(user.getWeight().toString());
+//        Height.setText(user.getHeight().toString());
+        BMI.setText((CharSequence) user.getResult());
         return rootView;
 
     }
@@ -64,6 +68,9 @@ public class ProfileFragment extends Fragment{
         tvEmail = (TextView) rootView.findViewById(R.id.tvEmail);
         tvGender = (TextView) rootView.findViewById(R.id.tvGender);
         tvBirthday = (TextView) rootView.findViewById(R.id.tvBirthday);
+//        Weight = (TextView) rootView.findViewById(R.id.tvWeight);
+//        Height = (TextView) rootView.findViewById(R.id.tvHeight);
+        BMI = (TextView) rootView.findViewById(R.id.tvBMI);
 
         share = (MaterialFancyButton) rootView.findViewById(R.id.share);
         logout = (MaterialFancyButton) rootView.findViewById(R.id.logout);

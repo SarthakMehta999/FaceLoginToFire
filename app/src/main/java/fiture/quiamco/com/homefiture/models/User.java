@@ -1,5 +1,8 @@
 package fiture.quiamco.com.homefiture.models;
 
+import android.widget.EditText;
+import android.widget.TextView;
+
 import java.io.Serializable;
 
 /**
@@ -20,6 +23,10 @@ public class User implements Serializable {
     private String gender;
     private String email;
     private String imageUrl;
+    private EditText height;
+    private EditText weight;
+    private TextView result;
+
 
 
     public User(String fName, String lName, String birthDate, String gender, String email, String imageUrl) {
@@ -29,7 +36,14 @@ public class User implements Serializable {
         this.gender = gender;
         this.email = email;
         this.imageUrl = imageUrl;
+
     }
+    public User(TextView result) {
+        this.height = height;
+        this.weight = weight;
+        this.result = result;
+    }
+
 
     public String getfName() {
         return fName;
@@ -77,5 +91,29 @@ public class User implements Serializable {
 
     public void setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
+    }
+
+    public EditText getHeight() {
+        return height;
+    }
+
+    public void setHeight(EditText height) {
+        this.height = height;
+    }
+
+    public EditText getWeight() {
+        return weight;
+    }
+
+    public void setWeight(EditText weight) {
+        this.weight = weight;
+    }
+
+    public TextView getResult() {
+        return result;
+    }
+
+    public void setResult(TextView result) {
+        this.result = result;
     }
 }

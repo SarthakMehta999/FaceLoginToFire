@@ -10,6 +10,7 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
     }
     buildTypes {
         release {
@@ -47,7 +48,9 @@ dependencies {
     compile 'com.rilixtech:fontawesome-typeface:4.7.0.4'
     compile 'com.rilixtech:foundation-icons-typeface:3.0.0.3'
     compile 'com.firebase:firebase-client-android:2.5.2'
-    compile 'com.google.firebase:firebase-database:10.0.1'
+    compile 'com.google.firebase:firebase-database:10.2.0'
+    compile 'com.android.volley:volley:1.0.0'
+    compile 'com.android.support:multidex:1.0.0'
     testCompile 'junit:junit:4.12'
 
 }
@@ -64,5 +67,7 @@ android {
         exclude 'META-INF/dependencies.txt'
         exclude 'META-INF/LGPL2.1'
     }
+
+
 }
 apply plugin: 'com.google.gms.google-services'
