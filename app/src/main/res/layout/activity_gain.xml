@@ -85,7 +85,5 @@
         app:layout_constraintHorizontal_bias="0.945" />
 
 
-
-
 </android.support.constraint.ConstraintLayout>
     

@@ -136,8 +136,8 @@ public class NavDrawer extends AppCompatActivity
         FragmentManager fm  = getSupportFragmentManager();
         // Handle navigation view item clicks here.
         int id = item.getItemId();
-        if (id == R.id.nav_camera) {
-            Intent main = new Intent(NavDrawer.this, BMI.class);
+        if (id == R.id.leaderboard) {
+            Intent main = new Intent(NavDrawer.this, Leaderboard.class);
             startActivity(main);
 //            finish();
         } else if (id == R.id.nav_gallery) {

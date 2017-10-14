@@ -24,7 +24,7 @@ public class Step_1 extends Activity {
     private long startTime = 0L;
 
     private Handler customHandler = new Handler();
-
+    private int points = 10;
     long timeInMilliseconds = 0L;
     long timeSwapBuff = 0L;
     long updatedTime = 0L;
@@ -49,6 +49,7 @@ public class Step_1 extends Activity {
 
             public void onClick(View view) {
                     Intent step = new Intent(Step_1.this, Step_2.class);
+                    step.putExtra("score", points);
                     startActivity(step);
 
 
