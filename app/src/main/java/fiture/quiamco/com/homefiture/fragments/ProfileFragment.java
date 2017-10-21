@@ -11,7 +11,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.facebook.login.LoginManager;
 import com.facebook.share.model.ShareHashtag;
 import com.facebook.share.model.ShareLinkContent;
 import com.facebook.share.widget.ShareDialog;
@@ -21,9 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import de.hdodenhof.circleimageview.CircleImageView;
-import fiture.quiamco.com.homefiture.FacebookLoginActivity;
 import fiture.quiamco.com.homefiture.R;
-import fiture.quiamco.com.homefiture.StartActivity;
 import fiture.quiamco.com.homefiture.models.User;
 
 /**
@@ -73,14 +70,14 @@ public class ProfileFragment extends Fragment{
         BMI = (TextView) rootView.findViewById(R.id.tvBMI);
 
         share = (MaterialFancyButton) rootView.findViewById(R.id.share);
-        logout = (MaterialFancyButton) rootView.findViewById(R.id.logout);
+//        logout = (MaterialFancyButton) rootView.findViewById(R.id.logout);
         start = (MaterialFancyButton) rootView.findViewById(R.id.startActivity);
-        logout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                logout();
-            }
-        });
+//        logout.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                logout();
+//            }
+//        });
 
         share.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -97,7 +94,7 @@ public class ProfileFragment extends Fragment{
     }
 
     private void start() {
-        Intent login = new Intent(getActivity(), StartActivity.class);
+        Intent login = new Intent(getActivity(), fiture.quiamco.com.homefiture.BMI.class);
         startActivity(login);
     }
 
@@ -126,10 +123,10 @@ public class ProfileFragment extends Fragment{
         shareDialog.show(content);
     }
 
-    private void logout(){
-        LoginManager.getInstance().logOut();
-        Intent login = new Intent(getActivity(), FacebookLoginActivity.class);
-        startActivity(login);
-    }
+//    private void logout(){
+//        LoginManager.getInstance().logOut();
+//        Intent login = new Intent(getActivity(), FacebookLoginActivity.class);
+//        startActivity(login);
+//    }
 
 }

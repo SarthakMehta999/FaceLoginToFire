@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+    android:background="@color/backgroundforallscreen"
+    tools:context="fiture.quiamco.com.homefiture.Pedometer.Pedometer_Main">
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="280dp"
+        android:layout_height="267dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.625"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.348"
+        tools:context="android.quiamco.com.simplepedometer.MainActivity">
+
+
+        <TextView
+            android:id="@+id/tv_steps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Number of Steps: 0"
+            android:textColor="#ffff"
+            android:textSize="20sp" />
+
+        <com.rilixtech.materialfancybutton.MaterialFancyButton
+            android:id="@+id/btn_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_gravity="center_horizontal"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            fancy:mfb_borderColor="#FFFFFF"
+            fancy:mfb_borderWidth="1dp"
+            fancy:mfb_defaultColor="#212121"
+            fancy:mfb_focusColor="#9bd823"
+            fancy:mfb_iconFont="fontawesome.ttf"
+            fancy:mfb_iconPosition="left"
+            fancy:mfb_radius="30dp"
+            fancy:mfb_text="Start Pedometer"
+            fancy:mfb_textColor="#FFFFFF"
+            />
+
+        <com.rilixtech.materialfancybutton.MaterialFancyButton
+            android:id="@+id/btn_stop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_gravity="center_horizontal"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            fancy:mfb_borderColor="#FFFFFF"
+            fancy:mfb_borderWidth="1dp"
+            fancy:mfb_defaultColor="#212121"
+            fancy:mfb_focusColor="#9bd823"
+            fancy:mfb_iconFont="fontawesome.ttf"
+            fancy:mfb_iconPosition="left"
+            fancy:mfb_radius="30dp"
+            fancy:mfb_text="Stop Pedometer"
+            fancy:mfb_textColor="#FFFFFF"
+            />
+
+
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>

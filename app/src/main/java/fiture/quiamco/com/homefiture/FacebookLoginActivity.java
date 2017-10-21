@@ -28,6 +28,9 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FacebookAuthProvider;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.yasic.library.particletextview.MovingStrategy.RandomMovingStrategy;
+import com.yasic.library.particletextview.Object.ParticleTextViewConfig;
+import com.yasic.library.particletextview.View.ParticleTextView;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -43,6 +46,7 @@ public class FacebookLoginActivity extends AppCompatActivity {
     private int mColor;
     private FirebaseAuth firebaseAuth;
     private FirebaseAuth.AuthStateListener firebaseAuthListner;
+    private ParticleTextView particleTextView;
 
 
     private AccessTokenTracker accessTokenTracker;
@@ -60,6 +64,7 @@ public class FacebookLoginActivity extends AppCompatActivity {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_facebook_login);
 
+
         callbackManager = CallbackManager.Factory.create();
         FacebookSdk.sdkInitialize(this.getApplicationContext());
 
@@ -68,6 +73,21 @@ public class FacebookLoginActivity extends AppCompatActivity {
         callbackManager = CallbackManager.Factory.create();
 
         loginButton = (LoginButton) findViewById(R.id.login_button);
+
+        particleTextView = (ParticleTextView) findViewById(R.id.particleTextView);
+        RandomMovingStrategy randomMovingStrategy = new RandomMovingStrategy();
+        ParticleTextViewConfig config = new ParticleTextViewConfig.Builder()
+                .setRowStep(8)
+                .setColumnStep(8)
+                .setTargetText("Fiture")
+                .setReleasing(0.2)
+                .setParticleRadius(4)
+                .setMiniDistance(0.1)
+                .setTextSize(150)
+                .setMovingStrategy(randomMovingStrategy)
+                .instance();
+        particleTextView.setConfig(config);
+        particleTextView.startAnimation();
 
 //        loginButton.setReadPermissions("email", "user_birthday","user_posts","user_photos","public_profile");
         loginButton.setReadPermissions(Arrays.asList("email", "user_birthday","user_posts","user_photos","public_profile"));

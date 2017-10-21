@@ -3,7 +3,6 @@ package fiture.quiamco.com.homefiture;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -11,8 +10,11 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.firebase.client.Firebase;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.rilixtech.materialfancybutton.MaterialFancyButton;
 
+import fiture.quiamco.com.homefiture.Category.Gain;
 import fiture.quiamco.com.homefiture.models.User;
 
 public class BMI extends AppCompatActivity {
@@ -20,8 +22,13 @@ public class BMI extends AppCompatActivity {
     private EditText weight;
     private TextView result;
     private MaterialFancyButton proceed;
-//    private User user;
+    private User user;
     private Firebase mRootRef;
+    FirebaseDatabase database = FirebaseDatabase.getInstance();
+    DatabaseReference myRef = database.getReference("BMI");
+
+
+//    DatabaseReference databaseReference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +36,10 @@ public class BMI extends AppCompatActivity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_bmi);
+
+//        databaseReference = FirebaseDatabase.getInstance().getReference("BMI");
+
+
 
 //        mRootRef = new Firebase("https://fiture-dfae4.firebaseio.com/");
         height = (EditText) findViewById(R.id.height);
@@ -38,7 +49,7 @@ public class BMI extends AppCompatActivity {
         proceed.setVisibility(View.GONE);
 
 
-        user = (User) getIntent().getExtras().getSerializable("user");
+//        user = (User) getIntent().getExtras().getSerializable("user");
 
 
         proceed.setOnClickListener(new View.OnClickListener() {
@@ -49,35 +60,40 @@ public class BMI extends AppCompatActivity {
                     height.setError("Please Input Value");
                     weight.setError("Please Input Value");
                 }
+                else if(height.getText().toString().trim().equals("") || weight.getText().toString().trim().equals("") ){
+
+                }
                 else {
 
-                    Intent pt = new Intent(BMI.this, NavDrawer.class);
-                    Bundle bundle = new Bundle();
-                    bundle.putSerializable("user", user);
-                    Log.d("asdasda", String.valueOf(user.getResult()));
-                    pt.putExtras(bundle);
-                    startActivity(pt);
+                    Intent pt = new Intent(BMI.this, Gain.class);
+
                 }
             }
         });
 
     }
-    User user = new User(
-            result
-    );
+//    User user = new User(
+//            result
+//    );
 
 
     public void calculateBMI(View v) {
         String heightStr = height.getText().toString();
         String weightStr = weight.getText().toString();
+
 //        String value1 = height.getText().toString();
 //        String value2 = weight.getText().toString();
-//        mRootRef.push().setValue(value1,value2);
+//        String id = databaseReference.push().getKey();
+//         user = new User(
+//               result
+//        );
+//        databaseReference.child(id).setValue(user);
         if (height.getText().toString().trim().equals("") || weight.getText().toString().trim().equals("") ){
             height.setError("Please Input Value");
             weight.setError("Please Input Value");
 
         }
+
         else {
             proceed.setVisibility(View.VISIBLE);
         }
@@ -91,6 +107,8 @@ public class BMI extends AppCompatActivity {
             float bmi = weightValue / (heightValue * heightValue);
 
             displayBMI(bmi);
+            String id = myRef.push().getKey();
+            myRef.child(id).setValue("height:"+heightStr+" cm"+" "+"weight:"+weightStr+" Kg");
         }
     }
 
@@ -118,6 +136,28 @@ public class BMI extends AppCompatActivity {
 
         bmiLabel = "BMI:" +"\n" + bmi + " \n\n"  + bmiLabel;
         result.setText(bmiLabel);
+
+//        if(bmiLabel.toString().getClass().equals(R.string.very_severely_underweight)){
+//            proceed.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+////
+////                    if (height.getText().toString().trim().equals("") || weight.getText().toString().trim().equals("") ){
+////                        height.setError("Please Input Value");
+////                        weight.setError("Please Input Value");
+////                    }
+////
+////                    else {
+//
+//
+//                        Intent pt = new Intent(BMI.this, Gain.class);
+//
+//
+//                }
+//            });
+
+
+
     }
 
 

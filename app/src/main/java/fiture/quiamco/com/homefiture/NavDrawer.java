@@ -14,11 +14,13 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.facebook.login.LoginManager;
 import com.facebook.share.widget.ShareDialog;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 
+import fiture.quiamco.com.homefiture.Pedometer.Pedometer_Main;
 import fiture.quiamco.com.homefiture.fragments.ProfileFragment;
 import fiture.quiamco.com.homefiture.models.User;
 
@@ -123,7 +125,9 @@ public class NavDrawer extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            return true;
+            LoginManager.getInstance().logOut();
+            Intent login = new Intent(NavDrawer.this, FacebookLoginActivity.class);
+            startActivity(login);
         }
 
         return super.onOptionsItemSelected(item);
@@ -140,18 +144,18 @@ public class NavDrawer extends AppCompatActivity
             Intent main = new Intent(NavDrawer.this, Leaderboard.class);
             startActivity(main);
 //            finish();
-        } else if (id == R.id.nav_gallery) {
-            Intent main = new Intent(NavDrawer.this, Lifestyle.class);
-            startActivity(main);
+        } else if (id == R.id.pedometer) {
+            Intent inte = new Intent(NavDrawer.this, Pedometer_Main.class);
+            startActivity(inte);
 
-        } else if (id == R.id.nav_slideshow) {
-
-        } else if (id == R.id.nav_manage) {
-
-
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
+//        } else if (id == R.id.nav_slideshow) {
+//
+//        } else if (id == R.id.nav_manage) {
+//
+//
+//        } else if (id == R.id.nav_share) {
+//
+//        } else if (id == R.id.nav_send) {
 
         }
 

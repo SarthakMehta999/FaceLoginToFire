@@ -6,8 +6,9 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.SystemClock;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
+
+import com.rilixtech.materialfancybutton.MaterialFancyButton;
 
 import fiture.quiamco.com.homefiture.R;
 import pl.droidsonroids.gif.GifTextView;
@@ -16,8 +17,8 @@ public class Step_1 extends Activity {
     GifTextView img;
 //    String url ="http://agile-gorge-65786.herokuapp.com/gallery/images/59d85efb89fe4day2.jpg  ";
 
-    private Button startButton;
-    private Button pauseButton;
+    private MaterialFancyButton startButton;
+    private MaterialFancyButton pauseButton;
 
     private TextView timerValue;
 
@@ -28,21 +29,22 @@ public class Step_1 extends Activity {
     long timeInMilliseconds = 0L;
     long timeSwapBuff = 0L;
     long updatedTime = 0L;
-    Button finish;
+    MaterialFancyButton finish;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_step_1);
+
         img = (GifTextView) findViewById(R.id.gifTextView);
 
 //        loadImage();
 
-        finish = (Button) findViewById(R.id.btnFinish);
+        finish = (MaterialFancyButton) findViewById(R.id.btnFinish);
 
         timerValue = (TextView) findViewById(R.id.timerValue);
 
-        startButton = (Button) findViewById(R.id.startButton);
+        startButton = (MaterialFancyButton) findViewById(R.id.btnStart);
         finish.setVisibility(View.GONE );
 
         finish.setOnClickListener(new View.OnClickListener() {
@@ -64,7 +66,7 @@ public class Step_1 extends Activity {
 
             }
         });
-        pauseButton = (Button) findViewById(R.id.pauseButton);
+        pauseButton = (MaterialFancyButton) findViewById(R.id.btnPause);
 
         pauseButton.setOnClickListener(new View.OnClickListener() {
 

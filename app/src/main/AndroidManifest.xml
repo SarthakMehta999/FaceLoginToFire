@@ -5,6 +5,8 @@
     android:installLocation="preferExternal">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -59,7 +61,8 @@
         <activity android:name=".Exercises.Step_3" />
         <activity android:name=".Exercises.Step_4" />
         <activity android:name=".Exercises.GainDay_2.GStep_1" />
-        <activity android:name=".Leaderboard"></activity>
+        <activity android:name=".Leaderboard" />
+        <activity android:name=".Pedometer.Pedometer_Main"></activity>
     </application>
 
 </manifest>

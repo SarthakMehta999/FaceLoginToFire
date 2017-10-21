@@ -9,6 +9,7 @@ import android.view.View;
 
 import fiture.quiamco.com.homefiture.Exercises.GainDay_2.GStep_1;
 import fiture.quiamco.com.homefiture.Exercises.Step_1;
+import fiture.quiamco.com.homefiture.NavDrawer;
 import fiture.quiamco.com.homefiture.R;
 import fiture.quiamco.com.homefiture.models.User;
 
@@ -23,19 +24,22 @@ public class Gain extends AppCompatActivity {
         setContentView(R.layout.activity_gain);
 
 //
-//        user = (User) getIntent().getExtras().getSerializable("user");
+//        Bundle bundle = getIntent().getExtras();
+//        user = (User) bundle.getSerializable("user");
+
         jump = (CardView) findViewById(R.id.jumpCard);
         active = (CardView) findViewById(R.id.stretchCard);
-        home = (FloatingActionButton) findViewById(R.id.fab);
+       home = (FloatingActionButton) findViewById(R.id.fab);
         jump.setBackgroundResource(R.drawable.jumping_jack);
         active.setBackgroundResource(R.drawable.day2);
+
         jump.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 Intent inte = new Intent(Gain.this,Step_1.class);
 
                 startActivity(inte);
+
             }
         });
         active.setOnClickListener(new View.OnClickListener() {
@@ -47,18 +51,19 @@ public class Gain extends AppCompatActivity {
                 startActivity(inte);
             }
         });
-//        home.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent pt = new Intent(Gain.this, NavDrawer.class);
+//        user = (User) getIntent().getExtras().getSerializable("user");
+        home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent pt = new Intent(Gain.this, NavDrawer.class);
 //                Bundle bundle = new Bundle();
 //                bundle.putSerializable("user", user);
-//                Log.d("asdasda", user.getfName());
+////                Log.d("asdasda", user.getfName());
 //                pt.putExtras(bundle);
-//                startActivity(pt);
-//
-//            }
-//        });
+                startActivity(pt);
+
+            }
+        });
 
             }
 

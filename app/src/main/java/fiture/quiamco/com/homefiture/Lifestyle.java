@@ -40,7 +40,7 @@ public class Lifestyle extends AppCompatActivity {
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference("message");
 //        myRef.setValue("Hello, World!");
-
+        user = (User) getIntent().getExtras().getSerializable("user");
 
         Log.d("asdasda",user.getfName());
 //        mRootRef = new Firebase("https://fiture-dfae4.firebaseio.com/");
@@ -75,7 +75,7 @@ public class Lifestyle extends AppCompatActivity {
 //                String value1 = light.getText().toString();
 //                String value2 = moderate.getText().toString();
 ////                mRootRef.push().setValue(value1);
-                Intent proc = new Intent(Lifestyle.this,BMI.class);
+                Intent proc = new Intent(Lifestyle.this,NavDrawer.class);
                 Bundle bundle = new Bundle();
                 bundle.putSerializable("user", user);
                 proc.putExtras(bundle);

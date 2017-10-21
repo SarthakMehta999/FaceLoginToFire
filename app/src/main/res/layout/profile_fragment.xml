@@ -135,22 +135,6 @@
                 fancy:mfb_textColor="#FFFFFF" />
 
 
-            <com.rilixtech.materialfancybutton.MaterialFancyButton
-                android:id="@+id/logout"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="8dp"
-                fancy:mfb_borderColor="#FFFFFF"
-                fancy:mfb_borderWidth="1dp"
-                fancy:mfb_defaultColor="#212121"
-                fancy:mfb_focusColor="#9bd823"
-                fancy:mfb_iconFont="fontawesome.ttf"
-                fancy:mfb_iconPosition="left"
-                fancy:mfb_radius="30dp"
-                fancy:mfb_text="Logout"
-                fancy:mfb_textColor="#FFFFFF" />
-
 
         </LinearLayout>
 

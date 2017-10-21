@@ -1,19 +1,20 @@
 package fiture.quiamco.com.homefiture.Exercises;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.os.Handler;
 import android.os.SystemClock;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
+
+import com.rilixtech.materialfancybutton.MaterialFancyButton;
 
 import fiture.quiamco.com.homefiture.R;
 
 public class Step_3 extends AppCompatActivity {
-    private Button startButton;
-    private Button pauseButton;
+    private MaterialFancyButton startButton;
+    private MaterialFancyButton pauseButton;
 
     private TextView timerValue;
 
@@ -25,7 +26,7 @@ public class Step_3 extends AppCompatActivity {
     long timeSwapBuff = 0L;
     long updatedTime = 0L;
 
-    Button finish;
+    MaterialFancyButton finish;
 
 
     @Override
@@ -33,11 +34,11 @@ public class Step_3 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_step_3);
 
-        finish = (Button) findViewById(R.id.btnFinish);
+        finish = (MaterialFancyButton) findViewById(R.id.btnFinish);
         finish.setVisibility(View.GONE );
         timerValue = (TextView) findViewById(R.id.timerValue);
 
-        startButton = (Button) findViewById(R.id.startButton);
+        startButton = (MaterialFancyButton) findViewById(R.id.startButton);
         finish.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View view) {
@@ -54,7 +55,7 @@ public class Step_3 extends AppCompatActivity {
 
             }
         });
-        pauseButton = (Button) findViewById(R.id.pauseButton);
+        pauseButton = (MaterialFancyButton) findViewById(R.id.btnPause);
 
         pauseButton.setOnClickListener(new View.OnClickListener() {
 

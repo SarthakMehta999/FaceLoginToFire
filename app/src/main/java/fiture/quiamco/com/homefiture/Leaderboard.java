@@ -31,11 +31,11 @@ public class Leaderboard extends AppCompatActivity {
         recyclerView.addItemDecoration(new DividerItemDecoration(this, LinearLayoutManager.VERTICAL));
         recyclerView.setAdapter(mAdapter);
 
-        prepareMovieData();
+        prepareScoreData();
 
     }
 
-    private void prepareMovieData() {
+    private void prepareScoreData() {
         Points points = new Points("Deceree Clyde Quiamco", "Points: 1234 pts","Lose");
         pointsList.add(points);
 
