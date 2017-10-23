@@ -24,6 +24,7 @@ public class BMI extends AppCompatActivity {
     private MaterialFancyButton proceed;
     private User user;
     private Firebase mRootRef;
+
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference myRef = database.getReference("BMI");
 
@@ -51,25 +52,23 @@ public class BMI extends AppCompatActivity {
 
 //        user = (User) getIntent().getExtras().getSerializable("user");
 
-
-        proceed.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                if (height.getText().toString().trim().equals("") || weight.getText().toString().trim().equals("") ){
-                    height.setError("Please Input Value");
-                    weight.setError("Please Input Value");
-                }
-                else if(height.getText().toString().trim().equals("") || weight.getText().toString().trim().equals("") ){
-
-                }
-                else {
-
-                    Intent pt = new Intent(BMI.this, Gain.class);
-
-                }
-            }
-        });
+//
+//        proceed.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//                if (height.getText().toString().trim().equals("") || weight.getText().toString().trim().equals("") ){
+//                    height.setError("Please Input Value");
+//                    weight.setError("Please Input Value");
+//                }
+//
+//                else {
+//
+//                    Intent pt = new Intent(BMI.this, Gain.class);
+//                    startActivity(pt);
+//                }
+//            }
+//        });
 
     }
 //    User user = new User(
@@ -80,6 +79,7 @@ public class BMI extends AppCompatActivity {
     public void calculateBMI(View v) {
         String heightStr = height.getText().toString();
         String weightStr = weight.getText().toString();
+
 
 //        String value1 = height.getText().toString();
 //        String value2 = weight.getText().toString();
@@ -108,7 +108,7 @@ public class BMI extends AppCompatActivity {
 
             displayBMI(bmi);
             String id = myRef.push().getKey();
-            myRef.child(id).setValue("height:"+heightStr+" cm"+" "+"weight:"+weightStr+" Kg");
+            myRef.child(id).setValue("height:"+heightStr+"cm"+" "+"weight:"+weightStr+"Kg");
         }
     }
 
@@ -118,12 +118,42 @@ public class BMI extends AppCompatActivity {
 
         if (Float.compare(bmi, 15f) <= 0) {
             bmiLabel = getString(R.string.very_severely_underweight);
+            proceed.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    if (height.getText().toString().trim().equals("") || weight.getText().toString().trim().equals("")) {
+                        height.setError("Please Input Value");
+                        weight.setError("Please Input Value");
+                    } else {
+
+                        Intent pt = new Intent(BMI.this, Gain.class);
+                        startActivity(pt);
+                    }
+                }
+            });
+
         } else if (Float.compare(bmi, 15f) > 0  &&  Float.compare(bmi, 16f) <= 0) {
             bmiLabel = getString(R.string.severely_underweight);
+
         } else if (Float.compare(bmi, 16f) > 0  &&  Float.compare(bmi, 18.5f) <= 0) {
             bmiLabel = getString(R.string.underweight);
         } else if (Float.compare(bmi, 18.5f) > 0  &&  Float.compare(bmi, 25f) <= 0) {
             bmiLabel = getString(R.string.normal);
+            proceed.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    if (height.getText().toString().trim().equals("") || weight.getText().toString().trim().equals("")) {
+                        height.setError("Please Input Value");
+                        weight.setError("Please Input Value");
+                    } else {
+
+                        Intent pt = new Intent(BMI.this, StartActivity.class);
+                        startActivity(pt);
+                    }
+                }
+            });
         } else if (Float.compare(bmi, 25f) > 0  &&  Float.compare(bmi, 30f) <= 0) {
             bmiLabel = getString(R.string.overweight);
         } else if (Float.compare(bmi, 30f) > 0  &&  Float.compare(bmi, 35f) <= 0) {
@@ -137,39 +167,34 @@ public class BMI extends AppCompatActivity {
         bmiLabel = "BMI:" +"\n" + bmi + " \n\n"  + bmiLabel;
         result.setText(bmiLabel);
 
-//        if(bmiLabel.toString().getClass().equals(R.string.very_severely_underweight)){
+//        if(bmiLabel.equals(R.string.severely_underweight)){
+//
 //            proceed.setOnClickListener(new View.OnClickListener() {
 //                @Override
 //                public void onClick(View v) {
-////
-////                    if (height.getText().toString().trim().equals("") || weight.getText().toString().trim().equals("") ){
-////                        height.setError("Please Input Value");
-////                        weight.setError("Please Input Value");
-////                    }
-////
-////                    else {
 //
+//                    if (height.getText().toString().trim().equals("") || weight.getText().toString().trim().equals("") ){
+//                        height.setError("Please Input Value");
+//                        weight.setError("Please Input Value");
+//                    }
+//
+//                    else {
 //
 //                        Intent pt = new Intent(BMI.this, Gain.class);
-//
-//
+//                        startActivity(pt);
+//                    }
 //                }
 //            });
-
-
-
+       // }
     }
-
-
-
-//        public void proceedTo(View v) {
-//        Intent pt = new Intent(BMI.this,NavDrawer.class);
-//        Bundle bundle = new Bundle();
-//        bundle.putSerializable("user", user);
-//        pt.putExtras(bundle);
-//        startActivity(pt);
 //
+//    private void sudFire(){
+//        String id = myRef.push().getKey();
+//        myRef.child(id).setValue("height:"+heightStr+"cm"+" "+"weight:"+weightStr+"Kg"+bmiLabel);
 //    }
+
+
+
 
     @Override
     public void onBackPressed() {

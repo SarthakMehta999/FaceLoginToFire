@@ -20,6 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import de.hdodenhof.circleimageview.CircleImageView;
+import fiture.quiamco.com.homefiture.BMI;
 import fiture.quiamco.com.homefiture.R;
 import fiture.quiamco.com.homefiture.models.User;
 
@@ -32,7 +33,7 @@ public class ProfileFragment extends Fragment{
     private ShareDialog shareDialog;
     private String TAG = "ProfileFragment";
     private CircleImageView profileImage;
-    private TextView nameAndSurname, tvEmail, tvGender, tvBirthday,BMI;
+    private TextView nameAndSurname, tvEmail, tvGender, tvBirthday,Bmi;
     private EditText Weight,Height;
     private MaterialFancyButton share, logout,start;
     private View rootView;
@@ -54,7 +55,7 @@ public class ProfileFragment extends Fragment{
         tvBirthday.setText(user.getBirthDate());
 //        Weight.getText(user.getWeight().toString());
 //        Height.setText(user.getHeight().toString());
-        BMI.setText((CharSequence) user.getResult());
+        Bmi.setText((CharSequence) user.getResult());
         return rootView;
 
     }
@@ -67,7 +68,7 @@ public class ProfileFragment extends Fragment{
         tvBirthday = (TextView) rootView.findViewById(R.id.tvBirthday);
 //        Weight = (TextView) rootView.findViewById(R.id.tvWeight);
 //        Height = (TextView) rootView.findViewById(R.id.tvHeight);
-        BMI = (TextView) rootView.findViewById(R.id.tvBMI);
+        Bmi = (TextView) rootView.findViewById(R.id.tvBMI);
 
         share = (MaterialFancyButton) rootView.findViewById(R.id.share);
 //        logout = (MaterialFancyButton) rootView.findViewById(R.id.logout);
@@ -88,15 +89,12 @@ public class ProfileFragment extends Fragment{
         start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                start();
+                Intent login = new Intent(getActivity(),BMI.class);
+                startActivity(login);
             }
         });
     }
 
-    private void start() {
-        Intent login = new Intent(getActivity(), fiture.quiamco.com.homefiture.BMI.class);
-        startActivity(login);
-    }
 
     public static ProfileFragment newInstance(User user) {
         Bundle args = new Bundle();

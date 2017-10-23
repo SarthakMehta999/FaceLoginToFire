@@ -62,7 +62,9 @@
         <activity android:name=".Exercises.Step_4" />
         <activity android:name=".Exercises.GainDay_2.GStep_1" />
         <activity android:name=".Leaderboard" />
-        <activity android:name=".Pedometer.Pedometer_Main"></activity>
+        <activity android:name=".Pedometer.Pedometer_Main" />
+        <activity android:name=".SignupActivity" />
+        <activity android:name=".ResetPasswordActivity"></activity>
     </application>
 
 </manifest>
