@@ -8,6 +8,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.firebase.client.Firebase;
 import com.google.firebase.database.DatabaseReference;
@@ -158,10 +159,13 @@ public class BMI extends AppCompatActivity {
             bmiLabel = getString(R.string.overweight);
         } else if (Float.compare(bmi, 30f) > 0  &&  Float.compare(bmi, 35f) <= 0) {
             bmiLabel = getString(R.string.obese_class_i);
+            Toast.makeText(this, "Class 1 (low-risk) obesity, if BMI is 30.0 to 34.9", Toast.LENGTH_LONG).show();
         } else if (Float.compare(bmi, 35f) > 0  &&  Float.compare(bmi, 40f) <= 0) {
             bmiLabel = getString(R.string.obese_class_ii);
+            Toast.makeText(this, "Class 2 (moderate-risk) obesity, if BMI is 35.0 to 39.9", Toast.LENGTH_LONG).show();
         } else {
             bmiLabel = getString(R.string.obese_class_iii);
+            Toast.makeText(this, "Class 3 (high-risk) obesity, if BMI is equal to or greater than 40.0", Toast.LENGTH_LONG).show();
         }
 
         bmiLabel = "BMI:" +"\n" + bmi + " \n\n"  + bmiLabel;

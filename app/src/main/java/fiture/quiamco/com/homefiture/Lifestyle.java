@@ -9,10 +9,12 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.rilixtech.materialfancybutton.MaterialFancyButton;
+import com.vstechlab.easyfonts.EasyFonts;
 
 import fiture.quiamco.com.homefiture.models.User;
 
@@ -44,6 +46,16 @@ public class Lifestyle extends AppCompatActivity {
 
         Log.d("asdasda",user.getfName());
 //        mRootRef = new Firebase("https://fiture-dfae4.firebaseio.com/");
+
+        TextView tv_hello = (TextView) findViewById(R.id.lifestlyeText);
+        tv_hello.setTypeface(EasyFonts.robotoThin(this));
+
+        TextView textView = (TextView) findViewById(R.id.textView3);
+        textView.setTypeface(EasyFonts.droidSerifRegular(this));
+        TextView textView1 = (TextView) findViewById(R.id.textView6);
+        textView.setTypeface(EasyFonts.droidSerifRegular(this));
+        TextView textView2 = (TextView) findViewById(R.id.textView7);
+        textView.setTypeface(EasyFonts.droidSerifRegular(this));
         findViews();
 
     }

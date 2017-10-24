@@ -5,16 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
+    android:background="@drawable/backgroundgradient"
     tools:context="fiture.quiamco.com.homefiture.FacebookLoginActivity">
 
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:background="@color/colorPrimary"
         android:gravity="center"
         android:orientation="vertical"
         android:padding="@dimen/activity_horizontal_margin">
-
 
         <ImageView
             android:layout_width="@dimen/logo_w_h"
@@ -60,9 +59,9 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dip"
-            android:background="@color/colorAccent"
+            android:background="#6f62d0"
             android:text="@string/btn_login"
-            android:textColor="@android:color/black" />
+            android:textColor="#ECEFF1" />
 
         <Button
             android:id="@+id/btn_reset_password"
