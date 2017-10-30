@@ -15,6 +15,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.rilixtech.materialfancybutton.MaterialFancyButton;
 
+import fiture.quiamco.com.homefiture.BaseOnBMI.Underweight.FoodPlan;
 import fiture.quiamco.com.homefiture.Category.Gain;
 import fiture.quiamco.com.homefiture.models.User;
 
@@ -51,30 +52,9 @@ public class BMI extends AppCompatActivity {
         proceed.setVisibility(View.GONE);
 
 
-//        user = (User) getIntent().getExtras().getSerializable("user");
 
-//
-//        proceed.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//
-//                if (height.getText().toString().trim().equals("") || weight.getText().toString().trim().equals("") ){
-//                    height.setError("Please Input Value");
-//                    weight.setError("Please Input Value");
-//                }
-//
-//                else {
-//
-//                    Intent pt = new Intent(BMI.this, Gain.class);
-//                    startActivity(pt);
-//                }
-//            }
-//        });
 
     }
-//    User user = new User(
-//            result
-//    );
 
 
     public void calculateBMI(View v) {
@@ -116,7 +96,7 @@ public class BMI extends AppCompatActivity {
 
     private void displayBMI(float bmi) {
         String bmiLabel = "";
-
+        //Very Severely Underweight
         if (Float.compare(bmi, 15f) <= 0) {
             bmiLabel = getString(R.string.very_severely_underweight);
             proceed.setOnClickListener(new View.OnClickListener() {
@@ -134,12 +114,31 @@ public class BMI extends AppCompatActivity {
                 }
             });
 
+            //Severely Underweight
+
         } else if (Float.compare(bmi, 15f) > 0  &&  Float.compare(bmi, 16f) <= 0) {
             bmiLabel = getString(R.string.severely_underweight);
 
+            //Underweight
         } else if (Float.compare(bmi, 16f) > 0  &&  Float.compare(bmi, 18.5f) <= 0) {
             bmiLabel = getString(R.string.underweight);
-        } else if (Float.compare(bmi, 18.5f) > 0  &&  Float.compare(bmi, 25f) <= 0) {
+            proceed.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    if (height.getText().toString().trim().equals("") || weight.getText().toString().trim().equals("")) {
+                        height.setError("Please Input Value");
+                        weight.setError("Please Input Value");
+                    } else {
+
+                        Intent pt = new Intent(BMI.this, FoodPlan.class);
+                        startActivity(pt);
+                    }
+                }
+            });
+        }
+        //Normal
+        else if (Float.compare(bmi, 18.5f) > 0  &&  Float.compare(bmi, 25f) <= 0) {
             bmiLabel = getString(R.string.normal);
             proceed.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -155,15 +154,19 @@ public class BMI extends AppCompatActivity {
                     }
                 }
             });
+            //Overweight
         } else if (Float.compare(bmi, 25f) > 0  &&  Float.compare(bmi, 30f) <= 0) {
             bmiLabel = getString(R.string.overweight);
+          //Class 1
         } else if (Float.compare(bmi, 30f) > 0  &&  Float.compare(bmi, 35f) <= 0) {
             bmiLabel = getString(R.string.obese_class_i);
             Toast.makeText(this, "Class 1 (low-risk) obesity, if BMI is 30.0 to 34.9", Toast.LENGTH_LONG).show();
+            //Class 2
         } else if (Float.compare(bmi, 35f) > 0  &&  Float.compare(bmi, 40f) <= 0) {
             bmiLabel = getString(R.string.obese_class_ii);
             Toast.makeText(this, "Class 2 (moderate-risk) obesity, if BMI is 35.0 to 39.9", Toast.LENGTH_LONG).show();
         } else {
+            //Class 3
             bmiLabel = getString(R.string.obese_class_iii);
             Toast.makeText(this, "Class 3 (high-risk) obesity, if BMI is equal to or greater than 40.0", Toast.LENGTH_LONG).show();
         }
@@ -171,31 +174,7 @@ public class BMI extends AppCompatActivity {
         bmiLabel = "BMI:" +"\n" + bmi + " \n\n"  + bmiLabel;
         result.setText(bmiLabel);
 
-//        if(bmiLabel.equals(R.string.severely_underweight)){
-//
-//            proceed.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View v) {
-//
-//                    if (height.getText().toString().trim().equals("") || weight.getText().toString().trim().equals("") ){
-//                        height.setError("Please Input Value");
-//                        weight.setError("Please Input Value");
-//                    }
-//
-//                    else {
-//
-//                        Intent pt = new Intent(BMI.this, Gain.class);
-//                        startActivity(pt);
-//                    }
-//                }
-//            });
-       // }
     }
-//
-//    private void sudFire(){
-//        String id = myRef.push().getKey();
-//        myRef.child(id).setValue("height:"+heightStr+"cm"+" "+"weight:"+weightStr+"Kg"+bmiLabel);
-//    }
 
 
 

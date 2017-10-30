@@ -7,6 +7,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
@@ -66,14 +68,15 @@ public class FacebookLoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//       requestWindowFeature(Window.FEATURE_NO_TITLE);
-//        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+       requestWindowFeature(Window.FEATURE_NO_TITLE);
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         auth = FirebaseAuth.getInstance();
 
-//        if (auth.getCurrentUser() != null) {
-//            startActivity(new Intent(FacebookLoginActivity.this, Lifestyle.class));
-//            finish();
-//        }
+        if (auth.getCurrentUser() != null) {
+            Intent startNew = new Intent(FacebookLoginActivity.this,Lifestyle.class);
+            startActivity(startNew);
+
+        }
         setContentView(R.layout.activity_facebook_login);
 
 //        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
