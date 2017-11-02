@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="fiture.quiamco.com.homefiture.Exercises.workout3daymostheavy">
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed"
+        android:text="    DAY 1
+ MONDAY
+WORKOUT
+        3"
+        android:textColor="#4D4D4E"
+        android:textSize="35sp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintVertical_bias="0.415"
+        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed"
+        android:text="
+Romanian Deadlift
+
+Week 1 Sets/Reps
+5 reps (10RM) for 6-min
+
+Week 2 Sets/Reps
+5 reps (10RM) for 8-min
+
+Week 3 Sets/Reps
+5 reps (10RM) for 10-min
+
+Week 4 Sets/Reps
+5 reps (10RM) for 12-min
+
+Week 5
+Sets/Reps
+5 reps (10RM) for 14-min
+
+Week 6
+Sets/Reps
+5 reps (10RM) for 15-min
+
+"
+        android:textColor="#4D4D4E"
+        android:textSize="20sp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="28dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintVertical_bias="0.777"
+        app:layout_constraintHorizontal_bias="0.952" />
+
+</android.support.constraint.ConstraintLayout>

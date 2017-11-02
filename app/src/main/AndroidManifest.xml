@@ -64,7 +64,39 @@
         <activity android:name=".SignupActivity" />
         <activity android:name=".ResetPasswordActivity" />
         <activity android:name=".BaseOnBMI.Underweight.FoodPlan" />
-        <activity android:name=".BaseOnBMI.Underweight.Breakfast"></activity>
+        <activity android:name=".BaseOnBMI.Underweight.Breakfast" />
+        <activity android:name=".Exercises.LoseHeavy" />
+        <activity android:name=".Exercises.LoseMoreHeavy" />
+        <activity android:name=".Exercises.LoseMostHeavy" />
+        <activity android:name=".Exercises.day1heavy" />
+        <activity android:name=".Exercises.Underweight.day2heavy" />
+        <activity android:name=".Exercises.Underweight.day1moreheavy" />
+        <activity android:name=".Exercises.day1moreheavy" />
+        <activity android:name=".Exercises.day1mostheavy" />
+        <activity android:name=".Exercises.day2mostheavy" />
+        <activity android:name=".Exercises.day3heavy" />
+        <activity android:name=".Exercises.day4heavy" />
+        <activity android:name=".Exercises.day5heavy" />
+        <activity android:name=".Exercises.day6heavy" />
+        <activity android:name=".Exercises.day7heavy" />
+        <activity android:name=".Exercises.workout1day2" />
+        <activity android:name=".Exercises.Workout2day2" />
+        <activity android:name=".Exercises.Workout3day2" />
+        <activity android:name=".Exercises.Workout4day2" />
+        <activity android:name=".Exercises.Workout5day2" />
+        <activity android:name=".Exercises.Workout6day2" />
+        <activity android:name=".Exercises.Workout1day3" />
+        <activity android:name=".Exercises.workout2day3" />
+        <activity android:name=".Exercises.Workout3day3" />
+        <activity android:name=".Exercises.Workout4day3" />
+        <activity android:name=".Exercises.Workout5day3" />
+        <activity android:name=".Exercises.Workout6day3" />
+        <activity android:name=".Exercises.day3moreheavy" />
+        <activity android:name=".Exercises.workout2day2mostheavy" />
+        <activity android:name=".Exercises.workout3daymostheavy" />
+        <activity android:name=".Exercises.workout4day1mostheavy" />
+        <activity android:name=".Exercises.workout5day1mostheavy" />
+        <activity android:name=".Exercises.workout6day1mostheavy"></activity>
     </application>
 
 </manifest>

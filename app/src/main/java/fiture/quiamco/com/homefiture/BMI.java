@@ -17,6 +17,9 @@ import com.rilixtech.materialfancybutton.MaterialFancyButton;
 
 import fiture.quiamco.com.homefiture.BaseOnBMI.Underweight.FoodPlan;
 import fiture.quiamco.com.homefiture.Category.Gain;
+import fiture.quiamco.com.homefiture.Exercises.LoseHeavy;
+import fiture.quiamco.com.homefiture.Exercises.LoseMoreHeavy;
+import fiture.quiamco.com.homefiture.Exercises.LoseMostHeavy;
 import fiture.quiamco.com.homefiture.models.User;
 
 public class BMI extends AppCompatActivity {
@@ -161,14 +164,58 @@ public class BMI extends AppCompatActivity {
         } else if (Float.compare(bmi, 30f) > 0  &&  Float.compare(bmi, 35f) <= 0) {
             bmiLabel = getString(R.string.obese_class_i);
             Toast.makeText(this, "Class 1 (low-risk) obesity, if BMI is 30.0 to 34.9", Toast.LENGTH_LONG).show();
+            proceed.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    if (height.getText().toString().trim().equals("") || weight.getText().toString().trim().equals("")) {
+                        height.setError("Please Input Value");
+                        weight.setError("Please Input Value");
+                    } else {
+
+                        Intent pt = new Intent(BMI.this, LoseHeavy.class);
+                        startActivity(pt);
+                    }
+                }
+            });
+
             //Class 2
         } else if (Float.compare(bmi, 35f) > 0  &&  Float.compare(bmi, 40f) <= 0) {
             bmiLabel = getString(R.string.obese_class_ii);
             Toast.makeText(this, "Class 2 (moderate-risk) obesity, if BMI is 35.0 to 39.9", Toast.LENGTH_LONG).show();
+            proceed.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    if (height.getText().toString().trim().equals("") || weight.getText().toString().trim().equals("")) {
+                        height.setError("Please Input Value");
+                        weight.setError("Please Input Value");
+                    } else {
+
+                        Intent pt = new Intent(BMI.this, LoseMoreHeavy.class);
+                        startActivity(pt);
+                    }
+                }
+            });
         } else {
             //Class 3
             bmiLabel = getString(R.string.obese_class_iii);
             Toast.makeText(this, "Class 3 (high-risk) obesity, if BMI is equal to or greater than 40.0", Toast.LENGTH_LONG).show();
+            proceed.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    if (height.getText().toString().trim().equals("") || weight.getText().toString().trim().equals("")) {
+                        height.setError("Please Input Value");
+                        weight.setError("Please Input Value");
+                    } else {
+
+                        Intent pt = new Intent(BMI.this, LoseMostHeavy.class);
+                        startActivity(pt);
+                    }
+                }
+            });
+
         }
 
         bmiLabel = "BMI:" +"\n" + bmi + " \n\n"  + bmiLabel;
