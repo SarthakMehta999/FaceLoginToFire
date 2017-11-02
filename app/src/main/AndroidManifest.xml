@@ -96,7 +96,11 @@
         <activity android:name=".Exercises.workout3daymostheavy" />
         <activity android:name=".Exercises.workout4day1mostheavy" />
         <activity android:name=".Exercises.workout5day1mostheavy" />
-        <activity android:name=".Exercises.workout6day1mostheavy"></activity>
+        <activity android:name=".Exercises.workout6day1mostheavy" />
+        <activity android:name=".Exercises.workoutMostHeavy" />
+        <activity android:name=".Exercises.workoutmostheavy1" />
+        <activity android:name=".Exercises.MostHeavyAddingWeight1" />
+        <activity android:name=".Exercises.MostHeavyAddingWeight0"></activity>
     </application>
 
 </manifest>
