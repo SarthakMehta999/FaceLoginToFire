@@ -7,6 +7,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
 import android.view.View;
 
+import fiture.quiamco.com.homefiture.Exercises.Day2Step1;
+import fiture.quiamco.com.homefiture.Exercises.Day2Step1_1;
 import fiture.quiamco.com.homefiture.Exercises.GainDay_2.GStep_1;
 import fiture.quiamco.com.homefiture.Exercises.Step_1;
 import fiture.quiamco.com.homefiture.NavDrawer;
@@ -28,13 +30,11 @@ public class Gain extends AppCompatActivity {
 //        user = (User) bundle.getSerializable("user");
 
         jump = (CardView) findViewById(R.id.jumpCard);
-        active = (CardView) findViewById(R.id.stretchCard);
+        active = (CardView) findViewById(R.id.stretchCard1);
         day33 = (CardView) findViewById(R.id.day3);
         day44 = (CardView) findViewById(R.id.day4);
         day567 = (CardView) findViewById(R.id.day5);
        home = (FloatingActionButton) findViewById(R.id.fab);
-        jump.setBackgroundResource(R.drawable.jumping_jack);
-        active.setBackgroundResource(R.drawable.day2);
 
         jump.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,11 +49,26 @@ public class Gain extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent inte = new Intent(Gain.this,Step_1.class);
-                startActivity(inte);
+                Intent inten = new Intent(Gain.this, Day2Step1_1.class);
+                startActivity(inten);
             }
         });
+        day33.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
+                Intent inten = new Intent(Gain.this, Step_1.class);
+                startActivity(inten);
+            }
+        });
+        day44.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent inten = new Intent(Gain.this, Day2Step1_1.class);
+                startActivity(inten);
+            }
+        });
        /* day33.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
