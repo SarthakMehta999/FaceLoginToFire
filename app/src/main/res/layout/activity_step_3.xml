@@ -11,7 +11,7 @@
     <pl.droidsonroids.gif.GifTextView
         android:layout_width="281dp"
         android:layout_height="217dp"
-        android:background="@drawable/push_ups"
+        android:background="@drawable/dips"
         android:layout_marginRight="50dp"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginLeft="8dp"

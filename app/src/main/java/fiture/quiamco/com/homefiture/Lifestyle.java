@@ -1,6 +1,8 @@
 package fiture.quiamco.com.homefiture;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -13,6 +15,7 @@ import android.widget.TextView;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.gson.Gson;
 import com.rilixtech.materialfancybutton.MaterialFancyButton;
 import com.vstechlab.easyfonts.EasyFonts;
 
@@ -38,13 +41,22 @@ public class Lifestyle extends AppCompatActivity {
 //        databaseReference = FirebaseDatabase.getInstance().getReference("answers");
 
         Bundle bundle = getIntent().getExtras();
-        user = (User) bundle.getSerializable("user");
+//        user = (User) bundle.getSerializable("user");
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference("message");
 //        myRef.setValue("Hello, World!");
-        user = (User) getIntent().getExtras().getSerializable("user");
+//        user = (User) getIntent().getExtras().getSerializable("user");
+        SharedPreferences sharedPreferences = getSharedPreferences("FitureUser", Context.MODE_PRIVATE);
+        String fname = sharedPreferences.getString("userFname","");
+        String lname = sharedPreferences.getString("userLname","");
+        String bday= sharedPreferences.getString("birthday","");
+        String gender = sharedPreferences.getString("userGender","");
+        String email = sharedPreferences.getString("userEmail","");
+        String pic = sharedPreferences.getString("userPic","");
+        user = new User(fname,lname,bday,gender,email,pic);
 
-        Log.d("asdasda",user.getfName());
+
+//        Log.d("asdasda",user.getfName());
 //        mRootRef = new Firebase("https://fiture-dfae4.firebaseio.com/");
 
         TextView tv_hello = (TextView) findViewById(R.id.lifestlyeText);

@@ -16,7 +16,7 @@ import fiture.quiamco.com.homefiture.models.User;
 public class Gain extends AppCompatActivity {
 
     FloatingActionButton home;
-    CardView jump,active;
+    CardView jump,active, day33, day44, day567;
     private User user;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +29,9 @@ public class Gain extends AppCompatActivity {
 
         jump = (CardView) findViewById(R.id.jumpCard);
         active = (CardView) findViewById(R.id.stretchCard);
+        day33 = (CardView) findViewById(R.id.day3);
+        day44 = (CardView) findViewById(R.id.day4);
+        day567 = (CardView) findViewById(R.id.day5);
        home = (FloatingActionButton) findViewById(R.id.fab);
         jump.setBackgroundResource(R.drawable.jumping_jack);
         active.setBackgroundResource(R.drawable.day2);
@@ -46,11 +49,19 @@ public class Gain extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent inte = new Intent(Gain.this,GStep_1.class);
-
+                Intent inte = new Intent(Gain.this,Step_1.class);
                 startActivity(inte);
             }
         });
+
+       /* day33.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent inte = new Intent(Gain.this,Day3.class);
+
+                startActivity(inte);
+            }
+        });*/
 //        user = (User) getIntent().getExtras().getSerializable("user");
         home.setOnClickListener(new View.OnClickListener() {
             @Override

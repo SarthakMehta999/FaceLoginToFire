@@ -28,6 +28,8 @@ public class User implements Serializable {
     private TextView result;
 
 
+    public User() {
+    }
 
     public User(String fName, String lName, String birthDate, String gender, String email, String imageUrl) {
         this.fName = fName;

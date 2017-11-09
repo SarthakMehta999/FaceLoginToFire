@@ -1,6 +1,8 @@
 package fiture.quiamco.com.homefiture;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -33,11 +35,14 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FacebookAuthProvider;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.yasic.library.particletextview.View.ParticleTextView;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.lang.reflect.Modifier;
 import java.util.Arrays;
 
 import fiture.quiamco.com.homefiture.models.User;
@@ -201,16 +206,37 @@ public class FacebookLoginActivity extends AppCompatActivity {
                             if (object.has("gender"))
                                 gender = object.getString("gender");
 
-                            User user = new User(
-                                    firstName,
-                                    lastName,
-                                    birthday,
-                                    gender,
-                                    email,
-                                    profilePicture
-                            );
+
                             Intent main = new Intent(FacebookLoginActivity.this, Lifestyle.class);
                             Bundle bundle = new Bundle();
+                            if(email == null){
+                                email="none";
+                            }
+                            User user = new User(
+//                                    firstName,
+//                                    lastName,
+//                                    birthday,
+//                                    gender,
+//                                    email,
+//                                    profilePicture
+                            );
+                            user.setfName(firstName);
+                            user.setlName(lastName);
+                            user.setBirthDate(birthday);
+                            user.setGender(gender);
+                            user.setEmail(email);
+                            user.setImageUrl(profilePicture);
+                            SharedPreferences sharedPreferences = getSharedPreferences("FitureUser", Context.MODE_PRIVATE);
+                            SharedPreferences.Editor editor = sharedPreferences.edit();
+                            editor.putString("userFname",firstName);
+                            editor.putString("userLname",lastName);
+                            editor.putString("userBday",birthday);
+                            editor.putString("userGender",gender);
+                            editor.putString("userEmail",email);
+                            editor.putString("userPic",profilePicture);
+                            editor.apply();
+                            Log.d("userAss",profilePicture+" "+email+" "+firstName+" "+lastName+" "+birthday+" "+
+                            gender);
                             bundle.putSerializable("user", user);
                             main.putExtras(bundle);
 //                            main.putExtra("name", firstName);
