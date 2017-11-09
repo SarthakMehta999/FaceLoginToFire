@@ -3,7 +3,7 @@
     <string name="facebook_app_id">447582032289540</string>
     <string name="fb_login_protocol_scheme">fb447582032289540</string>
     <string name="appName1">Fiture</string>
-    <string name="title_activity_nav_drawer">NavDrawer</string>
+    <string name="title_activity_nav_drawer">Fiture</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>

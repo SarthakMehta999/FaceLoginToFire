@@ -5,16 +5,33 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:showIn="@layout/activity_main"
-    android:background="@color/backgroundforallscreen"
+    android:background="@drawable/backgroundgradient"
     tools:context="fiture.quiamco.com.homefiture.Leaderboard">
 
-
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/recycler_view"
-        android:layout_width="match_parent"
+    <LinearLayout
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:scrollbars="vertical" />
+        tools:layout_editor_absoluteY="-3dp"
+        tools:layout_editor_absoluteX="0dp"
+        android:id="@+id/linearLayout3">
+        <ImageView
+            android:id="@+id/morningEat"
+            android:layout_width="381dp"
+            android:layout_height="220dp"
+            android:background="@drawable/morning"
+            app:layout_constraintLeft_toLeftOf="parent"
+            tools:layout_editor_absoluteY="-3dp"
+            android:layout_marginLeft="0dp">
+
+        </ImageView>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+
 
 </android.support.constraint.ConstraintLayout>

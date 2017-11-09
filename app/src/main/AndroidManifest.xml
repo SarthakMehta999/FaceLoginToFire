@@ -101,6 +101,9 @@
         <activity android:name=".Exercises.workoutmostheavy1" />
         <activity android:name=".Exercises.MostHeavyAddingWeight1" />
         <activity android:name=".Exercises.MostHeavyAddingWeight0"></activity>
+
+        <activity android:name=".BaseOnBMI.Underweight.Lunch" />
+        <activity android:name=".BaseOnBMI.Underweight.Dinner"></activity>
     </application>
 
 </manifest>

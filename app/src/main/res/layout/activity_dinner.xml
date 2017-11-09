@@ -5,24 +5,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F3F5F2"
-    tools:context="fiture.quiamco.com.homefiture.BaseOnBMI.Underweight.Breakfast">
+    tools:context="fiture.quiamco.com.homefiture.BaseOnBMI.Underweight.Dinner">
 
-       <LinearLayout
+    <LinearLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         tools:layout_editor_absoluteY="-3dp"
         tools:layout_editor_absoluteX="0dp"
         android:id="@+id/linearLayout3">
         <ImageView
-            android:id="@+id/morningEat"
+            android:id="@+id/nightEat"
             android:layout_width="381dp"
             android:layout_height="220dp"
-            android:background="@drawable/morning"
+            android:background="@drawable/dinner1"
             app:layout_constraintLeft_toLeftOf="parent"
             tools:layout_editor_absoluteY="-3dp"
             android:layout_marginLeft="0dp">
 
-    </ImageView>
+        </ImageView>
     </LinearLayout>
 
     <TextView
@@ -30,7 +30,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-condensed"
-        android:text="BREAKFAST"
+        android:text="DINNER"
         android:textColor="#424242"
         android:textSize="40sp"
         android:layout_marginRight="8dp"
@@ -48,7 +48,7 @@
 
 
     <TextView
-        android:id="@+id/fruit"
+        android:id="@+id/fj"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -56,62 +56,43 @@
         android:layout_marginRight="8dp"
         android:layout_marginTop="28dp"
         android:fontFamily="sans-serif-condensed"
-        android:text="-  Fruit or fruit juice"
+        android:text="- Fruit juice"
         android:textAllCaps="true"
         android:textColor="#4d4d4e"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.041"
+        app:layout_constraintHorizontal_bias="0.025"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.508" />
+        app:layout_constraintVertical_bias="0.479" />
 
-            <TextView
-                android:id="@+id/cereal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-condensed"
-                android:text="-  Cereal with milk and sugar"
-                android:textAllCaps="true"
-                android:textColor="#4d4d4e"
-                android:textSize="18sp"
-                android:layout_marginLeft="8dp"
-                app:layout_constraintLeft_toLeftOf="parent"
-                android:layout_marginRight="8dp"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:layout_marginTop="8dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                android:layout_marginBottom="8dp"
-                app:layout_constraintHorizontal_bias="0.065"
-                app:layout_constraintVertical_bias="0.603" />
-
-            <TextView
-                android:id="@+id/eggs"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-condensed"
-                android:text="-  Boiled egg or bacon or sausage"
-                android:textAllCaps="true"
-                android:textColor="#4d4d4e"
-                android:textSize="18sp"
-                android:layout_marginRight="8dp"
-                app:layout_constraintRight_toRightOf="parent"
-                android:layout_marginLeft="8dp"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:layout_marginTop="8dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                android:layout_marginBottom="8dp"
-                app:layout_constraintHorizontal_bias="0.088"
-                app:layout_constraintVertical_bias="0.671" />
     <TextView
-        android:id="@+id/whole"
-        android:layout_width="287dp"
-        android:layout_height="47dp"
+        android:id="@+id/meat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:fontFamily="sans-serif-condensed"
-        android:text="-  Wholewheat toast or roll with butter and jam"
+        android:text="- Meat or fish or cheese or eggs"
+        android:textAllCaps="true"
+        android:textColor="#4d4d4e"
+        android:textSize="18sp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintVertical_bias="0.565" />
+
+    <TextView
+        android:id="@+id/veg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed"
+        android:text="-  Vegetable or salad with dressing"
         android:textAllCaps="true"
         android:textColor="#4d4d4e"
         android:textSize="18sp"
@@ -123,17 +104,17 @@
         android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginBottom="8dp"
-        app:layout_constraintVertical_bias="0.773"
-        app:layout_constraintHorizontal_bias="0.098" />
-
+        app:layout_constraintHorizontal_bias="0.027"
+        app:layout_constraintVertical_bias="0.623" />
     <TextView
-    android:id="@+id/drink"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="- Beverage"
-    android:textAllCaps="true"
-    android:textColor="#4d4d4e"
-    android:textSize="18sp"
+        android:id="@+id/starch"
+        android:layout_width="100dp"
+        android:layout_height="28dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="-  Starch "
+        android:textAllCaps="true"
+        android:textColor="#4d4d4e"
+        android:textSize="18sp"
         android:layout_marginRight="8dp"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginLeft="8dp"
@@ -142,8 +123,50 @@
         android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginBottom="8dp"
-        app:layout_constraintHorizontal_bias="0.029"
-        app:layout_constraintVertical_bias="0.85" />
+        app:layout_constraintVertical_bias="0.688"
+        app:layout_constraintHorizontal_bias="0.0" />
+
+
+    <TextView
+        android:id="@+id/pudding"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="- Pudding"
+        android:textAllCaps="true"
+        android:textColor="#4d4d4e"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.75" />
+
+
+    <TextView
+        android:id="@+id/drink2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="- Beverage  "
+        android:textAllCaps="true"
+        android:textColor="#4d4d4e"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.812" />
 
     <TextView
         android:id="@+id/go"
@@ -159,9 +182,6 @@
         android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginBottom="8dp"
-        app:layout_constraintVertical_bias="0.941" />
-
-
-
+        app:layout_constraintVertical_bias="0.984" />
 
 </android.support.constraint.ConstraintLayout>

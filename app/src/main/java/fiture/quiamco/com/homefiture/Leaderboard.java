@@ -29,6 +29,7 @@ public class Leaderboard extends AppCompatActivity {
         recyclerView.setLayoutManager(mLayoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.addItemDecoration(new DividerItemDecoration(this, LinearLayoutManager.VERTICAL));
+        recyclerView.getLayoutManager().setMeasurementCacheEnabled(false);
         recyclerView.setAdapter(mAdapter);
 
         prepareScoreData();
@@ -36,10 +37,26 @@ public class Leaderboard extends AppCompatActivity {
     }
 
     private void prepareScoreData() {
-        Points points = new Points("Deceree Clyde Quiamco", "Points: 1234 pts","Lose");
+        Points points = new Points("Fruit or fruit juice", "(1 orange or 1 glass of orange juice)","Lose");
         pointsList.add(points);
 
-        points = new Points("Shawn Erl Sala", "Points: 2424 pts","Lose");
+        points = new Points("Cereal with milk and sugar", "(1/2 cup of breakfast cereal or porridge,\n" +
+                "with ½ cup of full-cream milk and 2 t of\n" +
+                "sugar or honey, or 1 tablespoon of raisins)","Lose");
+        pointsList.add(points);
+
+        points = new Points("Wholewheat toast or roll with butter and jam"," (1-2 slices of toast or rolls with 30g\n" +
+                "  polyunsaturated margarine and 1-2 tablespoons of\n" +
+                "  jam, honey or marmalade)","");
+        pointsList.add(points);
+
+        points = new Points("Boiled egg or bacon or sausage","(fry bacon or sausage in non-stick pan)","");
+        pointsList.add(points);
+
+        points = new Points("Boiled egg or bacon or sausage","(fry bacon or sausage in non-stick pan)","");
+        pointsList.add(points);
+
+        points = new Points("Boiled egg or bacon or sausage","(fry bacon or sausage in non-stick pan)","");
         pointsList.add(points);
 
 
