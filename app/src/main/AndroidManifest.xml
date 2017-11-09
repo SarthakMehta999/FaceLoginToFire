@@ -46,7 +46,7 @@
         <activity android:name=".FacebookLoginActivity" />
         <activity
             android:name=".NavDrawer"
-            android:label="@string/title_activity_nav_drawer"
+            android:label="Fiture"
             android:theme="@style/AppTheme" />
         <activity android:name=".BMI" />
         <activity android:name=".Lifestyle" />
@@ -100,7 +100,9 @@
         <activity android:name=".Exercises.workoutMostHeavy" />
         <activity android:name=".Exercises.workoutmostheavy1" />
         <activity android:name=".Exercises.MostHeavyAddingWeight1" />
-        <activity android:name=".Exercises.MostHeavyAddingWeight0"></activity>
+        <activity android:name=".Exercises.MostHeavyAddingWeight0" />
+        <activity android:name=".Exercises.Day2Step1_1" />
+        <activity android:name=".Exercises.day2Step2_2"></activity>
     </application>
 
 </manifest>
