@@ -71,14 +71,12 @@
         <activity android:name=".Exercises.day1heavy" />
         <activity android:name=".Exercises.Underweight.day2heavy" />
         <activity android:name=".Exercises.Underweight.day1moreheavy" />
-        <activity android:name=".Exercises.day1moreheavy" />
         <activity android:name=".Exercises.day1mostheavy" />
         <activity android:name=".Exercises.day2mostheavy" />
         <activity android:name=".Exercises.day3heavy" />
         <activity android:name=".Exercises.day4heavy" />
         <activity android:name=".Exercises.day5heavy" />
         <activity android:name=".Exercises.day6heavy" />
-        <activity android:name=".Exercises.day7heavy" />
         <activity android:name=".Exercises.workout1day2" />
         <activity android:name=".Exercises.Workout2day2" />
         <activity android:name=".Exercises.Workout3day2" />
