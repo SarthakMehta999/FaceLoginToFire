@@ -20,11 +20,11 @@
         android:layout_marginTop="8dp"
         android:text="Back"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintHorizontal_bias="0.225"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.761" />
+        app:layout_constraintVertical_bias="0.821" />
 
     <Button
         android:id="@+id/button46"
@@ -40,11 +40,11 @@
         android:layout_marginTop="8dp"
         android:text="Next"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.846"
+        app:layout_constraintHorizontal_bias="0.85"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.761" />
+        app:layout_constraintVertical_bias="0.821" />
 
     <TextView
         android:id="@+id/textView11"
@@ -68,8 +68,8 @@
 
     <TextView
         android:id="@+id/textView12"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="247dp"
+        android:layout_height="273dp"
         android:fontFamily="sans-serif-condensed"
         android:text="Day 6: Shoulders and Calves:
 
@@ -90,11 +90,11 @@
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginLeft="8dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintVertical_bias="0.385"
+        app:layout_constraintVertical_bias="0.426"
         android:layout_below="@+id/textView11"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="8dp"
-        app:layout_constraintHorizontal_bias="0.777" />
+        app:layout_constraintHorizontal_bias="0.504" />
 
 
 </android.support.constraint.ConstraintLayout>

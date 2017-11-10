@@ -14,7 +14,7 @@
         android:fontFamily="sans-serif-condensed"
         android:text="DAY 4 THURSDAY"
         android:textColor="@color/textColor"
-        android:textSize="35sp"
+        android:textSize="20sp"
         android:layout_marginRight="8dp"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginLeft="8dp"
@@ -22,17 +22,17 @@
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintVertical_bias="0.11"
+        app:layout_constraintVertical_bias="0.072"
         android:layout_marginStart="47dp"
         android:layout_alignParentTop="true"
         android:layout_alignStart="@+id/textView12"
         android:layout_marginBottom="8dp"
-        app:layout_constraintHorizontal_bias="0.217" />
+        app:layout_constraintHorizontal_bias="0.444" />
 
     <TextView
         android:id="@+id/textView12"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="312dp"
+        android:layout_height="344dp"
         android:fontFamily="sans-serif-condensed"
         android:text="                      Day 4  Workouts
 1. FRONT SQUAT
@@ -54,12 +54,11 @@ Sets: 3 Reps: As many as possible Rest: 2-3 min."
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginLeft="8dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintVertical_bias="0.432"
+        app:layout_constraintVertical_bias="0.371"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintHorizontal_bias="0.0" />
+        android:layout_marginBottom="8dp" />
 
     <Button
         android:id="@+id/button41"
@@ -76,7 +75,7 @@ Sets: 3 Reps: As many as possible Rest: 2-3 min."
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginRight="8dp"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintHorizontal_bias="0.214"
+        app:layout_constraintHorizontal_bias="0.242"
         app:layout_constraintVertical_bias="0.86" />
 
     <Button
@@ -91,12 +90,12 @@ Sets: 3 Reps: As many as possible Rest: 2-3 min."
         android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginBottom="8dp"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent"
         android:layout_marginLeft="8dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintHorizontal_bias="0.771"
-        app:layout_constraintVertical_bias="0.86" />
+        app:layout_constraintVertical_bias="0.86"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.682" />
 
 
 </android.support.constraint.ConstraintLayout>

@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/backgroundgradient"
     tools:context="fiture.quiamco.com.homefiture.Exercises.Workout1day3">
 
     <pl.droidsonroids.gif.GifTextView
@@ -16,8 +17,8 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.977"
-        app:layout_constraintVertical_bias="0.146"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintVertical_bias="0.149"
         android:id="@+id/gifTextView"
         android:layout_marginTop="35dp"
         android:layout_marginStart="36dp"
@@ -30,7 +31,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-condensed"
         android:text="DAY 3 WEDNESDAY"
-        android:textColor="#4D4D4E"
+        android:textColor="@color/textColor"
         android:textSize="25sp"
         android:layout_marginRight="8dp"
         app:layout_constraintRight_toRightOf="parent"
@@ -38,37 +39,39 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintVertical_bias="0.363"
-        app:layout_constraintHorizontal_bias="0.053"
-        android:layout_below="@+id/textView12"
-        android:layout_alignStart="@+id/button25" />
+        app:layout_constraintVertical_bias="0.084"
+        app:layout_constraintHorizontal_bias="0.554"
+        android:layout_alignBaseline="@+id/gifTextView"
+        android:layout_alignBottom="@+id/gifTextView"
+        android:layout_alignStart="@+id/button25"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp" />
 
     <TextView
         android:id="@+id/textView12"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="292dp"
+        android:layout_height="101dp"
         android:fontFamily="sans-serif-condensed"
         android:text="Workout 1
 SUITCASE DEADLIFT
 Reps: 8-12
-
 Rest: As needed
-
 "
-        android:textColor="#4D4D4E"
-        android:textSize="25sp"
+        android:textColor="@color/textColor"
+        android:textSize="20sp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginRight="8dp"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginLeft="8dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintHorizontal_bias="0.041"
-        app:layout_constraintVertical_bias="0.734"
+        app:layout_constraintVertical_bias="0.673"
+        android:layout_marginTop="8dp"
         android:layout_below="@+id/gifTextView"
-        android:layout_alignStart="@+id/gifTextView"
-        android:layout_marginStart="11dp"
-        android:layout_marginTop="12dp" />
+        android:layout_alignEnd="@+id/gifTextView"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintHorizontal_bias="0.671" />
 
     <Button
         android:id="@+id/button25"
@@ -77,7 +80,17 @@ Rest: As needed
         android:text="Back"
         android:layout_marginStart="28dp"
         android:layout_below="@+id/textView11"
-        android:layout_alignStart="@+id/textView12" />
+        android:layout_alignStart="@+id/textView12"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.232"
+        app:layout_constraintVertical_bias="0.821" />
 
     <Button
         android:id="@+id/button26"
@@ -85,7 +98,17 @@ Rest: As needed
         android:layout_height="wrap_content"
         android:text="Next"
         android:layout_below="@+id/textView11"
-        android:layout_alignEnd="@+id/textView11" />
+        android:layout_alignEnd="@+id/textView11"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.746"
+        app:layout_constraintVertical_bias="0.821" />
 
 
-</RelativeLayout>
+</android.support.constraint.ConstraintLayout>

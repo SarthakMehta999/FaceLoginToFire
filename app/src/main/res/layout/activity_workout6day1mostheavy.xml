@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/backgroundgradient"
     tools:context="fiture.quiamco.com.homefiture.Exercises.workout6day1mostheavy">
 
     <TextView
@@ -14,8 +15,8 @@
         android:text=" WEEKLY
 WORKOUTS
         "
-        android:textColor="#4D4D4E"
-        android:textSize="30sp"
+        android:textColor="@color/textColor"
+        android:textSize="20sp"
         android:layout_marginRight="8dp"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginLeft="8dp"
@@ -23,8 +24,8 @@ WORKOUTS
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintVertical_bias="0.462"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintVertical_bias="0.448"
+        app:layout_constraintHorizontal_bias="0.078"
         android:layout_marginStart="29dp"
         android:layout_alignTop="@+id/textView12"
         android:layout_alignParentStart="true"
@@ -32,8 +33,8 @@ WORKOUTS
 
     <TextView
         android:id="@+id/textView12"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="143dp"
+        android:layout_height="433dp"
         android:fontFamily="sans-serif-condensed"
         android:text="
 Dumbbell Pushups
@@ -58,7 +59,7 @@ Week 6
 Sets/Reps
 100 as fast as possible
 "
-        android:textColor="#4D4D4E"
+        android:textColor="@color/textColor"
         android:textSize="20sp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -66,8 +67,8 @@ Sets/Reps
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginLeft="8dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintVertical_bias="0.381"
+        app:layout_constraintHorizontal_bias="0.857"
         android:layout_marginEnd="16dp"
         android:layout_centerVertical="true"
         android:layout_alignParentEnd="true"
@@ -90,8 +91,8 @@ Sets/Reps
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginLeft="8dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintHorizontal_bias="0.114"
-        app:layout_constraintVertical_bias="0.015" />
+        app:layout_constraintHorizontal_bias="0.15"
+        app:layout_constraintVertical_bias="0.747" />
 
     <Button
         android:id="@+id/button59"
@@ -108,7 +109,7 @@ Sets/Reps
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginLeft="8dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintHorizontal_bias="0.16"
-        app:layout_constraintVertical_bias="0.95" />
+        app:layout_constraintHorizontal_bias="0.167"
+        app:layout_constraintVertical_bias="0.876" />
 
 </android.support.constraint.ConstraintLayout>

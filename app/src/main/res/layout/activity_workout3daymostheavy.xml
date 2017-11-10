@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/backgroundgradient"
     tools:context="fiture.quiamco.com.homefiture.Exercises.workout3daymostheavy">
 
     <TextView
@@ -13,8 +14,7 @@
         android:fontFamily="sans-serif-condensed"
         android:text="  WEEKLY
 WORKOUTS"
-        android:textColor="#4D4D4E"
-        android:textSize="35sp"
+        android:textSize="30sp"
         android:layout_marginRight="8dp"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginLeft="8dp"
@@ -22,16 +22,17 @@ WORKOUTS"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintVertical_bias="0.321"
-        app:layout_constraintHorizontal_bias="0.019"
+        app:layout_constraintVertical_bias="0.293"
+        app:layout_constraintHorizontal_bias="0.035"
+        android:textColor="@color/textColor"
         android:layout_alignParentTop="true"
         android:layout_toStartOf="@+id/textView12"
         android:layout_marginBottom="8dp" />
 
     <TextView
         android:id="@+id/textView12"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="168dp"
+        android:layout_height="485dp"
         android:fontFamily="sans-serif-condensed"
         android:text="
 Romanian Deadlift
@@ -57,7 +58,7 @@ Sets/Reps
 5 reps (10RM) for 15-min
 
 "
-        android:textColor="#4D4D4E"
+        android:textColor="@color/textColor"
         android:textSize="20sp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -65,8 +66,7 @@ Sets/Reps
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginLeft="8dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.915"
         android:layout_centerVertical="true"
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="12dp"

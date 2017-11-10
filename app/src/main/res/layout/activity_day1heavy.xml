@@ -24,8 +24,8 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginBottom="8dp"
-        app:layout_constraintHorizontal_bias="0.832"
-        app:layout_constraintVertical_bias="0.94" />
+        app:layout_constraintHorizontal_bias="0.753"
+        app:layout_constraintVertical_bias="0.9" />
 
     <Button
         android:id="@+id/btnBack"
@@ -43,8 +43,8 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginBottom="8dp"
-        app:layout_constraintHorizontal_bias="0.207"
-        app:layout_constraintVertical_bias="0.94" />
+        app:layout_constraintHorizontal_bias="0.271"
+        app:layout_constraintVertical_bias="0.9" />
 
     <pl.droidsonroids.gif.GifTextView
         android:layout_width="281dp"
@@ -57,7 +57,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintVertical_bias="0.08"
+        app:layout_constraintVertical_bias="0.167"
         android:id="@+id/gifTextView"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
@@ -66,38 +66,28 @@
 
     <TextView
         android:id="@+id/textView12"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="256dp"
+        android:layout_height="158dp"
         android:layout_alignStart="@+id/gifTextView"
         android:layout_below="@+id/gifTextView"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:fontFamily="sans-serif-condensed"
-        android:text="
- Workout 1
+        android:text=" Workout 1
 FRONT SQUAT
-
-
-
-
-
 Sets: 3
-
-
-
-
 Reps: 8-12
 Rest: As needed
 "
         android:textColor="@color/textColor"
         android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.269"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.639"
-        android:layout_marginTop="8dp" />
+        app:layout_constraintVertical_bias="0.713"
+        android:layout_marginTop="8dp"
+        app:layout_constraintHorizontal_bias="0.616" />
 
     <TextView
         android:id="@+id/textView11"
@@ -113,10 +103,9 @@ Rest: As needed
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.837"
+        app:layout_constraintVertical_bias="0.049"
         android:layout_below="@+id/textView12"
         android:layout_centerHorizontal="true"
-        app:layout_constraintHorizontal_bias="0.542"
         android:layout_marginTop="8dp" />
 
 

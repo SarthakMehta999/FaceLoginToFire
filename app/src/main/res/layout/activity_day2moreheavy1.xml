@@ -21,7 +21,7 @@
         android:layout_marginRight="8dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintHorizontal_bias="0.242"
-        app:layout_constraintVertical_bias="0.926" />
+        app:layout_constraintVertical_bias="0.876" />
 
     <Button
         android:id="@+id/button66"
@@ -36,8 +36,8 @@
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginRight="8dp"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintHorizontal_bias="0.685"
-        app:layout_constraintVertical_bias="0.926" />
+        app:layout_constraintHorizontal_bias="0.692"
+        app:layout_constraintVertical_bias="0.876" />
 
     <pl.droidsonroids.gif.GifTextView
         android:layout_width="281dp"
@@ -64,7 +64,7 @@
         android:fontFamily="sans-serif-condensed"
         android:text="DAY 2 TUESDAY"
         android:textColor="@color/textColor"
-        android:textSize="35sp"
+        android:textSize="20sp"
         android:layout_marginRight="8dp"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginLeft="8dp"
@@ -81,8 +81,8 @@
 
     <TextView
         android:id="@+id/textView12"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="259dp"
+        android:layout_height="118dp"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
 
@@ -91,19 +91,18 @@
         android:layout_marginRight="8dp"
         android:layout_marginTop="8dp"
         android:fontFamily="sans-serif-condensed"
-        android:text=" Day 2 - Workout:
-
+        android:text=" Day 2  Workout:
 2. BENCH PRESS
-Sets: 4 Reps: 5 Rest: 2-3 min
-
+Sets: 4
+Reps: 5
+Rest: 2-3 min
 "
         android:textColor="@color/textColor"
-        android:textSize="25sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.7"
-        app:layout_constraintHorizontal_bias="0.511" />
+        app:layout_constraintVertical_bias="0.699" />
 
 </android.support.constraint.ConstraintLayout>
