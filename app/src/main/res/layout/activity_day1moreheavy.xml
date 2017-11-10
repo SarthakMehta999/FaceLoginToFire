@@ -4,7 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/backgroundgradient"
     tools:context="fiture.quiamco.com.homefiture.Exercises.Underweight.day1moreheavy">
+
+    <pl.droidsonroids.gif.GifTextView
+        android:layout_width="281dp"
+        android:layout_height="217dp"
+        android:background="@drawable/deadlift"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintVertical_bias="0.224"
+        android:id="@+id/gifTextView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp" />
 
     <TextView
         android:id="@+id/textView11"
@@ -12,20 +31,19 @@
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-condensed"
         android:text="DAY 1 MONDAY"
-        android:textColor="#4D4D4E"
-        android:textSize="35sp"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent"
+        android:textColor="@color/textColor"
+        android:textSize="25sp"
         android:layout_marginLeft="8dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginBottom="8dp"
-        app:layout_constraintVertical_bias="0.271"
-        app:layout_constraintHorizontal_bias="0.126"
+        app:layout_constraintVertical_bias="0.066"
         android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp" />
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent" />
 
     <TextView
         android:id="@+id/textView12"
@@ -37,26 +55,51 @@
 1 DeadLift
 Sets: 4 Reps: 5 Rest: 2-3 min.
 
-2. CHINUP
-Sets: 4 Reps: 5 Rest: 2-3 min.
+"
 
-3. DUMBBELL FLOOR PRESS
-Sets: 4 Reps: 8 Rest: 2-3 min.
-
-4. REVERSE LUNGE
-Sets: 3 Reps: 8 Rest: 2-3 min."
-
-        android:textColor="#4D4D4E"
+        android:textColor="@color/textColor"
         android:textSize="20sp"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginBottom="8dp"
         android:layout_marginRight="8dp"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginLeft="8dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintHorizontal_bias="0.14"
-        app:layout_constraintVertical_bias="0.776" />
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintVertical_bias="0.761" />
+
+    <Button
+        android:id="@+id/button9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.271"
+        app:layout_constraintVertical_bias="0.902" />
+
+    <Button
+        android:id="@+id/button12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintHorizontal_bias="0.735"
+        app:layout_constraintVertical_bias="0.902" />
 
 </android.support.constraint.ConstraintLayout>

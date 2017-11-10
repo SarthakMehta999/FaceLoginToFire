@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/backgroundgradient"
     tools:context="fiture.quiamco.com.homefiture.Exercises.day4moreheavy">
 
     <TextView
@@ -12,7 +13,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-condensed"
         android:text="DAY 4 THURSDAY"
-        android:textColor="#4D4D4E"
+        android:textColor="@color/textColor"
         android:textSize="35sp"
         android:layout_marginRight="8dp"
         app:layout_constraintRight_toRightOf="parent"
@@ -21,18 +22,19 @@
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.227"
+        android:layout_marginStart="47dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/textView12"
         android:layout_marginBottom="8dp"
-        app:layout_constraintVertical_bias="0.302"
-        app:layout_constraintHorizontal_bias="0.064"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp" />
+        app:layout_constraintHorizontal_bias="0.354" />
 
     <TextView
         android:id="@+id/textView12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-condensed"
-        android:text=" Day 4
+        android:text=" Day 4  Workouts
 1. FRONT SQUAT
 Sets: 4 Reps: 5 Rest: 2-3 min. How to
 2. INVERTED ROW
@@ -41,18 +43,57 @@ Sets: 4 Reps: 8 Rest: 2-3 min. How to
 Sets: 4 Reps: 8 (each side) Rest: 2-3 min. How to
 4. PUSHUP
 Sets: 3 Reps: As many as possible Rest: 2-3 min."
-        android:textColor="#4D4D4E"
+        android:textColor="@color/textColor"
         android:textSize="20sp"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="28dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintVertical_bias="0.648"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintHorizontal_bias="0.375" />
+
+    <Button
+        android:id="@+id/button41"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView11"
+        android:layout_below="@+id/textView12"
+        android:text="Back"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.221"
+        app:layout_constraintVertical_bias="0.914" />
+
+    <Button
+        android:id="@+id/button42"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/textView11"
+        android:layout_below="@+id/textView12"
+        android:layout_marginEnd="18dp"
+        android:text="Next"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginBottom="8dp"
         android:layout_marginRight="8dp"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginLeft="8dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintVertical_bias="0.725"
-        app:layout_constraintHorizontal_bias="0.0" />
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintVertical_bias="0.914" />
 
 
 </android.support.constraint.ConstraintLayout>

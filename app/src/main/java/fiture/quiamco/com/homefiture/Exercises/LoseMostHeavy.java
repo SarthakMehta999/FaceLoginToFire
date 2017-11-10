@@ -9,7 +9,7 @@ import android.view.View;
 import fiture.quiamco.com.homefiture.R;
 
 public class LoseMostHeavy extends AppCompatActivity {
-    CardView card,card2;
+    CardView card,card2,card3,card4;
 
 
     @Override
@@ -18,6 +18,9 @@ public class LoseMostHeavy extends AppCompatActivity {
         setContentView(R.layout.activity_lose_most_heavy);
         card = (CardView)  findViewById(R.id.card1);
         card2 = (CardView)  findViewById(R.id.card2);
+        card3 = (CardView)  findViewById(R.id.card3);
+        card4 = (CardView)  findViewById(R.id.card4);
+
         card.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -29,11 +32,28 @@ public class LoseMostHeavy extends AppCompatActivity {
         card2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent fast = new Intent(LoseMostHeavy.this,day2mostheavy.class);
+                Intent fast = new Intent(LoseMostHeavy.this,workout2day2mostheavy.class);
                 startActivity(fast);
 
             }
         });
+        card3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent fast = new Intent(LoseMostHeavy.this,workout3daymostheavy.class);
+                startActivity(fast);
+
+            }
+        });
+        card4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent fast = new Intent(LoseMostHeavy.this,workout4day1mostheavy.class);
+                startActivity(fast);
+
+            }
+        });
+
     }
 }
 

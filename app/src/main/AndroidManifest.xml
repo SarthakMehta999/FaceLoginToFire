@@ -13,13 +13,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SplashActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".SplashActivity" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+
+        <action android:name="android.intent.action.MAIN" />
+
+        <category android:name="android.intent.category.LAUNCHER" />
 
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
@@ -68,17 +72,21 @@
         <activity android:name=".Exercises.LoseHeavy" />
         <activity android:name=".Exercises.LoseMoreHeavy" />
         <activity android:name=".Exercises.LoseMostHeavy" />
-        <activity android:name=".Exercises.day1heavy" />
+        <activity android:name=".Exercises.day1heavy">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".Exercises.Underweight.day2heavy" />
         <activity android:name=".Exercises.Underweight.day1moreheavy" />
-        <activity android:name=".Exercises.day1moreheavy" />
+        <activity android:name=".Exercises.day2moreheavy" />
         <activity android:name=".Exercises.day1mostheavy" />
         <activity android:name=".Exercises.day2mostheavy" />
         <activity android:name=".Exercises.day3heavy" />
-        <activity android:name=".Exercises.day4heavy" />
         <activity android:name=".Exercises.day5heavy" />
         <activity android:name=".Exercises.day6heavy" />
-        <activity android:name=".Exercises.day7heavy" />
         <activity android:name=".Exercises.workout1day2" />
         <activity android:name=".Exercises.Workout2day2" />
         <activity android:name=".Exercises.Workout3day2" />
@@ -100,7 +108,19 @@
         <activity android:name=".Exercises.workoutMostHeavy" />
         <activity android:name=".Exercises.workoutmostheavy1" />
         <activity android:name=".Exercises.MostHeavyAddingWeight1" />
-        <activity android:name=".Exercises.MostHeavyAddingWeight0"></activity>
+        <activity android:name=".Exercises.MostHeavyAddingWeight0" />
+        <activity android:name=".Exercises.day4moreheavy" />
+        <activity android:name=".Exercises.day5moreheavy" />
+        <activity android:name=".Exercises.day6moreheavy" />
+        <activity android:name=".Exercises.day7moreheavy" />
+        <activity android:name=".Exercises.day4heavy" />
+        <activity android:name=".StartHeavyWorkouts" />
+        <activity android:name=".Exercises.day1moreheavy2" />
+        <activity android:name=".Exercises.day1moreheavy3" />
+        <activity android:name=".Exercises.day1moreheavy4" />
+        <activity android:name=".Exercises.day2moreheavy1" />
+        <activity android:name=".Exercises.day2moreheavy2" />
+        <activity android:name=".Exercises.day2moreheavy3"></activity>
     </application>
 
 </manifest>
