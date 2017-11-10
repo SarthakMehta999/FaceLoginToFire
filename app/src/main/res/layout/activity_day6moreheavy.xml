@@ -20,11 +20,11 @@
         android:layout_marginTop="8dp"
         android:text="Back"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.225"
+        app:layout_constraintHorizontal_bias="0.2"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.948" />
+        app:layout_constraintVertical_bias="0.761" />
 
     <Button
         android:id="@+id/button46"
@@ -40,11 +40,11 @@
         android:layout_marginTop="8dp"
         android:text="Next"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.775"
+        app:layout_constraintHorizontal_bias="0.846"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.948" />
+        app:layout_constraintVertical_bias="0.761" />
 
     <TextView
         android:id="@+id/textView11"
@@ -75,9 +75,6 @@
 
 3 sets Dumbbell military press (4-8 reps)
 
-3 sets Barbell military press (6-10 reps)
-
-2 sets Lateral raises (8-15 reps)
 
 4 sets Bar or Dumbbell shrugs (6-12 reps)
 
@@ -93,10 +90,11 @@
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginLeft="8dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintVertical_bias="0.552"
+        app:layout_constraintVertical_bias="0.385"
         android:layout_below="@+id/textView11"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="8dp" />
+        android:layout_marginBottom="8dp"
+        app:layout_constraintHorizontal_bias="0.777" />
 
 
 </android.support.constraint.ConstraintLayout>

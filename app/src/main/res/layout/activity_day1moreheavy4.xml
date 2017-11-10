@@ -30,7 +30,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-condensed"
-        android:text="DAY 1 MONDAY"
+        android:text="DAY 2 MONDAY"
         android:textColor="@color/textColor"
         android:textSize="25sp"
         android:layout_marginLeft="8dp"
@@ -50,12 +50,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-condensed"
-        android:text="Workout
+        android:text="Workout 1
 REVERSE LUNGE
-
-Sets: 3
-Reps: 8
-Rest: 2-3 min
+Sets: 3  Reps: 8  Rest: 2-3 min
 "
 
         android:textColor="@color/textColor"
@@ -68,8 +65,8 @@ Rest: 2-3 min
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginLeft="8dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintVertical_bias="0.877" />
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintVertical_bias="0.709" />
 
     <Button
         android:id="@+id/button63"

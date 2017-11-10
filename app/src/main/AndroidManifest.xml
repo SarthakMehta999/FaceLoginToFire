@@ -13,7 +13,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SplashActivity" />
+        <activity android:name=".SplashActivity">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+    </activity>
+
 
         <intent-filter>
             <action android:name="android.intent.action.MAIN" />
@@ -72,13 +79,7 @@
         <activity android:name=".Exercises.LoseHeavy" />
         <activity android:name=".Exercises.LoseMoreHeavy" />
         <activity android:name=".Exercises.LoseMostHeavy" />
-        <activity android:name=".Exercises.day1heavy">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".Exercises.day1heavy"/>
         <activity android:name=".Exercises.Underweight.day2heavy" />
         <activity android:name=".Exercises.Underweight.day1moreheavy" />
         <activity android:name=".Exercises.day2moreheavy" />
@@ -120,7 +121,10 @@
         <activity android:name=".Exercises.day1moreheavy4" />
         <activity android:name=".Exercises.day2moreheavy1" />
         <activity android:name=".Exercises.day2moreheavy2" />
-        <activity android:name=".Exercises.day2moreheavy3"></activity>
+        <activity android:name=".Exercises.day2moreheavy3" />
+        <activity android:name=".Exercises.day3moreheavy1" />
+        <activity android:name=".Exercises.day3moreheavy2" />
+        <activity android:name=".Exercises.day3moreheavy3"></activity>
     </application>
 
 </manifest>

@@ -22,7 +22,7 @@ public class day3moreheavy extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(day3moreheavy.this, day4moreheavy.class);
+                Intent intent = new Intent(day3moreheavy.this, day3moreheavy1.class);
                 startActivity(intent);
                 finish();
             }
@@ -32,7 +32,7 @@ public class day3moreheavy extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(day3moreheavy.this, day2moreheavy.class);
+                Intent intent = new Intent(day3moreheavy.this, day3moreheavy.class);
                 startActivity(intent);
                 finish();
             }

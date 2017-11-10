@@ -84,7 +84,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-condensed"
-        android:text=" Day 2 - Workout:
+        android:text="         Workout:
 
 3. DUMBBELL ROW
 Sets: 4 Reps: 6 (each side) Rest: 2-3 min.
@@ -99,11 +99,11 @@ Sets: 4 Reps: 6 (each side) Rest: 2-3 min.
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginLeft="8dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintVertical_bias="0.816"
+        app:layout_constraintVertical_bias="0.709"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
-        app:layout_constraintHorizontal_bias="0.504" />
+        app:layout_constraintHorizontal_bias="0.0" />
 
 </android.support.constraint.ConstraintLayout>
