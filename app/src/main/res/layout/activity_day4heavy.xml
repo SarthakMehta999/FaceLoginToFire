@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -17,7 +17,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.977"
+        app:layout_constraintHorizontal_bias="0.177"
         app:layout_constraintVertical_bias="0.146"
         android:id="@+id/gifTextView"
         android:layout_marginTop="43dp"
@@ -39,15 +39,15 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintVertical_bias="0.335"
-        app:layout_constraintHorizontal_bias="0.08"
-        android:layout_above="@+id/button7"
-        android:layout_centerHorizontal="true" />
+        app:layout_constraintVertical_bias="0.059"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="17dp" />
 
     <TextView
         android:id="@+id/textView12"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="256dp"
+        android:layout_height="149dp"
         android:fontFamily="sans-serif-condensed"
         android:text="WORKOUT 4
 DUMBBELL FLYE
@@ -56,27 +56,36 @@ Reps: 8-12
 Rest: As needed
 "
         android:textColor="@color/textColor"
-        android:textSize="30sp"
+        android:textSize="20sp"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginRight="8dp"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginLeft="8dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintVertical_bias="0.638"
-        app:layout_constraintHorizontal_bias="0.047"
         android:layout_below="@+id/gifTextView"
-        android:layout_alignStart="@+id/gifTextView" />
+        android:layout_alignEnd="@+id/gifTextView"
+        android:layout_marginTop="305dp"
+        android:layout_alignStart="@+id/gifTextView"
+        app:layout_constraintHorizontal_bias="0.43" />
 
     <Button
         android:id="@+id/button6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Back"
-        android:layout_marginBottom="48dp"
         android:layout_alignParentBottom="true"
         android:layout_alignStart="@+id/textView12"
-        android:layout_marginStart="26dp" />
+        android:layout_marginStart="26dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.128"
+        app:layout_constraintVertical_bias="0.886" />
 
     <Button
         android:id="@+id/button7"
@@ -86,7 +95,17 @@ Rest: As needed
         android:layout_alignBaseline="@+id/button6"
         android:layout_alignBottom="@+id/button6"
         android:layout_alignEnd="@+id/gifTextView"
-        android:layout_marginEnd="47dp" />
+        android:layout_marginEnd="47dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="170dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
+        app:layout_constraintHorizontal_bias="0.754"
+        app:layout_constraintVertical_bias="0.886" />
 
 
-</RelativeLayout>
+</android.support.constraint.ConstraintLayout>

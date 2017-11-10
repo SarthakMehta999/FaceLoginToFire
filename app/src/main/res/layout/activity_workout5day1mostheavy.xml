@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/backgroundgradient"
     tools:context="fiture.quiamco.com.homefiture.Exercises.workout5day1mostheavy">
 
     <TextView
@@ -14,26 +15,25 @@
         android:text="WEEKLY
 WORKOUTS
         "
-        android:textColor="#4D4D4E"
-        android:textSize="35sp"
+        android:textColor="@color/textColor"
+        android:textSize="20sp"
         android:layout_marginRight="8dp"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginLeft="8dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintVertical_bias="0.405"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.178"
         android:layout_marginStart="27dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
+        app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginBottom="8dp" />
 
     <TextView
         android:id="@+id/textView12"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="126dp"
+        android:layout_height="459dp"
         android:fontFamily="sans-serif-condensed"
         android:text="
 Barbell Complex
@@ -58,7 +58,7 @@ Week 6
 Sets/Reps
 3x8/ exercise
 "
-        android:textColor="#4D4D4E"
+        android:textColor="@color/textColor"
         android:textSize="20sp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -66,8 +66,8 @@ Sets/Reps
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginLeft="8dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        app:layout_constraintHorizontal_bias="0.964"
+        app:layout_constraintVertical_bias="0.38"
+        app:layout_constraintHorizontal_bias="0.855"
         android:layout_marginEnd="29dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
@@ -90,7 +90,7 @@ Sets/Reps
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginBottom="8dp"
-        app:layout_constraintHorizontal_bias="0.128"
+        app:layout_constraintHorizontal_bias="0.189"
         app:layout_constraintVertical_bias="0.685" />
 
     <Button
@@ -108,7 +108,7 @@ Sets/Reps
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginLeft="8dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintHorizontal_bias="0.189"
-        app:layout_constraintVertical_bias="0.831" />
+        app:layout_constraintHorizontal_bias="0.235"
+        app:layout_constraintVertical_bias="0.819" />
 
 </android.support.constraint.ConstraintLayout>

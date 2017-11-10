@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/backgroundgradient"
+
     tools:context="fiture.quiamco.com.homefiture.Exercises.workout2day3">
 
     <TextView
@@ -12,25 +14,25 @@
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-condensed"
         android:text="DAY 3 WEDNESDAY"
-        android:textColor="#4D4D4E"
+        android:textColor="@color/textColor"
         android:textSize="35sp"
         android:layout_marginRight="8dp"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginLeft="8dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="78dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintVertical_bias="0.349"
-        app:layout_constraintHorizontal_bias="0.08"
+        app:layout_constraintVertical_bias="0.137"
+        app:layout_constraintHorizontal_bias="0.505"
         android:layout_marginStart="12dp"
         android:layout_alignParentTop="true"
         android:layout_alignStart="@+id/textView12" />
 
     <TextView
         android:id="@+id/textView12"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="289dp"
+        android:layout_height="147dp"
         android:fontFamily="sans-serif-condensed"
         android:text="Workout 2
 
@@ -40,18 +42,19 @@ Reps: 8-12
 Rest: As needed
 
 "
-        android:textColor="#4D4D4E"
-        android:textSize="30sp"
+        android:textColor="@color/textColor"
+        android:textSize="20sp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginRight="8dp"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginLeft="8dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintHorizontal_bias="0.145"
-        app:layout_constraintVertical_bias="0.838"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintVertical_bias="0.324"
         android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp" />
 
     <Button
         android:id="@+id/button27"
@@ -59,7 +62,17 @@ Rest: As needed
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/textView11"
         android:layout_below="@+id/textView12"
-        android:text="Back" />
+        android:text="Back"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.246"
+        app:layout_constraintVertical_bias="0.648" />
 
     <Button
         android:id="@+id/button28"
@@ -68,7 +81,17 @@ Rest: As needed
         android:layout_alignEnd="@+id/textView11"
         android:layout_below="@+id/textView12"
         android:layout_marginEnd="11dp"
-        android:text="Next" />
+        android:text="Next"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintHorizontal_bias="0.742"
+        app:layout_constraintVertical_bias="0.648" />
 
 
-</RelativeLayout>
+</android.support.constraint.ConstraintLayout>

@@ -14,12 +14,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".SplashActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+    </activity>
+
 
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
@@ -58,14 +60,14 @@
         <activity android:name=".Exercises.Step_2" />
         <activity android:name=".Exercises.Step_3" />
         <activity android:name=".Exercises.Step_4" />
-        <activity android:name=".Exercises.GainDay_2.GStep_1" />
+        <activityp android:name=".Exercises.GainDay_2.GStep_1" />
         <activity android:name=".Leaderboard" />
         <activity android:name=".Pedometer.Pedometer_Main" />
         <activity android:name=".SignupActivity" />
         <activity android:name=".ResetPasswordActivity" />
         <activity android:name=".BaseOnBMI.Underweight.FoodPlan" />
         <activity android:name=".BaseOnBMI.Underweight.Breakfast" />
-        <activity android:name=".Exercises.LoseHeavy" />
+        <activity android:name=".Exercises.LoseHeavy"/>
         <activity android:name=".Exercises.LoseMoreHeavy" />
         <activity android:name=".Exercises.LoseMostHeavy" />
         <activity android:name=".Exercises.day1heavy" />

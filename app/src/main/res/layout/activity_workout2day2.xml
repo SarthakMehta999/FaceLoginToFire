@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -11,19 +11,20 @@
         android:layout_width="281dp"
         android:layout_height="217dp"
         android:background="@drawable/romanian"
-        android:layout_marginRight="50dp"
+        android:layout_marginRight="8dp"
         app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginLeft="8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.977"
-        app:layout_constraintVertical_bias="0.146"
+        app:layout_constraintVertical_bias="0.182"
         android:id="@+id/gifTextView"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="8dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="35dp" />
+        android:layout_marginStart="35dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintHorizontal_bias="0.31" />
 
     <TextView
         android:id="@+id/textView11"
@@ -38,17 +39,18 @@
         android:layout_marginLeft="8dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="11dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintVertical_bias="0.363"
-        app:layout_constraintHorizontal_bias="0.053"
+        app:layout_constraintVertical_bias="0.059"
+        app:layout_constraintHorizontal_bias="0.502"
         android:layout_below="@+id/textView12"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp" />
 
     <TextView
         android:id="@+id/textView12"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="298dp"
+        android:layout_height="133dp"
         android:fontFamily="sans-serif-condensed"
         android:text="Workout 2
 ROMANIAN DEADLIFT
@@ -57,28 +59,37 @@ Reps: 8-12
 Rest: As needed
 "
         android:textColor="@color/textColor"
-        android:textSize="25sp"
+        android:textSize="20sp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginRight="8dp"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginLeft="8dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintHorizontal_bias="0.077"
-        app:layout_constraintVertical_bias="0.78"
+        app:layout_constraintVertical_bias="0.677"
         android:layout_below="@+id/gifTextView"
-        android:layout_alignStart="@+id/gifTextView" />
+        android:layout_alignStart="@+id/gifTextView"
+        android:layout_alignEnd="@+id/gifTextView"
+        app:layout_constraintHorizontal_bias="0.685" />
 
     <Button
         android:id="@+id/button15"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Back"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="447dp"
         android:layout_below="@+id/textView11"
         android:layout_alignStart="@+id/textView12"
-        android:layout_marginStart="28dp" />
+        android:layout_marginStart="28dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintHorizontal_bias="0.239"
+        app:layout_constraintVertical_bias="0.833" />
 
     <Button
         android:id="@+id/button16"
@@ -87,6 +98,16 @@ Rest: As needed
         android:text="Next"
         android:layout_below="@+id/textView11"
         android:layout_alignEnd="@+id/gifTextView"
-        android:layout_marginEnd="21dp" />
+        android:layout_marginEnd="21dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.753"
+        app:layout_constraintVertical_bias="0.833" />
 
-</RelativeLayout>
+</android.support.constraint.ConstraintLayout>
