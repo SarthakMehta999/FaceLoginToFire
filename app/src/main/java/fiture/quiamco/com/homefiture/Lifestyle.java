@@ -1,9 +1,10 @@
 package fiture.quiamco.com.homefiture;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -25,7 +26,6 @@ public class Lifestyle extends AppCompatActivity {
     private RadioButton light,moderate,very,most,sometimes,never,gain,lose,maintain;
     private RadioGroup fitness,workout,goal;
     private User user;
-    private TextView textView,textView1,textView2;
 //    DatabaseReference databaseReference;
 
 
@@ -39,29 +39,38 @@ public class Lifestyle extends AppCompatActivity {
 //        databaseReference = FirebaseDatabase.getInstance().getReference("answers");
 
         Bundle bundle = getIntent().getExtras();
-        user = (User) bundle.getSerializable("user");
+//        user = (User) bundle.getSerializable("user");
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference("message");
 //        myRef.setValue("Hello, World!");
-        user = (User) getIntent().getExtras().getSerializable("user");
+//        user = (User) getIntent().getExtras().getSerializable("user");
+        SharedPreferences sharedPreferences = getSharedPreferences("FitureUser", Context.MODE_PRIVATE);
+        String fname = sharedPreferences.getString("userFname","");
+        String lname = sharedPreferences.getString("userLname","");
+        String bday= sharedPreferences.getString("birthday","");
+        String gender = sharedPreferences.getString("userGender","");
+        String email = sharedPreferences.getString("userEmail","");
+        String pic = sharedPreferences.getString("userPic","");
+        user = new User(fname,lname,bday,gender,email,pic);
 
-        Log.d("asdasda",user.getfName());
+
+//        Log.d("asdasda",user.getfName());
 //        mRootRef = new Firebase("https://fiture-dfae4.firebaseio.com/");
 
         TextView tv_hello = (TextView) findViewById(R.id.lifestlyeText);
         tv_hello.setTypeface(EasyFonts.robotoThin(this));
 
-        textView = (TextView) findViewById(R.id.textView3);
+        TextView textView = (TextView) findViewById(R.id.textView3);
         textView.setTypeface(EasyFonts.robotoThin(this));
-        textView1 = (TextView) findViewById(R.id.textView6);
+        TextView textView1 = (TextView) findViewById(R.id.textView6);
         textView1.setTypeface(EasyFonts.robotoThin(this));
-        textView2 = (TextView) findViewById(R.id.textView7);
+        TextView textView2 = (TextView) findViewById(R.id.textView7);
         textView2.setTypeface(EasyFonts.robotoThin(this));
         findViews();
 
     }
 
-        private void findViews() {
+    private void findViews() {
 
         fitness =(RadioGroup)findViewById(R.id.rgFitness);
         workout =(RadioGroup)findViewById(R.id.rgWorkout);
@@ -84,6 +93,10 @@ public class Lifestyle extends AppCompatActivity {
         proceed.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+//                String id = databaseReference.push().getKey();
+//                String value1 = light.getText().toString();
+//                String value2 = moderate.getText().toString();
+////                mRootRef.push().setValue(value1);
                 Intent proc = new Intent(Lifestyle.this,NavDrawer.class);
                 Bundle bundle = new Bundle();
                 bundle.putSerializable("user", user);

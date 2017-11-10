@@ -16,10 +16,10 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.rilixtech.materialfancybutton.MaterialFancyButton;
 
 import fiture.quiamco.com.homefiture.BaseOnBMI.Underweight.FoodPlan;
-import fiture.quiamco.com.homefiture.Category.Gain;
 import fiture.quiamco.com.homefiture.Exercises.LoseHeavy;
 import fiture.quiamco.com.homefiture.Exercises.LoseMoreHeavy;
 import fiture.quiamco.com.homefiture.Exercises.LoseMostHeavy;
+import fiture.quiamco.com.homefiture.Exercises.day1heavy;
 import fiture.quiamco.com.homefiture.models.User;
 
 public class BMI extends AppCompatActivity {
@@ -111,7 +111,7 @@ public class BMI extends AppCompatActivity {
                         weight.setError("Please Input Value");
                     } else {
 
-                        Intent pt = new Intent(BMI.this, Gain.class);
+                        Intent pt = new Intent(BMI.this, FoodPlan.class);
                         startActivity(pt);
                     }
                 }
@@ -121,7 +121,20 @@ public class BMI extends AppCompatActivity {
 
         } else if (Float.compare(bmi, 15f) > 0  &&  Float.compare(bmi, 16f) <= 0) {
             bmiLabel = getString(R.string.severely_underweight);
+            proceed.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
 
+                    if (height.getText().toString().trim().equals("") || weight.getText().toString().trim().equals("")) {
+                        height.setError("Please Input Value");
+                        weight.setError("Please Input Value");
+                    } else {
+
+                        Intent pt = new Intent(BMI.this, FoodPlan.class);
+                        startActivity(pt);
+                    }
+                }
+            });
             //Underweight
         } else if (Float.compare(bmi, 16f) > 0  &&  Float.compare(bmi, 18.5f) <= 0) {
             bmiLabel = getString(R.string.underweight);
@@ -160,7 +173,22 @@ public class BMI extends AppCompatActivity {
             //Overweight
         } else if (Float.compare(bmi, 25f) > 0  &&  Float.compare(bmi, 30f) <= 0) {
             bmiLabel = getString(R.string.overweight);
-          //Class 1
+            proceed.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    if (height.getText().toString().trim().equals("") || weight.getText().toString().trim().equals("")) {
+                        height.setError("Please Input Value");
+                        weight.setError("Please Input Value");
+                    } else {
+
+                        Intent pt = new Intent(BMI.this, day1heavy.class);
+                        startActivity(pt);
+                    }
+                }
+            });
+
+            //Class 1
         } else if (Float.compare(bmi, 30f) > 0  &&  Float.compare(bmi, 35f) <= 0) {
             bmiLabel = getString(R.string.obese_class_i);
             Toast.makeText(this, "Class 1 (low-risk) obesity, if BMI is 30.0 to 34.9", Toast.LENGTH_LONG).show();

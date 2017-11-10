@@ -66,16 +66,12 @@ public class FoodPlan extends AppCompatActivity {
             }
         });
 
-//        back.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent proc = new Intent(FoodPlan.this,NavDrawer.class);
-//                Bundle bundle = new Bundle();
-//                bundle.putSerializable("user", user);
-//                proc.putExtras(bundle);
-//                startActivity(proc);
-//            }
-//        });
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
 
     }
     @Override
