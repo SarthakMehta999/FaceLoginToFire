@@ -6,7 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
-import fiture.quiamco.com.homefiture.Exercises.LoseMoreHeavy;
+import fiture.quiamco.com.homefiture.Exercises.LoseHeavy;
 import fiture.quiamco.com.homefiture.Exercises.day1moreheavy2;
 import fiture.quiamco.com.homefiture.R;
 
@@ -33,7 +33,7 @@ public class day1moreheavy extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(day1moreheavy.this, LoseMoreHeavy.class);
+                Intent intent = new Intent(day1moreheavy.this, LoseHeavy.class);
                 startActivity(intent);
 
             }
