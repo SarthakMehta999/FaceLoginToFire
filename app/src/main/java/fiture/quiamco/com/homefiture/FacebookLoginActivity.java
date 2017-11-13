@@ -35,14 +35,11 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FacebookAuthProvider;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 import com.yasic.library.particletextview.View.ParticleTextView;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.lang.reflect.Modifier;
 import java.util.Arrays;
 
 import fiture.quiamco.com.homefiture.models.User;
@@ -179,7 +176,7 @@ public class FacebookLoginActivity extends AppCompatActivity {
 
 
 //        loginButton.setReadPermissions("email", "user_birthday","user_posts","user_photos","public_profile");
-        loginButton.setReadPermissions(Arrays.asList("email", "user_birthday", "user_posts", "user_photos", "public_profile"));
+        loginButton.setReadPermissions(Arrays.asList("email", "user_birthday", "user_posts", "user_photos", "public_profile","user_friends"));
         loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
             @Override
             public void onSuccess(LoginResult loginResult) {

@@ -13,7 +13,11 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.facebook.login.LoginManager;
 import com.facebook.share.widget.ShareDialog;
 
@@ -21,6 +25,7 @@ import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 
 import fiture.quiamco.com.homefiture.Pedometer.Pedometer_Main;
+import fiture.quiamco.com.homefiture.fragments.MainFragment;
 import fiture.quiamco.com.homefiture.fragments.ProfileFragment;
 import fiture.quiamco.com.homefiture.models.User;
 
@@ -29,7 +34,6 @@ public class NavDrawer extends AppCompatActivity
 
     private ShareDialog shareDialog;
     private String name, surname, imageUrl,day,genderOfUser,emailOfUser,userId;
-
     private String TAG = "MainActivity";
     private User user;
 
@@ -39,6 +43,7 @@ public class NavDrawer extends AppCompatActivity
         setContentView(R.layout.activity_nav_drawer);
 
         EventBus.getDefault().register(this);
+
 
 
         Bundle inBundle = getIntent().getExtras();
@@ -51,7 +56,14 @@ public class NavDrawer extends AppCompatActivity
         imageUrl = user.getImageUrl();
 //        userId = inBundle.getString("userID");
         Log.d("namessdfds",user.getfName() + " " + user.getlName());
-
+//        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+//        View hView =  navigationView.getHeaderView(0);
+//        ImageView imageView = (ImageView) hView.findViewById(R.id.imageView);
+//        Glide.with(NavDrawer.this).load(user.getImageUrl()).into(imageView);
+//        TextView nav_user = (TextView)hView.findViewById(R.id.nav_name);
+//        TextView email = (TextView)hView.findViewById(R.id.email);
+//        email.setText(user.getEmail());
+//        nav_user.setText(user.getfName() + " " + user.getlName());
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -66,6 +78,7 @@ public class NavDrawer extends AppCompatActivity
 //        });
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
@@ -73,7 +86,13 @@ public class NavDrawer extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-
+        View hView =  navigationView.getHeaderView(0);
+        ImageView imageView = (ImageView) hView.findViewById(R.id.imageView);
+        Glide.with(NavDrawer.this).load(user.getImageUrl()).into(imageView);
+        TextView nav_user = (TextView)hView.findViewById(R.id.nav_name);
+        TextView email = (TextView)hView.findViewById(R.id.email);
+        email.setText(user.getEmail());
+        nav_user.setText(user.getfName() + " " + user.getlName());
         fragment();
 
 
@@ -88,6 +107,18 @@ public class NavDrawer extends AppCompatActivity
                         .beginTransaction()
                         .setCustomAnimations(android.R.anim.fade_in, android.R.anim.fade_out)
                         .replace(R.id.content_frame, new ProfileFragment().newInstance(user))
+                        .commit();
+            }
+        }, 0);
+    }
+    public void fragmentA() {
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                getSupportFragmentManager()
+                        .beginTransaction()
+                        .setCustomAnimations(android.R.anim.fade_in, android.R.anim.fade_out)
+                        .replace(R.id.content_frame, new MainFragment().newInstance(user))
                         .commit();
             }
         }, 0);
@@ -141,14 +172,14 @@ public class NavDrawer extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
         if (id == R.id.leaderboard) {
-            Intent main = new Intent(NavDrawer.this, Leaderboard.class);
-            startActivity(main);
+            fragmentA();
 //            finish();
         } else if (id == R.id.pedometer) {
             Intent inte = new Intent(NavDrawer.this, Pedometer_Main.class);
             startActivity(inte);
 
-//        } else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.home) {
+            fragment();
 //
 //        } else if (id == R.id.nav_manage) {
 //

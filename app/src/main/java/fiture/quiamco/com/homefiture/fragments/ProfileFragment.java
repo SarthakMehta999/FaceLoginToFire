@@ -43,6 +43,7 @@ public class ProfileFragment extends Fragment{
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
+
         user = (User) getArguments().getSerializable("user");
         rootView = inflater.inflate(R.layout.profile_fragment,container,false);
 
