@@ -18,7 +18,7 @@ public class day1moreheavy extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_day1moreheavy);
-        next=(Button)findViewById (R.id.button12);
+       // next=(Button)findViewById (R.id.button12);
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -28,7 +28,7 @@ public class day1moreheavy extends AppCompatActivity {
 
             }
         });
-        back=(Button)findViewById(R.id.button9);
+     //   back=(Button)findViewById(R.id.button9);
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

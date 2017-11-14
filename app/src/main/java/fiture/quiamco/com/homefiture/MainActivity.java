@@ -3,6 +3,7 @@ package fiture.quiamco.com.homefiture;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
@@ -32,6 +33,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private String TAG = "MainActivity";
 
+    private RecyclerView recyclerViewDailyChallenge;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,6 +50,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         imageUrl = inBundle.getString("imageUrl");
         userId = inBundle.getString("userID");
 
+        recyclerViewDailyChallenge = (RecyclerView) findViewById(R.id.dailyChallenge);
 
 
         TextView nameView = (TextView) findViewById(R.id.nameAndSurname);
