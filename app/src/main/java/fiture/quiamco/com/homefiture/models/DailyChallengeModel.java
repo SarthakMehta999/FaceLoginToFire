@@ -5,17 +5,17 @@ package fiture.quiamco.com.homefiture.models;
  */
 
 public class DailyChallengeModel {
-    private String dailyExerciseImage;
+    private Integer dailyExerciseImage;
     private String exerciseName;
 
     public DailyChallengeModel() {
     }
 
-    public String getDailyExerciseImage() {
+    public Integer getDailyExerciseImage() {
         return dailyExerciseImage;
     }
 
-    public void setDailyExerciseImage(String dailyExerciseImage) {
+    public void setDailyExerciseImage(Integer dailyExerciseImage) {
         this.dailyExerciseImage = dailyExerciseImage;
     }
 

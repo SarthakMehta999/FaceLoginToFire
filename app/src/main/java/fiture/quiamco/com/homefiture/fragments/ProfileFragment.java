@@ -4,6 +4,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,8 +23,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import de.hdodenhof.circleimageview.CircleImageView;
+import fiture.quiamco.com.homefiture.Adapter.DailyChallengeAdapter;
 import fiture.quiamco.com.homefiture.BMI;
 import fiture.quiamco.com.homefiture.R;
+import fiture.quiamco.com.homefiture.models.DailyChallengeModel;
 import fiture.quiamco.com.homefiture.models.User;
 
 /**
@@ -38,6 +43,34 @@ public class ProfileFragment extends Fragment{
     private MaterialFancyButton share, logout,start;
     private View rootView;
     private User user;
+
+    private RecyclerView recyclerViewDailyChallenge;
+    private ArrayList<DailyChallengeModel> dailyChallengeModels;
+    private DailyChallengeAdapter dailyChallengeAdapter;
+
+//    private String[] pics = {
+//            String.valueOf(R.drawable.nocheck1),
+//            String.valueOf(R.drawable.nocheck2),
+//            String.valueOf(R.drawable.nocheck3),
+//            String.valueOf(R.drawable.nocheck4),
+//            String.valueOf(R.drawable.nocheck5),
+//            String.valueOf(R.drawable.nocheck6)
+//    };
+
+    private int pics[] = {
+            R.drawable.nocheck1,
+            R.drawable.nocheck2,
+            R.drawable.nocheck3,
+            R.drawable.nocheck4,
+            R.drawable.nocheck5,
+            R.drawable.nocheck6,
+            R.drawable.withlock1,
+            R.drawable.withlock2,
+            R.drawable.withlock3,
+            R.drawable.withlock4,
+            R.drawable.withlock5,
+            R.drawable.withlock6
+    };
 
     @Nullable
     @Override
@@ -70,7 +103,10 @@ public class ProfileFragment extends Fragment{
 //        Weight = (TextView) rootView.findViewById(R.id.tvWeight);
 //        Height = (TextView) rootView.findViewById(R.id.tvHeight);
         Bmi = (TextView) rootView.findViewById(R.id.tvBMI);
-
+        recyclerViewDailyChallenge = (RecyclerView) rootView.findViewById(R.id.dailyChallenge);
+        dailyChallengeModels = new ArrayList<>();
+        recyclerViewDailyChallenge.setLayoutManager(new LinearLayoutManager(getContext(),LinearLayoutManager.HORIZONTAL,false));
+        setDailyChallenge();
         share = (MaterialFancyButton) rootView.findViewById(R.id.share);
 //        logout = (MaterialFancyButton) rootView.findViewById(R.id.logout);
         start = (MaterialFancyButton) rootView.findViewById(R.id.startActivity);
@@ -96,6 +132,16 @@ public class ProfileFragment extends Fragment{
         });
     }
 
+    private void setDailyChallenge(){
+        for (int i = 0; i < pics.length; i++) {
+            DailyChallengeModel dailyChallengeModel = new DailyChallengeModel();
+            dailyChallengeModel.setDailyExerciseImage(pics[i]);
+            dailyChallengeModels.add(dailyChallengeModel);
+        }
+        Log.d("sampleAs",pics.length+"");
+        dailyChallengeAdapter = new DailyChallengeAdapter(getContext(),dailyChallengeModels);
+        recyclerViewDailyChallenge.setAdapter(dailyChallengeAdapter);
+    }
 
     public static ProfileFragment newInstance(User user) {
         Bundle args = new Bundle();
