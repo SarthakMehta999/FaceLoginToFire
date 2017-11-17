@@ -6,8 +6,9 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
 
-    <provider android:authorities="com.facebook.app.FacebookContentProvider1234"
+    <provider
         android:name="com.facebook.FacebookContentProvider"
+        android:authorities="com.facebook.app.FacebookContentProvider1234"
         android:exported="true" />
 
     <application
@@ -107,7 +108,12 @@
         <activity android:name=".Exercises.MostHeavyAddingWeight0" />
         <activity android:name=".Exercises.Day2Step1_1" />
         <activity android:name=".Exercises.day2Step2_2" />
-        <activity android:name=".Gamification.GameRequest"></activity>
+        <activity android:name=".Gamification.GameRequest" />
+        <activity android:name=".Exercises.exercise1mostheavy" />
+        <activity android:name=".Exercises.exercise2mostheavy" />
+        <activity android:name=".Exercises.exercise3mostheavy" />
+        <activity android:name=".Exercises.exercise4mostheavy" />
+        <activity android:name=".Exercises.exercise5mostheavy"></activity>
     </application>
 
 </manifest>

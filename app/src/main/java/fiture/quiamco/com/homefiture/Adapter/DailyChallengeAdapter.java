@@ -20,6 +20,11 @@ import fiture.quiamco.com.homefiture.Exercises.Workout4day2;
 import fiture.quiamco.com.homefiture.Exercises.Workout5day2;
 import fiture.quiamco.com.homefiture.Exercises.Workout6day2;
 import fiture.quiamco.com.homefiture.Exercises.day1heavy;
+import fiture.quiamco.com.homefiture.Exercises.exercise1mostheavy;
+import fiture.quiamco.com.homefiture.Exercises.exercise2mostheavy;
+import fiture.quiamco.com.homefiture.Exercises.exercise3mostheavy;
+import fiture.quiamco.com.homefiture.Exercises.exercise4mostheavy;
+import fiture.quiamco.com.homefiture.Exercises.exercise5mostheavy;
 import fiture.quiamco.com.homefiture.Exercises.workout1day2;
 import fiture.quiamco.com.homefiture.R;
 import fiture.quiamco.com.homefiture.models.DailyChallengeModel;
@@ -57,31 +62,31 @@ public class DailyChallengeAdapter extends RecyclerView.Adapter<RecyclerView.Vie
                 @Override
                 public void onClick(View v) {
                     if(position==0){
-                        Intent pt = new Intent(context, workout1day2.class);
+                        Intent pt = new Intent(context, exercise1mostheavy.class);
                         Bundle bundle = new Bundle();
                         bundle.putSerializable("user",user);
                         pt.putExtras(bundle);
                         context.startActivity(pt);
                     }else if(position==1){
-                        Intent pt = new Intent(context, Workout2day2.class);
+                        Intent pt = new Intent(context, exercise2mostheavy.class);
                         Bundle bundle = new Bundle();
                         bundle.putSerializable("user",user);
                         pt.putExtras(bundle);
                         context.startActivity(pt);
                     }else if(position == 2){
-                        Intent pt = new Intent(context, Workout3day2.class);
+                        Intent pt = new Intent(context, exercise3mostheavy.class);
                         Bundle bundle = new Bundle();
                         bundle.putSerializable("user",user);
                         pt.putExtras(bundle);
                         context.startActivity(pt);
                     }else if(position == 3){
-                        Intent pt = new Intent(context, Workout4day2.class);
+                        Intent pt = new Intent(context, exercise4mostheavy.class);
                         Bundle bundle = new Bundle();
                         bundle.putSerializable("user",user);
                         pt.putExtras(bundle);
                         context.startActivity(pt);
                     }else if(position == 4){
-                        Intent pt = new Intent(context, Workout5day2.class);
+                        Intent pt = new Intent(context, exercise5mostheavy.class);
                         Bundle bundle = new Bundle();
                         bundle.putSerializable("user",user);
                         pt.putExtras(bundle);
