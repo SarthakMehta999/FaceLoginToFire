@@ -74,7 +74,7 @@ Rest: As needed
         android:id="@+id/button24"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Next"
+        android:text="FINISH"
         android:layout_below="@+id/textView11"
         android:layout_centerHorizontal="true"
         app:layout_constraintBottom_toBottomOf="parent"

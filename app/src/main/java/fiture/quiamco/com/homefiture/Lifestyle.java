@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -51,7 +52,9 @@ public class Lifestyle extends AppCompatActivity {
         String gender = sharedPreferences.getString("userGender","");
         String email = sharedPreferences.getString("userEmail","");
         String pic = sharedPreferences.getString("userPic","");
-        user = new User(fname,lname,bday,gender,email,pic);
+        String points = sharedPreferences.getString("samplePoint","");
+        Log.d("atayakayawa",points+"shit");
+        user = new User(fname,lname,bday,gender,email,pic,points);
 
 
 //        Log.d("asdasda",user.getfName());

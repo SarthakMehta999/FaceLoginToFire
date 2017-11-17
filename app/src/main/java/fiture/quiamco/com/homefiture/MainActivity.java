@@ -3,6 +3,7 @@ package fiture.quiamco.com.homefiture;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
@@ -23,6 +24,9 @@ import com.vstechlab.easyfonts.EasyFonts;
 import java.util.ArrayList;
 import java.util.List;
 
+import fiture.quiamco.com.homefiture.Adapter.DailyChallengeAdapter;
+import fiture.quiamco.com.homefiture.models.DailyChallengeModel;
+
 import static fiture.quiamco.com.homefiture.R.id.profileImage;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -34,11 +38,24 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private String TAG = "MainActivity";
 
     private RecyclerView recyclerViewDailyChallenge;
+    private ArrayList<DailyChallengeModel> dailyChallengeModels;
+    private DailyChallengeAdapter dailyChallengeAdapter;
+
+    private String[] pics = {
+            String.valueOf(R.drawable.nocheck1),
+            String.valueOf(R.drawable.nocheck2),
+            String.valueOf(R.drawable.nocheck3),
+            String.valueOf(R.drawable.nocheck4),
+            String.valueOf(R.drawable.nocheck5),
+            String.valueOf(R.drawable.nocheck6)
+    };
+    private LinearLayoutManager layoutManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.profile_fragment);
+        Log.d("sampleAs","heyyyy");
 
 
         Bundle inBundle = getIntent().getExtras();
@@ -51,8 +68,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         userId = inBundle.getString("userID");
 
         recyclerViewDailyChallenge = (RecyclerView) findViewById(R.id.dailyChallenge);
-
-
+        dailyChallengeModels = new ArrayList<>();
+        recyclerViewDailyChallenge.setLayoutManager(new LinearLayoutManager(getApplicationContext(),LinearLayoutManager.HORIZONTAL,false));
+//        setDailyChallenge();
         TextView nameView = (TextView) findViewById(R.id.nameAndSurname);
         ImageView profileImageUs = (ImageView) findViewById(profileImage);
         TextView bday = (TextView) findViewById(R.id.tvBirthday);
@@ -132,6 +150,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         startActivity(login);
         finish();
     }
+
+//    private void setDailyChallenge(){
+//        for (int i = 0; i < pics.length; i++) {
+//            DailyChallengeModel dailyChallengeModel = new DailyChallengeModel();
+//            dailyChallengeModel.setDailyExerciseImage(pics[i]);
+//            dailyChallengeModels.add(dailyChallengeModel);
+//        }
+//        Log.d("sampleAs",pics.length+"");
+//        dailyChallengeAdapter = new DailyChallengeAdapter(this,dailyChallengeModels);
+//        recyclerViewDailyChallenge.setAdapter(dailyChallengeAdapter);
+//    }
 
 
 }

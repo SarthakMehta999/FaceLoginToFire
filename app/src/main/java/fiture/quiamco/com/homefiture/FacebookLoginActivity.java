@@ -35,6 +35,11 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FacebookAuthProvider;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.yasic.library.particletextview.View.ParticleTextView;
 
 import org.json.JSONException;
@@ -66,6 +71,8 @@ public class FacebookLoginActivity extends AppCompatActivity {
     private String userName;
     private TextView appName;
     private String TAG = "FacebookLoginActivity";
+    private FirebaseDatabase database;
+    private DatabaseReference userRef;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,11 +80,12 @@ public class FacebookLoginActivity extends AppCompatActivity {
        requestWindowFeature(Window.FEATURE_NO_TITLE);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         auth = FirebaseAuth.getInstance();
-
+        database = FirebaseDatabase.getInstance();
+        userRef = database.getReference("UserFiture");
+        final String id = userRef.push().getKey();
         if (auth.getCurrentUser() != null) {
             Intent startNew = new Intent(FacebookLoginActivity.this,Lifestyle.class);
             startActivity(startNew);
-
         }
         setContentView(R.layout.activity_facebook_login);
 
@@ -179,7 +187,7 @@ public class FacebookLoginActivity extends AppCompatActivity {
         loginButton.setReadPermissions(Arrays.asList("email", "user_birthday", "user_posts", "user_photos", "public_profile","user_friends"));
         loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
             @Override
-            public void onSuccess(LoginResult loginResult) {
+            public void onSuccess(final LoginResult loginResult) {
                 handleFacebookAccessToken(loginResult.getAccessToken());
                 GraphRequest request = GraphRequest.newMeRequest(loginResult.getAccessToken(), new GraphRequest.GraphJSONObjectCallback() {
                     @Override
@@ -209,7 +217,7 @@ public class FacebookLoginActivity extends AppCompatActivity {
                             if(email == null){
                                 email="none";
                             }
-                            User user = new User(
+                            final User user = new User(
 //                                    firstName,
 //                                    lastName,
 //                                    birthday,
@@ -223,11 +231,16 @@ public class FacebookLoginActivity extends AppCompatActivity {
                             user.setGender(gender);
                             user.setEmail(email);
                             user.setImageUrl(profilePicture);
+                            user.setUserPoints("0");
                             SharedPreferences sharedPreferences = getSharedPreferences("FitureUser", Context.MODE_PRIVATE);
-                            SharedPreferences.Editor editor = sharedPreferences.edit();
+                            final SharedPreferences.Editor editor = sharedPreferences.edit();
                             editor.putString("userFname",firstName);
                             editor.putString("userLname",lastName);
                             editor.putString("userBday",birthday);
+                            editor.putString("samplePoint","0");
+
+                            Log.d("sampleAsesd", userName);
+                            editor.putString("userKey",userName);
                             editor.putString("userGender",gender);
                             editor.putString("userEmail",email);
                             editor.putString("userPic",profilePicture);
@@ -322,6 +335,7 @@ public class FacebookLoginActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, responseCode, intent);
         callbackManager.onActivityResult(requestCode, responseCode, intent);
     }
+
 
 
 }

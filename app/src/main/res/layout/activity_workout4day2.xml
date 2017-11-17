@@ -94,7 +94,7 @@ Rest: As needed
         android:id="@+id/button20"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Next"
+        android:text="FINISH"
         android:layout_alignBaseline="@+id/button19"
         android:layout_alignBottom="@+id/button19"
         android:layout_alignEnd="@+id/textView11"

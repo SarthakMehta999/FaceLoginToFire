@@ -19,7 +19,6 @@ private Button Next,Back;
         Next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 Intent intent = new Intent(day1heavy.this, day2heavy.class);
                 startActivity(intent);
                 finish();

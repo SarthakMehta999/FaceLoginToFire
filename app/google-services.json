@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "732230474751-4nkjs0bbl0i8is6bjitpaiq7lkl6g7tf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "fiture.quiamco.com.homefiture",
+            "certificate_hash": "09d50614467b678126db0261920578d70b28a59c"
+          }
+        },
+        {
           "client_id": "732230474751-hfpnigfuv72mihl3ar52klqc4sj4h0mt.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {

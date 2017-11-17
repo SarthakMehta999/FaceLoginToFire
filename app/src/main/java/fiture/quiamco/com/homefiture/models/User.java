@@ -26,18 +26,19 @@ public class User implements Serializable {
     private EditText height;
     private EditText weight;
     private TextView result;
-
+    private String userPoints;
 
     public User() {
     }
 
-    public User(String fName, String lName, String birthDate, String gender, String email, String imageUrl) {
+    public User(String fName, String lName, String birthDate, String gender, String email, String imageUrl, String userPoints) {
         this.fName = fName;
         this.lName = lName;
         this.birthDate = birthDate;
         this.gender = gender;
         this.email = email;
         this.imageUrl = imageUrl;
+        this.userPoints = userPoints;
 
     }
     public User(TextView result) {
@@ -46,6 +47,15 @@ public class User implements Serializable {
         this.result = result;
     }
 
+
+
+    public String getUserPoints() {
+        return userPoints;
+    }
+
+    public void setUserPoints(String userPoints) {
+        this.userPoints = userPoints;
+    }
 
     public String getfName() {
         return fName;

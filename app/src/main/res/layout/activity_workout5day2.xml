@@ -94,7 +94,7 @@ Rest: As needed
         android:id="@+id/button22"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Next"
+        android:text="FINISH"
         android:layout_marginEnd="46dp"
         android:layout_below="@+id/textView11"
         android:layout_alignEnd="@+id/gifTextView"
