@@ -114,6 +114,8 @@
         <activity android:name=".Exercises.exercise3mostheavy" />
         <activity android:name=".Exercises.exercise4mostheavy" />
         <activity android:name=".Exercises.exercise5mostheavy"></activity>
+=======
+>>>>>>> origin/master
     </application>
 
 </manifest>

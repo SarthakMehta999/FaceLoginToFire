@@ -76,6 +76,7 @@ public class MainFragment extends Fragment {
     }
 
 
+
 //    private void logout(){
 //        LoginManager.getInstance().logOut();
 //        Intent login = new Intent(getActivity(), FacebookLoginActivity.class);

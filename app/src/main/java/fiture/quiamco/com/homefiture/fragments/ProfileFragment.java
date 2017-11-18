@@ -177,7 +177,7 @@ public class ProfileFragment extends Fragment{
     }
 
 
-        private void setDailyChallenges(){
+    private void setDailyChallenges(){
         for (int i = 0; i < pics.length; i++) {
             DailyChallengeModel dailyChallengeModel = new DailyChallengeModel();
             dailyChallengeModel.setDailyExerciseImage(pics[i]);

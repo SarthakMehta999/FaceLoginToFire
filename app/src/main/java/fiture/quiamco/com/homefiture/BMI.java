@@ -11,8 +11,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.firebase.client.Firebase;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 import com.rilixtech.materialfancybutton.MaterialFancyButton;
 
 import fiture.quiamco.com.homefiture.BaseOnBMI.Underweight.FoodPlan;
@@ -30,8 +28,8 @@ public class BMI extends AppCompatActivity {
     private User user;
     private Firebase mRootRef;
 
-    FirebaseDatabase database = FirebaseDatabase.getInstance();
-    DatabaseReference myRef = database.getReference("BMI");
+//    FirebaseDatabase database = FirebaseDatabase.getInstance();
+//    DatabaseReference myRef = database.getReference("BMI");
 
 
 //    DatabaseReference databaseReference;
@@ -91,8 +89,8 @@ public class BMI extends AppCompatActivity {
             float bmi = weightValue / (heightValue * heightValue);
 
             displayBMI(bmi);
-            String id = myRef.push().getKey();
-            myRef.child(id).setValue("height:"+heightStr+"cm"+" "+"weight:"+weightStr+"Kg");
+//            String id = myRef.push().getKey();
+//            myRef.child(id).setValue("height:"+heightStr+"cm"+" "+"weight:"+weightStr+"Kg");
         }
     }
 

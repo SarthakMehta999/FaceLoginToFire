@@ -67,6 +67,7 @@ public class NavDrawer extends AppCompatActivity
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        toolbar.getBackground().setAlpha(0);
 
 //        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
 //        fab.setOnClickListener(new View.OnClickListener() {
@@ -172,7 +173,10 @@ public class NavDrawer extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
         if (id == R.id.leaderboard) {
-            fragmentA();
+//            Intent inte = new Intent(NavDrawer.this, P.class);
+//            startActivity(inte);
+            fragment();
+
 //            finish();
         } else if (id == R.id.pedometer) {
             Intent inte = new Intent(NavDrawer.this, Pedometer_Main.class);
