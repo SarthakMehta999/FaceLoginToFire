@@ -19,7 +19,6 @@ import com.bumptech.glide.Glide;
 import com.facebook.share.model.ShareHashtag;
 import com.facebook.share.model.ShareLinkContent;
 import com.facebook.share.widget.ShareDialog;
-import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -101,7 +100,7 @@ public class ProfileFragment extends Fragment {
             R.drawable.ex5withcheck
     };
     private FirebaseDatabase database;
-    private DatabaseReference myRef, userRef;
+    private DatabaseReference myRef, userRef,alterUserData;
     private SharedPreferences sharedPreferences;
     private String id;
     private int j = 0;
@@ -116,6 +115,7 @@ public class ProfileFragment extends Fragment {
         database = FirebaseDatabase.getInstance();
         myRef = database.getReference("dailyChallenge");
         userRef = database.getReference("UserFiture");
+        alterUserData = database.getReference("User Data");
         sharedPreferences = getContext().getSharedPreferences("FitureUser", Context.MODE_PRIVATE);
         id = sharedPreferences.getString("userKey", "");
         userRef.child(id).setValue(user);
@@ -132,6 +132,23 @@ public class ProfileFragment extends Fragment {
 //        Weight.getText(user.getWeight().toString());
 //        Height.setText(user.getHeight().toString());
         Bmi.setText((CharSequence) user.getResult());
+        alterUserData.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                if (dataSnapshot.child(user.getfName()).exists()) {
+                    Log.d("Child exists", user.getlName());
+                } else {
+//                    alterUserData.child("Image").setValue(user.getImageUrl());
+                    alterUserData.child(user.getfName()).setValue("Name: " + user.getfName()+" " + user.getlName() +
+                            System.getProperty("line.separator")+ "Gender: "+ user.getGender() + " " + "Points: " + user.getUserPoints() );
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
         return rootView;
 
     }
