@@ -36,7 +36,7 @@ public class Workout6day2 extends AppCompatActivity {
         setContentView(R.layout.activity_workout6day2);
         sharedPreferences = getApplicationContext().getSharedPreferences("FitureUser", Context.MODE_PRIVATE);
         id = sharedPreferences.getString("userKey", "");
-        Next=(Button)findViewById (R.id.button24);
+        Next=(Button)findViewById (R.id.btnFinish);
         database = FirebaseDatabase.getInstance();
         myRef = database.getReference("dailyChallenge");
         userRef =database.getReference("UserFiture");

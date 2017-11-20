@@ -41,7 +41,7 @@ public class Workout3day2 extends AppCompatActivity {
         userRef = database.getReference("UserFiture");
         Bundle inBundle = getIntent().getExtras();
         user = (User) inBundle.getSerializable("user");
-        Next=(Button)findViewById (R.id.button18);
+        Next=(Button)findViewById (R.id.btnFinish);
         Next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -128,7 +128,7 @@ public class Workout3day2 extends AppCompatActivity {
 //                finish();
             }
         });
-        Back=(Button)findViewById(R.id.button17);
+        Back=(Button)findViewById(R.id.btnInstruction);
         Back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

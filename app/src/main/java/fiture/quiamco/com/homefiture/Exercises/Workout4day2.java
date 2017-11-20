@@ -36,7 +36,7 @@ public class Workout4day2 extends AppCompatActivity {
         setContentView(R.layout.activity_workout4day2);
         sharedPreferences = getApplicationContext().getSharedPreferences("FitureUser", Context.MODE_PRIVATE);
         id = sharedPreferences.getString("userKey", "");
-        Next=(Button)findViewById (R.id.button20);
+        Next=(Button)findViewById (R.id.btnFinish);
         database = FirebaseDatabase.getInstance();
         myRef = database.getReference("dailyChallenge");
         userRef = database.getReference("UserFiture");
@@ -128,7 +128,7 @@ public class Workout4day2 extends AppCompatActivity {
 //                finish();
             }
         });
-        Back=(Button)findViewById(R.id.button19);
+        Back=(Button)findViewById(R.id.btnInstruction);
         Back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

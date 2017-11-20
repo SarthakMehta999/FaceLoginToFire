@@ -42,7 +42,7 @@ public class Workout2day2 extends AppCompatActivity {
         id = sharedPreferences.getString("userKey", "");
         Bundle inBundle = getIntent().getExtras();
         user = (User) inBundle.getSerializable("user");
-        Next=(Button)findViewById (R.id.button16);
+        Next=(Button)findViewById (R.id.btnFinish);
         Next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -131,7 +131,7 @@ public class Workout2day2 extends AppCompatActivity {
 //                finish();
             }
         });
-        Back=(Button)findViewById(R.id.button15);
+        Back=(Button)findViewById(R.id.btnInstruction);
         Back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
