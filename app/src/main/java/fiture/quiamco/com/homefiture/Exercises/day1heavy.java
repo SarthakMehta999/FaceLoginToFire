@@ -23,7 +23,6 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.rilixtech.materialfancybutton.MaterialFancyButton;
 
-import fiture.quiamco.com.homefiture.Exercises.Underweight.day2heavy;
 import fiture.quiamco.com.homefiture.NavDrawer;
 import fiture.quiamco.com.homefiture.R;
 import fiture.quiamco.com.homefiture.models.User;
@@ -230,8 +229,8 @@ public class day1heavy extends AppCompatActivity {
 
                     }
                 });
-//                Intent step = new Intent(exercise1mostheavy.this, exercise2mostheavy.class);
-//                startActivity(step);
+               Intent step = new Intent(day1heavy.this, exercise2mostheavy.class);
+              startActivity(step);
 
             }
         });

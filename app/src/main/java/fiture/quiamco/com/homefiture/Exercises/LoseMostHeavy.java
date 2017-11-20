@@ -24,7 +24,7 @@ public class LoseMostHeavy extends AppCompatActivity {
         card.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent fast = new Intent(LoseMostHeavy.this,day1mostheavy.class);
+                Intent fast = new Intent(LoseMostHeavy.this,exercise1mostheavy.class);
                 startActivity(fast);
 
             }
@@ -32,7 +32,7 @@ public class LoseMostHeavy extends AppCompatActivity {
         card2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent fast = new Intent(LoseMostHeavy.this,workout2day2mostheavy.class);
+                Intent fast = new Intent(LoseMostHeavy.this,exercise1mostheavyd2.class);
                 startActivity(fast);
 
             }
@@ -40,19 +40,12 @@ public class LoseMostHeavy extends AppCompatActivity {
         card3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent fast = new Intent(LoseMostHeavy.this,workout3daymostheavy.class);
+                Intent fast = new Intent(LoseMostHeavy.this,exercise1mostheavyd3.class);
                 startActivity(fast);
-
             }
         });
-        card4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent fast = new Intent(LoseMostHeavy.this,workout4day1mostheavy.class);
-                startActivity(fast);
 
-            }
-        });
+
 
     }
 }

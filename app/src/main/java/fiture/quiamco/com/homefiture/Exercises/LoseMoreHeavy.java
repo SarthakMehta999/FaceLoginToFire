@@ -19,11 +19,11 @@ public class LoseMoreHeavy extends AppCompatActivity {
         setContentView(R.layout.activity_lose_more_heavy);
         card = (CardView)  findViewById(R.id.card1);
         card2 = (CardView)  findViewById(R.id.card2);
-        card3 = (CardView)  findViewById(R.id.card13);
+        card3 = (CardView)  findViewById(R.id.card3);
         card.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent fast = new Intent(LoseMoreHeavy.this,day2moreheavy.class);
+                Intent fast = new Intent(LoseMoreHeavy.this,day1moreheavy.class);
                 startActivity(fast);
 
             }
@@ -31,7 +31,7 @@ public class LoseMoreHeavy extends AppCompatActivity {
         card2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent fast = new Intent(LoseMoreHeavy.this,workout1day2.class);
+                Intent fast = new Intent(LoseMoreHeavy.this,day2moreheavy.class);
                 startActivity(fast);
 
             }
@@ -39,11 +39,11 @@ public class LoseMoreHeavy extends AppCompatActivity {
         card3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent fast = new Intent(LoseMoreHeavy.this,day1moreheavy.class);
+                Intent fast = new Intent(LoseMoreHeavy.this,day1heavy.class);
                 startActivity(fast);
 
             }
-    });
+        });
     }
 
     @Override

@@ -17,6 +17,7 @@ public class LoseHeavy extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lose_heavy);
 
+
         card = (CardView)  findViewById(R.id.card1);
         card2 = (CardView)  findViewById(R.id.card2);
         card3 = (CardView)  findViewById(R.id.card3);
@@ -45,5 +46,6 @@ public class LoseHeavy extends AppCompatActivity {
             }
         });
 
-                }
+    }
 }
+

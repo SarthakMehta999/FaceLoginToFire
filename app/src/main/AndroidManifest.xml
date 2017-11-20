@@ -113,9 +113,21 @@
         <activity android:name=".Exercises.exercise2mostheavy" />
         <activity android:name=".Exercises.exercise3mostheavy" />
         <activity android:name=".Exercises.exercise4mostheavy" />
-        <activity android:name=".Exercises.exercise5mostheavy"></activity>
-=======
->>>>>>> origin/master
+        <activity android:name=".Exercises.exercise5mostheavy" />
+        =======
+        >>>>>>> origin/master
+        <activity android:name=".Exercises.exercise1mostheavyd2" />
+        <activity android:name=".Exercises.exercise2mostheavyd2" />
+        <activity android:name=".Exercises.exercise3mostheavyd2" />
+        <activity android:name=".Exercises.exercise4mostheavyd2" />
+        <activity android:name=".Exercises.exercise5mostheavyd2" />
+        <activity android:name=".Exercises.exercise6mostheavyd2" />
+        <activity android:name=".Exercises.exercise1mostheavyd3" />
+        <activity android:name=".Exercises.exercise2mostheavyd3" />
+        <activity android:name=".Exercises.exercise3mostheavyd3" />
+        <activity android:name=".Exercises.exercise4mostheavyd3" />
+        <activity android:name=".Exercises.exercise5mostheavyd3" />
+        <activity android:name=".Exercises.exercise6mostheavyd3"></activity>
     </application>
 
 </manifest>
