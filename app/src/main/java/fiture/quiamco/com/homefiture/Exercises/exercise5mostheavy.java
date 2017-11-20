@@ -150,6 +150,7 @@ public class exercise5mostheavy extends AppCompatActivity {
                                     if(dataSnapshot.hasChild("4")){
                                         Log.d("idOy","naaJOD");
                                         final DatabaseReference ref0 = dataSnapshot.getRef().child("4");
+                                        final DatabaseReference ref1 = dataSnapshot.getRef().child("6");
                                         ref0.addListenerForSingleValueEvent(new ValueEventListener() {
                                             @Override
                                             public void onDataChange(DataSnapshot dataSnapshot) {

@@ -41,19 +41,19 @@ import fiture.quiamco.com.homefiture.models.User;
  * Created by User on 02/09/2017.
  */
 
-public class ProfileFragment extends Fragment{
+public class ProfileFragment extends Fragment {
 
     private ShareDialog shareDialog;
     private String TAG = "ProfileFragment";
     private CircleImageView profileImage;
-    private TextView nameAndSurname, tvEmail, tvGender, tvBirthday,Bmi;
-    private EditText Weight,Height;
-    private MaterialFancyButton share, logout,start;
+    private TextView nameAndSurname, tvEmail, tvGender, tvBirthday, Bmi;
+    private EditText Weight, Height;
+    private MaterialFancyButton share, logout, start;
     private View rootView;
     private User user;
 
     private RecyclerView recyclerViewDailyChallenge;
-    private ArrayList<DailyChallengeModel> dailyChallengeModels,dcmss;
+    private ArrayList<DailyChallengeModel> dailyChallengeModels, dcmss;
     private DailyChallengeAdapter dailyChallengeAdapter;
 
 //    private String[] pics = {
@@ -79,18 +79,32 @@ public class ProfileFragment extends Fragment{
             R.drawable.ex5withlock
     };
 
+    private int picswithoutcheck[] = {
+            R.drawable.ex5withoutcheck,
+            R.drawable.ex2withoutcheck,
+            R.drawable.ex3withoutcheck,
+            R.drawable.ex4withoutcheck,
+            R.drawable.ex1withoutcheck
+    };
+
     private int picsWithCheck[] = {
             R.drawable.withcheck1,
             R.drawable.withcheck2,
             R.drawable.withcheck3,
             R.drawable.withcheck4,
             R.drawable.withcheck5,
-            R.drawable.withcheck6
+            R.drawable.withcheck6,
+            R.drawable.ex1,
+            R.drawable.ex2withcheck,
+            R.drawable.ex3withcheck,
+            R.drawable.ex4withcheck,
+            R.drawable.ex5withcheck
     };
     private FirebaseDatabase database;
-    private DatabaseReference myRef,userRef;
+    private DatabaseReference myRef, userRef;
     private SharedPreferences sharedPreferences;
     private String id;
+    private int j = 0;
 
     @Nullable
     @Override
@@ -98,14 +112,14 @@ public class ProfileFragment extends Fragment{
 
 
         user = (User) getArguments().getSerializable("user");
-        rootView = inflater.inflate(R.layout.profile_fragment,container,false);
+        rootView = inflater.inflate(R.layout.profile_fragment, container, false);
         database = FirebaseDatabase.getInstance();
         myRef = database.getReference("dailyChallenge");
         userRef = database.getReference("UserFiture");
         sharedPreferences = getContext().getSharedPreferences("FitureUser", Context.MODE_PRIVATE);
-        id = sharedPreferences.getString("userKey","");
+        id = sharedPreferences.getString("userKey", "");
         userRef.child(id).setValue(user);
-        Log.d("sampleAsesd",id);
+        Log.d("sampleAsesd", id);
         dcmss = new ArrayList<>();
 
         findViews();
@@ -114,7 +128,7 @@ public class ProfileFragment extends Fragment{
         nameAndSurname.setText(user.getfName() + " " + user.getlName());
         tvEmail.setText(user.getEmail());
         tvGender.setText(user.getGender());
-        tvBirthday.setText("EXERCISE POINTS:"+" "+" "+" "+user.getUserPoints());
+        tvBirthday.setText("EXERCISE POINTS:" + " " + " " + " " + user.getUserPoints());
 //        Weight.getText(user.getWeight().toString());
 //        Height.setText(user.getHeight().toString());
         Bmi.setText((CharSequence) user.getResult());
@@ -122,9 +136,9 @@ public class ProfileFragment extends Fragment{
 
     }
 
-    public void findViews(){
+    public void findViews() {
         profileImage = (CircleImageView) rootView.findViewById(R.id.profileImage); // find circle image view
-        nameAndSurname  = (TextView) rootView.findViewById(R.id.nameAndSurname); //Find textview Id
+        nameAndSurname = (TextView) rootView.findViewById(R.id.nameAndSurname); //Find textview Id
         tvEmail = (TextView) rootView.findViewById(R.id.tvEmail);
         tvGender = (TextView) rootView.findViewById(R.id.tvGender);
         tvBirthday = (TextView) rootView.findViewById(R.id.tvBirthday);
@@ -133,25 +147,46 @@ public class ProfileFragment extends Fragment{
         Bmi = (TextView) rootView.findViewById(R.id.tvBMI);
         recyclerViewDailyChallenge = (RecyclerView) rootView.findViewById(R.id.dailyChallenge);
         dailyChallengeModels = new ArrayList<>();
-        recyclerViewDailyChallenge.setLayoutManager(new LinearLayoutManager(getContext(),LinearLayoutManager.HORIZONTAL,false));
+        recyclerViewDailyChallenge.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
         setDailyChallenge(new Callback() {
             @Override
             public void getChallenges(ArrayList<DailyChallengeModel> dailyChallengeModel) {
-                Log.d("valOfI",dailyChallengeModel.size()+"");
+                Log.d("valOfI", dailyChallengeModel.size() + "");
                 for (int i = 0; i < dailyChallengeModel.size(); i++) {
                     DailyChallengeModel dcm = new DailyChallengeModel();
-                    if(dailyChallengeModel.get(i).getStatus().equals("done")){
-                        Log.d("valOfResult",i+" "+dailyChallengeModel.size());
+                    if (dailyChallengeModel.get(i).getStatus().equals("done")) {
+                        Log.d("valOfResult", i + " " + dailyChallengeModel.size());
                         dcm.setDailyExerciseImage(picsWithCheck[i]);
-                    }else{
+                        dcm.setStatus("done");
+                    } else if (dailyChallengeModel.get(i).getStatus().equalsIgnoreCase("lock")) {
                         dcm.setDailyExerciseImage(pics[i]);
+                        dcm.setStatus("lock");
+                    } else if(dailyChallengeModel.get(i).getStatus().equalsIgnoreCase("unlock")){
+                        dcm.setDailyExerciseImage(picswithoutcheck[0]);
+                        dcm.setStatus("unlock");
+                    }else if(dailyChallengeModel.get(i).getStatus().equalsIgnoreCase("unlock1")) {
+                        dcm.setDailyExerciseImage(picswithoutcheck[1]);
+                        dcm.setStatus("unlock");
+                    } else if(dailyChallengeModel.get(i).getStatus().equalsIgnoreCase("unlock2")) {
+                        dcm.setDailyExerciseImage(picswithoutcheck[2]);
+                        dcm.setStatus("unlock");
+                    } else if(dailyChallengeModel.get(i).getStatus().equalsIgnoreCase("unlock3")) {
+                        dcm.setDailyExerciseImage(picswithoutcheck[3]);
+                        dcm.setStatus("unlock");
+                    }else if(dailyChallengeModel.get(i).getStatus().equalsIgnoreCase("unlock4")) {
+                        dcm.setDailyExerciseImage(picswithoutcheck[4]);
+                        dcm.setStatus("unlock");
+                    } else{
+                        dcm.setDailyExerciseImage(pics[i]);
+                        dcm.setStatus("pending");
                     }
                     dcmss.add(dcm);
                 }
-                dailyChallengeAdapter = new DailyChallengeAdapter(getContext(),dcmss,user);
+                dailyChallengeAdapter = new DailyChallengeAdapter(getContext(), dcmss, user);
                 recyclerViewDailyChallenge.setAdapter(dailyChallengeAdapter);
             }
-        });        share = (MaterialFancyButton) rootView.findViewById(R.id.share);
+        });
+        share = (MaterialFancyButton) rootView.findViewById(R.id.share);
 //        logout = (MaterialFancyButton) rootView.findViewById(R.id.logout);
         start = (MaterialFancyButton) rootView.findViewById(R.id.startActivity);
 //        logout.setOnClickListener(new View.OnClickListener() {
@@ -170,60 +205,97 @@ public class ProfileFragment extends Fragment{
         start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent login = new Intent(getActivity(),BMI.class);
+                Intent login = new Intent(getActivity(), BMI.class);
                 startActivity(login);
             }
         });
     }
 
 
-    private void setDailyChallenges(){
+    private void setDailyChallenges() {
         for (int i = 0; i < pics.length; i++) {
             DailyChallengeModel dailyChallengeModel = new DailyChallengeModel();
-            dailyChallengeModel.setDailyExerciseImage(pics[i]);
-            if(i==0) {
+            if (i == 0) {
                 dailyChallengeModel.setExerciseName("BENCH PRESS");
-            }else if(i == 1){
+                dailyChallengeModel.setStatus("pending");
+                dailyChallengeModel.setDailyExerciseImage(pics[i]);
+
+            } else if (i == 1) {
                 dailyChallengeModel.setExerciseName("ROMANIAN DEADLIFT");
-            }else if(i == 2){
+                dailyChallengeModel.setStatus("pending");
+                dailyChallengeModel.setDailyExerciseImage(pics[i]);
+
+            } else if (i == 2) {
                 dailyChallengeModel.setExerciseName("STANDING CALF RAISE");
-            }else if(i == 3){
+                dailyChallengeModel.setStatus("pending");
+                dailyChallengeModel.setDailyExerciseImage(pics[i]);
+
+            } else if (i == 3) {
                 dailyChallengeModel.setExerciseName("GOBLET SQUAT");
-            }else if(i==4){
+                dailyChallengeModel.setStatus("pending");
+                dailyChallengeModel.setDailyExerciseImage(pics[i]);
+
+            } else if (i == 4) {
                 dailyChallengeModel.setExerciseName("REVERSE LUNGE");
-            }else if(i==5){
+                dailyChallengeModel.setStatus("pending");
+                dailyChallengeModel.setDailyExerciseImage(pics[i]);
+            } else if (i == 5) {
                 dailyChallengeModel.setExerciseName("CRUNCH");
+                dailyChallengeModel.setStatus("pending");
+                dailyChallengeModel.setDailyExerciseImage(pics[i]);
+            } else if (i == 6) {
+                dailyChallengeModel.setExerciseName("Front Squat");
+                dailyChallengeModel.setStatus("lock");
+                dailyChallengeModel.setDailyExerciseImage(pics[i]);
+            } else if (i == 7) {
+                dailyChallengeModel.setExerciseName("Neutral Grip Pull-up");
+                dailyChallengeModel.setStatus("lock");
+                dailyChallengeModel.setDailyExerciseImage(pics[i]);
+
+            } else if (i == 8) {
+                dailyChallengeModel.setExerciseName("Triceps Pushdown");
+                dailyChallengeModel.setStatus("lock");
+                dailyChallengeModel.setDailyExerciseImage(pics[i]);
+
+            } else if (i == 9) {
+                dailyChallengeModel.setExerciseName("Dumbell Flye");
+                dailyChallengeModel.setStatus("lock");
+                dailyChallengeModel.setDailyExerciseImage(pics[i]);
+
+            } else if (i == 10) {
+                dailyChallengeModel.setExerciseName("Back Extension");
+                dailyChallengeModel.setStatus("lock");
+                dailyChallengeModel.setDailyExerciseImage(pics[i]);
             }
-            dailyChallengeModel.setStatus("pending");
             dailyChallengeModels.add(dailyChallengeModel);
             myRef.child(id).child(String.valueOf(i)).setValue(dailyChallengeModel);
         }
-        Log.d("sampleAs",pics.length+"");
-        dailyChallengeAdapter = new DailyChallengeAdapter(getContext(),dailyChallengeModels,user);
+        Log.d("sampleAs", pics.length + "");
+        dailyChallengeAdapter = new DailyChallengeAdapter(getContext(), dailyChallengeModels, user);
         recyclerViewDailyChallenge.setAdapter(dailyChallengeAdapter);
     }
 
-    public interface Callback{
+    public interface Callback {
         void getChallenges(ArrayList<DailyChallengeModel> dailyChallengeModel);
     }
 
-    private void setDailyChallenge(final Callback callback){
+    private void setDailyChallenge(final Callback callback) {
         myRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                if(dataSnapshot.hasChild(id)){
-                    Log.d("somethinginreturn","naa");
+                if (dataSnapshot.hasChild(id)) {
+                    Log.d("somethinginreturn", "naa");
                     final DatabaseReference matchesRefTemp = dataSnapshot.getRef().child(id);
                     matchesRefTemp.addListenerForSingleValueEvent(new ValueEventListener() {
                         @Override
                         public void onDataChange(DataSnapshot dataSnapshot) {
                             dailyChallengeModels = new ArrayList<>();
-                            for (DataSnapshot snapshot : dataSnapshot.getChildren()){
+                            for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
                                 DailyChallengeModel dailyChallengeModel = new DailyChallengeModel();
-                                dailyChallengeModel.setStatus(snapshot.child("status").getValue()+"");
+                                dailyChallengeModel.setStatus(snapshot.child("status").getValue() + "");
                                 dailyChallengeModels.add(dailyChallengeModel);
                             }
-                            Log.d("valOfI",dailyChallengeModels.size()+"set");
+                            Log.d("valOfI", dailyChallengeModels.size() + "set");
                             callback.getChallenges(dailyChallengeModels);
                         }
 
@@ -233,8 +305,8 @@ public class ProfileFragment extends Fragment{
                         }
                     });
 
-                }else{
-                    Log.d("somethinginreturn","wala");
+                } else {
+                    Log.d("somethinginreturn", "wala");
                     setDailyChallenges();
                 }
             }
@@ -248,14 +320,15 @@ public class ProfileFragment extends Fragment{
 
     public static ProfileFragment newInstance(User user) {
         Bundle args = new Bundle();
-        args.putSerializable("user",user);
+        args.putSerializable("user", user);
         ProfileFragment fragment = new ProfileFragment();
         fragment.setArguments(args);
         return fragment;
     }
-    private void share(){
+
+    private void share() {
         shareDialog = new ShareDialog(this);
-        List<String> taggedUserIds= new ArrayList<>();
+        List<String> taggedUserIds = new ArrayList<>();
         taggedUserIds.add("{USER_ID}");
         taggedUserIds.add("{USER_ID}");
         taggedUserIds.add("{USER_ID}");

@@ -57,6 +57,7 @@ public class Workout6day2 extends AppCompatActivity {
                                     if (dataSnapshot.hasChild("5")) {
                                         Log.d("idOy","naaJOD");
                                         final DatabaseReference ref0 = dataSnapshot.getRef().child("5");
+                                        final DatabaseReference ref1 = dataSnapshot.getRef().child("6");
                                         ref0.addListenerForSingleValueEvent(new ValueEventListener() {
                                             @Override
                                             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -71,6 +72,20 @@ public class Workout6day2 extends AppCompatActivity {
                                                                 refUserID.addListenerForSingleValueEvent(new ValueEventListener() {
                                                                     @Override
                                                                     public void onDataChange(DataSnapshot dataSnapshot) {
+                                                                        ref1.addListenerForSingleValueEvent(new ValueEventListener() {
+                                                                            @Override
+                                                                            public void onDataChange(DataSnapshot dataSnapshot) {
+                                                                                String status = dataSnapshot.child("status").getValue().toString();
+                                                                                if(status.equalsIgnoreCase("lock")){
+                                                                                    ref1.child("status").setValue("unlock");
+                                                                                }
+                                                                            }
+
+                                                                            @Override
+                                                                            public void onCancelled(DatabaseError databaseError) {
+
+                                                                            }
+                                                                        });
                                                                         int userPoints = Integer.parseInt(dataSnapshot.child("userPoints").getValue().toString());
                                                                         userPoints+=30;
                                                                         Toast.makeText(Workout6day2.this, "Congratulations, you received 30 points!", Toast.LENGTH_LONG).show();

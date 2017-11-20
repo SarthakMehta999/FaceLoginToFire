@@ -9,17 +9,22 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 
+import fiture.quiamco.com.homefiture.Exercises.Underweight.day2heavy;
 import fiture.quiamco.com.homefiture.Exercises.Workout2day2;
 import fiture.quiamco.com.homefiture.Exercises.Workout3day2;
 import fiture.quiamco.com.homefiture.Exercises.Workout4day2;
 import fiture.quiamco.com.homefiture.Exercises.Workout5day2;
 import fiture.quiamco.com.homefiture.Exercises.Workout6day2;
 import fiture.quiamco.com.homefiture.Exercises.day1heavy;
+import fiture.quiamco.com.homefiture.Exercises.day3heavy;
+import fiture.quiamco.com.homefiture.Exercises.day4heavy;
+import fiture.quiamco.com.homefiture.Exercises.day5heavy;
 import fiture.quiamco.com.homefiture.Exercises.exercise1mostheavy;
 import fiture.quiamco.com.homefiture.Exercises.exercise2mostheavy;
 import fiture.quiamco.com.homefiture.Exercises.exercise3mostheavy;
@@ -97,6 +102,56 @@ public class DailyChallengeAdapter extends RecyclerView.Adapter<RecyclerView.Vie
                         bundle.putSerializable("user",user);
                         pt.putExtras(bundle);
                         context.startActivity(pt);
+                    }else if(position == 6){
+                        if(dailyChallenge.get(position).getStatus().equalsIgnoreCase("lock")){
+                            Toast.makeText(context, "Please perform the previous exercise, to unlock this!", Toast.LENGTH_SHORT).show();
+                        }else{
+                            Intent pt = new Intent(context, day1heavy.class);
+                            Bundle bundle = new Bundle();
+                            bundle.putSerializable("user",user);
+                            pt.putExtras(bundle);
+                            context.startActivity(pt);
+                        }
+                    }else if(position == 7){
+                        if(dailyChallenge.get(position).getStatus().equalsIgnoreCase("lock")){
+                            Toast.makeText(context, "Please perform the previous exercise, to unlock this!", Toast.LENGTH_SHORT).show();
+                        }else{
+                            Intent pt = new Intent(context, day2heavy.class);
+                            Bundle bundle = new Bundle();
+                            bundle.putSerializable("user",user);
+                            pt.putExtras(bundle);
+                            context.startActivity(pt);
+                        }
+                    }else if(position == 8){
+                        if(dailyChallenge.get(position).getStatus().equalsIgnoreCase("lock")){
+                            Toast.makeText(context, "Please perform the previous exercise, to unlock this!", Toast.LENGTH_SHORT).show();
+                        }else{
+                            Intent pt = new Intent(context, day3heavy.class);
+                            Bundle bundle = new Bundle();
+                            bundle.putSerializable("user",user);
+                            pt.putExtras(bundle);
+                            context.startActivity(pt);
+                        }
+                    }else if(position == 9){
+                        if(dailyChallenge.get(position).getStatus().equalsIgnoreCase("lock")){
+                            Toast.makeText(context, "Please perform the previous exercise, to unlock this!", Toast.LENGTH_SHORT).show();
+                        }else{
+                            Intent pt = new Intent(context, day4heavy.class);
+                            Bundle bundle = new Bundle();
+                            bundle.putSerializable("user",user);
+                            pt.putExtras(bundle);
+                            context.startActivity(pt);
+                        }
+                    }else if(position == 10){
+                        if(dailyChallenge.get(position).getStatus().equalsIgnoreCase("lock")){
+                            Toast.makeText(context, "Please perform the previous exercise, to unlock this!", Toast.LENGTH_SHORT).show();
+                        }else{
+                            Intent pt = new Intent(context, day5heavy.class);
+                            Bundle bundle = new Bundle();
+                            bundle.putSerializable("user",user);
+                            pt.putExtras(bundle);
+                            context.startActivity(pt);
+                        }
                     }
                 }
             });

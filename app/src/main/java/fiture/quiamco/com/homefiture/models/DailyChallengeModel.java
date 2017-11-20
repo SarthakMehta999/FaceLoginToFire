@@ -8,6 +8,7 @@ public class DailyChallengeModel {
     private Integer dailyExerciseImage;
     private String exerciseName;
     private String status;
+    private int imageIndex;
 
     public DailyChallengeModel() {
     }
@@ -18,6 +19,14 @@ public class DailyChallengeModel {
 
     public void setDailyExerciseImage(Integer dailyExerciseImage) {
         this.dailyExerciseImage = dailyExerciseImage;
+    }
+
+    public int getImageIndex() {
+        return imageIndex;
+    }
+
+    public void setImageIndex(int imageIndex) {
+        this.imageIndex = imageIndex;
     }
 
     public String getExerciseName() {
