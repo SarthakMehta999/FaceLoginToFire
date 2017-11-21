@@ -71,11 +71,11 @@ public class ProfileFragment extends Fragment {
             R.drawable.nocheck4,
             R.drawable.nocheck5,
             R.drawable.nocheck6,
-            R.drawable.ex1withlock,
-            R.drawable.ex2withlock,
-            R.drawable.ex3withlock,
-            R.drawable.ex4withlock,
-            R.drawable.ex5withlock
+            R.drawable.loc1,
+            R.drawable.loc2,
+            R.drawable.loc3,
+            R.drawable.loc4,
+            R.drawable.loc5
     };
 
     private int picswithoutcheck[] = {
@@ -87,17 +87,17 @@ public class ProfileFragment extends Fragment {
     };
 
     private int picsWithCheck[] = {
-            R.drawable.withcheck1,
-            R.drawable.withcheck2,
-            R.drawable.withcheck3,
-            R.drawable.withcheck4,
-            R.drawable.withcheck5,
-            R.drawable.withcheck6,
-            R.drawable.ex1,
-            R.drawable.ex2withcheck,
-            R.drawable.ex3withcheck,
-            R.drawable.ex4withcheck,
-            R.drawable.ex5withcheck
+            R.drawable.chec1,
+            R.drawable.chec2,
+            R.drawable.chec3,
+            R.drawable.chec4,
+            R.drawable.chec5,
+            R.drawable.chec6,
+            R.drawable.chec1,
+            R.drawable.chec2,
+            R.drawable.chec3,
+            R.drawable.chec4,
+            R.drawable.chec5
     };
     private FirebaseDatabase database;
     private DatabaseReference myRef, userRef,alterUserData;
