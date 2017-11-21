@@ -23,14 +23,13 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.rilixtech.materialfancybutton.MaterialFancyButton;
 
-import fiture.quiamco.com.homefiture.Exercises.day1heavy;
-import fiture.quiamco.com.homefiture.Exercises.day3heavy;
 import fiture.quiamco.com.homefiture.NavDrawer;
 import fiture.quiamco.com.homefiture.R;
 import fiture.quiamco.com.homefiture.models.User;
 import pl.droidsonroids.gif.GifTextView;
 
 public class day2heavy extends AppCompatActivity {
+    private  MaterialFancyButton Next,Back;
 
     GifTextView img;
     final Context context = this;

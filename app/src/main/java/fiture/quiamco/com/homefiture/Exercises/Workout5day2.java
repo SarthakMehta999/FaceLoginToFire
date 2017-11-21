@@ -3,11 +3,10 @@ package fiture.quiamco.com.homefiture.Exercises;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
@@ -15,19 +14,22 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.rilixtech.materialfancybutton.MaterialFancyButton;
 
 import fiture.quiamco.com.homefiture.NavDrawer;
 import fiture.quiamco.com.homefiture.R;
 import fiture.quiamco.com.homefiture.models.User;
 
 public class Workout5day2 extends AppCompatActivity {
-    private Button Next,Back;
+    private  MaterialFancyButton Next,Back;
     private FirebaseDatabase database;
     private DatabaseReference myRef;
     private User user;
     private SharedPreferences sharedPreferences;
     private String id;
     private DatabaseReference userRef;
+    MaterialFancyButton finish;
+    MaterialFancyButton inst;
 
 
     @Override
@@ -36,7 +38,7 @@ public class Workout5day2 extends AppCompatActivity {
         setContentView(R.layout.activity_workout5day2);
         sharedPreferences = getApplicationContext().getSharedPreferences("FitureUser", Context.MODE_PRIVATE);
         id = sharedPreferences.getString("userKey", "");
-        Next=(Button)findViewById (R.id.btnFinish);
+        Next =(MaterialFancyButton)findViewById (R.id.btnFinish);
         database = FirebaseDatabase.getInstance();
         myRef = database.getReference("dailyChallenge");
         userRef = database.getReference("UserFiture");
@@ -128,7 +130,7 @@ public class Workout5day2 extends AppCompatActivity {
 //                finish();
             }
         });
-        Back=(Button)findViewById(R.id.btnInstruction);
+        Back=(MaterialFancyButton)findViewById(R.id.btnInstruction);
         Back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

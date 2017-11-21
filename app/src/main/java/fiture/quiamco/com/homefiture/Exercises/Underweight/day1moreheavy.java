@@ -10,7 +10,6 @@ import android.os.Handler;
 import android.os.SystemClock;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -23,7 +22,8 @@ import pl.droidsonroids.gif.GifTextView;
 public class day1moreheavy extends AppCompatActivity {
     GifTextView img;
 
-    private Button next, back;
+    private  MaterialFancyButton Next,Back;
+
     final Context context = this;
 
     private MaterialFancyButton pauseButton;
