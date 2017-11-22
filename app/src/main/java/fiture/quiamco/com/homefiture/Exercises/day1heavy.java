@@ -29,6 +29,8 @@ import fiture.quiamco.com.homefiture.models.User;
 import pl.droidsonroids.gif.GifTextView;
 
 public class day1heavy extends AppCompatActivity {
+    private  MaterialFancyButton Next,Back;
+
     GifTextView img;
     final Context context = this;
     private MaterialFancyButton startButton;
