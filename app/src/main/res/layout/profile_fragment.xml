@@ -10,7 +10,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#212121"
+            android:background="@drawable/backgroundgradient"
             tools:context="fiture.quiamco.com.homefiture.MainActivity">
 
 
@@ -52,7 +52,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="30sp"
-                    android:layout_marginTop="15sp"
+                    android:layout_marginTop="38sp"
                     android:textColor="#F5F5F5"
                     android:textSize="17sp"
                     android:textStyle="bold"
@@ -94,17 +94,6 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/tvBMI"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="4dp"
-                    android:layout_marginLeft="200sp"
-                    android:layout_marginTop="1sp"
-                    android:textColor="#F5F5F5"
-                    android:textSize="16dp"
-                    android:textStyle="bold" />
-
-                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="DAILY CHALLENGE"
@@ -121,12 +110,12 @@
                     android:id="@+id/startActivity"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="65dp"
                     android:layout_marginBottom="8dp"
                     android:layout_marginTop="8dp"
                     fancy:mfb_borderColor="#FFFFFF"
                     fancy:mfb_borderWidth="1dp"
-                    fancy:mfb_defaultColor="#212121"
+                    fancy:mfb_defaultColor="#141e30"
                     fancy:mfb_focusColor="#9bd823"
                     fancy:mfb_iconFont="fontawesome.ttf"
                     fancy:mfb_iconPosition="left"
@@ -139,17 +128,17 @@
                     android:id="@+id/share"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
                     android:layout_marginBottom="8dp"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="-46dp"
+                    android:layout_marginLeft="200dp"
                     fancy:mfb_borderColor="#FFFFFF"
                     fancy:mfb_borderWidth="1dp"
-                    fancy:mfb_defaultColor="#212121"
+                    fancy:mfb_defaultColor="#141e30"
                     fancy:mfb_focusColor="#9bd823"
                     fancy:mfb_iconFont="fontawesome.ttf"
                     fancy:mfb_iconPosition="left"
                     fancy:mfb_radius="30dp"
-                    fancy:mfb_text="Share Content"
+                    fancy:mfb_text="       Share       "
                     fancy:mfb_textColor="#FFFFFF" />
 
 

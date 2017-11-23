@@ -44,7 +44,7 @@ public class exercise2mostheavy extends AppCompatActivity {
     private long startTime = 0L;
 
     private Handler customHandler = new Handler();
-    private int points = 10;
+    private int points =(10);
     long timeInMilliseconds = 0L;
     long timeSwapBuff = 0L;
     long updatedTime = 0L;
@@ -165,11 +165,11 @@ public class exercise2mostheavy extends AppCompatActivity {
                                                                 refUserID.addListenerForSingleValueEvent(new ValueEventListener() {
                                                                     @Override
                                                                     public void onDataChange(DataSnapshot dataSnapshot) {
-                                                                        int userPoints = Integer.parseInt(dataSnapshot.child("userPoints").getValue().toString());
+                                                                        int userPoints = (Integer.parseInt(dataSnapshot.child("userPoints").getValue().toString()));
                                                                         userPoints+=30;
                                                                         Toast.makeText(exercise2mostheavy.this, "Congratulations, you received 30 points!", Toast.LENGTH_LONG).show();
                                                                         refUserID.child("userPoints").setValue(userPoints);
-                                                                        user.setUserPoints(String.valueOf(userPoints));
+                                                                        user.setUserPoints(userPoints);
                                                                         Intent proc = new Intent(exercise2mostheavy.this, NavDrawer.class);
                                                                         Bundle bundle = new Bundle();
                                                                         bundle.putSerializable("user", user);

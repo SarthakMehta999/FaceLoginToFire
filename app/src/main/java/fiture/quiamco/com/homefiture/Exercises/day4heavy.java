@@ -186,7 +186,7 @@ public class day4heavy extends AppCompatActivity {
                                                                         userPoints+=30;
                                                                         Toast.makeText(day4heavy.this, "Congratulations, you received 30 points!", Toast.LENGTH_LONG).show();
                                                                         refUserID.child("userPoints").setValue(userPoints);
-                                                                        user.setUserPoints(String.valueOf(userPoints));
+                                                                        user.setUserPoints(userPoints);
                                                                         Intent proc = new Intent(day4heavy.this, NavDrawer.class);
                                                                         Bundle bundle = new Bundle();
                                                                         bundle.putSerializable("user", user);
@@ -302,7 +302,7 @@ public class day4heavy extends AppCompatActivity {
                                                                     userPoints+=30;
                                                                     Toast.makeText(day4heavy.this, "Congratulations, you received 30 points!", Toast.LENGTH_LONG).show();
                                                                     refUserID.child("userPoints").setValue(userPoints);
-                                                                    user.setUserPoints(String.valueOf(userPoints));
+                                                                    user.setUserPoints(userPoints);
                                                                     Intent proc = new Intent(day4heavy.this, NavDrawer.class);
                                                                     Bundle bundle = new Bundle();
                                                                     bundle.putSerializable("user", user);

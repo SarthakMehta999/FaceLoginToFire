@@ -23,7 +23,6 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.rilixtech.materialfancybutton.MaterialFancyButton;
 
-import fiture.quiamco.com.homefiture.Exercises.Underweight.day2heavy;
 import fiture.quiamco.com.homefiture.NavDrawer;
 import fiture.quiamco.com.homefiture.R;
 import fiture.quiamco.com.homefiture.models.User;
@@ -193,7 +192,7 @@ public class day3heavy extends AppCompatActivity {
                                                                         userPoints+=30;
                                                                         Toast.makeText(day3heavy.this, "Congratulations, you received 30 points!", Toast.LENGTH_LONG).show();
                                                                         refUserID.child("userPoints").setValue(userPoints);
-                                                                        user.setUserPoints(String.valueOf(userPoints));
+                                                                        user.setUserPoints(userPoints);
                                                                         Intent proc = new Intent(day3heavy.this, NavDrawer.class);
                                                                         Bundle bundle = new Bundle();
                                                                         bundle.putSerializable("user", user);
@@ -309,7 +308,7 @@ public class day3heavy extends AppCompatActivity {
                                                                     userPoints+=30;
                                                                     Toast.makeText(day3heavy.this, "Congratulations, you received 30 points!", Toast.LENGTH_LONG).show();
                                                                     refUserID.child("userPoints").setValue(userPoints);
-                                                                    user.setUserPoints(String.valueOf(userPoints));
+                                                                    user.setUserPoints(userPoints);
                                                                     Intent proc = new Intent(day3heavy.this, NavDrawer.class);
                                                                     Bundle bundle = new Bundle();
                                                                     bundle.putSerializable("user", user);

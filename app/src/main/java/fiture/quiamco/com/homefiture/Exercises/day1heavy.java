@@ -185,7 +185,7 @@ public class day1heavy extends AppCompatActivity {
                                                                         userPoints+=30;
                                                                         Toast.makeText(day1heavy.this, "Congratulations, you received 30 points!", Toast.LENGTH_LONG).show();
                                                                         refUserID.child("userPoints").setValue(userPoints);
-                                                                        user.setUserPoints(String.valueOf(userPoints));
+                                                                        user.setUserPoints(userPoints);
                                                                         Intent proc = new Intent(day1heavy.this, NavDrawer.class);
                                                                         Bundle bundle = new Bundle();
                                                                         bundle.putSerializable("user", user);
@@ -301,7 +301,7 @@ public class day1heavy extends AppCompatActivity {
                                                                     userPoints+=30;
                                                                     Toast.makeText(day1heavy.this, "Congratulations, you received 30 points!", Toast.LENGTH_LONG).show();
                                                                     refUserID.child("userPoints").setValue(userPoints);
-                                                                    user.setUserPoints(String.valueOf(userPoints));
+                                                                    user.setUserPoints(userPoints);
                                                                     Intent proc = new Intent(day1heavy.this, NavDrawer.class);
                                                                     Bundle bundle = new Bundle();
                                                                     bundle.putSerializable("user", user);

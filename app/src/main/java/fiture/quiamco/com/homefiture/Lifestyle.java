@@ -52,7 +52,7 @@ public class Lifestyle extends AppCompatActivity {
         String gender = sharedPreferences.getString("userGender","");
         String email = sharedPreferences.getString("userEmail","");
         String pic = sharedPreferences.getString("userPic","");
-        String points = sharedPreferences.getString("samplePoint","");
+        int points = sharedPreferences.getInt("samplePoint",1);
         Log.d("atayakayawa",points+"shit");
         user = new User(fname,lname,bday,gender,email,pic,points);
 

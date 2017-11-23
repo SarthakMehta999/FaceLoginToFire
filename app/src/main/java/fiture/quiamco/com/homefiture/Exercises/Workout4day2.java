@@ -71,11 +71,11 @@ public class Workout4day2 extends AppCompatActivity {
                                                                 refUserID.addListenerForSingleValueEvent(new ValueEventListener() {
                                                                     @Override
                                                                     public void onDataChange(DataSnapshot dataSnapshot) {
-                                                                        int userPoints = Integer.parseInt(dataSnapshot.child("userPoints").getValue().toString());
+                                                                        int userPoints = (Integer.parseInt(dataSnapshot.child("userPoints").getValue().toString()));
                                                                         userPoints+=30;
                                                                         Toast.makeText(Workout4day2.this, "Congratulations, you received 30 points!", Toast.LENGTH_LONG).show();
                                                                         refUserID.child("userPoints").setValue(userPoints);
-                                                                        user.setUserPoints(String.valueOf(userPoints));
+                                                                        user.setUserPoints(userPoints);
                                                                         Intent proc = new Intent(Workout4day2.this, NavDrawer.class);
                                                                         Bundle bundle = new Bundle();
                                                                         bundle.putSerializable("user", user);

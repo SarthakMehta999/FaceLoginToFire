@@ -3,8 +3,8 @@ package fiture.quiamco.com.homefiture.Exercises;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -15,8 +15,6 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-
-import java.util.ResourceBundle;
 
 import fiture.quiamco.com.homefiture.NavDrawer;
 import fiture.quiamco.com.homefiture.R;
@@ -75,11 +73,11 @@ public class workout1day2 extends AppCompatActivity {
                                                                 refUserID.addListenerForSingleValueEvent(new ValueEventListener() {
                                                                     @Override
                                                                     public void onDataChange(DataSnapshot dataSnapshot) {
-                                                                        int userPoints = Integer.parseInt(dataSnapshot.child("userPoints").getValue().toString());
+                                                                        int userPoints = (Integer.parseInt(dataSnapshot.child("userPoints").getValue().toString()));
                                                                         userPoints+=30;
                                                                         Toast.makeText(workout1day2.this, "Congratulations, you received 30 points!", Toast.LENGTH_LONG).show();
                                                                         refUserID.child("userPoints").setValue(userPoints);
-                                                                        user.setUserPoints(String.valueOf(userPoints));
+                                                                        user.setUserPoints(userPoints);
                                                                         Intent proc = new Intent(workout1day2.this, NavDrawer.class);
                                                                         Bundle bundle = new Bundle();
                                                                         bundle.putSerializable("user", user);

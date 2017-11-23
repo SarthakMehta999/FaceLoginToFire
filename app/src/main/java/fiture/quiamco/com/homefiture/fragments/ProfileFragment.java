@@ -130,8 +130,7 @@ public class ProfileFragment extends Fragment {
         tvGender.setText(user.getGender());
         tvBirthday.setText("EXERCISE POINTS:" + " " + " " + " " + user.getUserPoints());
 //        Weight.getText(user.getWeight().toString());
-//        Height.setText(user.getHeight().toString());
-        Bmi.setText((CharSequence) user.getResult());
+//
         alterUserData.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -161,7 +160,6 @@ public class ProfileFragment extends Fragment {
         tvBirthday = (TextView) rootView.findViewById(R.id.tvBirthday);
 //        Weight = (TextView) rootView.findViewById(R.id.tvWeight);
 //        Height = (TextView) rootView.findViewById(R.id.tvHeight);
-        Bmi = (TextView) rootView.findViewById(R.id.tvBMI);
         recyclerViewDailyChallenge = (RecyclerView) rootView.findViewById(R.id.dailyChallenge);
         dailyChallengeModels = new ArrayList<>();
         recyclerViewDailyChallenge.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));

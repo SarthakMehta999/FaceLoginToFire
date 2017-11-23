@@ -94,11 +94,11 @@ public class NavDrawer extends AppCompatActivity
         TextView email = (TextView)hView.findViewById(R.id.email);
         email.setText(user.getEmail());
         nav_user.setText(user.getfName() + " " + user.getlName());
-        fragment();
+//        fragment();
 
 
-//        FragmentManager fam = getSupportFragmentManager();
-//        fam.beginTransaction().replace(R.id.content_frame,new ProfileFragment().newInstance(user)).commit();
+        FragmentManager fam = getSupportFragmentManager();
+        fam.beginTransaction().replace(R.id.content_frame,new ProfileFragment().newInstance(user)).commit();
     }
     public void fragment() {
         new Handler().postDelayed(new Runnable() {
@@ -173,9 +173,9 @@ public class NavDrawer extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
         if (id == R.id.leaderboard) {
-//            Intent inte = new Intent(NavDrawer.this, P.class);
+//            Intent inte = new Intent(NavDrawer.this, Leaderboards.class);
 //            startActivity(inte);
-            fragment();
+            fragmentA();
 
 //            finish();
         } else if (id == R.id.pedometer) {

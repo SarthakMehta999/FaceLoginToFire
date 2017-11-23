@@ -1,7 +1,6 @@
 package fiture.quiamco.com.homefiture.models;
 
-import android.widget.EditText;
-import android.widget.TextView;
+import android.support.annotation.NonNull;
 
 import java.io.Serializable;
 
@@ -9,7 +8,8 @@ import java.io.Serializable;
  * Created by User on 21/09/2017.
  */
 
-public class User implements Serializable {
+public class User implements Serializable, Comparable<User> {
+
 //    name = inBundle.getString("name");
 //    surname = inBundle.getString("surname");
 //    day = inBundle.getString("birthday");
@@ -23,15 +23,12 @@ public class User implements Serializable {
     private String gender;
     private String email;
     private String imageUrl;
-    private EditText height;
-    private EditText weight;
-    private TextView result;
-    private String userPoints;
+    private int userPoints;
 
     public User() {
     }
 
-    public User(String fName, String lName, String birthDate, String gender, String email, String imageUrl, String userPoints) {
+    public User(String fName, String lName, String birthDate, String gender, String email, String imageUrl, int userPoints) {
         this.fName = fName;
         this.lName = lName;
         this.birthDate = birthDate;
@@ -41,20 +38,16 @@ public class User implements Serializable {
         this.userPoints = userPoints;
 
     }
-    public User(TextView result) {
-        this.height = height;
-        this.weight = weight;
-        this.result = result;
-    }
 
 
 
-    public String getUserPoints() {
+    public int getUserPoints() {
         return userPoints;
     }
 
-    public void setUserPoints(String userPoints) {
+    public void setUserPoints(int userPoints) {
         this.userPoints = userPoints;
+
     }
 
     public String getfName() {
@@ -105,27 +98,46 @@ public class User implements Serializable {
         this.imageUrl = imageUrl;
     }
 
-    public EditText getHeight() {
-        return height;
+
+    /*@Override
+    public int compare(User o1, User o2) {
+        int resulta_1 = o1.getUserPoints();
+        int resulta_2 = o2.getUserPoints();
+        if(resulta_1 > resulta_2){
+            return 1;
+        }else if (resulta_1 < resulta_2){
+            return -1;
+        }else{
+            return 0;
+        }
+    }*/
+
+    @Override
+    public int compareTo(@NonNull User o) {
+        if(userPoints < o.getUserPoints()){
+            return 1;
+        }else if(userPoints > o.getUserPoints()){
+            return -1;
+        }else{
+            return 0;
+        }
     }
 
-    public void setHeight(EditText height) {
-        this.height = height;
-    }
 
-    public EditText getWeight() {
-        return weight;
-    }
+//
+//    public EditText getWeight() {
+//        return weight;
+//    }
+//
+//    public void setWeight(EditText weight) {
+//        this.weight = weight;
+//    }
 
-    public void setWeight(EditText weight) {
-        this.weight = weight;
-    }
-
-    public TextView getResult() {
-        return result;
-    }
-
-    public void setResult(TextView result) {
-        this.result = result;
-    }
+//    public TextView getResult() {
+//        return result;
+//    }
+//
+//    public void setResult(TextView result) {
+//        this.result = result;
+//    }
 }

@@ -9,6 +9,7 @@ import android.widget.TextView;
 import java.util.List;
 
 import fiture.quiamco.com.homefiture.R;
+import fiture.quiamco.com.homefiture.models.User;
 
 /**
  * Created by User on 14/10/2017.
@@ -16,7 +17,7 @@ import fiture.quiamco.com.homefiture.R;
 
 public class PointsAdapter extends RecyclerView.Adapter <PointsAdapter.MyViewHolder> {
 
-    private List<Points> pointsList;
+        private List<User> pointsList;
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
         public TextView name, points,category;
@@ -30,7 +31,7 @@ public class PointsAdapter extends RecyclerView.Adapter <PointsAdapter.MyViewHol
         }
     }
 
-        public PointsAdapter(List<Points> pointsList) {
+        public PointsAdapter(List<User> pointsList) {
             this.pointsList = pointsList;
         }
 
@@ -44,10 +45,10 @@ public class PointsAdapter extends RecyclerView.Adapter <PointsAdapter.MyViewHol
 
         @Override
         public void onBindViewHolder(MyViewHolder holder, int position) {
-            Points points = pointsList.get(position);
-            holder.name.setText(points.getName());
-            holder.points.setText(points.getPoints());
-            holder.category.setText(points.getCategory());
+            User points = pointsList.get(position);
+            holder.name.setText(points.getImageUrl());
+            holder.points.setText(points.getfName()+" "+points.getlName());
+            holder.category.setText(points.getGender());
 
         }
 

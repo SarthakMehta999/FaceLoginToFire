@@ -317,7 +317,7 @@
                 android:paddingTop="10dp"
                 fancy:mfb_borderColor="#F5F5F5"
                 fancy:mfb_borderWidth="1dp"
-                fancy:mfb_defaultColor="#212121"
+                fancy:mfb_defaultColor="#141e30"
                 fancy:mfb_focusColor="#9bd823"
                 fancy:mfb_iconFont="fontawesome.ttf"
                 fancy:mfb_iconPosition="left"
