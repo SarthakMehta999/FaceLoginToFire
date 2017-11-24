@@ -79,11 +79,11 @@ public class ProfileFragment extends Fragment {
     };
 
     private int picswithoutcheck[] = {
-            R.drawable.ex5withoutcheck,
-            R.drawable.ex2withoutcheck,
-            R.drawable.ex3withoutcheck,
-            R.drawable.ex4withoutcheck,
-            R.drawable.ex1withoutcheck
+            R.drawable.nocheck1,
+            R.drawable.nocheck2,
+            R.drawable.nocheck3,
+            R.drawable.nocheck4,
+            R.drawable.nocheck6
     };
 
     private int picsWithCheck[] = {

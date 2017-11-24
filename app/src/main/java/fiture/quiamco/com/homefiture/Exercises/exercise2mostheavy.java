@@ -70,7 +70,7 @@ public class exercise2mostheavy extends AppCompatActivity {
         myRef = database.getReference("dailyChallenge");
         userRef = database.getReference("UserFiture");
         Bundle inBundle = getIntent().getExtras();
-        user = (User) inBundle.getSerializable("user");
+//        user = (User) inBundle.getSerializable("user");
         inst = (MaterialFancyButton) findViewById(R.id.btnInstruction);
 //        loadImage();
 
