@@ -6,4 +6,11 @@
         android:orderInCategory="100"
         android:title="Logout"
         app:showAsAction="never" />
+
+    <item
+        android:id="@+id/myRank"
+        android:orderInCategory="100"
+        android:title="My Rank"
+        app:showAsAction="never" />
+
 </menu>

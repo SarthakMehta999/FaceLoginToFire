@@ -45,7 +45,6 @@ public class NavDrawer extends AppCompatActivity
         EventBus.getDefault().register(this);
 
 
-
         Bundle inBundle = getIntent().getExtras();
         user = (User) inBundle.getSerializable("user");
         name = user.getfName();
@@ -69,6 +68,9 @@ public class NavDrawer extends AppCompatActivity
         setSupportActionBar(toolbar);
         toolbar.getBackground().setAlpha(0);
 
+//        ActionBar bar = getActionBar();
+//        Drawable gradient = getResources().getDrawable( R.drawable.backgroundgradient);
+//        bar.setBackgroundDrawable(gradient);
 //        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
 //        fab.setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -97,8 +99,18 @@ public class NavDrawer extends AppCompatActivity
 //        fragment();
 
 
-        FragmentManager fam = getSupportFragmentManager();
-        fam.beginTransaction().replace(R.id.content_frame,new ProfileFragment().newInstance(user)).commit();
+//        FragmentManager fam = getSupportFragmentManager();
+//        fam.beginTransaction().replace(R.id.content_frame,new ProfileFragment().newInstance(user)).commit();
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                getSupportFragmentManager()
+                        .beginTransaction()
+                        .setCustomAnimations(android.R.anim.fade_in, android.R.anim.fade_out)
+                        .replace(R.id.content_frame, new ProfileFragment().newInstance(user))
+                        .commit();
+            }
+        }, 0);
     }
     public void fragment() {
         new Handler().postDelayed(new Runnable() {
@@ -160,6 +172,11 @@ public class NavDrawer extends AppCompatActivity
             LoginManager.getInstance().logOut();
             Intent login = new Intent(NavDrawer.this, FacebookLoginActivity.class);
             startActivity(login);
+        }
+        else if (id == R.id.myRank){
+            Intent rank = new Intent(NavDrawer.this,MyRank.class);
+            startActivity(rank);
+
         }
 
         return super.onOptionsItemSelected(item);

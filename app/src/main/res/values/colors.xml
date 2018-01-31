@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#00bcd4</color>
+    <color name="colorPrimary">#3a7bd5</color>
     <color name="colorPrimaryDark">#424242</color>
     <color name="colorAccent">#ECEFF1</color>
-    <color name ="SplashAccent">#424242</color>
+    <color name="SplashAccent">#424242</color>
     <color name="year">#999999</color>
     <color name="title">#222222</color>
-    <color name="backgroundforallscreen">#212121</color>
-    <color name="textColor">#fff</color>
+    <color name="backgroundforallscreen">#59c9a5</color>
+    <color name="textColor">#ECEFF1</color>
 
     <color name="bg_login">#26ae90</color>
     <color name="bg_register">#2e3237</color>
@@ -27,5 +27,7 @@
     <color name="green">#689F38</color>
     <color name="greenDark">#3E5F22</color>
     <color name="banana">#FFCC00</color>
+
+    <color name="black_overlay">#66000000</color>
 
 </resources>

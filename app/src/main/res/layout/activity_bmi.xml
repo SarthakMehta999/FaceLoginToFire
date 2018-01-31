@@ -81,23 +81,23 @@
 
     <com.rilixtech.materialfancybutton.MaterialFancyButton
         android:id="@+id/calc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="105dp"
+        android:layout_height="40dp"
         android:layout_marginTop="25dp"
         android:layout_gravity="center_horizontal"
         android:paddingBottom="10dp"
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
         android:paddingTop="10dp"
-        fancy:mfb_borderColor="#FFFFFF"
-        fancy:mfb_borderWidth="1dp"
-        fancy:mfb_defaultColor="#212121"
-        fancy:mfb_focusColor="#9bd823"
+        fancy:mfb_borderColor="@color/textColor"
+        fancy:mfb_borderWidth="2dp"
+        fancy:mfb_defaultColor="@color/backgroundforallscreen"
+        fancy:mfb_focusColor="@color/textColor"
         fancy:mfb_iconFont="fontawesome.ttf"
         fancy:mfb_iconPosition="left"
         fancy:mfb_radius="30dp"
-        fancy:mfb_text="Calculate BMI"
-        fancy:mfb_textColor="#FFFFFF"
+        fancy:mfb_text="Calculate"
+        fancy:mfb_textColor="@color/colorPrimary"
         android:onClick="calculateBMI"/>
 
     <TextView
@@ -113,21 +113,21 @@
 
     <com.rilixtech.materialfancybutton.MaterialFancyButton
         android:id="@+id/btnProc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="105dp"
+        android:layout_height="40dp"
         android:layout_marginTop="25dp"
         android:layout_gravity="center_horizontal"
         android:paddingBottom="10dp"
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
         android:paddingTop="10dp"
-        fancy:mfb_borderColor="#FFFFFF"
-        fancy:mfb_borderWidth="1dp"
-        fancy:mfb_defaultColor="#212121"
-        fancy:mfb_focusColor="#9bd823"
+        fancy:mfb_borderColor="@color/colorPrimary"
+        fancy:mfb_borderWidth="2dp"
+        fancy:mfb_defaultColor="@color/colorPrimary"
+        fancy:mfb_focusColor="@color/backgroundforallscreen"
         fancy:mfb_iconFont="fontawesome.ttf"
         fancy:mfb_iconPosition="left"
         fancy:mfb_radius="30dp"
         fancy:mfb_text="Proceed"
-        fancy:mfb_textColor="#FFFFFF" />
+        fancy:mfb_textColor="@color/backgroundforallscreen" />
 </LinearLayout>

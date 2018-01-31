@@ -81,7 +81,7 @@ public class FacebookLoginActivity extends AppCompatActivity {
         userRef = database.getReference("UserFiture");
         final String id = userRef.push().getKey();
         if (auth.getCurrentUser() != null) {
-            Intent startNew = new Intent(FacebookLoginActivity.this,Lifestyle.class);
+            Intent startNew = new Intent(FacebookLoginActivity.this,Splash2.class);
             startActivity(startNew);
         }
         setContentView(R.layout.activity_facebook_login);
@@ -146,7 +146,7 @@ public class FacebookLoginActivity extends AppCompatActivity {
                                         Toast.makeText(FacebookLoginActivity.this, getString(R.string.auth_failed), Toast.LENGTH_LONG).show();
                                     }
                                 } else {
-                                    Intent intent = new Intent(FacebookLoginActivity.this, Lifestyle.class);
+                                    Intent intent = new Intent(FacebookLoginActivity.this, Splash2.class);
                                     startActivity(intent);
                                     finish();
                                 }
@@ -209,7 +209,7 @@ public class FacebookLoginActivity extends AppCompatActivity {
                                 gender = object.getString("gender");
 
 
-                            Intent main = new Intent(FacebookLoginActivity.this, Lifestyle.class);
+                            Intent main = new Intent(FacebookLoginActivity.this, Splash2.class);
                             Bundle bundle = new Bundle();
                             if(email == null){
                                 email="none";

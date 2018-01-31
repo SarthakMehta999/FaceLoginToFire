@@ -50,4 +50,8 @@
     <string name="title_activity_view_pager">ViewPager</string>
     <string name="section_format">Hello World from section: %1$d</string>
     <string name="title_activity_view_pager_with_tabs">ViewPagerWithTabs</string>
+
+    <string name="title_activity_my_rank">MyRank</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
 </resources>

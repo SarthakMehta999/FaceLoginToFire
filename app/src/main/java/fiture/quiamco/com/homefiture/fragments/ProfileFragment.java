@@ -12,6 +12,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -47,7 +48,8 @@ public class ProfileFragment extends Fragment {
     private CircleImageView profileImage;
     private TextView nameAndSurname, tvEmail, tvGender, tvBirthday, Bmi;
     private EditText Weight, Height;
-    private MaterialFancyButton share, logout, start;
+    private Button share, logout, start;
+    private MaterialFancyButton challenge;
     private View rootView;
     private User user;
 
@@ -126,9 +128,9 @@ public class ProfileFragment extends Fragment {
 
         Glide.with(getActivity()).load(user.getImageUrl()).into(profileImage);
         nameAndSurname.setText(user.getfName() + " " + user.getlName());
-        tvEmail.setText(user.getEmail());
+//        tvEmail.setText(user.getEmail());
         tvGender.setText(user.getGender());
-        tvBirthday.setText("EXERCISE POINTS:" + " " + " " + " " + user.getUserPoints());
+//        tvBirthday.setText(user.getBirthDate());
 //        Weight.getText(user.getWeight().toString());
 //
         alterUserData.addValueEventListener(new ValueEventListener() {
@@ -155,12 +157,14 @@ public class ProfileFragment extends Fragment {
     public void findViews() {
         profileImage = (CircleImageView) rootView.findViewById(R.id.profileImage); // find circle image view
         nameAndSurname = (TextView) rootView.findViewById(R.id.nameAndSurname); //Find textview Id
-        tvEmail = (TextView) rootView.findViewById(R.id.tvEmail);
+        challenge = (MaterialFancyButton) rootView.findViewById(R.id.challenge);
+//        tvEmail = (TextView) rootView.findViewById(R.id.tvEmail);
         tvGender = (TextView) rootView.findViewById(R.id.tvGender);
         tvBirthday = (TextView) rootView.findViewById(R.id.tvBirthday);
 //        Weight = (TextView) rootView.findViewById(R.id.tvWeight);
 //        Height = (TextView) rootView.findViewById(R.id.tvHeight);
         recyclerViewDailyChallenge = (RecyclerView) rootView.findViewById(R.id.dailyChallenge);
+    recyclerViewDailyChallenge.setVisibility(View.GONE);
         dailyChallengeModels = new ArrayList<>();
         recyclerViewDailyChallenge.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
         setDailyChallenge(new Callback() {
@@ -201,9 +205,9 @@ public class ProfileFragment extends Fragment {
                 recyclerViewDailyChallenge.setAdapter(dailyChallengeAdapter);
             }
         });
-        share = (MaterialFancyButton) rootView.findViewById(R.id.share);
+        share = (Button) rootView.findViewById(R.id.share);
 //        logout = (MaterialFancyButton) rootView.findViewById(R.id.logout);
-        start = (MaterialFancyButton) rootView.findViewById(R.id.startActivity);
+        start = (Button) rootView.findViewById(R.id.startActivity);
 //        logout.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
@@ -222,6 +226,12 @@ public class ProfileFragment extends Fragment {
             public void onClick(View v) {
                 Intent login = new Intent(getActivity(), BMI.class);
                 startActivity(login);
+            }
+        });
+        challenge.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                recyclerViewDailyChallenge.setVisibility(View.VISIBLE);
             }
         });
     }

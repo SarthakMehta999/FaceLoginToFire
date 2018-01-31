@@ -124,7 +124,7 @@ public class BMI extends AppCompatActivity {
                 public void onClick(View v) {
 
                     if (height.getText().toString().trim().equals("") || weight.getText().toString().trim().equals("")) {
-                        height.setError("Please Input Value");
+                            height.setError("Please Input Value");
                         weight.setError("Please Input Value");
                     } else {
 

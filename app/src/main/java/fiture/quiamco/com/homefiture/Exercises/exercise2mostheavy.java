@@ -44,7 +44,7 @@ public class exercise2mostheavy extends AppCompatActivity {
     private long startTime = 0L;
 
     private Handler customHandler = new Handler();
-    private int points =(10);
+    private int points =10;
     long timeInMilliseconds = 0L;
     long timeSwapBuff = 0L;
     long updatedTime = 0L;
@@ -70,7 +70,7 @@ public class exercise2mostheavy extends AppCompatActivity {
         myRef = database.getReference("dailyChallenge");
         userRef = database.getReference("UserFiture");
         Bundle inBundle = getIntent().getExtras();
-//        user = (User) inBundle.getSerializable("user");
+//     user = (User) inBundle.getSerializable("user");
         inst = (MaterialFancyButton) findViewById(R.id.btnInstruction);
 //        loadImage();
 
@@ -166,7 +166,9 @@ public class exercise2mostheavy extends AppCompatActivity {
                                                                     @Override
                                                                     public void onDataChange(DataSnapshot dataSnapshot) {
                                                                         int userPoints = (Integer.parseInt(dataSnapshot.child("userPoints").getValue().toString()));
+                                                                        Log.d("valOfPoints:",userPoints+"shet");
                                                                         userPoints+=30;
+                                                                        Log.d("valOfPoints:",userPoints+"sheti"+refUserID);
                                                                         Toast.makeText(exercise2mostheavy.this, "Congratulations, you received 30 points!", Toast.LENGTH_LONG).show();
                                                                         refUserID.child("userPoints").setValue(userPoints);
                                                                         user.setUserPoints(userPoints);

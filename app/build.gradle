@@ -55,6 +55,7 @@ dependencies {
     compile 'com.android.support:recyclerview-v7:25.3.1'
     compile 'yasic.library.ParticleTextView:particletextview:0.0.5'
     compile 'com.jpardogo.materialtabstrip:library:1.1.1'
+    compile 'com.android.support:support-v4:25.3.1'
     testCompile 'junit:junit:4.12'
 }
 android {

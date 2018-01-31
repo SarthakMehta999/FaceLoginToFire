@@ -12,6 +12,7 @@ import android.view.WindowManager;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -24,7 +25,9 @@ import static fiture.quiamco.com.homefiture.R.id.rbtnLight;
 
 public class Lifestyle extends AppCompatActivity {
     private MaterialFancyButton proceed;
-    private RadioButton light,moderate,very,most,sometimes,never,gain,lose,maintain;
+    private RadioButton light,moderate,very,dizziness,
+    shortness,gain,lose,maintain;
+    private RadioButton not,rapid,chest,heart,pain,none;
     private RadioGroup fitness,workout,goal;
     private User user;
 //    DatabaseReference databaseReference;
@@ -74,25 +77,28 @@ public class Lifestyle extends AppCompatActivity {
     }
 
     private void findViews() {
-
+        //Activity
         fitness =(RadioGroup)findViewById(R.id.rgFitness);
-        workout =(RadioGroup)findViewById(R.id.rgWorkout);
-        goal =(RadioGroup)findViewById(R.id.rgGoal);
-        proceed = (MaterialFancyButton)findViewById(R.id.btnProceed);
+        not = (RadioButton) findViewById(R.id.rbtnNot);
         light = (RadioButton)findViewById(rbtnLight);
         moderate = (RadioButton)findViewById(R.id.rbtnModerate);
-//        very = (RadioButton)findViewById(R.id.rbtnVery);
-        most = (RadioButton)findViewById(R.id.rbtnMost);
-        sometimes = (RadioButton)findViewById(R.id.rbtnSometimes);
-        never = (RadioButton)findViewById(R.id.rbtnNever);
+        very = (RadioButton)findViewById(R.id.rbtnVery);
+        //Fitness Goal
+        goal =(RadioGroup)findViewById(R.id.rgGoal);
         gain = (RadioButton)findViewById(R.id.rbtnGain);
         lose = (RadioButton)findViewById(R.id.rbtnLose);
         maintain = (RadioButton)findViewById(R.id.rbtnMaintain);
+        //Physical Conditions
+        workout =(RadioGroup)findViewById(R.id.rgWorkout);
+        rapid = (RadioButton) findViewById(R.id.rbtnRapid);
+        chest = (RadioButton)findViewById(R.id.rbtnMost);
+        heart = (RadioButton) findViewById(R.id.rbtnHeart);
+        pain = (RadioButton) findViewById(R.id.rbtnPain);
+        dizziness = (RadioButton)findViewById(R.id.rbtnSometimes);
+        shortness = (RadioButton)findViewById(R.id.rbtnNever);
+        none = (RadioButton) findViewById(R.id.rbtnNone);
 
-
-
-
-
+        proceed = (MaterialFancyButton)findViewById(R.id.btnProceed);
         proceed.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -108,14 +114,7 @@ public class Lifestyle extends AppCompatActivity {
             }
         });
 
-    RadioButton rbtnVery = (RadioButton) findViewById(R.id.rbtnVery);
-        if(fitness.getCheckedRadioButtonId() <=0) {//Grp is your radio group object
-            proceed.setEnabled(false);
-        }
-        else if(fitness.getCheckedRadioButtonId() >=0){
-            proceed.setEnabled(true);
 
-        }
 
 //        light.setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -127,9 +126,18 @@ public class Lifestyle extends AppCompatActivity {
 //            }
 //        });
 
-
-
-//
+        //Radio conditions testing pa
+        if(light.isChecked() && lose.isChecked() && none.isChecked())
+        {
+            Toast.makeText(this, "lightly active checked", Toast.LENGTH_SHORT).show();
+        }
+        else if(moderate.isChecked())
+        {
+            Toast.makeText(this, "moderately active checked", Toast.LENGTH_SHORT).show();
+        }
+        else if (very.isChecked()){
+            Toast.makeText(this, "very active checked", Toast.LENGTH_SHORT).show();
+        }
 
 
     }
