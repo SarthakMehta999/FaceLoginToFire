@@ -1,4 +1,4 @@
-package fiture.quiamco.com.homefiture;
+package fiture.quiamco.com.homefiture.Activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,6 +7,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.TextView;
+
+import fiture.quiamco.com.homefiture.R;
 
 public class SplashActivity extends AppCompatActivity {
 

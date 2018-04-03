@@ -31,10 +31,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 import de.hdodenhof.circleimageview.CircleImageView;
+import fiture.quiamco.com.homefiture.Activities.BMI;
 import fiture.quiamco.com.homefiture.Adapter.DailyChallengeAdapter;
-import fiture.quiamco.com.homefiture.BMI;
 import fiture.quiamco.com.homefiture.R;
 import fiture.quiamco.com.homefiture.models.DailyChallengeModel;
+import fiture.quiamco.com.homefiture.models.Infos;
 import fiture.quiamco.com.homefiture.models.User;
 
 /**
@@ -46,13 +47,13 @@ public class ProfileFragment extends Fragment {
     private ShareDialog shareDialog;
     private String TAG = "ProfileFragment";
     private CircleImageView profileImage;
-    private TextView nameAndSurname, tvEmail, tvGender, tvBirthday, Bmi;
+    private TextView nameAndSurname, tvEmail, tvGender, tvBirthday, Bmi,tvWeight,tvHeight;
     private EditText Weight, Height;
     private Button share, logout, start;
     private MaterialFancyButton challenge;
     private View rootView;
     private User user;
-
+    private Infos infos;
     private RecyclerView recyclerViewDailyChallenge;
     private ArrayList<DailyChallengeModel> dailyChallengeModels, dcmss;
     private DailyChallengeAdapter dailyChallengeAdapter;
@@ -113,6 +114,7 @@ public class ProfileFragment extends Fragment {
 
 
         user = (User) getArguments().getSerializable("user");
+        infos = (Infos) getArguments().getSerializable("infos");
         rootView = inflater.inflate(R.layout.profile_fragment, container, false);
         database = FirebaseDatabase.getInstance();
         myRef = database.getReference("dailyChallenge");
@@ -130,6 +132,8 @@ public class ProfileFragment extends Fragment {
         nameAndSurname.setText(user.getfName() + " " + user.getlName());
 //        tvEmail.setText(user.getEmail());
         tvGender.setText(user.getGender());
+        tvHeight.setText(user.getHeight());
+        tvWeight.setText(infos.getWeight());
 //        tvBirthday.setText(user.getBirthDate());
 //        Weight.getText(user.getWeight().toString());
 //
@@ -161,6 +165,8 @@ public class ProfileFragment extends Fragment {
 //        tvEmail = (TextView) rootView.findViewById(R.id.tvEmail);
         tvGender = (TextView) rootView.findViewById(R.id.tvGender);
         tvBirthday = (TextView) rootView.findViewById(R.id.tvBirthday);
+        tvWeight = (TextView) rootView.findViewById(R.id.tvWeight);
+        tvHeight = (TextView) rootView.findViewById(R.id.tvHeight);
 //        Weight = (TextView) rootView.findViewById(R.id.tvWeight);
 //        Height = (TextView) rootView.findViewById(R.id.tvHeight);
         recyclerViewDailyChallenge = (RecyclerView) rootView.findViewById(R.id.dailyChallenge);
@@ -224,7 +230,7 @@ public class ProfileFragment extends Fragment {
         start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent login = new Intent(getActivity(), BMI.class);
+                Intent login = new Intent(getActivity(),BMI.class);
                 startActivity(login);
             }
         });

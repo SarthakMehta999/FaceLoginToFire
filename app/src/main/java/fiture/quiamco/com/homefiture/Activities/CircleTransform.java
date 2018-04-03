@@ -1,4 +1,4 @@
-package fiture.quiamco.com.homefiture;
+package fiture.quiamco.com.homefiture.Activities;
 
 import android.content.Context;
 import android.graphics.Bitmap;

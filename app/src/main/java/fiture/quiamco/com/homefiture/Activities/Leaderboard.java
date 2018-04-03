@@ -1,4 +1,4 @@
-package fiture.quiamco.com.homefiture;
+package fiture.quiamco.com.homefiture.Activities;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -18,6 +18,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import fiture.quiamco.com.homefiture.Adapter.PointsAdapter;
+import fiture.quiamco.com.homefiture.R;
 import fiture.quiamco.com.homefiture.models.User;
 
 public class Leaderboard extends AppCompatActivity {

@@ -1,4 +1,4 @@
-package fiture.quiamco.com.homefiture;
+package fiture.quiamco.com.homefiture.Activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,6 +15,8 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+
+import fiture.quiamco.com.homefiture.R;
 
 public class SignupActivity extends AppCompatActivity {
     private EditText inputEmail, inputPassword;

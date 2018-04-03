@@ -1,4 +1,4 @@
-package fiture.quiamco.com.homefiture;
+package fiture.quiamco.com.homefiture.Activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,6 +9,7 @@ import android.view.View;
 import fiture.quiamco.com.homefiture.Exercises.LoseHeavy;
 import fiture.quiamco.com.homefiture.Exercises.LoseMoreHeavy;
 import fiture.quiamco.com.homefiture.Exercises.LoseMostHeavy;
+import fiture.quiamco.com.homefiture.R;
 
 public class StartHeavyWorkouts extends AppCompatActivity {
 

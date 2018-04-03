@@ -1,8 +1,11 @@
-package fiture.quiamco.com.homefiture;
+package fiture.quiamco.com.homefiture.Activities;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -11,13 +14,15 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.firebase.client.Firebase;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.rilixtech.materialfancybutton.MaterialFancyButton;
 
-import fiture.quiamco.com.homefiture.BaseOnBMI.Underweight.FoodPlan;
-import fiture.quiamco.com.homefiture.Exercises.LoseHeavy;
-import fiture.quiamco.com.homefiture.Exercises.LoseMoreHeavy;
-import fiture.quiamco.com.homefiture.Exercises.LoseMostHeavy;
-import fiture.quiamco.com.homefiture.Exercises.day1heavy;
+import fiture.quiamco.com.homefiture.R;
+import fiture.quiamco.com.homefiture.models.Infos;
 import fiture.quiamco.com.homefiture.models.User;
 
 public class BMI extends AppCompatActivity {
@@ -27,10 +32,13 @@ public class BMI extends AppCompatActivity {
     private MaterialFancyButton proceed;
     private User user;
     private Firebase mRootRef;
-
+    private Infos infos;
+    private String id;
+    String heightStr;
+    String weightStr;
 //    FirebaseDatabase database = FirebaseDatabase.getInstance();
 //    DatabaseReference myRef = database.getReference("BMI");
-
+    private DatabaseReference userBmi;
 
 //    DatabaseReference databaseReference;
 
@@ -40,10 +48,21 @@ public class BMI extends AppCompatActivity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_bmi);
-
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
 //        databaseReference = FirebaseDatabase.getInstance().getReference("BMI");
+        SharedPreferences sharedPreferences = getSharedPreferences("FitureUser", Context.MODE_PRIVATE);
+        String fname = sharedPreferences.getString("userFname","");
+        String lname = sharedPreferences.getString("userLname","");
+        String bday= sharedPreferences.getString("userBday","");
+        String gender = sharedPreferences.getString("userGender","");
+        String email = sharedPreferences.getString("userEmail","");
+        String pic = sharedPreferences.getString("userPic","");
+        int points = sharedPreferences.getInt("samplePoint",1);
+        Log.d("atayakayawa",points+"shit");
+        user = new User(fname,lname,bday,gender,email,pic,points);
+        userBmi = database.getReference("User_BMI");
 
-
+        id = sharedPreferences.getString("userKey", "");
 
 //        mRootRef = new Firebase("https://fiture-dfae4.firebaseio.com/");
         height = (EditText) findViewById(R.id.height);
@@ -59,8 +78,9 @@ public class BMI extends AppCompatActivity {
 
 
     public void calculateBMI(View v) {
-        String heightStr = height.getText().toString();
-        String weightStr = weight.getText().toString();
+        heightStr = height.getText().toString();
+        weightStr = weight.getText().toString();
+
 
 
 //        String value1 = height.getText().toString();
@@ -108,8 +128,7 @@ public class BMI extends AppCompatActivity {
                         height.setError("Please Input Value");
                         weight.setError("Please Input Value");
                     } else {
-
-                        Intent pt = new Intent(BMI.this, FoodPlan.class);
+                        Intent pt = new Intent(BMI.this, Lifestyle.class);
                         startActivity(pt);
                     }
                 }
@@ -128,7 +147,7 @@ public class BMI extends AppCompatActivity {
                         weight.setError("Please Input Value");
                     } else {
 
-                        Intent pt = new Intent(BMI.this, FoodPlan.class);
+                        Intent pt = new Intent(BMI.this, Lifestyle.class);
                         startActivity(pt);
                     }
                 }
@@ -144,8 +163,7 @@ public class BMI extends AppCompatActivity {
                         height.setError("Please Input Value");
                         weight.setError("Please Input Value");
                     } else {
-
-                        Intent pt = new Intent(BMI.this, FoodPlan.class);
+                        Intent pt = new Intent(BMI.this, Lifestyle.class);
                         startActivity(pt);
                     }
                 }
@@ -163,7 +181,7 @@ public class BMI extends AppCompatActivity {
                         weight.setError("Please Input Value");
                     } else {
 
-                        Intent pt = new Intent(BMI.this, StartActivity.class);
+                        Intent pt = new Intent(BMI.this, Lifestyle.class);
                         startActivity(pt);
                     }
                 }
@@ -180,7 +198,7 @@ public class BMI extends AppCompatActivity {
                         weight.setError("Please Input Value");
                     } else {
 
-                        Intent pt = new Intent(BMI.this, day1heavy.class);
+                        Intent pt = new Intent(BMI.this, Lifestyle.class);
                         startActivity(pt);
                     }
                 }
@@ -199,7 +217,7 @@ public class BMI extends AppCompatActivity {
                         weight.setError("Please Input Value");
                     } else {
 
-                        Intent pt = new Intent(BMI.this, LoseHeavy.class);
+                        Intent pt = new Intent(BMI.this, Lifestyle.class);
                         startActivity(pt);
                     }
                 }
@@ -218,7 +236,7 @@ public class BMI extends AppCompatActivity {
                         weight.setError("Please Input Value");
                     } else {
 
-                        Intent pt = new Intent(BMI.this, LoseMoreHeavy.class);
+                        Intent pt = new Intent(BMI.this, Lifestyle.class);
                         startActivity(pt);
                     }
                 }
@@ -236,7 +254,7 @@ public class BMI extends AppCompatActivity {
                         weight.setError("Please Input Value");
                     } else {
 
-                        Intent pt = new Intent(BMI.this, LoseMostHeavy.class);
+                        Intent pt = new Intent(BMI.this, Lifestyle.class);
                         startActivity(pt);
                     }
                 }
@@ -246,6 +264,40 @@ public class BMI extends AppCompatActivity {
 
         bmiLabel = "BMI:" +"\n" + bmi + " \n\n"  + bmiLabel;
         result.setText(bmiLabel);
+
+        final Infos infos = new Infos();
+        infos.setHeight(heightStr +""+ "cm");
+        infos.setWeight(weightStr +""+ "kg");
+
+        SharedPreferences sharedPreferences = getSharedPreferences("FitureUser", Context.MODE_PRIVATE);
+        final SharedPreferences.Editor editor = sharedPreferences.edit();
+
+        Log.d("testingzz","weight: " + weightStr);
+        Log.d("testingzz","height: " + heightStr);
+        Log.d("testingzz","bmi: " + String.valueOf(bmi));
+
+        editor.putString("userWeight",weightStr);
+        editor.putString("userHeight",heightStr);
+        editor.putString("userBMI",String.valueOf(bmi));
+        editor.apply();
+        userBmi.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                if (dataSnapshot.child(id).exists()) {
+                    Log.d("Child exists", user.getlName());
+                } else {
+//                    alterUserData.child("Image").setValue(user.getImageUrl());
+                    userBmi.child(id+"Height: " + infos.getHeight()+ " " +
+                            "Weight: "+ infos.getWeight());
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+
 
     }
 

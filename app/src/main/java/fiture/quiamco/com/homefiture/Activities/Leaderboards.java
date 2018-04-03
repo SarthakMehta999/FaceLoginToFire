@@ -1,4 +1,4 @@
-package fiture.quiamco.com.homefiture;
+package fiture.quiamco.com.homefiture.Activities;
 
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
@@ -22,6 +22,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.util.ArrayList;
 
 import fiture.quiamco.com.homefiture.Adapter.UserAdapter;
+import fiture.quiamco.com.homefiture.R;
 import fiture.quiamco.com.homefiture.fragments.MainFragment;
 import fiture.quiamco.com.homefiture.fragments.ProfileFragment;
 import fiture.quiamco.com.homefiture.models.User;

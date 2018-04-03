@@ -1,4 +1,4 @@
-package fiture.quiamco.com.homefiture;
+package fiture.quiamco.com.homefiture.Activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -25,6 +25,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import fiture.quiamco.com.homefiture.Adapter.DailyChallengeAdapter;
+import fiture.quiamco.com.homefiture.R;
 import fiture.quiamco.com.homefiture.models.DailyChallengeModel;
 
 import static fiture.quiamco.com.homefiture.R.id.profileImage;

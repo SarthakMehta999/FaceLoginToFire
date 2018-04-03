@@ -24,6 +24,9 @@ public class User implements Serializable, Comparable<User> {
     private String email;
     private String imageUrl;
     private int userPoints;
+    private String height;
+    private String weight;
+    private String BMI;
 
     public User() {
     }
@@ -36,10 +39,20 @@ public class User implements Serializable, Comparable<User> {
         this.email = email;
         this.imageUrl = imageUrl;
         this.userPoints = userPoints;
-
     }
 
-
+    public User(String fName, String lName, String birthDate, String gender, String email, String imageUrl, int userPoints, String height, String weight, String BMI) {
+        this.fName = fName;
+        this.lName = lName;
+        this.birthDate = birthDate;
+        this.gender = gender;
+        this.email = email;
+        this.imageUrl = imageUrl;
+        this.userPoints = userPoints;
+        this.height = height;
+        this.weight = weight;
+        this.BMI = BMI;
+    }
 
     public int getUserPoints() {
         return userPoints;
@@ -98,6 +111,29 @@ public class User implements Serializable, Comparable<User> {
         this.imageUrl = imageUrl;
     }
 
+    public String getHeight() {
+        return height;
+    }
+
+    public void setHeight(String height) {
+        this.height = height;
+    }
+
+    public String getWeight() {
+        return weight;
+    }
+
+    public void setWeight(String weight) {
+        this.weight = weight;
+    }
+
+    public String getBMI() {
+        return BMI;
+    }
+
+    public void setBMI(String BMI) {
+        this.BMI = BMI;
+    }
 
     /*@Override
     public int compare(User o1, User o2) {

@@ -106,9 +106,9 @@ public class MainFragment extends Fragment {
 //        Weight = (TextView) rootView.findViewById(R.id.tvWeight);
 //        Height = (TextView) rootView.findViewById(R.id.tvHeight);
 
-        share = (MaterialFancyButton) rootView.findViewById(R.id.share);
+//        share = (MaterialFancyButton) rootView.findViewById(R.id.share);
 //        logout = (MaterialFancyButton) rootView.findViewById(R.id.logout);
-        start = (MaterialFancyButton) rootView.findViewById(R.id.startActivity);
+//        start = (MaterialFancyButton) rootView.findViewById(R.id.startActivity);
 //        logout.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {

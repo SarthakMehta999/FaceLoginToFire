@@ -54,4 +54,8 @@
     <string name="title_activity_my_rank">MyRank</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <!--Radio Button Values-->
+
+    <string name="light_rb">Lightly Active (1 "n dash" 2 times a month or less)</string>
 </resources>

@@ -1,4 +1,4 @@
-package fiture.quiamco.com.homefiture.Exercises;
+package fiture.quiamco.com.homefiture.Activities;
 
 import android.app.AlertDialog;
 import android.content.Context;
@@ -23,7 +23,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.rilixtech.materialfancybutton.MaterialFancyButton;
 
-import fiture.quiamco.com.homefiture.NavDrawer;
+import fiture.quiamco.com.homefiture.Exercises.exercise2mostheavy;
 import fiture.quiamco.com.homefiture.R;
 import fiture.quiamco.com.homefiture.models.User;
 import pl.droidsonroids.gif.GifTextView;

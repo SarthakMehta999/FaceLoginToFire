@@ -1,4 +1,4 @@
-package fiture.quiamco.com.homefiture;
+package fiture.quiamco.com.homefiture.Activities;
 
 import android.content.Context;
 import android.content.Intent;
@@ -13,11 +13,12 @@ import android.widget.TextView;
 
 import com.vstechlab.easyfonts.EasyFonts;
 
+import fiture.quiamco.com.homefiture.R;
 import fiture.quiamco.com.homefiture.models.User;
 
 public class Splash2 extends AppCompatActivity {
     private User user;
-    private static int SPLASH_TIME_OUT = 8000;
+    private static int SPLASH_TIME_OUT = 3000;
     private TextView consider,some;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +35,7 @@ public class Splash2 extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(Splash2.this,Lifestyle.class);
+                Intent intent = new Intent(Splash2.this,BMI.class);
                 startActivity(intent);
                 finish();
             }
@@ -43,7 +44,7 @@ public class Splash2 extends AppCompatActivity {
         SharedPreferences sharedPreferences = getSharedPreferences("FitureUser", Context.MODE_PRIVATE);
         String fname = sharedPreferences.getString("userFname","");
         String lname = sharedPreferences.getString("userLname","");
-        String bday= sharedPreferences.getString("birthday","");
+        String bday= sharedPreferences.getString("userBday","");
         String gender = sharedPreferences.getString("userGender","");
         String email = sharedPreferences.getString("userEmail","");
         String pic = sharedPreferences.getString("userPic","");

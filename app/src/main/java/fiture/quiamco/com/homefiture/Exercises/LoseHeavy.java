@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
 import android.view.View;
 
+import fiture.quiamco.com.homefiture.Activities.day1heavy;
 import fiture.quiamco.com.homefiture.Exercises.Underweight.day1moreheavy;
 import fiture.quiamco.com.homefiture.R;
 

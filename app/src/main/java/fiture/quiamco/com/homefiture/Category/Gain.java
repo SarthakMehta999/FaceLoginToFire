@@ -7,11 +7,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
 import android.view.View;
 
-import fiture.quiamco.com.homefiture.Exercises.Day2Step1;
 import fiture.quiamco.com.homefiture.Exercises.Day2Step1_1;
-import fiture.quiamco.com.homefiture.Exercises.GainDay_2.GStep_1;
 import fiture.quiamco.com.homefiture.Exercises.Step_1;
-import fiture.quiamco.com.homefiture.NavDrawer;
+import fiture.quiamco.com.homefiture.Activities.NavDrawer;
 import fiture.quiamco.com.homefiture.R;
 import fiture.quiamco.com.homefiture.models.User;
 

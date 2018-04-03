@@ -1,9 +1,11 @@
-package fiture.quiamco.com.homefiture;
+package fiture.quiamco.com.homefiture.Activities;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
+
+import fiture.quiamco.com.homefiture.R;
 
 public class UserStatus extends AppCompatActivity {
     private String imageUrl;

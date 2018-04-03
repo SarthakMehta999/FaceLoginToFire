@@ -1,4 +1,4 @@
-package fiture.quiamco.com.homefiture;
+package fiture.quiamco.com.homefiture.Activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -25,6 +25,7 @@ import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 
 import fiture.quiamco.com.homefiture.Pedometer.Pedometer_Main;
+import fiture.quiamco.com.homefiture.R;
 import fiture.quiamco.com.homefiture.fragments.MainFragment;
 import fiture.quiamco.com.homefiture.fragments.ProfileFragment;
 import fiture.quiamco.com.homefiture.models.User;

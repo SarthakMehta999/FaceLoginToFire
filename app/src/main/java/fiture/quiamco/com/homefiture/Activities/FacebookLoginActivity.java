@@ -1,4 +1,4 @@
-package fiture.quiamco.com.homefiture;
+package fiture.quiamco.com.homefiture.Activities;
 
 import android.content.Context;
 import android.content.Intent;
@@ -44,6 +44,7 @@ import org.json.JSONObject;
 
 import java.util.Arrays;
 
+import fiture.quiamco.com.homefiture.R;
 import fiture.quiamco.com.homefiture.models.User;
 
 public class FacebookLoginActivity extends AppCompatActivity {
@@ -208,7 +209,7 @@ public class FacebookLoginActivity extends AppCompatActivity {
                             if (object.has("gender"))
                                 gender = object.getString("gender");
 
-
+                            Log.d("birthdayCheck", birthday);
                             Intent main = new Intent(FacebookLoginActivity.this, Splash2.class);
                             Bundle bundle = new Bundle();
                             if(email == null){
