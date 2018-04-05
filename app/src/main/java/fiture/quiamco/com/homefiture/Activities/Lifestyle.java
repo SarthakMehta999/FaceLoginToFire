@@ -73,13 +73,14 @@ public class Lifestyle extends AppCompatActivity {
         String height = sharedPreferences.getString("userHeight", "");
         String weight = sharedPreferences.getString("userWeight", "");
         String BMI = sharedPreferences.getString("userBMI", "");
+        String bmiLabel = sharedPreferences.getString("userBMILabel", "");
         Log.d("atayakayawa", points + "shit");
 
         Log.d("testingzz", "weight: " + weight);
         Log.d("testingzz", "height: " + height);
         Log.d("testingzz", "bmi: " + BMI);
 
-        user = new User(fname, lname, bday, gender, email, pic, points, height, weight, BMI);
+        user = new User(fname, lname, bday, gender, email, pic, points, height, weight, BMI,bmiLabel);
         userAns = database.getReference("User_Info");
 
 //        Log.d("asdasda",user.getfName());
@@ -275,11 +276,17 @@ public class Lifestyle extends AppCompatActivity {
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference surveyResponseRef = database.getReference("UserSurveyResponses");
-        surveyResponseRef.child(userId).child("fitnessLevel").setValue(fitnessResponse);
-        surveyResponseRef.child(userId).child("goal").setValue(goalResponse);
-        for (int i = 0 ; i<ilnesses.size(); i++){
-            surveyResponseRef.child(userId).child("illnesses").child(String.valueOf(i+1)).setValue(ilnesses.get(i));
+        if(surveyResponseRef.child(userId).equals(userId)){
+            Log.d("it exists",user.getfName());
         }
+        else {
+            surveyResponseRef.child(userId).child("fitnessLevel").setValue(fitnessResponse);
+            surveyResponseRef.child(userId).child("goal").setValue(goalResponse);
+            for (int i = 0; i < ilnesses.size(); i++) {
+                surveyResponseRef.child(userId).child("illnesses").child(String.valueOf(i + 1)).setValue(ilnesses.get(i));
+            }
+        }
+
     }
 
     @Override

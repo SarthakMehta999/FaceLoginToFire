@@ -86,17 +86,42 @@
                     android:textColor="#F5F5F5"
                     android:textSize="18sp" />
                 <TextView
-                    android:id="@+id/tvWeight"
+                    android:id="@+id/weight"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginTop="1dp"
                     android:layout_marginLeft="-55dp"
+                    android:layout_marginTop="3dp"
                     android:fontFamily="sans-serif-condensed"
                     android:text="Weight:"
                     android:textAllCaps="true"
                     android:textColor="#F5F5F5"
-                    android:textSize="16sp" />
+                    android:textSize="15sp" />
+                <TextView
+                android:id="@+id/height"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="-20dp"
+                android:layout_marginLeft="55dp"
+                android:textAllCaps="true"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Height:"
+                android:textColor="#F5F5F5"
+                android:textSize="16sp" />
+                <TextView
+                    android:id="@+id/tvWeight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="-55dp"
+                    android:layout_marginTop="-10dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="Weight:"
+                    android:textColor="#F5F5F5"
+                    android:textSize="14sp" />
+
                 <TextView
                     android:id="@+id/tvHeight"
                     android:layout_width="wrap_content"
@@ -107,9 +132,8 @@
                     android:layout_marginLeft="55dp"
                     android:fontFamily="sans-serif-condensed"
                     android:text="Height:"
-                    android:textAllCaps="true"
                     android:textColor="#F5F5F5"
-                    android:textSize="16sp" />
+                    android:textSize="14sp" />
 
 
                 <com.rilixtech.materialfancybutton.MaterialFancyButton

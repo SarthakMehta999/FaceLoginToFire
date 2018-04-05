@@ -133,7 +133,7 @@ public class ProfileFragment extends Fragment {
 //        tvEmail.setText(user.getEmail());
         tvGender.setText(user.getGender());
         tvHeight.setText(user.getHeight());
-        tvWeight.setText(infos.getWeight());
+        tvWeight.setText(user.getWeight());
 //        tvBirthday.setText(user.getBirthDate());
 //        Weight.getText(user.getWeight().toString());
 //

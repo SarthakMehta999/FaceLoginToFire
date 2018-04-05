@@ -27,6 +27,7 @@ public class User implements Serializable, Comparable<User> {
     private String height;
     private String weight;
     private String BMI;
+    private String bmiLabel;
 
     public User() {
     }
@@ -41,7 +42,7 @@ public class User implements Serializable, Comparable<User> {
         this.userPoints = userPoints;
     }
 
-    public User(String fName, String lName, String birthDate, String gender, String email, String imageUrl, int userPoints, String height, String weight, String BMI) {
+    public User(String fName, String lName, String birthDate, String gender, String email, String imageUrl, int userPoints, String height, String weight, String BMI, String bmiLabel) {
         this.fName = fName;
         this.lName = lName;
         this.birthDate = birthDate;
@@ -52,6 +53,7 @@ public class User implements Serializable, Comparable<User> {
         this.height = height;
         this.weight = weight;
         this.BMI = BMI;
+        this.bmiLabel = bmiLabel;
     }
 
     public int getUserPoints() {
@@ -135,6 +137,13 @@ public class User implements Serializable, Comparable<User> {
         this.BMI = BMI;
     }
 
+    public String getBmiLabel() {
+        return bmiLabel;
+    }
+
+    public void setBmiLabel(String bmiLabel) {
+        this.bmiLabel = bmiLabel;
+    }
     /*@Override
     public int compare(User o1, User o2) {
         int resulta_1 = o1.getUserPoints();

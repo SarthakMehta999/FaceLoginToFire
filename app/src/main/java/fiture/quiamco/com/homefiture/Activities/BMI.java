@@ -36,6 +36,8 @@ public class BMI extends AppCompatActivity {
     private String id;
     String heightStr;
     String weightStr;
+    String bmiLabel = "";
+    String bmiStat;
 //    FirebaseDatabase database = FirebaseDatabase.getInstance();
 //    DatabaseReference myRef = database.getReference("BMI");
     private DatabaseReference userBmi;
@@ -116,7 +118,7 @@ public class BMI extends AppCompatActivity {
 
 
     private void displayBMI(float bmi) {
-        String bmiLabel = "";
+
         //Very Severely Underweight
         if (Float.compare(bmi, 15f) <= 0) {
             bmiLabel = getString(R.string.very_severely_underweight);
@@ -262,8 +264,8 @@ public class BMI extends AppCompatActivity {
 
         }
 
-        bmiLabel = "BMI:" +"\n" + bmi + " \n\n"  + bmiLabel;
-        result.setText(bmiLabel);
+        bmiStat = "BMI:" +"\n" + bmi + " \n\n"  + bmiLabel;
+        result.setText(bmiStat);
 
         final Infos infos = new Infos();
         infos.setHeight(heightStr +""+ "cm");
@@ -272,13 +274,15 @@ public class BMI extends AppCompatActivity {
         SharedPreferences sharedPreferences = getSharedPreferences("FitureUser", Context.MODE_PRIVATE);
         final SharedPreferences.Editor editor = sharedPreferences.edit();
 
-        Log.d("testingzz","weight: " + weightStr);
+        Log.d("testingzz","weight: " + weightStr +" "+"kg");
         Log.d("testingzz","height: " + heightStr);
         Log.d("testingzz","bmi: " + String.valueOf(bmi));
+        Log.d("testingzz","bmi label:" + bmiLabel);
 
-        editor.putString("userWeight",weightStr);
-        editor.putString("userHeight",heightStr);
+        editor.putString("userWeight" ,weightStr + " "+"kg");
+        editor.putString("userHeight",heightStr +" "+"cm");
         editor.putString("userBMI",String.valueOf(bmi));
+        editor.putString("userBMILabel",bmiLabel);
         editor.apply();
         userBmi.addValueEventListener(new ValueEventListener() {
             @Override
