@@ -14,11 +14,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.firebase.client.Firebase;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 import com.rilixtech.materialfancybutton.MaterialFancyButton;
 
 import fiture.quiamco.com.homefiture.R;
@@ -284,23 +281,7 @@ public class BMI extends AppCompatActivity {
         editor.putString("userBMI",String.valueOf(bmi));
         editor.putString("userBMILabel",bmiLabel);
         editor.apply();
-        userBmi.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                if (dataSnapshot.child(id).exists()) {
-                    Log.d("Child exists", user.getlName());
-                } else {
-//                    alterUserData.child("Image").setValue(user.getImageUrl());
-                    userBmi.child(id+"Height: " + infos.getHeight()+ " " +
-                            "Weight: "+ infos.getWeight());
-                }
-            }
 
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-
-            }
-        });
 
 
     }

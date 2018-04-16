@@ -21,8 +21,6 @@ import com.bumptech.glide.Glide;
 import com.facebook.login.LoginManager;
 import com.facebook.share.widget.ShareDialog;
 
-import org.greenrobot.eventbus.EventBus;
-import org.greenrobot.eventbus.Subscribe;
 
 import fiture.quiamco.com.homefiture.Pedometer.Pedometer_Main;
 import fiture.quiamco.com.homefiture.R;
@@ -42,8 +40,6 @@ public class NavDrawer extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nav_drawer);
-
-        EventBus.getDefault().register(this);
 
 
         Bundle inBundle = getIntent().getExtras();
@@ -138,10 +134,7 @@ public class NavDrawer extends AppCompatActivity
         }, 0);
     }
 
-    @Subscribe
-    public void onEvent(ProfileFragment event){
-        Log.d("Sample","Test");
-    }
+
 
 
     @Override
