@@ -21,19 +21,65 @@
         android:layout_below="@+id/Toolbar1"
         android:layout_centerHorizontal="true">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content"/>
 
-        <LinearLayout
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Full-Body Fitness Quickie
+        20-Minute Cardio HIIT Workout"
+        android:textAlignment="center"
+        android:layout_marginBottom="25sp"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:orientation="vertical"
             android:layout_height="wrap_content">
 
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Day 4"
-                android:textAlignment="center"
+                android:text="Exercises"
+                android:textStyle="bold"
                 android:textSize="30sp"
-                android:textStyle="bold" />
+                android:layout_marginTop="105dp"
+                android:layout_marginBottom="20sp"
+                android:layout_marginStart="8dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="Time"
+                android:textSize="30sp"
+                android:layout_marginTop="105dp"
+                android:textStyle="bold"
+                android:layout_marginRight="8dp"/>
+
+
+
+
+
+        </RelativeLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="75dp">
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -42,72 +88,42 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Exercises"
-                    android:textStyle="bold"
-                    android:textSize="30sp"
+                    android:text="Warmup: Knees and Toes"
+                    android:textSize="18sp"
+                    android:layout_marginTop="75dp"
+                    android:layout_marginStart="8dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="30 seconds "
+                    android:textSize="18sp"
                     android:layout_marginTop="30dp"
-                    android:layout_marginBottom="20sp"
-                    android:layout_marginStart="8dp"
-                    />
+                    android:layout_marginRight="8dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:text="Reps"
-                    android:textSize="30sp"
+                    android:text="Warmup: Plank Jack"
+                    android:textSize="18sp"
                     android:layout_marginTop="30dp"
-                    android:textStyle="bold"
-                    android:layout_marginRight="8dp"/>
-
-
-
-
-
-
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="BODYWEIGHT SQUATS"
-                    android:textSize="18sp"
-                    android:layout_marginTop="20dp"
                     android:layout_marginStart="8dp"
                     />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
-                    android:text="15"
+                    android:text="30 seconds "
                     android:textSize="18sp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginRight="8dp"/>
-
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="DUMBBELL BENCH PRESS"
-                    android:textSize="18sp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginStart="8dp"
-                    />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:text="12"
-                    android:textSize="18sp"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="30dp"
                     android:layout_marginRight="8dp"/>
 
             </RelativeLayout>
@@ -120,16 +136,96 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="DUMBBELL ROW"
+                    android:text="Warmup: 180 Jump"
                     android:textSize="18sp"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="30dp"
                     android:layout_marginStart="8dp"
                     />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
-                    android:text="12"
+                    android:text="30 seconds "
+                    android:textSize="18sp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginRight="8dp"/>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Circuit One: Jump Shot"
+                    android:textSize="18sp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginStart="8dp"
+
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="40 seconds "
+                    android:textSize="18sp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginRight="8dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="  CircuitOne: Alternating
+  Two-Point Touch"
+                    android:textSize="18sp"
+                    android:layout_marginTop="30dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="40 seconds "
+                    android:textSize="18sp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginRight="8dp"
+                    android:id="@+id/textView25" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Circuit One: Jumping Lunges
+"
+                    android:textSize="18sp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginStart="8dp"
+
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="40 seconds "
                     android:textSize="18sp"
                     android:layout_marginTop="20dp"
                     android:layout_marginRight="8dp"/>
@@ -145,9 +241,10 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="LYING ISOMETRIC Y"
+                    android:text="Circuit Two: Side Skaters
+"
                     android:textSize="18sp"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="30dp"
                     android:layout_marginStart="8dp"
 
                     />
@@ -155,12 +252,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
-                    android:text="30 s"
+                    android:text="40 seconds"
                     android:textSize="18sp"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="30dp"
                     android:layout_marginRight="8dp"/>
 
             </RelativeLayout>
+
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -170,9 +268,10 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="BOX STEP UPS"
+                    android:text="Circuit Two: Side Plank March
+"
                     android:textSize="18sp"
-                    android:layout_marginTop="1dp"
+                    android:layout_marginTop="30dp"
                     android:layout_marginBottom="8dp"
                     android:layout_marginStart="8dp"
 
@@ -181,13 +280,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
-                    android:text="15"
+                    android:text="40 seconds"
                     android:textSize="18sp"
-                    android:layout_marginTop="1dp"
+                    android:layout_marginTop="30dp"
                     android:layout_marginBottom="8dp"
                     android:layout_marginRight="8dp"/>
 
             </RelativeLayout>
+
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -197,10 +297,10 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="PLANK"
+                    android:text="Circuit Two: 180 Jump Squat
+"
                     android:textSize="18sp"
-                    android:layout_marginTop="1dp"
-                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="30dp"
                     android:layout_marginStart="8dp"
 
                     />
@@ -208,15 +308,17 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
-                    android:text="30 s"
+                    android:text="40 seconds"
                     android:textSize="18sp"
-                    android:layout_marginTop="1dp"
-                    android:layout_marginBottom="1dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="8dp"
                     android:layout_marginRight="8dp"/>
 
             </RelativeLayout>
+
 
         </LinearLayout>
+    </ScrollView>
     </android.support.v7.widget.CardView>
     <Button
         android:layout_width="match_parent"
@@ -226,6 +328,4 @@
         android:textSize="30sp"
         android:backgroundTint="@color/colorPrimaryDark"
         android:textColor="@color/white"/>
-
-</RelativeLayout>
-
+   </RelativeLayout>
