@@ -31,7 +31,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import de.hdodenhof.circleimageview.CircleImageView;
-import fiture.quiamco.com.homefiture.Activities.WeeklyExercises;
+import fiture.quiamco.com.homefiture.Activities.Weekly;
 import fiture.quiamco.com.homefiture.Adapter.DailyChallengeAdapter;
 import fiture.quiamco.com.homefiture.R;
 import fiture.quiamco.com.homefiture.models.DailyChallengeModel;
@@ -230,7 +230,7 @@ public class ProfileFragment extends Fragment {
         start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent login = new Intent(getActivity(),WeeklyExercises.class);
+                Intent login = new Intent(getActivity(),Weekly.class);
                 startActivity(login);
             }
         });

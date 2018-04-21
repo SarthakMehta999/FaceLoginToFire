@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 
 import at.markushi.ui.CircleButton;
 import fiture.quiamco.com.homefiture.R;
@@ -37,19 +38,19 @@ public class WeeklyExercisesAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        CircleButton circleButton;
+        ImageView imageView;
         if (convertView == null) {
             // if it's not recycled, initialize some attributes
-            circleButton = new CircleButton(mContext);
-           circleButton.setLayoutParams(new ViewGroup.LayoutParams(130, 130 ));
-           circleButton.setScaleType(CircleButton.ScaleType.CENTER_CROP);
-           circleButton.setPadding(8, 8, 8, 8);
+            imageView = new CircleButton(mContext);
+            imageView.setLayoutParams(new ViewGroup.LayoutParams(130, 130));
+            imageView.setScaleType(CircleButton.ScaleType.CENTER_CROP);
+            imageView.setPadding(8, 8, 8, 8);
         } else {
-            circleButton = (CircleButton) convertView;
+            imageView = (CircleButton) convertView;
         }
 
-        circleButton.setImageResource(mThumbIds[position]);
-        return circleButton;
+        imageView.setImageResource(mThumbIds[position]);
+        return imageView;
 
     }
     private Integer[] mThumbIds = {
