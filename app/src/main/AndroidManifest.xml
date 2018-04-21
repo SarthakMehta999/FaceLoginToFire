@@ -131,7 +131,9 @@
         <activity android:name=".Exercises.exercise6mostheavyd3" />
         <activity android:name=".Activities.MyRank" />
         <activity android:name=".Activities.Splash2" />
-        <!--<activity android:name=".Activities.WeeklyExercises"></activity>-->
+        <activity android:name=".Activities.Weekly"></activity>
+        <activity android:name=".Activities.Ready"></activity>
+        <activity android:name=".Activities.PushUp"></activity>
     </application>
 
 </manifest>
