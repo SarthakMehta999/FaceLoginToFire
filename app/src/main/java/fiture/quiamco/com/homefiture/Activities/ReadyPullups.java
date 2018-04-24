@@ -69,8 +69,9 @@ public class ReadyPullups extends AppCompatActivity {
         startButton = (MaterialFancyButton) findViewById(R.id.startButton);
         finish.setOnClickListener(new View.OnClickListener() {
 
-            public void onClick(View view)
-            {Intent intent = new Intent(ReadyPullups.this, ReadyAbCircuits.class);
+            public void onClick(View view) {
+
+                Intent intent = new Intent(ReadyPullups.this, AbCircuits.class);
                 startActivity(intent);
 
             }

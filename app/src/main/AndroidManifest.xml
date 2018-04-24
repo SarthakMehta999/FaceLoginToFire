@@ -143,7 +143,17 @@
         <activity android:name=".Activities.ReadyBodyweightSquat" />
         <activity android:name=".Activities.BodyweightSquat" />
         <activity android:name=".Activities.TricepsDip" />
-        <activity android:name=".Activities.Pullups"></activity>
+        <activity android:name=".Activities.Pullups" />
+        <activity android:name=".Activities.AbCircuits" />
+        <activity android:name=".Activities.ExercisesDay2" />
+        <activity android:name=".Activities.SquatJump" />
+        <activity android:name=".Activities.ReadySquatJump" />
+        <activity android:name=".Activities.Lunge" />
+        <activity android:name=".Activities.ReadyLunge" />
+        <activity android:name=".Activities.StandingCalfRaise" />
+        <activity android:name=".Activities.ReadyStandingCalfRaise" />
+        <activity android:name=".Activities.Burpee" />
+        <activity android:name=".Activities.ReadyBurpee"></activity>
     </application>
 
 </manifest>

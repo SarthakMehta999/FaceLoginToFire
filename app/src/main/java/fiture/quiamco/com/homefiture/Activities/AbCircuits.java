@@ -12,7 +12,7 @@ import android.widget.Button;
 import at.markushi.ui.CircleButton;
 import fiture.quiamco.com.homefiture.R;
 
-public class Pullups extends AppCompatActivity {
+public class AbCircuits extends AppCompatActivity {
 
     CircleButton finish;
     Button inst;
@@ -21,13 +21,13 @@ public class Pullups extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_pullups);
+        setContentView(R.layout.activity_ab_circuits);
         inst = (Button) findViewById(R.id.dialog);
         finish = (CircleButton)findViewById(R.id.btnFinish);
         finish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Pullups.this,ReadyPullups.class);
+                Intent intent = new Intent(AbCircuits.this,ReadyAbCircuits.class);
                 startActivity(intent);
             }
         });

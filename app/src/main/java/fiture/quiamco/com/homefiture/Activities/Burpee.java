@@ -12,22 +12,22 @@ import android.widget.Button;
 import at.markushi.ui.CircleButton;
 import fiture.quiamco.com.homefiture.R;
 
-public class Pullups extends AppCompatActivity {
-
+public class Burpee extends AppCompatActivity {
     CircleButton finish;
     Button inst;
     final Context context = this;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_pullups);
+        setContentView(R.layout.activity_burpee);
         inst = (Button) findViewById(R.id.dialog);
         finish = (CircleButton)findViewById(R.id.btnFinish);
         finish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Pullups.this,ReadyPullups.class);
+                Intent intent = new Intent(Burpee.this,ReadyBurpee.class);
                 startActivity(intent);
             }
         });
@@ -38,10 +38,12 @@ public class Pullups extends AppCompatActivity {
                 alertDialogBuilder.setTitle("Instructions:");
                 //set dialog message
                 alertDialogBuilder
-                        .setMessage("1.) Grab a pull-up bar with your palms facing outwards." + "\n" +
-                                "2.) Pull yourself up slightly over the bar by keeping a slight arch in your back and torso puffed out. " + "\n" +
-                                "3.) Slowly lower down yourself until your arms are fully extended." + "\n" +
-                                "4.) That’s rep one. Do as many strict reps you can do. ")
+                        .setMessage("1.) Start off with a standing position with hands on the side.\n" +
+                                "Drop down to a squat position but with your palms on the ground.," +"\n" +
+                                "2.) Kick your legs back while keeping your arms extended.\n" +
+                                "You will be now in a high plank position. " + "\n" +
+                                "3.) From high plank position, immediately return to squat position." + "\n" +
+                                "4.) Jump from this position to finish the first rep. ")
                         .setPositiveButton("Confirm", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int id) {

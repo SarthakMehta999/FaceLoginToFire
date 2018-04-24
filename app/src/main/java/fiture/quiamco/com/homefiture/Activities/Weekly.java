@@ -21,28 +21,27 @@ public class Weekly extends AppCompatActivity {
 
         GridView gridview = (GridView) findViewById(R.id.gridview);
         gridview.setAdapter(new WeeklyExercisesAdapter(this));
-
         gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View v,
                                     int position, long id) {
                 if (position == 0) {
                  Intent def = new Intent(Weekly.this, ExercisesDay1.class);
                     startActivity(def);
-                    Toast.makeText(Weekly.this, "suwayan ra jud atay", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Weekly.this, "try", Toast.LENGTH_SHORT).show();
 //                    Toast.makeText(Weekly.this, "" + position,
 //                            Toast.LENGTH_SHORT).show();
                 }
 
                  else if (position == 1) {
-                    Toast.makeText(Weekly.this, "suwayan ra jud atay", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Weekly.this, "try", Toast.LENGTH_SHORT).show();
                 } else if (position == 2) {
-                    Toast.makeText(Weekly.this, "suwayan ra jud atay", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Weekly.this, "try", Toast.LENGTH_SHORT).show();
                 } else if (position == 3) {
-                    Toast.makeText(Weekly.this, "suwayan ra jud atay", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Weekly.this, "try", Toast.LENGTH_SHORT).show();
                 } else if (position == 4) {
-                    Toast.makeText(Weekly.this, "suwayan ra jud atay", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Weekly.this, "try", Toast.LENGTH_SHORT).show();
                 } else if (position == 5) {
-                    Toast.makeText(Weekly.this, "suwayan ra jud atay", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Weekly.this, "try", Toast.LENGTH_SHORT).show();
                 }
             }
         });

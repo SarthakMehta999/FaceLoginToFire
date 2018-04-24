@@ -18,7 +18,7 @@ import at.markushi.ui.CircleButton;
 import fiture.quiamco.com.homefiture.R;
 import fiture.quiamco.com.homefiture.models.CircleCountDownView;
 
-public class ReadyAbCircuits extends AppCompatActivity {
+public class ReadyStandingCalfRaise extends AppCompatActivity {
 
     private Handler mHandler = new Handler();
     public static final int ONE_MINUTE = 60000;
@@ -58,12 +58,10 @@ public class ReadyAbCircuits extends AppCompatActivity {
     boolean stop = false;
     private volatile boolean isRunning = true;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ready_ab_circuits);
-
+        setContentView(R.layout.activity_ready_standing_calf_raise);
         finish = (CircleButton) findViewById(R.id.btnFinish);
         finish.setVisibility(View.VISIBLE);
         timerValue = (TextView) findViewById(R.id.timerValue);
@@ -72,10 +70,8 @@ public class ReadyAbCircuits extends AppCompatActivity {
         finish.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View view) {
-
-                Intent intent = new Intent(ReadyAbCircuits.this, Weekly.class);
+                Intent intent = new Intent(ReadyStandingCalfRaise.this, Weekly.class);
                 startActivity(intent);
-
 
             }
         });

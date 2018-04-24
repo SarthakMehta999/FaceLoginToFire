@@ -37,11 +37,13 @@ public class TricepsDip extends AppCompatActivity {
                 alertDialogBuilder.setTitle("Instructions:");
                 //set dialog message
                 alertDialogBuilder
-                        .setMessage("1.) Begin with a high plank position with your hands firmly placed on the ground," +
-                                " right beneath your shoulders" +"\n" +
-                                "2.) Now keeping a neutral spine, lower down your body until your chest is just above the floor. " + "\n" +
-                                "3.) Push yourself back up to complete one rep." + "\n" +
-                                "4.) For better activation of triceps, keep your arms tucked to the side while you lower down your body. ")
+                        .setMessage("1.) For this exercise, you will need a bench or something similar like a sofa or a sturdy chair." +
+                                   " similar like a sofa or a sturdy chair." +
+                                   " Place the chair behind your back. Grip the edge of the chair with hands " +
+                                   " fully extended and placed shoulder width apart." + "\n" +
+                                "2.) Keep your legs straight and extended forward such that it is perpendicular to your chest." + "\n" +
+                                "3.) Slowly lower down your body by bending through elbows until your upper arms and forearms are perpendicular to each other." + "\n" +
+                                "4.) Lift yourself back to the starting position by using your triceps. You have complete one rep successfully. ")
                         .setPositiveButton("Confirm", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int id) {
