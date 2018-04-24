@@ -131,9 +131,19 @@
         <activity android:name=".Exercises.exercise6mostheavyd3" />
         <activity android:name=".Activities.MyRank" />
         <activity android:name=".Activities.Splash2" />
-        <activity android:name=".Activities.Weekly"></activity>
-        <activity android:name=".Activities.Ready"></activity>
-        <activity android:name=".Activities.PushUp"></activity>
+        <activity android:name=".Activities.Weekly" />
+        <activity android:name=".Activities.Ready" />
+        <activity android:name=".Activities.PushUp" />
+        <activity android:name=".Activities.ExercisesDay1" />
+        <activity android:name=".Activities.PikePushUps" />
+        <activity android:name=".Activities.ReadyPikePushups" />
+        <activity android:name=".Activities.ReadyTricepsDip" />
+        <activity android:name=".Activities.ReadyPullups" />
+        <activity android:name=".Activities.ReadyAbCircuits" />
+        <activity android:name=".Activities.ReadyBodyweightSquat" />
+        <activity android:name=".Activities.BodyweightSquat" />
+        <activity android:name=".Activities.TricepsDip" />
+        <activity android:name=".Activities.Pullups"></activity>
     </application>
 
 </manifest>

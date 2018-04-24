@@ -1,5 +1,6 @@
 package fiture.quiamco.com.homefiture.Activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -25,8 +26,8 @@ public class Weekly extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View v,
                                     int position, long id) {
                 if (position == 0) {
-//                    Intent def = new Intent(Weekly.this, PulsaIndosat.class);
-//                    startActivity(def);
+                 Intent def = new Intent(Weekly.this, ExercisesDay1.class);
+                    startActivity(def);
                     Toast.makeText(Weekly.this, "suwayan ra jud atay", Toast.LENGTH_SHORT).show();
 //                    Toast.makeText(Weekly.this, "" + position,
 //                            Toast.LENGTH_SHORT).show();
