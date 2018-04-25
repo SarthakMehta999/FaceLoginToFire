@@ -23,7 +23,7 @@ public class Lunge extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lunge);
         inst = (Button) findViewById(R.id.dialog);
-        finish = (CircleButton)findViewById(R.id.btnFinish);
+        finish = (CircleButton)findViewById(R.id.btnFinish11);
         finish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#ffffff"
     tools:context="fiture.quiamco.com.homefiture.Activities.Day3GReadyAbCircuits">
 
     <TextView
@@ -66,6 +67,7 @@
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:src="@drawable/checked"
+
         app:cb_color="@color/textColor"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="32dp"

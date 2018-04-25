@@ -61,7 +61,7 @@ public class ReadyLunge extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ready_lunge);
-        finish = (CircleButton) findViewById(R.id.btnFinish);
+        finish = (CircleButton) findViewById(R.id.btnFinish12);
         finish.setVisibility(View.VISIBLE);
         timerValue = (TextView) findViewById(R.id.timerValue);
 

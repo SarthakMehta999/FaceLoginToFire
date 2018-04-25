@@ -45,7 +45,7 @@ public class Weekly extends AppCompatActivity {
                 } else if (position == 3) {
                     Intent def = new Intent(Weekly.this, ExercisesDay4.class);
                     startActivity(def);
-                    Toast.makeText(Weekly.this, "try3", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Weekly.this, "try4", Toast.LENGTH_SHORT).show();
 
                 } else if (position == 4) {
                     Toast.makeText(Weekly.this, "try", Toast.LENGTH_SHORT).show();

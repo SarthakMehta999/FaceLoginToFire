@@ -23,7 +23,7 @@ public class Burpee extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_burpee);
         inst = (Button) findViewById(R.id.dialog);
-        finish = (CircleButton)findViewById(R.id.btnFinish);
+        finish = (CircleButton)findViewById(R.id.btnFinish13);
         finish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

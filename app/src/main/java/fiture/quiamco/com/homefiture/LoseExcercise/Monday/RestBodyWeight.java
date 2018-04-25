@@ -1,11 +1,11 @@
-package fiture.quiamco.com.homefiture.Activities;
+package fiture.quiamco.com.homefiture.LoseExcercise.Monday;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
@@ -15,11 +15,11 @@ import android.widget.TextView;
 import com.rilixtech.materialfancybutton.MaterialFancyButton;
 
 import at.markushi.ui.CircleButton;
+import fiture.quiamco.com.homefiture.Activities.PikePushUps;
 import fiture.quiamco.com.homefiture.R;
 import fiture.quiamco.com.homefiture.models.CircleCountDownView;
 
-public class ReadyBurpee extends AppCompatActivity {
-
+public class RestBodyWeight extends AppCompatActivity {
     private Handler mHandler = new Handler();
     public static final int ONE_MINUTE = 60000;
     final Context context = this;
@@ -61,8 +61,8 @@ public class ReadyBurpee extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ready_burpee);
-        finish = (CircleButton) findViewById(R.id.btnFinish14);
+        setContentView(R.layout.activity_rest_body_weight);
+        finish = (CircleButton) findViewById(R.id.btnFinish);
         finish.setVisibility(View.VISIBLE);
         timerValue = (TextView) findViewById(R.id.timerValue);
 
@@ -70,10 +70,8 @@ public class ReadyBurpee extends AppCompatActivity {
         finish.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View view) {
-
-                Intent intent = new Intent(ReadyBurpee.this, Weekly.class);
+                Intent intent = new Intent(RestBodyWeight.this, PikePushUps.class);
                 startActivity(intent);
-
 
             }
         });

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#ffffff"
     tools:context="fiture.quiamco.com.homefiture.Activities.Lunge">
 
     <pl.droidsonroids.gif.GifTextView
@@ -43,7 +44,7 @@
         app:layout_constraintVertical_bias="0.515" />
 
     <at.markushi.ui.CircleButton
-        android:id="@+id/btnFinish"
+        android:id="@+id/btnFinish11"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_marginLeft="8dp"

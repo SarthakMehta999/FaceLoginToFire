@@ -172,24 +172,12 @@
         <activity android:name=".LoseExcercise.Friday.SquatsLegSide" />
         <activity android:name=".LoseExcercise.Friday.StarJumps" />
         <activity android:name=".LoseExcercise.Friday.ThighSlapJumps" />
-        <activity android:name=".LoseExcercise.Monday.Instructions.InsBodyWeightSquat" />
-        <activity android:name=".LoseExcercise.Monday.Instructions.InsBoxStepUp" />
-        <activity android:name=".LoseExcercise.Monday.Instructions.InsDumbellBench" />
-        <activity android:name=".LoseExcercise.Monday.Instructions.InsLying" />
-        <activity android:name=".LoseExcercise.Monday.Instructions.InsPlank" />
-        <activity android:name=".LoseExcercise.Monday.Instructions.InsBentOver" />
-        <activity android:name=".LoseExcercise.Tuesday.Instructions.InsFullSprint" />
-        <activity android:name=".LoseExcercise.Tuesday.Instructions.InsModeratePaceJog" />
-        <activity android:name=".LoseExcercise.Wednesday.Instructions.InsFoamRolling" />
-        <activity android:name=".LoseExcercise.Wednesday.Instructions.InsWalkingLunge" />
-        <activity android:name=".LoseExcercise.Friday.Instructions.InsHighKnees" />
-        <activity android:name=".LoseExcercise.Friday.Instructions.InsJumpingLunges" />
-        <activity android:name=".LoseExcercise.Friday.Instructions.InsMtClimb" />
-        <activity android:name=".LoseExcercise.Friday.Instructions.InsPushUpsOblique" />
-        <activity android:name=".LoseExcercise.Friday.Instructions.InsSquatJacks" />
-        <activity android:name=".LoseExcercise.Friday.Instructions.InsSquatsLegSide" />
-        <activity android:name=".LoseExcercise.Friday.Instructions.InsStarJumps" />
-        <activity android:name=".LoseExcercise.Friday.Instructions.InsThighSlapJumps"></activity>
+        <activity android:name=".LoseExcercise.Monday.RestBodyWeight" />
+        <activity android:name=".LoseExcercise.Monday.RestDumbellBench" />
+        <activity android:name=".LoseExcercise.Monday.RestBentOver" />
+        <activity android:name=".LoseExcercise.Monday.RestLyingIsometric" />
+        <activity android:name=".LoseExcercise.Monday.RestBoxStepUp" />
+        <activity android:name=".LoseExcercise.Monday.RestPlank"></activity>
     </application>
 
 </manifest>
