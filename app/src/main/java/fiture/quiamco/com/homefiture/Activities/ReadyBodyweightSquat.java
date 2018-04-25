@@ -1,6 +1,7 @@
 package fiture.quiamco.com.homefiture.Activities;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.CountDownTimer;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
@@ -69,6 +70,8 @@ public class ReadyBodyweightSquat extends AppCompatActivity {
         finish.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View view) {
+                Intent intent = new Intent(ReadyBodyweightSquat.this, SquatJump.class);
+                startActivity(intent);
 
 
             }

@@ -70,8 +70,10 @@ public class ReadyBurpee extends AppCompatActivity {
         finish.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View view) {
+
                 Intent intent = new Intent(ReadyBurpee.this, Weekly.class);
                 startActivity(intent);
+
 
             }
         });

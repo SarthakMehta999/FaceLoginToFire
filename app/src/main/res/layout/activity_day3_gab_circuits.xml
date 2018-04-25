@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="fiture.quiamco.com.homefiture.Activities.AbCircuits">
+    tools:context="fiture.quiamco.com.homefiture.Activities.Day3GAbCircuits">
 
     <pl.droidsonroids.gif.GifTextView
         android:layout_width="307dp"
@@ -62,4 +62,3 @@
         android:layout_marginEnd="8dp" />
 
 </android.support.constraint.ConstraintLayout>
-

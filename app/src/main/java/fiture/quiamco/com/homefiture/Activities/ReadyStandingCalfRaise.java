@@ -70,7 +70,7 @@ public class ReadyStandingCalfRaise extends AppCompatActivity {
         finish.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View view) {
-                Intent intent = new Intent(ReadyStandingCalfRaise.this, Weekly.class);
+                Intent intent = new Intent(ReadyStandingCalfRaise.this, Burpee.class);
                 startActivity(intent);
 
             }

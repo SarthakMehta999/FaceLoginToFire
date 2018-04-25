@@ -27,17 +27,26 @@ public class Weekly extends AppCompatActivity {
                 if (position == 0) {
                  Intent def = new Intent(Weekly.this, ExercisesDay1.class);
                     startActivity(def);
-                    Toast.makeText(Weekly.this, "try", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Weekly.this, "try1", Toast.LENGTH_SHORT).show();
 //                    Toast.makeText(Weekly.this, "" + position,
 //                            Toast.LENGTH_SHORT).show();
                 }
 
                  else if (position == 1) {
-                    Toast.makeText(Weekly.this, "try", Toast.LENGTH_SHORT).show();
+                    Intent defs = new Intent(Weekly.this, ExercisesDay2.class);
+                    startActivity(defs);
+                    Toast.makeText(Weekly.this, "try2", Toast.LENGTH_SHORT).show();
+
                 } else if (position == 2) {
-                    Toast.makeText(Weekly.this, "try", Toast.LENGTH_SHORT).show();
+                    Intent def = new Intent(Weekly.this, ExercisesDay3.class);
+                    startActivity(def);
+                    Toast.makeText(Weekly.this, "try3", Toast.LENGTH_SHORT).show();
+
                 } else if (position == 3) {
-                    Toast.makeText(Weekly.this, "try", Toast.LENGTH_SHORT).show();
+                    Intent def = new Intent(Weekly.this, ExercisesDay4.class);
+                    startActivity(def);
+                    Toast.makeText(Weekly.this, "try3", Toast.LENGTH_SHORT).show();
+
                 } else if (position == 4) {
                     Toast.makeText(Weekly.this, "try", Toast.LENGTH_SHORT).show();
                 } else if (position == 5) {

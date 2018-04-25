@@ -18,7 +18,8 @@ import at.markushi.ui.CircleButton;
 import fiture.quiamco.com.homefiture.R;
 import fiture.quiamco.com.homefiture.models.CircleCountDownView;
 
-public class ReadySquatJump extends AppCompatActivity {
+public class Day3GReadyTricepsDip extends AppCompatActivity {
+
     private Handler mHandler = new Handler();
     public static final int ONE_MINUTE = 60000;
     final Context context = this;
@@ -57,10 +58,11 @@ public class ReadySquatJump extends AppCompatActivity {
     boolean stop = false;
     private volatile boolean isRunning = true;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ready_squat_jump);
+        setContentView(R.layout.activity_day3_gready_triceps_dip);
         finish = (CircleButton) findViewById(R.id.btnFinish);
         finish.setVisibility(View.VISIBLE);
         timerValue = (TextView) findViewById(R.id.timerValue);
@@ -69,7 +71,7 @@ public class ReadySquatJump extends AppCompatActivity {
         finish.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View view) {
-                Intent intent = new Intent(ReadySquatJump.this, Lunge.class);
+                Intent intent = new Intent(Day3GReadyTricepsDip.this, Day3GPullUps.class);
                 startActivity(intent);
 
             }
