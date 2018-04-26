@@ -189,7 +189,8 @@
         <activity android:name=".LoseExcercise.Friday.Instructions.InsSquatJacks" />
         <activity android:name=".LoseExcercise.Friday.Instructions.InsSquatsLegSide" />
         <activity android:name=".LoseExcercise.Friday.Instructions.InsStarJumps" />
-        <activity android:name=".LoseExcercise.Friday.Instructions.InsThighSlapJumps"></activity>
+        <activity android:name=".LoseExcercise.Friday.Instructions.InsThighSlapJumps" />
+        <activity android:name=".Ectomorph.Day1ChestTriceps.Dips"></activity>
     </application>
 
 </manifest>
