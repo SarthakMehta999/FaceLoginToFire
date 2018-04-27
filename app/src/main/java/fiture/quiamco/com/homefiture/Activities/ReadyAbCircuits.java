@@ -73,7 +73,7 @@ public class ReadyAbCircuits extends AppCompatActivity {
 
             public void onClick(View view) {
 
-                Intent intent = new Intent(ReadyAbCircuits.this, Weekly.class);
+                Intent intent = new Intent(ReadyAbCircuits.this, WeeklyGain.class);
                 startActivity(intent);
 
 

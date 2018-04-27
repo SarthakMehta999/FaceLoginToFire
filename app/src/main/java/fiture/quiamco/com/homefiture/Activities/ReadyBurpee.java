@@ -71,7 +71,7 @@ public class ReadyBurpee extends AppCompatActivity {
 
             public void onClick(View view) {
 
-                Intent intent = new Intent(ReadyBurpee.this, Weekly.class);
+                Intent intent = new Intent(ReadyBurpee.this, WeeklyGain.class);
                 startActivity(intent);
 
 

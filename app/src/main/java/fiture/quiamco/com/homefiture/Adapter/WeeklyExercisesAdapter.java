@@ -54,13 +54,16 @@ public class WeeklyExercisesAdapter extends BaseAdapter {
     }
     private Integer[] mThumbIds = {
             R.drawable.one, R.drawable.two,R.drawable.three,R.drawable.four,
-            R.drawable.five, R.drawable.six,R.drawable.seven,R.drawable.eight,
-            R.drawable.nine, R.drawable.ten,R.drawable.eleven,R.drawable.twelve,
-            R.drawable.thirteen, R.drawable.fourteen,R.drawable.fifteen,R.drawable.sixteen,
-            R.drawable.seventeen, R.drawable.eighteen,R.drawable.nineteen,R.drawable.twenty,
-            R.drawable.twentyone, R.drawable.twentytwo,R.drawable.twentythree,R.drawable.twentyfour,
-            R.drawable.twentyfive, R.drawable.twentysix,R.drawable.twentyseven,R.drawable.twentyeight,
-            R.drawable.twentynine, R.drawable.thirty,R.drawable.thirtyone
+            R.drawable.five, R.drawable.six,R.drawable.seven
+
+
+//            R.drawable.eight,
+//            R.drawable.nine, R.drawable.ten,R.drawable.eleven,R.drawable.twelve,
+//            R.drawable.thirteen, R.drawable.fourteen,R.drawable.fifteen,R.drawable.sixteen,
+//            R.drawable.seventeen, R.drawable.eighteen,R.drawable.nineteen,R.drawable.twenty,
+//            R.drawable.twentyone, R.drawable.twentytwo,R.drawable.twentythree,R.drawable.twentyfour,
+//            R.drawable.twentyfive, R.drawable.twentysix,R.drawable.twentyseven,R.drawable.twentyeight,
+//            R.drawable.twentynine, R.drawable.thirty,R.drawable.thirtyone
 
     };
 

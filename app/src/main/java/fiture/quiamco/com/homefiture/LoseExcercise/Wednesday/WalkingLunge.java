@@ -10,7 +10,7 @@ import android.view.View;
 import android.widget.Button;
 
 import at.markushi.ui.CircleButton;
-import fiture.quiamco.com.homefiture.Activities.Weekly;
+import fiture.quiamco.com.homefiture.Activities.WeeklyGain;
 import fiture.quiamco.com.homefiture.R;
 
 public class WalkingLunge extends AppCompatActivity {
@@ -28,7 +28,7 @@ public class WalkingLunge extends AppCompatActivity {
         finish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(WalkingLunge.this,Weekly.class);
+                Intent intent = new Intent(WalkingLunge.this,WeeklyGain.class);
                 startActivity(intent);
             }
         });

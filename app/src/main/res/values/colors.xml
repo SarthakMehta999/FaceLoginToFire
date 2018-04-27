@@ -8,6 +8,7 @@
     <color name="title">#222222</color>
     <color name="backgroundforallscreen">#59c9a5</color>
     <color name="textColor">#ECEFF1</color>
+    <color name="weeklyExerciseBG">#FFFF</color>
 
     <color name="bg_login">#26ae90</color>
     <color name="bg_register">#2e3237</color>

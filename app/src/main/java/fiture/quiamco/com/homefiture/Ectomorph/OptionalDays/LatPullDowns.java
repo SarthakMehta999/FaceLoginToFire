@@ -70,7 +70,6 @@ public class LatPullDowns extends AppCompatActivity {
         endTime = 5; // up to finish time
         minutes = endTime-1;
         time= endTime*60;
-
         countDownTimer = new CountDownTimer(time * 1000 /*finishTime**/, 1000 /*interval**/) {
             @Override
             public void onTick(long millisUntilFinished) {

@@ -131,7 +131,7 @@
         <activity android:name=".Exercises.exercise6mostheavyd3" />
         <activity android:name=".Activities.MyRank" />
         <activity android:name=".Activities.Splash2" />
-        <activity android:name=".Activities.Weekly" />
+        <activity android:name=".Activities.WeeklyGain" />
         <activity android:name=".Activities.Ready" />
         <activity android:name=".Activities.PushUp" />
         <activity android:name=".Activities.ExercisesDay1" />
@@ -219,7 +219,8 @@
         <activity android:name=".Ectomorph.Day3LegShoulders.Ectomorphday3exercises" />
         <activity android:name=".Ectomorph.HighRepAbDays.HighRepAbDays" />
         <activity android:name=".Ectomorph.LowRepAbDay.ectomorphlowrepday" />
-        <activity android:name=".Ectomorph.OptionalDays.EctomorphOptionalDays"></activity>
+        <activity android:name=".Ectomorph.OptionalDays.EctomorphOptionalDays" />
+        <activity android:name=".Activities.WeeklyLose"></activity>
     </application>
 
 </manifest>
