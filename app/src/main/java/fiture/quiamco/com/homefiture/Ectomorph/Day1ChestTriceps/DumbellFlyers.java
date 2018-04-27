@@ -1,20 +1,21 @@
     package fiture.quiamco.com.homefiture.Ectomorph.Day1ChestTriceps;
 
-import android.content.Context;
-import android.os.Bundle;
-import android.os.CountDownTimer;
-import android.os.Handler;
-import android.support.v7.app.AppCompatActivity;
-import android.view.View;
-import android.view.inputmethod.InputMethodManager;
-import android.widget.Button;
-import android.widget.TextView;
+    import android.content.Context;
+    import android.content.Intent;
+    import android.os.Bundle;
+    import android.os.CountDownTimer;
+    import android.os.Handler;
+    import android.support.v7.app.AppCompatActivity;
+    import android.view.View;
+    import android.view.inputmethod.InputMethodManager;
+    import android.widget.Button;
+    import android.widget.TextView;
 
-import com.rilixtech.materialfancybutton.MaterialFancyButton;
+    import com.rilixtech.materialfancybutton.MaterialFancyButton;
 
-import at.markushi.ui.CircleButton;
-import fiture.quiamco.com.homefiture.R;
-import fiture.quiamco.com.homefiture.models.CircleCountDownView;
+    import at.markushi.ui.CircleButton;
+    import fiture.quiamco.com.homefiture.R;
+    import fiture.quiamco.com.homefiture.models.CircleCountDownView;
 
     public class DumbellFlyers extends AppCompatActivity {
 
@@ -47,8 +48,8 @@ import fiture.quiamco.com.homefiture.models.CircleCountDownView;
         finish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent b = new Intent(DumbellBenchPress.this,InsBentOver.class);
-//                startActivity(b);
+                Intent b = new Intent(DumbellFlyers.this,Dips.class);
+                startActivity(b);
             }
         });
 

@@ -1,10 +1,11 @@
 package fiture.quiamco.com.homefiture.Ectomorph.OptionalDays;
 
 import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
@@ -45,8 +46,8 @@ public class LatPullDowns extends AppCompatActivity {
         finish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent b = new Intent(DumbellBenchPress.this,InsBentOver.class);
-//                startActivity(b);
+                Intent b = new Intent(LatPullDowns.this,SkullCrush.class);
+                startActivity(b);
             }
         });
 

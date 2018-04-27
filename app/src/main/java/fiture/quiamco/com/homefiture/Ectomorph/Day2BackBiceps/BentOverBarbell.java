@@ -1,6 +1,7 @@
 package fiture.quiamco.com.homefiture.Ectomorph.Day2BackBiceps;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.Handler;
@@ -47,8 +48,8 @@ public class BentOverBarbell extends AppCompatActivity {
         finish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent b = new Intent(DumbellBenchPress.this,InsBentOver.class);
-//                startActivity(b);
+                Intent b = new Intent(BentOverBarbell.this,DumbellRows.class);
+                startActivity(b);
             }
         });
 

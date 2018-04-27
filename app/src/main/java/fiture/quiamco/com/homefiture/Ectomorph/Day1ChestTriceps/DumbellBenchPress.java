@@ -14,7 +14,6 @@ import android.widget.TextView;
 import com.rilixtech.materialfancybutton.MaterialFancyButton;
 
 import at.markushi.ui.CircleButton;
-import fiture.quiamco.com.homefiture.LoseExcercise.Monday.Instructions.InsBentOver;
 import fiture.quiamco.com.homefiture.R;
 import fiture.quiamco.com.homefiture.models.CircleCountDownView;
 
@@ -47,7 +46,7 @@ public class DumbellBenchPress extends AppCompatActivity {
         finish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent b = new Intent(DumbellBenchPress.this,InsBentOver.class);
+                Intent b = new Intent(DumbellBenchPress.this,InclinePress.class);
                 startActivity(b);
             }
         });
