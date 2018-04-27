@@ -190,7 +190,31 @@
         <activity android:name=".LoseExcercise.Friday.Instructions.InsSquatsLegSide" />
         <activity android:name=".LoseExcercise.Friday.Instructions.InsStarJumps" />
         <activity android:name=".LoseExcercise.Friday.Instructions.InsThighSlapJumps" />
-        <activity android:name=".Ectomorph.Day1ChestTriceps.Dips"></activity>
+        <activity android:name=".Ectomorph.Day1ChestTriceps.Dips" />
+        <activity android:name=".Ectomorph.Day1ChestTriceps.DumbellFlyers" />
+        <activity android:name=".Ectomorph.Day1ChestTriceps.InclinePress" />
+        <activity android:name=".Ectomorph.Day1ChestTriceps.SkullBench" />
+        <activity android:name=".Ectomorph.Day2BackBiceps.AlternatingCurls" />
+        <activity android:name=".Ectomorph.Day2BackBiceps.BentOverBarbell" />
+        <activity android:name=".Ectomorph.Day2BackBiceps.DumbellRows" />
+        <activity android:name=".Ectomorph.Day2BackBiceps.StandingBarbellCurls" />
+        <activity android:name=".Ectomorph.Day2BackBiceps.WideGridPullUp" />
+        <activity android:name=".Ectomorph.Day3LegShoulders.BarbellSquat" />
+        <activity android:name=".Ectomorph.Day3LegShoulders.LateralRaise" />
+        <activity android:name=".Ectomorph.Day3LegShoulders.LegExtensions" />
+        <activity android:name=".Ectomorph.Day3LegShoulders.LegLyingPress" />
+        <activity android:name=".Ectomorph.Day3LegShoulders.ShoulderPress" />
+        <activity android:name=".Ectomorph.Day3LegShoulders.UprightLateral" />
+        <activity android:name=".Ectomorph.HighRepAbDays.Crunch" />
+        <activity android:name=".Ectomorph.HighRepAbDays.ReverseCrunch" />
+        <activity android:name=".Ectomorph.LowRepAbDay.BallCrunch" />
+        <activity android:name=".Ectomorph.LowRepAbDay.HangingLegRaise" />
+        <activity android:name=".Ectomorph.OptionalDays.BenchPress" />
+        <activity android:name=".Ectomorph.OptionalDays.LatPullDowns" />
+        <activity android:name=".Ectomorph.OptionalDays.SkullCrush" />
+        <activity android:name=".Mesomorph.Mesomorph.Monday.LongJump" />
+        <activity android:name=".Mesomorph.Mesomorph.tuesday.MixedIntervalWrkout" />
+        <activity android:name=".Mesomorph.Mesomorph.Wednesday.EllipticalInterval"></activity>
     </application>
 
 </manifest>
