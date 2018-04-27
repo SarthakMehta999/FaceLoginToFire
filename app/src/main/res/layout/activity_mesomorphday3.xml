@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    tools:context="fiture.quiamco.com.homefiture.Mesomorph.Mesomorph.Wednesday.mesomorphday3">
 
     <Toolbar
         android:id="@+id/Toolbar1"
@@ -30,7 +31,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Day 1"
+                android:text="Day 3"
                 android:textAlignment="center"
                 android:textSize="30sp"
                 android:textStyle="bold" />
@@ -72,7 +73,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="LONG JUMP"
+                    android:text="Elliptical Interval Workout"
                     android:textSize="18sp"
                     android:layout_marginTop="20dp"
                     android:layout_marginStart="8dp"
@@ -81,53 +82,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
-                    android:text="35 mins"
+                    android:text="40 mins"
                     android:textSize="18sp"
                     android:layout_marginTop="20dp"
-                    android:layout_marginRight="8dp"/>
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="15sp"/>
 
             </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Fitness level: Intermediate/
- advanced
-Equipment: A step or platform
-"
-                    android:textSize="18sp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginStart="8dp"
-                    />
-
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Why It Works
-This workout takes traditional
-interval training and turns up the
-heat by shortening the recovery intervals between exercises"
-                    android:textSize="18sp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginBottom="15dp"
-                    android:layout_marginStart="8dp"
-                    />
-
-            </RelativeLayout>
-
-
-
-
 
 
 

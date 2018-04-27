@@ -219,7 +219,10 @@
         <activity android:name=".Ectomorph.Day3LegShoulders.Ectomorphday3exercises" />
         <activity android:name=".Ectomorph.HighRepAbDays.HighRepAbDays" />
         <activity android:name=".Ectomorph.LowRepAbDay.ectomorphlowrepday" />
-        <activity android:name=".Ectomorph.OptionalDays.EctomorphOptionalDays"></activity>
+        <activity android:name=".Ectomorph.OptionalDays.EctomorphOptionalDays" />
+        <activity android:name=".Mesomorph.Mesomorph.Monday.mesomorphday1" />
+        <activity android:name=".Mesomorph.Mesomorph.tuesday.mesomorphday2" />
+        <activity android:name=".Mesomorph.Mesomorph.Wednesday.mesomorphday3"></activity>
     </application>
 
 </manifest>
