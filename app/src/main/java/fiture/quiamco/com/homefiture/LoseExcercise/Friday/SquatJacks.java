@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 
 import at.markushi.ui.CircleButton;
+import fiture.quiamco.com.homefiture.LoseExcercise.Friday.Rest.RestSquatjacks;
 import fiture.quiamco.com.homefiture.R;
 
 public class SquatJacks extends AppCompatActivity {
@@ -26,7 +27,7 @@ public class SquatJacks extends AppCompatActivity {
         finish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(SquatJacks.this,PushUpsOblique.class);
+                Intent intent = new Intent(SquatJacks.this,RestSquatjacks.class);
                 startActivity(intent);
             }
         });

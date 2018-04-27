@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffffff"
-    tools:context="fiture.quiamco.com.homefiture.LoseExcercise.Monday.RestBoxStepUp">
+    android:background="#ffff"
+    tools:context="fiture.quiamco.com.homefiture.LoseExcercise.Friday.Rest.RestPushUpsOblique">
 
     <android.support.v7.widget.Toolbar
         android:layout_width="0dp"

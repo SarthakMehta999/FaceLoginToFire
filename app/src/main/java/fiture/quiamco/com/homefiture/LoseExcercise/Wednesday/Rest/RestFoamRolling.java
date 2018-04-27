@@ -1,4 +1,4 @@
-package fiture.quiamco.com.homefiture.LoseExcercise.Monday;
+package fiture.quiamco.com.homefiture.LoseExcercise.Wednesday.Rest;
 
 import android.content.Context;
 import android.content.Intent;
@@ -15,11 +15,12 @@ import android.widget.TextView;
 import com.rilixtech.materialfancybutton.MaterialFancyButton;
 
 import at.markushi.ui.CircleButton;
-import fiture.quiamco.com.homefiture.LoseExcercise.Monday.Instructions.InsBentOver;
+import fiture.quiamco.com.homefiture.LoseExcercise.Wednesday.Instructions.InsWalkingLunge;
 import fiture.quiamco.com.homefiture.R;
 import fiture.quiamco.com.homefiture.models.CircleCountDownView;
 
-public class RestDumbellBench extends AppCompatActivity {
+public class RestFoamRolling extends AppCompatActivity {
+
     private Handler mHandler = new Handler();
     public static final int ONE_MINUTE = 60000;
     final Context context = this;
@@ -58,11 +59,10 @@ public class RestDumbellBench extends AppCompatActivity {
     boolean stop = false;
     private volatile boolean isRunning = true;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_rest_dumbell_bench);
+        setContentView(R.layout.activity_rest_foam_rolling);
         finish = (CircleButton) findViewById(R.id.btnFinish);
         finish.setVisibility(View.VISIBLE);
         timerValue = (TextView) findViewById(R.id.timerValue);
@@ -71,7 +71,7 @@ public class RestDumbellBench extends AppCompatActivity {
         finish.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View view) {
-                Intent intent = new Intent(RestDumbellBench.this, InsBentOver.class);
+                Intent intent = new Intent(RestFoamRolling.this, InsWalkingLunge.class);
                 startActivity(intent);
 
             }

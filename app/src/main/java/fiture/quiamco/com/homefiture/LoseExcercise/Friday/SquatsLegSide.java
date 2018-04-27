@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 
 import at.markushi.ui.CircleButton;
+import fiture.quiamco.com.homefiture.LoseExcercise.Friday.Rest.RestSquatLegSide;
 import fiture.quiamco.com.homefiture.R;
 
 public class SquatsLegSide extends AppCompatActivity {
@@ -26,7 +27,7 @@ public class SquatsLegSide extends AppCompatActivity {
         finish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(SquatsLegSide.this,HighKness.class);
+                Intent intent = new Intent(SquatsLegSide.this,RestSquatLegSide.class);
                 startActivity(intent);
             }
         });

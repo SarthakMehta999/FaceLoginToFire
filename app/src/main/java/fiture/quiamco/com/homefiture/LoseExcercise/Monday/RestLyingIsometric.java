@@ -15,7 +15,7 @@ import android.widget.TextView;
 import com.rilixtech.materialfancybutton.MaterialFancyButton;
 
 import at.markushi.ui.CircleButton;
-import fiture.quiamco.com.homefiture.Activities.PikePushUps;
+import fiture.quiamco.com.homefiture.LoseExcercise.Monday.Instructions.InsBoxStepUp;
 import fiture.quiamco.com.homefiture.R;
 import fiture.quiamco.com.homefiture.models.CircleCountDownView;
 
@@ -71,7 +71,7 @@ public class RestLyingIsometric extends AppCompatActivity {
         finish.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View view) {
-                Intent intent = new Intent(RestLyingIsometric.this, PikePushUps.class);
+                Intent intent = new Intent(RestLyingIsometric.this, InsBoxStepUp.class);
                 startActivity(intent);
 
             }

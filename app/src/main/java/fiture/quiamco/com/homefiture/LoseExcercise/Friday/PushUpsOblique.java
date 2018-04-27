@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 
 import at.markushi.ui.CircleButton;
+import fiture.quiamco.com.homefiture.LoseExcercise.Friday.Rest.RestPushUpsOblique;
 import fiture.quiamco.com.homefiture.R;
 
 public class PushUpsOblique extends AppCompatActivity {
@@ -27,7 +28,7 @@ public class PushUpsOblique extends AppCompatActivity {
         finish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(PushUpsOblique.this,StarJumps.class);
+                Intent intent = new Intent(PushUpsOblique.this,RestPushUpsOblique.class);
                 startActivity(intent);
             }
         });

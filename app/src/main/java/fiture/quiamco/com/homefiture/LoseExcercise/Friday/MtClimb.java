@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 
 import at.markushi.ui.CircleButton;
+import fiture.quiamco.com.homefiture.LoseExcercise.Friday.Rest.RestMtClimb;
 import fiture.quiamco.com.homefiture.R;
 
 public class MtClimb extends AppCompatActivity {
@@ -26,7 +27,7 @@ public class MtClimb extends AppCompatActivity {
         finish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MtClimb.this,ThighSlapJumps.class);
+                Intent intent = new Intent(MtClimb.this,RestMtClimb.class);
                 startActivity(intent);
             }
         });

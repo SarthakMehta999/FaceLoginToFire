@@ -26,7 +26,7 @@ public class ReadyBentOver extends AppCompatActivity {
         finish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ReadyBentOver.this,LyingIsometricycling.class);
+                Intent intent = new Intent(ReadyBentOver.this,RestBentOver.class);
                 startActivity(intent);
             }
         });

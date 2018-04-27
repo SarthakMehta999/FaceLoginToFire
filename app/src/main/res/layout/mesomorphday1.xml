@@ -119,6 +119,7 @@ interval training and turns up the
 heat by shortening the recovery intervals between exercises"
                     android:textSize="18sp"
                     android:layout_marginTop="20dp"
+                    android:layout_marginBottom="15dp"
                     android:layout_marginStart="8dp"
                     />
 

@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 
 import at.markushi.ui.CircleButton;
+import fiture.quiamco.com.homefiture.LoseExcercise.Friday.Rest.RestThighSlapJumps;
 import fiture.quiamco.com.homefiture.R;
 
 public class ThighSlapJumps extends AppCompatActivity {
@@ -27,7 +28,7 @@ public class ThighSlapJumps extends AppCompatActivity {
         finish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ThighSlapJumps.this,SquatsLegSide.class);
+                Intent intent = new Intent(ThighSlapJumps.this,RestThighSlapJumps.class);
                 startActivity(intent);
             }
         });

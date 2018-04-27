@@ -2,10 +2,10 @@ package fiture.quiamco.com.homefiture.LoseExcercise.Monday;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
@@ -15,8 +15,7 @@ import android.widget.TextView;
 import com.rilixtech.materialfancybutton.MaterialFancyButton;
 
 import at.markushi.ui.CircleButton;
-import fiture.quiamco.com.homefiture.Activities.PikePushUps;
-import fiture.quiamco.com.homefiture.Activities.Ready;
+import fiture.quiamco.com.homefiture.Activities.Weekly;
 import fiture.quiamco.com.homefiture.R;
 import fiture.quiamco.com.homefiture.models.CircleCountDownView;
 
@@ -73,7 +72,7 @@ public class RestPlank extends AppCompatActivity {
         finish.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View view) {
-                Intent intent = new Intent(RestPlank.this, PikePushUps.class);
+                Intent intent = new Intent(RestPlank.this, Weekly.class);
                 startActivity(intent);
 
             }

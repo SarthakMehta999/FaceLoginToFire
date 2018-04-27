@@ -14,7 +14,6 @@ import android.widget.TextView;
 import com.rilixtech.materialfancybutton.MaterialFancyButton;
 
 import at.markushi.ui.CircleButton;
-import fiture.quiamco.com.homefiture.LoseExcercise.Monday.Instructions.InsPlank;
 import fiture.quiamco.com.homefiture.R;
 import fiture.quiamco.com.homefiture.models.CircleCountDownView;
 
@@ -46,7 +45,7 @@ public class BoxStepUp extends AppCompatActivity {
         finish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent b = new Intent(BoxStepUp.this,InsPlank.class);
+                Intent b = new Intent(BoxStepUp.this,RestBoxStepUp.class);
                 startActivity(b);
             }
         });
