@@ -214,7 +214,12 @@
         <activity android:name=".Ectomorph.OptionalDays.SkullCrush" />
         <activity android:name=".Mesomorph.Mesomorph.Monday.LongJump" />
         <activity android:name=".Mesomorph.Mesomorph.tuesday.MixedIntervalWrkout" />
-        <activity android:name=".Mesomorph.Mesomorph.Wednesday.EllipticalInterval"></activity>
+        <activity android:name=".Mesomorph.Mesomorph.Wednesday.EllipticalInterval" />
+        <activity android:name=".Ectomorph.LayoutEcto.ectomorphday1exercises" />
+        <activity android:name=".Ectomorph.Day3LegShoulders.Ectomorphday3exercises" />
+        <activity android:name=".Ectomorph.HighRepAbDays.HighRepAbDays" />
+        <activity android:name=".Ectomorph.LowRepAbDay.ectomorphlowrepday" />
+        <activity android:name=".Ectomorph.OptionalDays.EctomorphOptionalDays"></activity>
     </application>
 
 </manifest>

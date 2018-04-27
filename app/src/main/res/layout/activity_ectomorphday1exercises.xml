@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    tools:context="fiture.quiamco.com.homefiture.Ectomorph.LayoutEcto.ectomorphday1exercises">
 
     <Toolbar
         android:id="@+id/Toolbar1"
@@ -30,7 +31,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Low Rep Ab Day"
+                android:text="Day 1 Chest/Triceps"
                 android:textAlignment="center"
                 android:textSize="30sp"
                 android:textStyle="bold" />
@@ -72,8 +73,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Exercise ball crunch,
-with weight behind head"
+                    android:text="Bench Press"
                     android:textSize="18sp"
                     android:layout_marginTop="20dp"
                     android:layout_marginStart="8dp"
@@ -82,7 +82,7 @@ with weight behind head"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
-                    android:text="3x12 "
+                    android:text="2"
                     android:textSize="18sp"
                     android:layout_marginTop="20dp"
                     android:layout_marginRight="8dp"/>
@@ -96,31 +96,103 @@ with weight behind head"
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Superset with
-Hanging leg raises,
-with ankle weight if necessary"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Incline Dumbbell Press"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="20dp"
+                    android:text="3x10"
+                    android:textSize="18sp" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dumbbell Fly"
                     android:textSize="18sp"
                     android:layout_marginTop="20dp"
-                    android:layout_marginBottom="10dp"
                     android:layout_marginStart="8dp"
                     />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
-                    android:text="3x12 "
+                    android:text="2x10"
                     android:textSize="18sp"
                     android:layout_marginTop="20dp"
-                    android:layout_marginBottom="10dp"
                     android:layout_marginRight="8dp"/>
 
             </RelativeLayout>
 
 
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dips"
+                    android:textSize="18sp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="8dp"
+
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="12,10,10, 8"
+                    android:textSize="18sp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="8dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Skull Crushers, on incline bench "
+                    android:textSize="18sp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginStart="8dp"
+
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="3x10"
+                    android:textSize="18sp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginRight="8dp"/>
+
+            </RelativeLayout>
 
         </LinearLayout>
     </android.support.v7.widget.CardView>
     <Button
+        android:id="@+id/btnFinish"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -130,4 +202,6 @@ with ankle weight if necessary"
         android:textColor="@color/white"/>
 
 </RelativeLayout>
+
+
 

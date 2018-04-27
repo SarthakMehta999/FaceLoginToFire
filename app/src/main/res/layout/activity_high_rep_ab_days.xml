@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    tools:context="fiture.quiamco.com.homefiture.Ectomorph.HighRepAbDays.HighRepAbDays">
 
     <Toolbar
         android:id="@+id/Toolbar1"
@@ -30,7 +31,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Optional Superset Day"
+                android:text="High Rep Ab Day"
                 android:textAlignment="center"
                 android:textSize="30sp"
                 android:textStyle="bold" />
@@ -72,7 +73,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Bench Press"
+                    android:text="CRUNCHES"
                     android:textSize="18sp"
                     android:layout_marginTop="20dp"
                     android:layout_marginStart="8dp"
@@ -81,7 +82,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
-                    android:text="3x12 "
+                    android:text="3x25 "
                     android:textSize="18sp"
                     android:layout_marginTop="20dp"
                     android:layout_marginRight="8dp"/>
@@ -95,16 +96,18 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Lat pulldowns"
+                    android:text="SUPERSET WITH
+REVERSE CRUNCHES"
                     android:textSize="18sp"
                     android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
                     android:layout_marginStart="8dp"
                     />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
-                    android:text="3x12 "
+                    android:text="3x25 "
                     android:textSize="18sp"
                     android:layout_marginTop="20dp"
                     android:layout_marginBottom="10dp"
@@ -112,29 +115,6 @@
 
             </RelativeLayout>
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Skull Crushers"
-                    android:textSize="18sp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginStart="8dp"
-                    />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:text="3x12 "
-                    android:textSize="18sp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginBottom="10dp"
-                    android:layout_marginRight="8dp"/>
-
-            </RelativeLayout>
 
 
         </LinearLayout>
@@ -149,4 +129,3 @@
         android:textColor="@color/white"/>
 
 </RelativeLayout>
-

@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    tools:context="fiture.quiamco.com.homefiture.Ectomorph.LowRepAbDay.ectomorphlowrepday">
 
     <Toolbar
         android:id="@+id/Toolbar1"
@@ -30,7 +31,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="High Rep Ab Day"
+                android:text="Low Rep Ab Day"
                 android:textAlignment="center"
                 android:textSize="30sp"
                 android:textStyle="bold" />
@@ -72,7 +73,8 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="CRUNCHES"
+                    android:text="Exercise ball crunch,
+with weight behind head"
                     android:textSize="18sp"
                     android:layout_marginTop="20dp"
                     android:layout_marginStart="8dp"
@@ -81,7 +83,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
-                    android:text="3x25 "
+                    android:text="3x12 "
                     android:textSize="18sp"
                     android:layout_marginTop="20dp"
                     android:layout_marginRight="8dp"/>
@@ -95,8 +97,9 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="SUPERSET WITH
-REVERSE CRUNCHES"
+                    android:text="Superset with
+Hanging leg raises,
+with ankle weight if necessary"
                     android:textSize="18sp"
                     android:layout_marginTop="20dp"
                     android:layout_marginBottom="10dp"
@@ -106,7 +109,7 @@ REVERSE CRUNCHES"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
-                    android:text="3x25 "
+                    android:text="3x12 "
                     android:textSize="18sp"
                     android:layout_marginTop="20dp"
                     android:layout_marginBottom="10dp"
@@ -128,4 +131,5 @@ REVERSE CRUNCHES"
         android:textColor="@color/white"/>
 
 </RelativeLayout>
+
 

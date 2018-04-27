@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    tools:context="fiture.quiamco.com.homefiture.Ectomorph.OptionalDays.EctomorphOptionalDays">
 
     <Toolbar
         android:id="@+id/Toolbar1"
@@ -30,7 +31,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Day 2 Back/Biceps"
+                android:text="Optional Superset Day"
                 android:textAlignment="center"
                 android:textSize="30sp"
                 android:textStyle="bold" />
@@ -72,7 +73,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Wide-grip lat pulldowns/pull-ups"
+                    android:text="Bench Press"
                     android:textSize="18sp"
                     android:layout_marginTop="20dp"
                     android:layout_marginStart="8dp"
@@ -81,7 +82,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
-                    android:text="12,10,10,8"
+                    android:text="3x12 "
                     android:textSize="18sp"
                     android:layout_marginTop="20dp"
                     android:layout_marginRight="8dp"/>
@@ -95,22 +96,22 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
+                    android:text="Lat pulldowns"
+                    android:textSize="18sp"
                     android:layout_marginTop="20dp"
-                    android:text="Bent over barbell rows"
-                    android:textSize="18sp" />
-
+                    android:layout_marginStart="8dp"
+                    />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
-                    android:layout_marginRight="8dp"
+                    android:text="3x12 "
+                    android:textSize="18sp"
                     android:layout_marginTop="20dp"
-                    android:text="12, 10, 10, 8"
-                    android:textSize="18sp" />
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginRight="8dp"/>
 
             </RelativeLayout>
-
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -119,7 +120,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Dumbbell rows"
+                    android:text="Skull Crushers"
                     android:textSize="18sp"
                     android:layout_marginTop="20dp"
                     android:layout_marginStart="8dp"
@@ -128,65 +129,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
-                    android:text="3x10 "
+                    android:text="3x12 "
                     android:textSize="18sp"
                     android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
                     android:layout_marginRight="8dp"/>
 
             </RelativeLayout>
 
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Standing barbell curls"
-                    android:textSize="18sp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginStart="8dp"
-
-                    />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:text="12,10,10, 8"
-                    android:textSize="18sp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginRight="8dp"/>
-
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Alternating dumbbell curls"
-                    android:textSize="18sp"
-                    android:layout_marginTop="1dp"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginStart="8dp"
-
-                    />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:text="2x10"
-                    android:textSize="18sp"
-                    android:layout_marginTop="1dp"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginRight="8dp"/>
-
-            </RelativeLayout>
 
         </LinearLayout>
     </android.support.v7.widget.CardView>
@@ -200,4 +150,3 @@
         android:textColor="@color/white"/>
 
 </RelativeLayout>
-
