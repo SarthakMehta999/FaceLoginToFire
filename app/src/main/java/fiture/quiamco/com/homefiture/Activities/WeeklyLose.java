@@ -28,7 +28,7 @@ public class WeeklyLose extends AppCompatActivity {
                     Intent def = new Intent(WeeklyLose.this, InsBodyWeightSquat.class);
                     startActivity(def);
                     Toast.makeText(WeeklyLose.this, "try1", Toast.LENGTH_SHORT).show();
-//                    Toast.makeText(WeeklyGain.this, "" + position,
+//                    Toast.makeText(Weekly.this, "" + position,
 //                            Toast.LENGTH_SHORT).show();
                 }
 

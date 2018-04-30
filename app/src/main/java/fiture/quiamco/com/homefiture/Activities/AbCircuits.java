@@ -42,7 +42,7 @@ public class AbCircuits extends AppCompatActivity {
                                 "2.) Pull yourself up slightly over the bar by keeping a slight arch in your back and torso puffed out. " + "\n" +
                                 "3.) Slowly lower down yourself until your arms are fully extended." + "\n" +
                                 "4.) That’s rep one. Do as many strict reps you can do. ")
-                        .setPositiveButton("Confirm", new DialogInterface.OnClickListener() {
+                        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int id) {
                                 // if this button is clicked, close

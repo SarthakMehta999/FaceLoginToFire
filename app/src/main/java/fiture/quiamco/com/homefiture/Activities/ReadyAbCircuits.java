@@ -73,7 +73,7 @@ public class ReadyAbCircuits extends AppCompatActivity {
 
             public void onClick(View view) {
 
-                Intent intent = new Intent(ReadyAbCircuits.this, WeeklyGain.class);
+                Intent intent = new Intent(ReadyAbCircuits.this, Weekly.class);
                 startActivity(intent);
 
 
@@ -109,7 +109,7 @@ public class ReadyAbCircuits extends AppCompatActivity {
 //        cancelTimerBt.setVisibility(View.VISIBLE); // show cancel button
 
         progress = 1;
-        endTime = 5; // up to finish time
+        endTime = 1; // up to finish time
         minutes = endTime-1;
         time= endTime*60;
 

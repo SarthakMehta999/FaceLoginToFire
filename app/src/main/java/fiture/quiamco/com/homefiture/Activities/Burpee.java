@@ -44,7 +44,7 @@ public class Burpee extends AppCompatActivity {
                                 "You will be now in a high plank position. " + "\n" +
                                 "3.) From high plank position, immediately return to squat position." + "\n" +
                                 "4.) Jump from this position to finish the first rep. ")
-                        .setPositiveButton("Confirm", new DialogInterface.OnClickListener() {
+                        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int id) {
                                 // if this button is clicked, close

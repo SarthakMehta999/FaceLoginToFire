@@ -45,7 +45,7 @@ public class Day3GTricepsDip extends AppCompatActivity {
                                 "2.) Keep your legs straight and extended forward such that it is perpendicular to your chest." + "\n" +
                                 "3.) Slowly lower down your body by bending through elbows until your upper arms and forearms are perpendicular to each other." + "\n" +
                                 "4.) Lift yourself back to the starting position by using your triceps. You have complete one rep successfully. ")
-                        .setPositiveButton("Confirm", new DialogInterface.OnClickListener() {
+                        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int id) {
                                 // if this button is clicked, close

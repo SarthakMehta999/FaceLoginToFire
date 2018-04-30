@@ -41,7 +41,7 @@ public class SquatJump extends AppCompatActivity {
                                 "2.) Go down until your rear knee grazes the floor. " + "\n" +
                                 "3.) Stand back up and take another step forward with left leg." + "\n" +
                                 "4.) You can also grab free weights with your hands to make this exercise even tougher. ")
-                        .setPositiveButton("Confirm", new DialogInterface.OnClickListener() {
+                        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int id) {
                                 // if this button is clicked, close

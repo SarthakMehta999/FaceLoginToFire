@@ -11,7 +11,7 @@ import android.widget.Toast;
 import fiture.quiamco.com.homefiture.Adapter.WeeklyExercisesAdapter;
 import fiture.quiamco.com.homefiture.R;
 
-public class WeeklyGain extends AppCompatActivity {
+public class Weekly extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,32 +25,32 @@ public class WeeklyGain extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View v,
                                     int position, long id) {
                 if (position == 0) {
-                 Intent def = new Intent(WeeklyGain.this, ExercisesDay1.class);
+                 Intent def = new Intent(Weekly.this, ExercisesDay1.class);
                     startActivity(def);
-                    Toast.makeText(WeeklyGain.this, "try1", Toast.LENGTH_SHORT).show();
-//                    Toast.makeText(WeeklyGain.this, "" + position,
+                    Toast.makeText(Weekly.this, "try1", Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(Weekly.this, "" + position,
 //                            Toast.LENGTH_SHORT).show();
                 }
 
                  else if (position == 1) {
-                    Intent defs = new Intent(WeeklyGain.this, ExercisesDay2.class);
+                    Intent defs = new Intent(Weekly.this, ExercisesDay2.class);
                     startActivity(defs);
-                    Toast.makeText(WeeklyGain.this, "try2", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Weekly.this, "try2", Toast.LENGTH_SHORT).show();
 
                 } else if (position == 2) {
-                    Intent def = new Intent(WeeklyGain.this, ExercisesDay3.class);
+                    Intent def = new Intent(Weekly.this, ExercisesDay3.class);
                     startActivity(def);
-                    Toast.makeText(WeeklyGain.this, "try3", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Weekly.this, "try3", Toast.LENGTH_SHORT).show();
 
                 } else if (position == 3) {
-                    Intent def = new Intent(WeeklyGain.this, ExercisesDay4.class);
+                    Intent def = new Intent(Weekly.this, ExercisesDay4.class);
                     startActivity(def);
-                    Toast.makeText(WeeklyGain.this, "try4", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Weekly.this, "try4", Toast.LENGTH_SHORT).show();
 
                 } else if (position == 4) {
-                    Toast.makeText(WeeklyGain.this, "try", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Weekly.this, "try", Toast.LENGTH_SHORT).show();
                 } else if (position == 5) {
-                    Toast.makeText(WeeklyGain.this, "try", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Weekly.this, "try", Toast.LENGTH_SHORT).show();
                 }
             }
         });

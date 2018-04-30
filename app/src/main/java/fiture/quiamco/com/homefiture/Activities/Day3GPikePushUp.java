@@ -44,7 +44,7 @@ public class Day3GPikePushUp extends AppCompatActivity {
                                 " the floor and your torso towards the ceiling. "+"\n" +
                                 " Now get back to starting position by keeping your arms straight and hips in the air." + "\n" +
                                 "4.) Once you are in the starting position, perform another rep directly without staying in the locked position for too long. ")
-                        .setPositiveButton("Confirm", new DialogInterface.OnClickListener() {
+                        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int id) {
                                 // if this button is clicked, close

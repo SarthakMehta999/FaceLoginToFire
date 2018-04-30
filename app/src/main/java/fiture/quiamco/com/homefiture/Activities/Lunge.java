@@ -43,7 +43,7 @@ public class Lunge extends AppCompatActivity {
                                 "2.) Now keeping a neutral spine, lower down your body until your chest is just above the floor. " + "\n" +
                                 "3.) Push yourself back up to complete one rep." + "\n" +
                                 "4.) For better activation of triceps, keep your arms tucked to the side while you lower down your body. ")
-                        .setPositiveButton("Confirm", new DialogInterface.OnClickListener() {
+                        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int id) {
                                 // if this button is clicked, close

@@ -71,7 +71,7 @@ public class Day3GReadyAbCircuits extends AppCompatActivity {
         finish.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View view) {
-                Intent intent = new Intent(Day3GReadyAbCircuits.this, WeeklyGain.class);
+                Intent intent = new Intent(Day3GReadyAbCircuits.this, Weekly.class);
                 startActivity(intent);
 
             }

@@ -3,14 +3,13 @@ package fiture.quiamco.com.homefiture.Activities;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
 import at.markushi.ui.CircleButton;
-import fiture.quiamco.com.homefiture.LoseExcercise.Monday.RestBodyWeight;
 import fiture.quiamco.com.homefiture.R;
 
 public class BodyweightSquat extends AppCompatActivity {
@@ -27,7 +26,7 @@ public class BodyweightSquat extends AppCompatActivity {
         finish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(BodyweightSquat.this,RestBodyWeight.class);
+                Intent intent = new Intent(BodyweightSquat.this,ReadyBodyweightSquat.class);
                 startActivity(intent);
             }
         });
@@ -43,7 +42,7 @@ public class BodyweightSquat extends AppCompatActivity {
                                 "2.) Begin the downward motion by flexing your knees and hips. Sit back with your hips and keep an upright torso. " + "\n" +
                                 "3.) Go full depth and return to starting position to finish one rep." + "\n" +
                                 "4.) Perform 4-5 sets of 10-15 reps as warm-ups and three sets of 15-20 reps as a finisher on a leg day workout. ")
-                        .setPositiveButton("Confirm", new DialogInterface.OnClickListener() {
+                        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int id) {
                                 // if this button is clicked, close

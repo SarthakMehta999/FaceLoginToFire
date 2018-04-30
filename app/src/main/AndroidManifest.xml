@@ -131,7 +131,7 @@
         <activity android:name=".Exercises.exercise6mostheavyd3" />
         <activity android:name=".Activities.MyRank" />
         <activity android:name=".Activities.Splash2" />
-        <activity android:name=".Activities.WeeklyGain" />
+        <activity android:name=".Activities.Weekly" />
         <activity android:name=".Activities.Ready" />
         <activity android:name=".Activities.PushUp" />
         <activity android:name=".Activities.ExercisesDay1" />
@@ -154,6 +154,7 @@
         <activity android:name=".Activities.ReadyStandingCalfRaise" />
         <activity android:name=".Activities.Burpee" />
         <activity android:name=".Activities.ReadyBurpee" />
+        <activity android:name=".Activities.ExercisesDay4" />
         <activity android:name=".LoseExcercise.Monday.ReadyBentOver" />
         <activity android:name=".LoseExcercise.Monday.BodyWeightSquat" />
         <activity android:name=".LoseExcercise.Monday.BoxStepUp" />

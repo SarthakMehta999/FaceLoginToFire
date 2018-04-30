@@ -41,7 +41,7 @@ public class StandingCalfRaise extends AppCompatActivity {
                         .setMessage("1.)Rise up on the toes from a standing position while keeping the knees and straight and heels off the floor." + " \n" +
                                 "2.) Hold the position for a couple of seconds and slowly come down. " + "\n" +
                                 "3.) Repeat for desired counts. ")
-                        .setPositiveButton("Confirm", new DialogInterface.OnClickListener() {
+                        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int id) {
                                 // if this button is clicked, close
