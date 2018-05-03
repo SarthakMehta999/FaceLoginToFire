@@ -3,7 +3,6 @@ package fiture.quiamco.com.homefiture.Activities;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
@@ -11,7 +10,6 @@ import android.widget.Toast;
 
 import fiture.quiamco.com.homefiture.Adapter.WeeklyExercisesAdapter;
 import fiture.quiamco.com.homefiture.R;
-import fiture.quiamco.com.homefiture.fragments.ProfileFragment;
 
 public class Weekly extends AppCompatActivity {
 
@@ -20,22 +18,6 @@ public class Weekly extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_weekly);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.imToolbar);
-        setSupportActionBar(toolbar);
-
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
-
-        toolbar.setNavigationIcon(R.drawable.back_btn);
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent im = new Intent(Weekly.this,ProfileFragment.class);
-                startActivity(im);
-            }
-        });
-
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
         GridView gridview = (GridView) findViewById(R.id.gridview);
         gridview.setAdapter(new WeeklyExercisesAdapter(this));
         gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
