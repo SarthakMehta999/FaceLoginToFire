@@ -140,8 +140,6 @@
         <activity android:name=".Activities.ReadyTricepsDip" />
         <activity android:name=".Activities.ReadyPullups" />
         <activity android:name=".Activities.ReadyAbCircuits" />
-        <activity android:name=".Activities.ReadyBodyweightSquat" />
-        <activity android:name=".Activities.BodyweightSquat" />
         <activity android:name=".Activities.TricepsDip" />
         <activity android:name=".Activities.Pullups" />
         <activity android:name=".Activities.AbCircuits" />
@@ -150,11 +148,12 @@
         <activity android:name=".Activities.ReadySquatJump" />
         <activity android:name=".Activities.Lunge" />
         <activity android:name=".Activities.ReadyLunge" />
-        <activity android:name=".Activities.StandingCalfRaise" />
         <activity android:name=".Activities.ReadyStandingCalfRaise" />
         <activity android:name=".Activities.Burpee" />
         <activity android:name=".Activities.ReadyBurpee" />
+        <activity android:name=".Activities.ExercisesDay3" />
         <activity android:name=".Activities.ExercisesDay4" />
+        <activity android:name=".Activities.StandingCalfRaise" />
         <activity android:name=".LoseExcercise.Monday.ReadyBentOver" />
         <activity android:name=".LoseExcercise.Monday.BodyWeightSquat" />
         <activity android:name=".LoseExcercise.Monday.BoxStepUp" />
@@ -167,19 +166,16 @@
         <activity android:name=".LoseExcercise.Wednesday.WalkingLunge" />
         <activity android:name=".LoseExcercise.Friday.HighKness" />
         <activity android:name=".LoseExcercise.Friday.JumpingLunges" />
-        <activity android:name=".LoseExcercise.Friday.MtClimb" />
         <activity android:name=".LoseExcercise.Friday.PushUpsOblique" />
         <activity android:name=".LoseExcercise.Friday.SquatJacks" />
         <activity android:name=".LoseExcercise.Friday.SquatsLegSide" />
         <activity android:name=".LoseExcercise.Friday.StarJumps" />
         <activity android:name=".LoseExcercise.Friday.ThighSlapJumps" />
-        <activity android:name=".LoseExcercise.Monday.Instructions.InsBodyWeightSquat" />
         <activity android:name=".LoseExcercise.Monday.Instructions.InsBoxStepUp" />
         <activity android:name=".LoseExcercise.Monday.Instructions.InsDumbellBench" />
         <activity android:name=".LoseExcercise.Monday.Instructions.InsLying" />
         <activity android:name=".LoseExcercise.Monday.Instructions.InsPlank" />
         <activity android:name=".LoseExcercise.Monday.Instructions.InsBentOver" />
-        <activity android:name=".LoseExcercise.Tuesday.Instructions.InsFullSprint" />
         <activity android:name=".LoseExcercise.Tuesday.Instructions.InsModeratePaceJog" />
         <activity android:name=".LoseExcercise.Wednesday.Instructions.InsFoamRolling" />
         <activity android:name=".LoseExcercise.Wednesday.Instructions.InsWalkingLunge" />
@@ -221,7 +217,13 @@
         <activity android:name=".Ectomorph.HighRepAbDays.HighRepAbDays" />
         <activity android:name=".Ectomorph.LowRepAbDay.ectomorphlowrepday" />
         <activity android:name=".Ectomorph.OptionalDays.EctomorphOptionalDays" />
-        <activity android:name=".Activities.WeeklyLose"></activity>
+        <activity android:name=".Activities.WeeklyLose" />
+        <activity android:name=".LoseExcercise.Monday.Instructions.InsBodyWeightSquat" />
+        <activity android:name=".LoseExcercise.Tuesday.Instructions.InsFullOut" />
+        <activity android:name=".LoseExcercise.Friday.MtClimb" />
+        <activity android:name=".Activities.BodyWeightsSquats" />
+        <activity android:name=".Activities.ReadyBodyweightSquats" />
+        <activity android:name=".Activities.StandingCalfRaise"></activity>
     </application>
 
 </manifest>

@@ -19,7 +19,7 @@ public class WeeklyLose extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_weekly_lose);
 
-        GridView gridview = (GridView) findViewById(R.id.gridview);
+        GridView gridview = (GridView) findViewById(R.id.gridview1);
         gridview.setAdapter(new WeeklyExercisesAdapter(this));
         gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View v,
@@ -48,9 +48,13 @@ public class WeeklyLose extends AppCompatActivity {
                     Toast.makeText(WeeklyLose.this, "try4", Toast.LENGTH_SHORT).show();
 
                 } else if (position == 4) {
-                    Toast.makeText(WeeklyLose.this, "try", Toast.LENGTH_SHORT).show();
+                    Intent def = new Intent(WeeklyLose.this, ExercisesDay4.class);
+                    startActivity(def);
+                    Toast.makeText(WeeklyLose.this, "try5", Toast.LENGTH_SHORT).show();
                 } else if (position == 5) {
-                    Toast.makeText(WeeklyLose.this, "try", Toast.LENGTH_SHORT).show();
+                    Intent def = new Intent(WeeklyLose.this, ExercisesDay4.class);
+                    startActivity(def);
+                    Toast.makeText(WeeklyLose.this, "try6", Toast.LENGTH_SHORT).show();
                 }
             }
         });

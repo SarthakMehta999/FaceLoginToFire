@@ -2,10 +2,11 @@ package fiture.quiamco.com.homefiture.Activities;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
@@ -18,7 +19,7 @@ import at.markushi.ui.CircleButton;
 import fiture.quiamco.com.homefiture.R;
 import fiture.quiamco.com.homefiture.models.CircleCountDownView;
 
-public class ReadyBodyweightSquat extends AppCompatActivity {
+public class ReadyBodyweightSquats extends AppCompatActivity {
 
     private Handler mHandler = new Handler();
     public static final int ONE_MINUTE = 60000;
@@ -61,8 +62,24 @@ public class ReadyBodyweightSquat extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ready_bodyweight_squat);
-        finish = (CircleButton) findViewById(R.id.btnFinish);
+        setContentView(R.layout.activity_ready_bodyweight_squats);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.imToolbar);
+        setSupportActionBar(toolbar);
+
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+
+        toolbar.setNavigationIcon(R.drawable.back_btn);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent im = new Intent(ReadyBodyweightSquats.this,BodyWeightsSquats.class);
+                startActivity(im);
+            }
+        });
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        finish = (CircleButton) findViewById(R.id.btnFinish14);
         finish.setVisibility(View.VISIBLE);
         timerValue = (TextView) findViewById(R.id.timerValue);
 
@@ -70,7 +87,7 @@ public class ReadyBodyweightSquat extends AppCompatActivity {
         finish.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View view) {
-                Intent intent = new Intent(ReadyBodyweightSquat.this, SquatJump.class);
+                Intent intent = new Intent(ReadyBodyweightSquats.this, SquatJump.class);
                 startActivity(intent);
 
 
@@ -190,3 +207,4 @@ public class ReadyBodyweightSquat extends AppCompatActivity {
 //    };
 
 }
+
