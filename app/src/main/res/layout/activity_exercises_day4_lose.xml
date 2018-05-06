@@ -1,9 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    tools:context="fiture.quiamco.com.homefiture.LoseExcercise.ExercisesDay.ExercisesDay4Lose">
+
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="368dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="8dp">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/imToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary">
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
 
     <Toolbar
         android:id="@+id/Toolbar1"
@@ -30,7 +54,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Day 1"
+                android:text="Day 4"
                 android:textAlignment="center"
                 android:textSize="30sp"
                 android:textStyle="bold" />
@@ -46,6 +70,7 @@
                     android:textStyle="bold"
                     android:textSize="30sp"
                     android:layout_marginTop="30dp"
+                    android:layout_marginBottom="20sp"
                     android:layout_marginStart="8dp"
                     />
                 <TextView
@@ -210,7 +235,7 @@
                     android:text="30 s"
                     android:textSize="18sp"
                     android:layout_marginTop="1dp"
-                    android:layout_marginBottom="8dp"
+                    android:layout_marginBottom="1dp"
                     android:layout_marginRight="8dp"/>
 
             </RelativeLayout>
@@ -218,6 +243,7 @@
         </LinearLayout>
     </android.support.v7.widget.CardView>
     <Button
+        android:id="@+id/startBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -227,4 +253,6 @@
         android:textColor="@color/white"/>
 
 </RelativeLayout>
+
+
 

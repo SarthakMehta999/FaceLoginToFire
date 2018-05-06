@@ -11,7 +11,7 @@ import android.view.View;
 import android.widget.Button;
 
 import at.markushi.ui.CircleButton;
-import fiture.quiamco.com.homefiture.Activities.Weekly;
+import fiture.quiamco.com.homefiture.LoseExcercise.ExercisesDay.ExercisesDay5Lose;
 import fiture.quiamco.com.homefiture.LoseExcercise.Friday.SquatJacks;
 import fiture.quiamco.com.homefiture.R;
 
@@ -35,7 +35,7 @@ public class InsSquatJacks extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent im = new Intent(InsSquatJacks.this,Weekly.class);
+                Intent im = new Intent(InsSquatJacks.this,ExercisesDay5Lose.class);
                 startActivity(im);
             }
         });
@@ -44,7 +44,7 @@ public class InsSquatJacks extends AppCompatActivity {
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         inst = (Button) findViewById(R.id.dialog);
-        finish = (CircleButton)findViewById(R.id.btnFinish);
+        finish = (CircleButton)findViewById(R.id.btnFinish22);
         finish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -59,9 +59,16 @@ public class InsSquatJacks extends AppCompatActivity {
                 alertDialogBuilder.setTitle("Instructions:");
                 //set dialog message
                 alertDialogBuilder
-                        .setMessage("Quick tip: Get low, keep your chest up, and don't let your " +
-                                "knees go over your toes during this lower-body move. ")
-                        .setPositiveButton("Confirm", new DialogInterface.OnClickListener() {
+                        .setMessage("1: Begin by standing up, putting your feet together and your fingers " +
+                                "down alongside your facets. Pull your shoulders back and push your chest out." +
+                                " You’re now in the starting state of the exercise.\n" +
+                                "2: Jump up, while you are inside the air and unfold your toes till they may be " +
+                                "about shoulder width aside. The moment your feet contact the ground, push your hips returned." +
+                                " Afterwards, bend your knees lowering your body until the crease of your hip is in line or under your knees.\n" +
+                                "3: Explosively push via your heels and jump up returning your body to the beginning position. " +
+                                "With this, you have now completed one repetition successfully. " +
+                                "Repeat for the favored variety of reps to complete one set. ")
+                        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int id) {
                                 // if this button is clicked, close

@@ -83,7 +83,7 @@ public class RestFullOut extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
-        finish = (CircleButton) findViewById(R.id.btnFinish);
+        finish = (CircleButton) findViewById(R.id.btnFinish15);
         finish.setVisibility(View.VISIBLE);
         timerValue = (TextView) findViewById(R.id.timerValue);
 

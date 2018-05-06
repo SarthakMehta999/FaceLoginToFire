@@ -11,7 +11,7 @@ import android.view.View;
 import android.widget.Button;
 
 import at.markushi.ui.CircleButton;
-import fiture.quiamco.com.homefiture.Activities.Weekly;
+import fiture.quiamco.com.homefiture.LoseExcercise.ExercisesDay.ExercisesDay3Lose;
 import fiture.quiamco.com.homefiture.LoseExcercise.Wednesday.WalkingLunge;
 import fiture.quiamco.com.homefiture.R;
 
@@ -36,7 +36,7 @@ public class InsWalkingLunge extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent im = new Intent(InsWalkingLunge.this,Weekly.class);
+                Intent im = new Intent(InsWalkingLunge.this,ExercisesDay3Lose.class);
                 startActivity(im);
             }
         });
@@ -59,8 +59,11 @@ public class InsWalkingLunge extends AppCompatActivity {
                 alertDialogBuilder.setTitle("Instructions:");
                 //set dialog message
                 alertDialogBuilder
-                        .setMessage("Quick tip: Get low, keep your chest up, and don't let your " +
-                                "knees go over your toes during this lower-body move. ")
+                        .setMessage("1. Begin standing with your feet shoulder width apart and your hands on your hips.\n" +
+                                "2. Step forward with one leg, flexing the knees to drop your hips. Descend until your rear knee " +
+                                "nearly touches the ground. Your posture should remain upright, and your front knee should stay above the front foot. \n" +
+                                "3. Drive through the heel of your lead foot and extend both knees to raise yourself back up.\n" +
+                                "4. Step forward with your rear foot, repeating the lunge on the opposite leg.  ")
                         .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int id) {

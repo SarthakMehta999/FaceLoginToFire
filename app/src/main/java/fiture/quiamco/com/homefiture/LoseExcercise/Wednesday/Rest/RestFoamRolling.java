@@ -16,8 +16,7 @@ import android.widget.TextView;
 import com.rilixtech.materialfancybutton.MaterialFancyButton;
 
 import at.markushi.ui.CircleButton;
-import fiture.quiamco.com.homefiture.Activities.Weekly;
-import fiture.quiamco.com.homefiture.LoseExcercise.Wednesday.Instructions.InsWalkingLunge;
+import fiture.quiamco.com.homefiture.Activities.WeeklyLose;
 import fiture.quiamco.com.homefiture.R;
 import fiture.quiamco.com.homefiture.models.CircleCountDownView;
 
@@ -75,7 +74,7 @@ public class RestFoamRolling extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent im = new Intent(RestFoamRolling.this,Weekly.class);
+                Intent im = new Intent(RestFoamRolling.this,RestFoamRolling.class);
                 startActivity(im);
             }
         });
@@ -90,7 +89,7 @@ public class RestFoamRolling extends AppCompatActivity {
         finish.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View view) {
-                Intent intent = new Intent(RestFoamRolling.this, InsWalkingLunge.class);
+                Intent intent = new Intent(RestFoamRolling.this, WeeklyLose.class);
                 startActivity(intent);
 
             }

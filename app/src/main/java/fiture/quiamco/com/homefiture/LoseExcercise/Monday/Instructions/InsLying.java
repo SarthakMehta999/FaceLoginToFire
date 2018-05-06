@@ -11,8 +11,8 @@ import android.view.View;
 import android.widget.Button;
 
 import at.markushi.ui.CircleButton;
-import fiture.quiamco.com.homefiture.Activities.Weekly;
 import fiture.quiamco.com.homefiture.LoseExcercise.Monday.LyingIsometricycling;
+import fiture.quiamco.com.homefiture.LoseExcercise.Monday.RestBentOver;
 import fiture.quiamco.com.homefiture.R;
 
 public class InsLying extends AppCompatActivity {
@@ -33,7 +33,7 @@ public class InsLying extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent im = new Intent(InsLying.this,Weekly.class);
+                Intent im = new Intent(InsLying.this,RestBentOver.class);
                 startActivity(im);
             }
         });
@@ -56,9 +56,8 @@ public class InsLying extends AppCompatActivity {
                 alertDialogBuilder.setTitle("Instructions:");
                 //set dialog message
                 alertDialogBuilder
-                        .setMessage("Quick tip: Alternate between your left and right leg, and for an " +
-                                "extra challenge, step your lifted foot into a" +
-                                " lunge as you come down from the box.")
+                        .setMessage("Quick tip: You can keep your legs on the ground for this " +
+                                "one if that feels more comfortable." )
                         .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int id) {

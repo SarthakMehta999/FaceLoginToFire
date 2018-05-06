@@ -11,7 +11,7 @@ import android.view.View;
 import android.widget.Button;
 
 import at.markushi.ui.CircleButton;
-import fiture.quiamco.com.homefiture.Activities.Weekly;
+import fiture.quiamco.com.homefiture.LoseExcercise.Friday.Rest.RestThighSlapJumps;
 import fiture.quiamco.com.homefiture.LoseExcercise.Friday.SquatsLegSide;
 import fiture.quiamco.com.homefiture.R;
 
@@ -35,7 +35,7 @@ public class InsSquatsLegSide extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent im = new Intent(InsSquatsLegSide.this,Weekly.class);
+                Intent im = new Intent(InsSquatsLegSide.this,RestThighSlapJumps.class);
                 startActivity(im);
             }
         });
@@ -59,8 +59,10 @@ public class InsSquatsLegSide extends AppCompatActivity {
                 alertDialogBuilder.setTitle("Instructions:");
                 //set dialog message
                 alertDialogBuilder
-                        .setMessage("Quick tip: Get low, keep your chest up, and don't let your " +
-                                "knees go over your toes during this lower-body move. ")
+                        .setMessage("1. Take a wide step to the right.\n" +
+                                "2. Lower into a squat, knees behind toes\n" +
+                                "3. Slowly step feet together.\n" +
+                                "4. Continue stepping to the right for 8-16 reps or the length of the room before switching sides.")
                         .setPositiveButton("Confirm", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int id) {

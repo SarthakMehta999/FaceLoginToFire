@@ -57,8 +57,10 @@ public class InsModeratePaceJog extends AppCompatActivity {
                 alertDialogBuilder.setTitle("Instructions:");
                 //set dialog message
                 alertDialogBuilder
-                        .setMessage("Quick tip: Get low, keep your chest up, and don't let your " +
-                                "knees go over your toes during this lower-body move. ")
+                        .setMessage("1. Lift your feet only an inch or two off the ground, hopping from foot to foot. Give yourself a few bear hugs to warm up your upper body.\n" +
+                                "\n" +
+                                "2. Lift your knees higher to increase your heart rate. If you want to really get your heart pumping, you can bring your knees up high — your thighs should be parallel with the ground.\n" +
+                                "3. Move your arms as you jog. The more you move your body, the more calories you'll burn as you work out. Engaging your arms is an effective way to up the burn. ")
                         .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int id) {

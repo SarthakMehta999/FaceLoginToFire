@@ -16,7 +16,8 @@ import android.widget.TextView;
 import com.rilixtech.materialfancybutton.MaterialFancyButton;
 
 import at.markushi.ui.CircleButton;
-import fiture.quiamco.com.homefiture.Activities.Weekly;
+import fiture.quiamco.com.homefiture.Activities.WeeklyLose;
+import fiture.quiamco.com.homefiture.LoseExcercise.Tuesday.ModeratePaceJog;
 import fiture.quiamco.com.homefiture.R;
 import fiture.quiamco.com.homefiture.models.CircleCountDownView;
 
@@ -74,7 +75,7 @@ public class RestModeratePace extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent im = new Intent(RestModeratePace.this,Weekly.class);
+                Intent im = new Intent(RestModeratePace.this,ModeratePaceJog.class);
                 startActivity(im);
             }
         });
@@ -89,7 +90,7 @@ public class RestModeratePace extends AppCompatActivity {
         finish.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View view) {
-                Intent intent = new Intent(RestModeratePace.this, Weekly.class);
+                Intent intent = new Intent(RestModeratePace.this, WeeklyLose.class);
                 startActivity(intent);
 
             }

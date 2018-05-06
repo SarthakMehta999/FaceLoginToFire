@@ -16,7 +16,6 @@ import android.widget.TextView;
 import com.rilixtech.materialfancybutton.MaterialFancyButton;
 
 import at.markushi.ui.CircleButton;
-import fiture.quiamco.com.homefiture.Activities.Weekly;
 import fiture.quiamco.com.homefiture.R;
 import fiture.quiamco.com.homefiture.models.CircleCountDownView;
 
@@ -74,7 +73,7 @@ public class JumpingJacks2 extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent im = new Intent(JumpingJacks2.this,Weekly.class);
+                Intent im = new Intent(JumpingJacks2.this,Rest10.class);
                 startActivity(im);
             }
         });
@@ -124,8 +123,8 @@ public class JumpingJacks2 extends AppCompatActivity {
 //        startTimerBt.setVisibility(View.GONE);
 //        cancelTimerBt.setVisibility(View.VISIBLE); // show cancel button
 
-        progress = 1;
-        endTime = 5; // up to finish time
+        progress = 59;
+        endTime = 1; // up to finish time
         minutes = endTime-1;
         time= endTime*60;
 

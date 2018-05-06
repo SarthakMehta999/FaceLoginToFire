@@ -16,7 +16,6 @@ import android.widget.TextView;
 import com.rilixtech.materialfancybutton.MaterialFancyButton;
 
 import at.markushi.ui.CircleButton;
-import fiture.quiamco.com.homefiture.Activities.Weekly;
 import fiture.quiamco.com.homefiture.R;
 import fiture.quiamco.com.homefiture.models.CircleCountDownView;
 
@@ -51,7 +50,7 @@ public class Rest7 extends AppCompatActivity {
     CountDownTimer countDownTimer;
 
     int count = 0;
-    int seconds =59;
+    int seconds =20;
     int minutes;
     int hours=0;
     int time;
@@ -74,7 +73,7 @@ public class Rest7 extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent im = new Intent(Rest7.this,Weekly.class);
+                Intent im = new Intent(Rest7.this,WalkingLunges2.class);
                 startActivity(im);
             }
         });
@@ -127,7 +126,7 @@ public class Rest7 extends AppCompatActivity {
         progress = 1;
         endTime = 5; // up to finish time
         minutes = endTime-1;
-        time= endTime*60;
+        time= endTime*20;
 
         countDownTimer = new CountDownTimer(time * 1000 /*finishTime**/, 1000 /*interval**/) {
             @Override

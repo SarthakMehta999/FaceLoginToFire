@@ -10,6 +10,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -40,6 +41,7 @@ public class Ready extends AppCompatActivity {
 
     private TextView mTvMinutes;
     private TextView mTvSeconds;
+    private ImageView home;
 
     CircleButton finish;
     MaterialFancyButton inst;
@@ -64,17 +66,17 @@ public class Ready extends AppCompatActivity {
         setContentView(R.layout.activity_ready);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.imToolbar);
-        setSupportActionBar(toolbar);
+    setSupportActionBar(toolbar);
 
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
+    getSupportActionBar().setDisplayShowTitleEnabled(false);
 
         toolbar.setNavigationIcon(R.drawable.back_btn);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent im = new Intent(Ready.this,PushUp.class);
-                startActivity(im);
-            }
+@Override
+public void onClick(View v) {
+        Intent im = new Intent(Ready.this,PushUp.class);
+        startActivity(im);
+        }
         });
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -82,15 +84,24 @@ public class Ready extends AppCompatActivity {
         finish = (CircleButton) findViewById(R.id.btnFinish);
         finish.setVisibility(View.VISIBLE);
         timerValue = (TextView) findViewById(R.id.timerValue);
+        home = (ImageView) findViewById(R.id.homeIcon);
+
+        home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Ready.this, Weekly.class);
+                startActivity(intent);
+            }
+        });
 
         startButton = (MaterialFancyButton) findViewById(R.id.startButton);
         finish.setOnClickListener(new View.OnClickListener() {
 
-            public void onClick(View view) {
-                Intent intent = new Intent(Ready.this, PikePushUps.class);
-                startActivity(intent);
+public void onClick(View view) {
+        Intent intent = new Intent(Ready.this, PikePushUps.class);
+        startActivity(intent);
 
-            }
+        }
         });
 
         countDownView = (CircleCountDownView) findViewById(R.id.circle_count_down_view);
@@ -111,9 +122,9 @@ public class Ready extends AppCompatActivity {
 //
 //            }
 //        });
-    }
+        }
 
-    protected void startCountDown() {
+protected void startCountDown() {
 
 
         //view.setVisibility(View.GONE); // hide button
@@ -127,55 +138,55 @@ public class Ready extends AppCompatActivity {
         time= endTime*60;
 
         countDownTimer = new CountDownTimer(time * 1000 /*finishTime**/, 1000 /*interval**/) {
-            @Override
-            public void onTick(long millisUntilFinished) {
-                countDownView.setProgress(progress, time );
-                progress = progress + 1;
+@Override
+public void onTick(long millisUntilFinished) {
+        countDownView.setProgress(progress, time );
+        progress = progress + 1;
 
-                if(seconds >= 0)
-                {
+        if(seconds >= 0)
+        {
 
-                    mTvMinutes.setText(minutes+"");
-                    if(seconds <10){
-                        mTvSeconds.setText("0"+seconds);
-                        seconds--;
-                        count++;
-                    }else{
-                        mTvSeconds.setText(seconds+"");
-                        seconds--;
-                        count++;
-                    }
+        mTvMinutes.setText(minutes+"");
+        if(seconds <10){
+        mTvSeconds.setText("0"+seconds);
+        seconds--;
+        count++;
+        }else{
+        mTvSeconds.setText(seconds+"");
+        seconds--;
+        count++;
+        }
 
-                }
+        }
 
-                if(count == 60 && minutes != 0)
-                {
-                    minutes--;
-                    count = 0;
-                    mTvMinutes.setText(minutes+"");
-                    seconds = 59;
-                }
+        if(count == 60 && minutes != 0)
+        {
+        minutes--;
+        count = 0;
+        mTvMinutes.setText(minutes+"");
+        seconds = 59;
+        }
 
-            }
+        }
 
-            @Override
-            public void onFinish() {
-                countDownView.setProgress(progress, time);
-                //view.setVisibility(View.VISIBLE);
-                cancelTimerBt.setVisibility(View.GONE);
-                minutes=0;
-                seconds=59;
-            }
+@Override
+public void onFinish() {
+        countDownView.setProgress(progress, time);
+        //view.setVisibility(View.VISIBLE);
+        cancelTimerBt.setVisibility(View.GONE);
+        minutes=0;
+        seconds=59;
+        }
         };
         countDownTimer.start(); // start timer
 
         // hide softkeyboard
         View currentFocus = this.getCurrentFocus();
         if (currentFocus != null) {
-            InputMethodManager imm = (InputMethodManager)this.getSystemService(Context.INPUT_METHOD_SERVICE);
-            imm.hideSoftInputFromWindow(currentFocus.getWindowToken(), 0);
+        InputMethodManager imm = (InputMethodManager)this.getSystemService(Context.INPUT_METHOD_SERVICE);
+        imm.hideSoftInputFromWindow(currentFocus.getWindowToken(), 0);
         }
-    }
+        }
 //    public void startTime(){
 //        startTime = SystemClock.uptimeMillis();
 //        customHandler.postDelayed(updateTimerThread, 0);
@@ -205,4 +216,4 @@ public class Ready extends AppCompatActivity {
 //
 //    };
 
-}
+        }

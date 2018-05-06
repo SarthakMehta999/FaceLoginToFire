@@ -11,8 +11,8 @@ import android.view.View;
 import android.widget.Button;
 
 import at.markushi.ui.CircleButton;
-import fiture.quiamco.com.homefiture.Activities.Weekly;
 import fiture.quiamco.com.homefiture.LoseExcercise.Monday.Plank;
+import fiture.quiamco.com.homefiture.LoseExcercise.Monday.RestBoxStepUp;
 import fiture.quiamco.com.homefiture.R;
 
 public class InsPlank extends AppCompatActivity {
@@ -35,7 +35,7 @@ public class InsPlank extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent im = new Intent(InsPlank.this,Weekly.class);
+                Intent im = new Intent(InsPlank.this,RestBoxStepUp.class);
                 startActivity(im);
             }
         });
@@ -59,8 +59,8 @@ public class InsPlank extends AppCompatActivity {
                 alertDialogBuilder.setTitle("Instructions:");
                 //set dialog message
                 alertDialogBuilder
-                        .setMessage("Quick tip: Get low, keep your chest up, and don't let your " +
-                                "knees go over your toes during this lower-body move. ")
+                        .setMessage("Quick tip: Make sure you're keeping your core tight! " +
+                                "Do the circuit 3x, resting for 1 minute between each round. ")
                         .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int id) {

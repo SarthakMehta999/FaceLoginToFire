@@ -16,7 +16,6 @@ import android.widget.TextView;
 import com.rilixtech.materialfancybutton.MaterialFancyButton;
 
 import at.markushi.ui.CircleButton;
-import fiture.quiamco.com.homefiture.Activities.Weekly;
 import fiture.quiamco.com.homefiture.R;
 import fiture.quiamco.com.homefiture.models.CircleCountDownView;
 
@@ -51,7 +50,7 @@ public class Rest1 extends AppCompatActivity {
     CountDownTimer countDownTimer;
 
     int count = 0;
-    int seconds =59;
+    int seconds =20;
     int minutes;
     int hours=0;
     int time;
@@ -73,7 +72,7 @@ public class Rest1 extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent im = new Intent(Rest1.this,Weekly.class);
+                Intent im = new Intent(Rest1.this,JumpingJacks.class);
                 startActivity(im);
             }
         });
@@ -124,9 +123,9 @@ public class Rest1 extends AppCompatActivity {
 //        cancelTimerBt.setVisibility(View.VISIBLE); // show cancel button
 
         progress = 1;
-        endTime = 5; // up to finish time
+        endTime = 1; // up to finish time
         minutes = endTime-1;
-        time= endTime*60;
+        time= endTime*20;
 
         countDownTimer = new CountDownTimer(time * 1000 /*finishTime**/, 1000 /*interval**/) {
             @Override
@@ -138,7 +137,7 @@ public class Rest1 extends AppCompatActivity {
                 {
 
                     mTvMinutes.setText(minutes+"");
-                    if(seconds <10){
+                    if(seconds <20){
                         mTvSeconds.setText("0"+seconds);
                         seconds--;
                         count++;
@@ -150,12 +149,12 @@ public class Rest1 extends AppCompatActivity {
 
                 }
 
-                if(count == 60 && minutes != 0)
+                if(count == 20 && minutes != 0)
                 {
                     minutes--;
                     count = 0;
                     mTvMinutes.setText(minutes+"");
-                    seconds = 59;
+                    seconds = 20;
                 }
 
             }
@@ -166,7 +165,7 @@ public class Rest1 extends AppCompatActivity {
                 //view.setVisibility(View.VISIBLE);
                 cancelTimerBt.setVisibility(View.GONE);
                 minutes=0;
-                seconds=59;
+                seconds=20;
             }
         };
         countDownTimer.start(); // start timer

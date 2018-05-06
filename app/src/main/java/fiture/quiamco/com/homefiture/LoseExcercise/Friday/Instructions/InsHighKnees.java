@@ -11,7 +11,6 @@ import android.view.View;
 import android.widget.Button;
 
 import at.markushi.ui.CircleButton;
-import fiture.quiamco.com.homefiture.Activities.Weekly;
 import fiture.quiamco.com.homefiture.LoseExcercise.Friday.HighKness;
 import fiture.quiamco.com.homefiture.R;
 
@@ -35,7 +34,7 @@ public class InsHighKnees extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent im = new Intent(InsHighKnees.this,Weekly.class);
+                Intent im = new Intent(InsHighKnees.this,InsSquatsLegSide.class);
                 startActivity(im);
             }
         });
@@ -59,8 +58,12 @@ public class InsHighKnees extends AppCompatActivity {
                 alertDialogBuilder.setTitle("Instructions:");
                 //set dialog message
                 alertDialogBuilder
-                        .setMessage("Quick tip: Get low, keep your chest up, and don't let your " +
-                                "knees go over your toes during this lower-body move. ")
+                        .setMessage("1. You will begin with your palms at belly button height and facing " +
+                                "down towards the floor.\n" +
+                                "2. Bring your right knee up to meet your right palm, then lower the same" +
+                                " leg down to the floor and repeat with your left knee.\n" +
+                                "3. Leave the hopping part out and keep alternating knees while engaging your " +
+                                "abdominal muscles as you bring the knees up each time. ")
                         .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int id) {

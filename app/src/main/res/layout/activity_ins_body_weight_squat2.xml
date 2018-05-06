@@ -23,6 +23,13 @@
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary">
 
+            <ImageView
+                android:layout_width="19dp"
+                android:layout_height="25dp"
+                android:background="@drawable/homeicon"
+                android:paddingLeft="100dp"
+                />
+
         </android.support.v7.widget.Toolbar>
 
     </android.support.design.widget.AppBarLayout>
@@ -41,7 +48,7 @@
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:id="@+id/textView22"
+        android:id="@+id/textView101"
         android:layout_marginTop="8dp"
         app:layout_constraintTop_toBottomOf="@+id/toolbar2"
         android:layout_marginBottom="60dp"
@@ -86,7 +93,7 @@
         app:layout_constraintVertical_bias="0.515" />
 
     <at.markushi.ui.CircleButton
-        android:id="@+id/btnFinish"
+        android:id="@+id/btnFinish20"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_marginLeft="8dp"

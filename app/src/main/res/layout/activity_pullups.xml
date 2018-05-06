@@ -24,6 +24,11 @@
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary">
 
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="25dp"
+                android:background="@drawable/homeicon"/>
+
         </android.support.v7.widget.Toolbar>
 
     </android.support.design.widget.AppBarLayout>

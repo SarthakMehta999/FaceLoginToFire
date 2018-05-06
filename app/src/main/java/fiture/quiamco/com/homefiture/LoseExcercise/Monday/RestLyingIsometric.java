@@ -16,7 +16,6 @@ import android.widget.TextView;
 import com.rilixtech.materialfancybutton.MaterialFancyButton;
 
 import at.markushi.ui.CircleButton;
-import fiture.quiamco.com.homefiture.Activities.Weekly;
 import fiture.quiamco.com.homefiture.LoseExcercise.Monday.Instructions.InsBoxStepUp;
 import fiture.quiamco.com.homefiture.R;
 import fiture.quiamco.com.homefiture.models.CircleCountDownView;
@@ -74,7 +73,7 @@ public class RestLyingIsometric extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent im = new Intent(RestLyingIsometric.this,Weekly.class);
+                Intent im = new Intent(RestLyingIsometric.this,LyingIsometricycling.class);
                 startActivity(im);
             }
         });

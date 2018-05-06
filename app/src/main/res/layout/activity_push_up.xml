@@ -26,6 +26,11 @@
             tools:layout_editor_absoluteY="0dp"
             tools:layout_editor_absoluteX="8dp">
 
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="25dp"
+                android:background="@drawable/homeicon"/>
+
         </android.support.v7.widget.Toolbar>
 
     </android.support.design.widget.AppBarLayout>
@@ -79,7 +84,7 @@
         android:layout_centerHorizontal="true"
         android:text="Ready to go!"
         android:textSize="30sp"
-        app:layout_constraintHorizontal_bias="0.287"
+        app:layout_constraintHorizontal_bias="0.297"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginStart="8dp"
@@ -87,7 +92,7 @@
         android:id="@+id/textView22"
         android:layout_marginTop="8dp"
         app:layout_constraintTop_toBottomOf="@+id/toolbar2"
-        android:layout_marginBottom="60dp"
+        android:layout_marginBottom="59dp"
         app:layout_constraintBottom_toBottomOf="parent" />
 
     <at.markushi.ui.CircleButton

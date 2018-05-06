@@ -22,7 +22,15 @@
             android:id="@+id/imToolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary">
+            android:background="?attr/colorPrimary"
+            android:weightSum="1">
+
+            <ImageView
+                android:layout_width="19dp"
+                android:layout_height="25dp"
+                android:background="@drawable/homeicon"
+                android:paddingLeft="100dp"
+                 />
 
         </android.support.v7.widget.Toolbar>
 

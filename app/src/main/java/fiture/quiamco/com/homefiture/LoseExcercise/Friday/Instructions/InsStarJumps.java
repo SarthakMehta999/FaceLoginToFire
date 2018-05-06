@@ -60,8 +60,11 @@ public class InsStarJumps extends AppCompatActivity {
                 alertDialogBuilder.setTitle("Instructions:");
                 //set dialog message
                 alertDialogBuilder
-                        .setMessage("Quick tip: Get low, keep your chest up, and don't let your " +
-                                "knees go over your toes during this lower-body move. ")
+                        .setMessage("1. Begin in a relaxed stance with your feet shoulder width apart and hold your " +
+                                "arms close to the body. \n" +
+                                "2. To initiate the move, squat down halfway and explode back up as high as possible. " +
+                                "Fully extend your entire body, spreading your legs and arms away from the body.\n" +
+                                "3. As you land, bring your limbs back in and absorb your impact through the legs.\n ")
                         .setPositiveButton("Confirm", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int id) {

@@ -11,8 +11,8 @@ import android.view.View;
 import android.widget.Button;
 
 import at.markushi.ui.CircleButton;
-import fiture.quiamco.com.homefiture.Activities.Weekly;
 import fiture.quiamco.com.homefiture.LoseExcercise.Monday.ReadyBentOver;
+import fiture.quiamco.com.homefiture.LoseExcercise.Monday.RestDumbellBench;
 import fiture.quiamco.com.homefiture.R;
 
 public class InsBentOver extends AppCompatActivity {
@@ -35,7 +35,7 @@ public class InsBentOver extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent im = new Intent(InsBentOver.this,Weekly.class);
+                Intent im = new Intent(InsBentOver.this,RestDumbellBench.class);
                 startActivity(im);
             }
         });

@@ -10,6 +10,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.rilixtech.materialfancybutton.MaterialFancyButton;
@@ -23,23 +24,42 @@ import fiture.quiamco.com.homefiture.models.CircleCountDownView;
 public class ModeratePaceJog extends AppCompatActivity {
     private Handler mHandler = new Handler();
     public static final int ONE_MINUTE = 60000;
+    final Context context = this;
+    private MaterialFancyButton startButton;
+    private MaterialFancyButton pauseButton;
+    private Handler customHandler = new Handler();
+    ProgressBar progressBar;
+    private MaterialFancyButton start_timer, stop_timer;
+    private CountDownTimer myCountDownTimer;
+    private TextView timerValue;
+    private long startTime = 0L;
+    long timeInMilliseconds = 0L;
+    long timeSwapBuff = 0L;
+    long updatedTime = 0L;
+
     protected CircleCountDownView countDownView;
     protected Button startTimerBt, cancelTimerBt;
+
     private TextView mTvMinutes;
     private TextView mTvSeconds;
+
     CircleButton finish;
     MaterialFancyButton inst;
+
     int progress;
     int endTime;
     CountDownTimer countDownTimer;
+
     int count = 0;
     int seconds =59;
     int minutes;
     int hours=0;
     int time;
+
     Thread t;
     boolean stop = false;
     private volatile boolean isRunning = true;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

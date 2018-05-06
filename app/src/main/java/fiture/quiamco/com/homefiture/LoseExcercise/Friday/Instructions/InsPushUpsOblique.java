@@ -59,8 +59,10 @@ public class InsPushUpsOblique extends AppCompatActivity {
                 alertDialogBuilder.setTitle("Instructions:");
                 //set dialog message
                 alertDialogBuilder
-                        .setMessage("Quick tip: Get low, keep your chest up, and don't let your " +
-                                "knees go over your toes during this lower-body move. ")
+                        .setMessage("1. Get on your hands and knees, with your arms positioned a little wider than " +
+                                "shoulder width.\n" +
+                                "2.Extend your feet backward and straighten your body.\n" +
+                                "3. Raise one foot off the floor. ")
                         .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int id) {

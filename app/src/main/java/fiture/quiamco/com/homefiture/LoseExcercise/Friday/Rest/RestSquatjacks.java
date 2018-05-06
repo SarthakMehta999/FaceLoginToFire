@@ -16,8 +16,8 @@ import android.widget.TextView;
 import com.rilixtech.materialfancybutton.MaterialFancyButton;
 
 import at.markushi.ui.CircleButton;
-import fiture.quiamco.com.homefiture.Activities.Weekly;
 import fiture.quiamco.com.homefiture.LoseExcercise.Friday.Instructions.InsPushUpsOblique;
+import fiture.quiamco.com.homefiture.LoseExcercise.Friday.SquatJacks;
 import fiture.quiamco.com.homefiture.R;
 import fiture.quiamco.com.homefiture.models.CircleCountDownView;
 
@@ -75,7 +75,7 @@ public class RestSquatjacks extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent im = new Intent(RestSquatjacks.this,Weekly.class);
+                Intent im = new Intent(RestSquatjacks.this,SquatJacks.class);
                 startActivity(im);
             }
         });

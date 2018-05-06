@@ -11,7 +11,7 @@ import android.view.View;
 import android.widget.Button;
 
 import at.markushi.ui.CircleButton;
-import fiture.quiamco.com.homefiture.Activities.Weekly;
+import fiture.quiamco.com.homefiture.LoseExcercise.ExercisesDay.ExercisesDay2Lose;
 import fiture.quiamco.com.homefiture.LoseExcercise.Tuesday.FullOutSprint;
 import fiture.quiamco.com.homefiture.R;
 
@@ -34,7 +34,7 @@ public class InsFullOut extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent im = new Intent(InsFullOut.this,Weekly.class);
+                Intent im = new Intent(InsFullOut.this,ExercisesDay2Lose.class);
                 startActivity(im);
             }
         });
@@ -58,8 +58,9 @@ public class InsFullOut extends AppCompatActivity {
                 alertDialogBuilder.setTitle("Instructions:");
                 //set dialog message
                 alertDialogBuilder
-                        .setMessage("Quick tip: Get low, keep your chest up, and don't let your " +
-                                "knees go over your toes during this lower-body move. ")
+                        .setMessage("1. Stand Straight with your feet shoulder width and face forward, opening up your chest.\n" +
+                                    "2. Start pulling your knees up, and slowly on the balls of your feet.\n" +
+                                    "3. Repeat until set is complete. ")
                         .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int id) {

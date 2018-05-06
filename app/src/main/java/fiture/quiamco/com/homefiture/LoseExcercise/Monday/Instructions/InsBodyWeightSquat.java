@@ -11,7 +11,7 @@ import android.view.View;
 import android.widget.Button;
 
 import at.markushi.ui.CircleButton;
-import fiture.quiamco.com.homefiture.Activities.Weekly;
+import fiture.quiamco.com.homefiture.Activities.WeeklyLose;
 import fiture.quiamco.com.homefiture.LoseExcercise.Monday.BodyWeightSquat;
 import fiture.quiamco.com.homefiture.R;
 
@@ -34,7 +34,7 @@ public class InsBodyWeightSquat extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent im = new Intent(InsBodyWeightSquat.this,Weekly.class);
+                Intent im = new Intent(InsBodyWeightSquat.this,WeeklyLose.class);
                 startActivity(im);
             }
         });
@@ -43,7 +43,7 @@ public class InsBodyWeightSquat extends AppCompatActivity {
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         inst = (Button) findViewById(R.id.dialog);
-        finish = (CircleButton)findViewById(R.id.btnFinish);
+        finish = (CircleButton)findViewById(R.id.btnFinish20);
         finish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

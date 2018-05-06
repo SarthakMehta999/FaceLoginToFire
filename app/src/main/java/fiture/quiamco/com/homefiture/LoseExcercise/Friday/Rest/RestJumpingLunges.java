@@ -16,8 +16,8 @@ import android.widget.TextView;
 import com.rilixtech.materialfancybutton.MaterialFancyButton;
 
 import at.markushi.ui.CircleButton;
-import fiture.quiamco.com.homefiture.Activities.Weekly;
-import fiture.quiamco.com.homefiture.LoseExcercise.Tuesday.Instructions.InsModeratePaceJog;
+import fiture.quiamco.com.homefiture.Activities.WeeklyLose;
+import fiture.quiamco.com.homefiture.LoseExcercise.Friday.JumpingLunges;
 import fiture.quiamco.com.homefiture.R;
 import fiture.quiamco.com.homefiture.models.CircleCountDownView;
 
@@ -76,7 +76,7 @@ public class RestJumpingLunges extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent im = new Intent(RestJumpingLunges.this,Weekly.class);
+                Intent im = new Intent(RestJumpingLunges.this,JumpingLunges.class);
                 startActivity(im);
             }
         });
@@ -91,7 +91,7 @@ public class RestJumpingLunges extends AppCompatActivity {
         finish.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View view) {
-                Intent intent = new Intent(RestJumpingLunges.this, InsModeratePaceJog.class);
+                Intent intent = new Intent(RestJumpingLunges.this, WeeklyLose.class);
                 startActivity(intent);
 
             }

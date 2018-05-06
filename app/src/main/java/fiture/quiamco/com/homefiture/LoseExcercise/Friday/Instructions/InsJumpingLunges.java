@@ -11,8 +11,8 @@ import android.view.View;
 import android.widget.Button;
 
 import at.markushi.ui.CircleButton;
-import fiture.quiamco.com.homefiture.Activities.Weekly;
 import fiture.quiamco.com.homefiture.LoseExcercise.Friday.JumpingLunges;
+import fiture.quiamco.com.homefiture.LoseExcercise.Friday.Rest.RestHighKness;
 import fiture.quiamco.com.homefiture.R;
 
 public class InsJumpingLunges extends AppCompatActivity {
@@ -35,7 +35,7 @@ public class InsJumpingLunges extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent im = new Intent(InsJumpingLunges.this,Weekly.class);
+                Intent im = new Intent(InsJumpingLunges.this,RestHighKness.class);
                 startActivity(im);
             }
         });
@@ -59,8 +59,12 @@ public class InsJumpingLunges extends AppCompatActivity {
                 alertDialogBuilder.setTitle("Instructions:");
                 //set dialog message
                 alertDialogBuilder
-                        .setMessage("Quick tip: Get low, keep your chest up, and don't let your " +
-                                "knees go over your toes during this lower-body move. ")
+                        .setMessage("Start with a standard forward lunge. Stand with your feet hip-width " +
+                                "apart, then take a big step forward and lower until both knees are bent at a 90° angle.\n" +
+                                "From this position, summon the energy to push explosively off the ground," +
+                                " switching the positions of your legs while airborne so that you land and can " +
+                                "immediately drop into another lunge but with the opposite leg forwards. " +
+                                "Make sure you land as softly as possible. ")
                         .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int id) {

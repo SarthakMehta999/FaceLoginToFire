@@ -59,8 +59,12 @@ public class InsMtClimb extends AppCompatActivity {
                 alertDialogBuilder.setTitle("Instructions:");
                 //set dialog message
                 alertDialogBuilder
-                        .setMessage("Quick tip: Get low, keep your chest up, and don't let your " +
-                                "knees go over your toes during this lower-body move. ")
+                        .setMessage("1. Begin in a pushup position, with your weight supported by your hands and toes." +
+                                " Flexing the knee and hip, bring one leg until the knee is approximately under the hip. " +
+                                "This will be your starting position.\n" +
+                                "2. Explosively reverse the positions of your legs, extending the bent leg until " +
+                                "the leg is straight and supported by the toe, and bringing the other foot up with the hip " +
+                                "and knee flexed. Repeat in an alternating fashion for 20-30 seconds.")
                         .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int id) {

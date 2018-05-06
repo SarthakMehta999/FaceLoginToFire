@@ -3,26 +3,47 @@ package fiture.quiamco.com.homefiture.Ectomorph.LayoutEcto;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 
-import fiture.quiamco.com.homefiture.Ectomorph.OptionalDays.BenchPress;
+import fiture.quiamco.com.homefiture.Activities.WeeklyEctomorph;
+import fiture.quiamco.com.homefiture.Ectomorph.Day1ChestTriceps.DumbellBenchPress;
 import fiture.quiamco.com.homefiture.R;
 
 public class ectomorphday1exercises extends AppCompatActivity {
 
-    Button finish;
+    Button start;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ectomorphday1exercises);
 
-        finish = (Button)findViewById(R.id.btnFinish);
-        finish.setOnClickListener(new View.OnClickListener() {
+        Toolbar toolbar = (Toolbar) findViewById(R.id.imToolbar);
+        setSupportActionBar(toolbar);
+
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+
+        toolbar.setNavigationIcon(R.drawable.back_btn);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent b = new Intent(getApplication(),BenchPress.class);
-                startActivity(b);
+                Intent im = new Intent(ectomorphday1exercises.this,WeeklyEctomorph.class);
+                startActivity(im);
+            }
+        });
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+
+        start = (Button) findViewById(R.id.startBtn);
+
+        start.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ectomorphday1exercises.this,DumbellBenchPress.class);
+                startActivity(intent);
             }
         });
     }

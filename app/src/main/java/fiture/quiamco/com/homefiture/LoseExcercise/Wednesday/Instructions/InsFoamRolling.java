@@ -11,8 +11,8 @@ import android.view.View;
 import android.widget.Button;
 
 import at.markushi.ui.CircleButton;
-import fiture.quiamco.com.homefiture.Activities.Weekly;
 import fiture.quiamco.com.homefiture.LoseExcercise.Wednesday.FoamRolling;
+import fiture.quiamco.com.homefiture.LoseExcercise.Wednesday.Rest.RestWalkingLunge;
 import fiture.quiamco.com.homefiture.R;
 
 public class InsFoamRolling extends AppCompatActivity {
@@ -34,7 +34,7 @@ public class InsFoamRolling extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent im = new Intent(InsFoamRolling.this,Weekly.class);
+                Intent im = new Intent(InsFoamRolling.this,RestWalkingLunge.class);
                 startActivity(im);
             }
         });
@@ -58,8 +58,10 @@ public class InsFoamRolling extends AppCompatActivity {
                 alertDialogBuilder.setTitle("Instructions:");
                 //set dialog message
                 alertDialogBuilder
-                        .setMessage("Quick tip: Get low, keep your chest up, and don't let your " +
-                                "knees go over your toes during this lower-body move. ")
+                        .setMessage("Lie down with your back on the floor. Place a foam roller underneath " +
+                                "your upper back and cross your arms in front of you, protracting your " +
+                                "shoulder blades. Raise your hips off of the ground, placing your weight onto the " +
+                                "roller. Shift your weight to one side, rolling the upper to mid back. Alternate sides.  ")
                         .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int id) {
