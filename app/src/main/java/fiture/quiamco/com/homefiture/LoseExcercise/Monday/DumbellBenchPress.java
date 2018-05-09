@@ -42,6 +42,7 @@ public class DumbellBenchPress extends AppCompatActivity {
     private TextView mTvMinutes;
     private TextView mTvSeconds;
 
+
     CircleButton finish;
     MaterialFancyButton inst;
 
@@ -82,6 +83,7 @@ public class DumbellBenchPress extends AppCompatActivity {
         finish = (CircleButton) findViewById(R.id.btnFinish);
         finish.setVisibility(View.VISIBLE);
         timerValue = (TextView) findViewById(R.id.timerValue);
+
 
         startButton = (MaterialFancyButton) findViewById(R.id.startButton);
         finish.setOnClickListener(new View.OnClickListener() {

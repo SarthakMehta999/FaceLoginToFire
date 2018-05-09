@@ -36,7 +36,7 @@ public class EctomorphDay2 extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
-        start = (Button) findViewById(R.id.startBtn);
+        start = (Button) findViewById(R.id.startBtn2);
 
         start.setOnClickListener(new View.OnClickListener() {
             @Override

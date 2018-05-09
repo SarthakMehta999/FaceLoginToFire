@@ -36,7 +36,7 @@ public class EctomorphOptionalDays extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
-        start = (Button) findViewById(R.id.startBtn);
+        start = (Button) findViewById(R.id.startBtn12);
 
         start.setOnClickListener(new View.OnClickListener() {
             @Override

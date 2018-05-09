@@ -37,7 +37,7 @@ public class TotalBodyCircuitExercises extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
-        start = (Button) findViewById(R.id.startBtn);
+        start = (Button) findViewById(R.id.startBtn13);
 
         start.setOnClickListener(new View.OnClickListener() {
             @Override

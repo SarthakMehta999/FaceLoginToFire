@@ -50,7 +50,7 @@ public class Rest4 extends AppCompatActivity {
     CountDownTimer countDownTimer;
 
     int count = 0;
-    int seconds =20;
+    int seconds =59;
     int minutes;
     int hours=0;
     int time;

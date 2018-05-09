@@ -10,7 +10,6 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -43,7 +42,6 @@ public class SkullCrush extends AppCompatActivity {
 
     private TextView mTvMinutes;
     private TextView mTvSeconds;
-    private ImageView home;
 
     CircleButton finish;
     MaterialFancyButton inst;
@@ -86,15 +84,7 @@ public class SkullCrush extends AppCompatActivity {
         finish = (CircleButton) findViewById(R.id.btnFinish);
         finish.setVisibility(View.VISIBLE);
         timerValue = (TextView) findViewById(R.id.timerValue);
-        home = (ImageView) findViewById(R.id.homeIcon);
 
-        home.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(SkullCrush.this, WeeklyEctomorph.class);
-                startActivity(intent);
-            }
-        });
 
         startButton = (MaterialFancyButton) findViewById(R.id.startButton);
         finish.setOnClickListener(new View.OnClickListener() {

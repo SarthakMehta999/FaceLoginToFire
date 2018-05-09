@@ -2,22 +2,20 @@ package fiture.quiamco.com.homefiture.Ectomorph.Day1ChestTriceps;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.rilixtech.materialfancybutton.MaterialFancyButton;
 
 import at.markushi.ui.CircleButton;
-import fiture.quiamco.com.homefiture.Activities.Weekly;
 import fiture.quiamco.com.homefiture.R;
 import fiture.quiamco.com.homefiture.models.CircleCountDownView;
 
@@ -43,7 +41,6 @@ public class Dips extends AppCompatActivity {
 
     private TextView mTvMinutes;
     private TextView mTvSeconds;
-    private ImageView home;
 
     CircleButton finish;
     MaterialFancyButton inst;
@@ -86,15 +83,7 @@ public class Dips extends AppCompatActivity {
         finish = (CircleButton) findViewById(R.id.btnFinish);
         finish.setVisibility(View.VISIBLE);
         timerValue = (TextView) findViewById(R.id.timerValue);
-        home = (ImageView) findViewById(R.id.homeIcon);
 
-        home.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Dips.this, Weekly.class);
-                startActivity(intent);
-            }
-        });
 
         startButton = (MaterialFancyButton) findViewById(R.id.startButton);
         finish.setOnClickListener(new View.OnClickListener() {

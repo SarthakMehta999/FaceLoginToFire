@@ -153,7 +153,7 @@ public class RestBoxStepUp extends AppCompatActivity {
                 if(count == 60 && minutes != 0)
                 {
                     minutes--;
-                    count = 0;
+                    count = 59;
                     mTvMinutes.setText(minutes+"");
                     seconds = 59;
                 }

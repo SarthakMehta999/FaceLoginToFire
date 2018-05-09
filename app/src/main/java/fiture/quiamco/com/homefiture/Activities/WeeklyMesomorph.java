@@ -9,9 +9,6 @@ import android.widget.GridView;
 import android.widget.Toast;
 
 import fiture.quiamco.com.homefiture.Adapter.WeeklyExercisesAdapter;
-import fiture.quiamco.com.homefiture.Ectomorph.HighRepAbDays.HighRepAbDays;
-import fiture.quiamco.com.homefiture.Ectomorph.LowRepAbDay.ectomorphlowrepday;
-import fiture.quiamco.com.homefiture.Ectomorph.OptionalDays.EctomorphOptionalDays;
 import fiture.quiamco.com.homefiture.Mesomorph.Mesomorph.Monday.mesomorphday1;
 import fiture.quiamco.com.homefiture.Mesomorph.Mesomorph.Wednesday.mesomorphday3;
 import fiture.quiamco.com.homefiture.Mesomorph.Mesomorph.tuesday.mesomorphday2;
@@ -46,20 +43,6 @@ public class WeeklyMesomorph extends AppCompatActivity {
                     startActivity(def);
                     Toast.makeText(WeeklyMesomorph.this, "try3", Toast.LENGTH_SHORT).show();
 
-                } else if (position == 3) {
-                    Intent def = new Intent(WeeklyMesomorph.this, HighRepAbDays.class);
-                    startActivity(def);
-                    Toast.makeText(WeeklyMesomorph.this, "try4", Toast.LENGTH_SHORT).show();
-
-                } else if (position == 4) {
-                    Intent def = new Intent(WeeklyMesomorph.this, ectomorphlowrepday.class);
-                    startActivity(def);
-                    Toast.makeText(WeeklyMesomorph.this, "try", Toast.LENGTH_SHORT).show();
-
-                } else if (position == 5) {
-                    Intent def = new Intent(WeeklyMesomorph.this, EctomorphOptionalDays.class);
-                    startActivity(def);
-                    Toast.makeText(WeeklyMesomorph.this, "try", Toast.LENGTH_SHORT).show();
                 }
             }
         });

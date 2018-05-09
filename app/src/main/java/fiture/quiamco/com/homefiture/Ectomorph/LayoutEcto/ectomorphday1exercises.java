@@ -37,7 +37,7 @@ public class ectomorphday1exercises extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
-        start = (Button) findViewById(R.id.startBtn);
+        start = (Button) findViewById(R.id.startBtn1);
 
         start.setOnClickListener(new View.OnClickListener() {
             @Override

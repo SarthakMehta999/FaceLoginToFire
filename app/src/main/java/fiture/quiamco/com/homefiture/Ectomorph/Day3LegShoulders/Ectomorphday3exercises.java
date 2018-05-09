@@ -13,6 +13,7 @@ import fiture.quiamco.com.homefiture.R;
 public class Ectomorphday3exercises extends AppCompatActivity {
 
     Button start;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,7 +36,7 @@ public class Ectomorphday3exercises extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
-        start = (Button) findViewById(R.id.startBtn);
+        start = (Button) findViewById(R.id.btnStart11);
 
         start.setOnClickListener(new View.OnClickListener() {
             @Override
