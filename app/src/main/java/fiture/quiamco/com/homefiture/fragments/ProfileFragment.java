@@ -31,7 +31,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import de.hdodenhof.circleimageview.CircleImageView;
+import fiture.quiamco.com.homefiture.Activities.Lifestyle;
 import fiture.quiamco.com.homefiture.Activities.Weekly;
+import fiture.quiamco.com.homefiture.Activities.WeeklyLose;
 import fiture.quiamco.com.homefiture.Adapter.DailyChallengeAdapter;
 import fiture.quiamco.com.homefiture.R;
 import fiture.quiamco.com.homefiture.models.DailyChallengeModel;
@@ -57,7 +59,6 @@ public class ProfileFragment extends Fragment {
     private RecyclerView recyclerViewDailyChallenge;
     private ArrayList<DailyChallengeModel> dailyChallengeModels, dcmss;
     private DailyChallengeAdapter dailyChallengeAdapter;
-
 //    private String[] pics = {
 //            String.valueOf(R.drawable.nocheck1),
 //            String.valueOf(R.drawable.nocheck2),
@@ -106,6 +107,7 @@ public class ProfileFragment extends Fragment {
     private DatabaseReference myRef, userRef,alterUserData;
     private SharedPreferences sharedPreferences;
     private String id;
+    private String bmiLabel;
     private int j = 0;
 
     @Nullable
@@ -122,10 +124,13 @@ public class ProfileFragment extends Fragment {
         alterUserData = database.getReference("User Data");
         sharedPreferences = getContext().getSharedPreferences("FitureUser", Context.MODE_PRIVATE);
         id = sharedPreferences.getString("userKey", "");
+        bmiLabel = sharedPreferences.getString("userBMILabel", "");
+
+
+
         userRef.child(id).setValue(user);
         Log.d("sampleAsesd", id);
         dcmss = new ArrayList<>();
-
         findViews();
 
         Glide.with(getActivity()).load(user.getImageUrl()).into(profileImage);
@@ -159,6 +164,7 @@ public class ProfileFragment extends Fragment {
     }
 
     public void findViews() {
+//        DatabaseReference ref = database.getReference("https://fiture-dfae4.firebaseio.com/UserFiture/bmiLabel ");
         profileImage = (CircleImageView) rootView.findViewById(R.id.profileImage); // find circle image view
         nameAndSurname = (TextView) rootView.findViewById(R.id.nameAndSurname); //Find textview Id
         challenge = (MaterialFancyButton) rootView.findViewById(R.id.challenge);
@@ -169,6 +175,23 @@ public class ProfileFragment extends Fragment {
         tvHeight = (TextView) rootView.findViewById(R.id.tvHeight);
 //        Weight = (TextView) rootView.findViewById(R.id.tvWeight);
 //        Height = (TextView) rootView.findViewById(R.id.tvHeight);
+
+//        String fname = sharedPreferences.getString("userFname", "");
+//        String lname = sharedPreferences.getString("userLname", "");
+//        String bday = sharedPreferences.getString("userBday", "");
+//        String gender = sharedPreferences.getString("userGender", "");
+//        String email = sharedPreferences.getString("userEmail", "");
+//        String pic = sharedPreferences.getString("userPic", "");
+//        int points = sharedPreferences.getInt("samplePoint", 1);
+//
+//        String height = sharedPreferences.getString("userHeight", "");
+//        String weight = sharedPreferences.getString("userWeight", "");
+//        String BMI = sharedPreferences.getString("userBMI", "");
+//        String bmiLabel = sharedPreferences.getString("userBMILabel", "");
+//
+//
+//        user = new User(fname, lname, bday, gender, email, pic, points, height, weight, BMI,bmiLabel);
+
         recyclerViewDailyChallenge = (RecyclerView) rootView.findViewById(R.id.dailyChallenge);
     recyclerViewDailyChallenge.setVisibility(View.GONE);
         dailyChallengeModels = new ArrayList<>();
@@ -227,13 +250,45 @@ public class ProfileFragment extends Fragment {
                 share();
             }
         });
-        start.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent login = new Intent(getActivity(),Weekly.class);
-                startActivity(login);
+//        ref.addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(DataSnapshot dataSnapshot) {
+//                User profile = dataSnapshot.getValue(User.class);
+//                Log.d("please",profile.getBmiLabel());
+//            }
+//
+//            @Override
+//            public void onCancelled(DatabaseError databaseError) {
+//                System.out.println("The read failed: " + databaseError.getCode());
+//            }
+//        });
+            if(bmiLabel.equals("Underweight")) {
+                start.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent login = new Intent(getActivity(), Weekly.class);
+                        startActivity(login);
+                    }
+                });
             }
-        });
+            else if(bmiLabel.equals("Overweight")){
+                start.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent login = new Intent(getActivity(), WeeklyLose.class);
+                        startActivity(login);
+                    }
+                });
+        }
+            else{
+                start.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent login = new Intent(getActivity(), Lifestyle.class);
+                        startActivity(login);
+                    }
+                });
+            }
         challenge.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

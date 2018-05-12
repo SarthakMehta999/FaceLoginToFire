@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -77,9 +78,12 @@ public class BMI extends AppCompatActivity {
 
 
     public void calculateBMI(View v) {
-        heightStr = height.getText().toString();
-        weightStr = weight.getText().toString();
+        try {
+            InputMethodManager imm = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
+            imm.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
 
+            heightStr = height.getText().toString();
+            weightStr = weight.getText().toString();
 
 
 //        String value1 = height.getText().toString();
@@ -89,27 +93,28 @@ public class BMI extends AppCompatActivity {
 //               result
 //        );
 //        databaseReference.child(id).setValue(user);
-        if (height.getText().toString().trim().equals("") || weight.getText().toString().trim().equals("") ){
-            height.setError("Please Input Value");
-            weight.setError("Please Input Value");
+            if (height.getText().toString().trim().equals("") || weight.getText().toString().trim().equals("")) {
+                height.setError("Please Input Value");
+                weight.setError("Please Input Value");
 
-        }
-
-        else {
-            proceed.setVisibility(View.VISIBLE);
-        }
+            } else {
+                proceed.setVisibility(View.VISIBLE);
+            }
 
 
-        if (heightStr != null && !"".equals(heightStr)
-                && weightStr != null  &&  !"".equals(weightStr)) {
-            float heightValue = Float.parseFloat(heightStr) / 100;
-            float weightValue = Float.parseFloat(weightStr);
+            if (heightStr != null && !"".equals(heightStr)
+                    && weightStr != null && !"".equals(weightStr)) {
+                float heightValue = Float.parseFloat(heightStr) / 100;
+                float weightValue = Float.parseFloat(weightStr);
 
-            float bmi = weightValue / (heightValue * heightValue);
+                float bmi = weightValue / (heightValue * heightValue);
 
-            displayBMI(bmi);
+                displayBMI(bmi);
 //            String id = myRef.push().getKey();
 //            myRef.child(id).setValue("height:"+heightStr+"cm"+" "+"weight:"+weightStr+"Kg");
+            }
+        }catch (Exception e) {
+
         }
     }
 
@@ -267,6 +272,8 @@ public class BMI extends AppCompatActivity {
         final Infos infos = new Infos();
         infos.setHeight(heightStr +""+ "cm");
         infos.setWeight(weightStr +""+ "kg");
+
+        user.setBmiLabel(bmiLabel);
 
         SharedPreferences sharedPreferences = getSharedPreferences("FitureUser", Context.MODE_PRIVATE);
         final SharedPreferences.Editor editor = sharedPreferences.edit();

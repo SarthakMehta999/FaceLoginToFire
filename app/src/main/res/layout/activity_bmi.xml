@@ -83,8 +83,9 @@
         android:id="@+id/calc"
         android:layout_width="105dp"
         android:layout_height="40dp"
-        android:layout_marginTop="25dp"
         android:layout_gravity="center_horizontal"
+        android:layout_marginTop="25dp"
+        android:onClick="calculateBMI"
         android:paddingBottom="10dp"
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
@@ -96,8 +97,7 @@
         fancy:mfb_iconPosition="left"
         fancy:mfb_radius="30dp"
         fancy:mfb_text="Calculate"
-        fancy:mfb_textColor="@color/textColor"
-        android:onClick="calculateBMI"/>
+        fancy:mfb_textColor="@color/textColor" />
 
     <TextView
         android:id="@+id/result"

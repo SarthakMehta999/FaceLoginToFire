@@ -126,10 +126,12 @@
                 android:layout_marginStart="8dp"
                 android:text="Not active at all"
                 android:textColor="#F5F5F5"
+                android:checked="true"
                 app:layout_constraintHorizontal_bias="0.308"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView3" />
+                app:layout_constraintTop_toBottomOf="@+id/textView3"
+                />
 
             <RadioButton
                 android:id="@+id/rbtnLight"
@@ -179,8 +181,8 @@
 
         <com.rilixtech.materialfancybutton.MaterialFancyButton
             android:id="@+id/btnProceed"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="105dp"
+            android:layout_height="40dp"
             android:layout_marginBottom="8dp"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
@@ -193,10 +195,8 @@
             fancy:layout_constraintRight_toRightOf="parent"
             fancy:layout_constraintTop_toTopOf="parent"
             fancy:layout_constraintVertical_bias="0.51"
-            fancy:mfb_borderColor="#F5F5F5"
-            fancy:mfb_borderWidth="1dp"
-            fancy:mfb_defaultColor="#141e30"
-            fancy:mfb_focusColor="#9bd823"
+            fancy:mfb_defaultColor="@color/colorPrimary"
+            fancy:mfb_focusColor="@color/backgroundforallscreen"
             fancy:mfb_iconFont="fontawesome.ttf"
             fancy:mfb_iconPosition="left"
             fancy:mfb_radius="30dp"
@@ -227,6 +227,7 @@
                 android:layout_marginStart="8dp"
                 android:text="Gain more muscles"
                 android:textColor="#F5F5F5"
+                android:checked="true"
                 app:layout_constraintHorizontal_bias="0.115"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
@@ -279,6 +280,7 @@
                 android:layout_height="wrap_content"
                 android:text="Chest pain"
                 android:textColor="#F5F5F5"
+                android:checked="true"
                 />
 
             <CheckBox
