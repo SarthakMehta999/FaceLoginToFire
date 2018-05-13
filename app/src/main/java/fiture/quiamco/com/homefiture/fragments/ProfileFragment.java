@@ -36,6 +36,7 @@ import fiture.quiamco.com.homefiture.Activities.Weekly;
 import fiture.quiamco.com.homefiture.Activities.WeeklyLose;
 import fiture.quiamco.com.homefiture.Adapter.DailyChallengeAdapter;
 import fiture.quiamco.com.homefiture.R;
+import fiture.quiamco.com.homefiture.TotalBodyCircuit.TotalBodyCircuitExercises;
 import fiture.quiamco.com.homefiture.models.DailyChallengeModel;
 import fiture.quiamco.com.homefiture.models.Infos;
 import fiture.quiamco.com.homefiture.models.User;
@@ -59,6 +60,7 @@ public class ProfileFragment extends Fragment {
     private RecyclerView recyclerViewDailyChallenge;
     private ArrayList<DailyChallengeModel> dailyChallengeModels, dcmss;
     private DailyChallengeAdapter dailyChallengeAdapter;
+    String surveyResponse,goal,ilness;
 //    private String[] pics = {
 //            String.valueOf(R.drawable.nocheck1),
 //            String.valueOf(R.drawable.nocheck2),
@@ -125,6 +127,10 @@ public class ProfileFragment extends Fragment {
         sharedPreferences = getContext().getSharedPreferences("FitureUser", Context.MODE_PRIVATE);
         id = sharedPreferences.getString("userKey", "");
         bmiLabel = sharedPreferences.getString("userBMILabel", "");
+        surveyResponse = sharedPreferences.getString("userFitnessResponse","");
+        goal = sharedPreferences.getString("userGoal","");
+        ilness = sharedPreferences.getString("userIlness","");
+        Log.d("huhu",goal);
 
 
 
@@ -262,7 +268,8 @@ public class ProfileFragment extends Fragment {
 //                System.out.println("The read failed: " + databaseError.getCode());
 //            }
 //        });
-            if(bmiLabel.equals("Underweight")) {
+        switch (bmiLabel) {
+            case "Underweight":
                 start.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -270,8 +277,8 @@ public class ProfileFragment extends Fragment {
                         startActivity(login);
                     }
                 });
-            }
-            else if(bmiLabel.equals("Overweight")){
+                break;
+            case "Overweight":
                 start.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -279,8 +286,40 @@ public class ProfileFragment extends Fragment {
                         startActivity(login);
                     }
                 });
-        }
-            else{
+                break;
+            case "Normal":
+
+                switch (goal) {
+                    case "maintain weight":
+                        start.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                Intent login = new Intent(getActivity(), TotalBodyCircuitExercises.class);
+                                startActivity(login);
+                            }
+                        });
+                        break;
+                    case "lose weight":
+                        start.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                Intent login = new Intent(getActivity(), WeeklyLose.class);
+                                startActivity(login);
+                            }
+                        });
+                        break;
+                    default:
+                        start.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                Intent login = new Intent(getActivity(), Lifestyle.class);
+                                startActivity(login);
+                            }
+                        });
+                        break;
+                }
+                break;
+            default:
                 start.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -288,7 +327,8 @@ public class ProfileFragment extends Fragment {
                         startActivity(login);
                     }
                 });
-            }
+                break;
+        }
         challenge.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

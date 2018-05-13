@@ -286,8 +286,24 @@ public class Lifestyle extends AppCompatActivity {
                 surveyResponseRef.child(userId).child("illnesses").child(String.valueOf(i + 1)).setValue(ilnesses.get(i));
             }
         }
+        SharedPreferences sharedPreferences = getSharedPreferences("FitureUser", Context.MODE_PRIVATE);
+        final SharedPreferences.Editor editor = sharedPreferences.edit();
+
+
+        editor.putString("userFitnessResponse" ,fitnessResponse);
+        editor.putString("userGoal",goalResponse);
+        editor.putString("userIlnesses", String.valueOf(ilnesses));
+        editor.apply();
+
+        Log.d("Responses",fitnessResponse+""+goalResponse+""+ilnesses);
+
+        final User user = new User();
+        user.setFitnessResponse(fitnessResponse);
+        user.setGoal(goalResponse);
+        user.setIlnesses(String.valueOf(ilnesses));
 
     }
+
 
     @Override
     public void onBackPressed() {

@@ -28,7 +28,9 @@ public class User implements Serializable, Comparable<User> {
     private String weight;
     private String BMI;
     private String bmiLabel;
-
+    private String fitnessResponse;
+    private String goal;
+    private String ilnesses;
     public User() {
     }
 
@@ -54,6 +56,24 @@ public class User implements Serializable, Comparable<User> {
         this.weight = weight;
         this.BMI = BMI;
         this.bmiLabel = bmiLabel;
+    }
+
+    public User(String fName, String lName, String birthDate, String gender, String email, String imageUrl, int userPoints, String height,
+                String weight, String BMI, String bmiLabel, String fitnessResponse, String goal, String ilnesses) {
+        this.fName = fName;
+        this.lName = lName;
+        this.birthDate = birthDate;
+        this.gender = gender;
+        this.email = email;
+        this.imageUrl = imageUrl;
+        this.userPoints = userPoints;
+        this.height = height;
+        this.weight = weight;
+        this.BMI = BMI;
+        this.bmiLabel = bmiLabel;
+        this.fitnessResponse = fitnessResponse;
+        this.goal = goal;
+        this.ilnesses = ilnesses;
     }
 
     public int getUserPoints() {
@@ -139,6 +159,30 @@ public class User implements Serializable, Comparable<User> {
 
     public String getBmiLabel() {
         return bmiLabel;
+    }
+
+    public String getFitnessResponse() {
+        return fitnessResponse;
+    }
+
+    public void setFitnessResponse(String fitnessResponse) {
+        this.fitnessResponse = fitnessResponse;
+    }
+
+    public String getGoal() {
+        return goal;
+    }
+
+    public void setGoal(String goal) {
+        this.goal = goal;
+    }
+
+    public String getIlnesses() {
+        return ilnesses;
+    }
+
+    public void setIlnesses(String ilnesses) {
+        this.ilnesses = ilnesses;
     }
 
     public void setBmiLabel(String bmiLabel) {

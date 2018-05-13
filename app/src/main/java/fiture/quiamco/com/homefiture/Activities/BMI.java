@@ -272,7 +272,6 @@ public class BMI extends AppCompatActivity {
         final Infos infos = new Infos();
         infos.setHeight(heightStr +""+ "cm");
         infos.setWeight(weightStr +""+ "kg");
-
         user.setBmiLabel(bmiLabel);
 
         SharedPreferences sharedPreferences = getSharedPreferences("FitureUser", Context.MODE_PRIVATE);
