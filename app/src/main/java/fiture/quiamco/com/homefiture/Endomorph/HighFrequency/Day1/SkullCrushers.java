@@ -16,7 +16,7 @@ import android.widget.TextView;
 import com.rilixtech.materialfancybutton.MaterialFancyButton;
 
 import at.markushi.ui.CircleButton;
-import fiture.quiamco.com.homefiture.Activities.WeeklyEctomorph;
+import fiture.quiamco.com.homefiture.Activities.WeeklyEndomorphHighFreq;
 import fiture.quiamco.com.homefiture.R;
 import fiture.quiamco.com.homefiture.models.CircleCountDownView;
 
@@ -90,7 +90,7 @@ public class SkullCrushers extends AppCompatActivity {
         finish.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View view) {
-                Intent intent = new Intent(SkullCrushers.this, WeeklyEctomorph.class);
+                Intent intent = new Intent(SkullCrushers.this, WeeklyEndomorphHighFreq .class);
                 startActivity(intent);
 
             }

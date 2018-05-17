@@ -350,7 +350,32 @@
         <activity android:name=".Endomorph.MediumFrequency.Day2.exercisesday2med" />
         <activity android:name=".Endomorph.MediumFrequency.Day3.exerciseday3med" />
         <activity android:name=".Endomorph.MediumFrequency.Day5.Biceps.Triceps.exercisesday5med" />
-        <activity android:name=".Endomorph.MediumFrequency.Day6.exercisesday6med"></activity>
+        <activity android:name=".Endomorph.MediumFrequency.Day6.exercisesday6med" />
+        <activity android:name=".Maintain.MondayCoreWorkout.StartMon" />
+        <activity android:name=".Maintain.MondayCoreWorkout.stability" />
+        <activity android:name=".Maintain.MondayCoreWorkout.seated" />
+        <activity android:name=".Maintain.MondayCoreWorkout.rollout" />
+        <activity android:name=".Maintain.MondayCoreWorkout.KneeTucks" />
+        <activity android:name=".Maintain.MondayCoreWorkout.spiderman" />
+        <activity android:name=".Maintain.MondayCoreWorkout.sideLift" />
+        <activity android:name=".Maintain.MondayCoreWorkout.crunch" />
+        <activity android:name=".Maintain.MaintainWeekly" />
+        <activity android:name=".Maintain.WedUpperBodyWorkout.standing" />
+        <activity android:name=".Maintain.WedUpperBodyWorkout.Alternating" />
+        <activity android:name=".Maintain.WedUpperBodyWorkout.Walking" />
+        <activity android:name=".Maintain.WedUpperBodyWorkout.Front" />
+        <activity android:name=".Maintain.WedUpperBodyWorkout.Diamond" />
+        <activity android:name=".Maintain.WedUpperBodyWorkout.Triceps" />
+        <activity android:name=".Maintain.WedUpperBodyWorkout.OneArm" />
+        <activity android:name=".Maintain.WedUpperBodyWorkout.StarWed" />
+        <activity android:name=".Maintain.Rest.Rest" />
+        <activity android:name=".Maintain.FriTotalBodyWrkout.Extension" />
+        <activity android:name=".Maintain.FriTotalBodyWrkout.Lunge" />
+        <activity android:name=".Maintain.FriTotalBodyWrkout.BackExtension" />
+        <activity android:name=".Maintain.FriTotalBodyWrkout.TricepsExtension" />
+        <activity android:name=".Maintain.FriTotalBodyWrkout.LegSquat" />
+        <activity android:name=".Maintain.FriTotalBodyWrkout.ToeTap" />
+        <activity android:name=".Maintain.FriTotalBodyWrkout.PulsingLunges"></activity>
     </application>
 
 </manifest>
