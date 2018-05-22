@@ -375,7 +375,14 @@
         <activity android:name=".Maintain.FriTotalBodyWrkout.TricepsExtension" />
         <activity android:name=".Maintain.FriTotalBodyWrkout.LegSquat" />
         <activity android:name=".Maintain.FriTotalBodyWrkout.ToeTap" />
-        <activity android:name=".Maintain.FriTotalBodyWrkout.PulsingLunges"></activity>
+        <activity android:name=".Maintain.FriTotalBodyWrkout.PulsingLunges" />
+        <activity android:name=".Maintain.FriTotalBodyWrkout.StartFri">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

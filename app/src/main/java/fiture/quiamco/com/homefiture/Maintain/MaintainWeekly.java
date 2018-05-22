@@ -9,7 +9,7 @@ import android.widget.GridView;
 import android.widget.Toast;
 
 import fiture.quiamco.com.homefiture.Adapter.WeeklyExercisesAdapter;
-import fiture.quiamco.com.homefiture.LoseExcercise.ExercisesDay.ExercisesDay5Lose;
+import fiture.quiamco.com.homefiture.Maintain.FriTotalBodyWrkout.StartFri;
 import fiture.quiamco.com.homefiture.Maintain.MondayCoreWorkout.StartMon;
 import fiture.quiamco.com.homefiture.Maintain.Rest.Rest;
 import fiture.quiamco.com.homefiture.Maintain.TuesdayCardio.Exercisesday1;
@@ -52,7 +52,7 @@ public class MaintainWeekly extends AppCompatActivity {
                     Toast.makeText(getApplication(), "try4", Toast.LENGTH_SHORT).show();
 
                 } else if (position == 4) {
-                    Intent def = new Intent(getApplication(), ExercisesDay5Lose.class);
+                    Intent def = new Intent(getApplication(), StartFri.class);
                     startActivity(def);
                     Toast.makeText(getApplication(), "try5", Toast.LENGTH_SHORT).show();
                 } else if (position == 5) {

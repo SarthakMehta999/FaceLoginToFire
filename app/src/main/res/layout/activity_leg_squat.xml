@@ -83,7 +83,7 @@
     <pl.droidsonroids.gif.GifTextView
         android:layout_width="235dp"
         android:layout_height="181dp"
-        android:background="@drawable/crunch2"
+        android:background="@drawable/oneleg_squat"
         android:layout_marginRight="8dp"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginLeft="8dp"
