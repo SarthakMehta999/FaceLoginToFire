@@ -3,11 +3,9 @@ package fiture.quiamco.com.homefiture.LoseExcercise.ExercisesDay;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 
-import fiture.quiamco.com.homefiture.Activities.WeeklyLose;
 import fiture.quiamco.com.homefiture.LoseExcercise.Tuesday.Instructions.InsFullOut;
 import fiture.quiamco.com.homefiture.R;
 
@@ -20,24 +18,10 @@ public class ExercisesDay2Lose extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exercises_day2_lose);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.imToolbar);
-        setSupportActionBar(toolbar);
 
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
 
-        toolbar.setNavigationIcon(R.drawable.back_btn);
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent im = new Intent(ExercisesDay2Lose.this,WeeklyLose.class);
-                startActivity(im);
-            }
-        });
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
-
-        start = (Button) findViewById(R.id.startBtn);
+        start = (Button) findViewById(R.id.startBtn13);
 
         start.setOnClickListener(new View.OnClickListener() {
             @Override

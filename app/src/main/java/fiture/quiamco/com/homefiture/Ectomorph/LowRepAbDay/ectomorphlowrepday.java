@@ -36,7 +36,7 @@ public class ectomorphlowrepday extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
-        start = (Button) findViewById(R.id.startBtn12);
+        start = (Button) findViewById(R.id.startBtn14);
 
         start.setOnClickListener(new View.OnClickListener() {
             @Override

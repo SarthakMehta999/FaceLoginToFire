@@ -37,6 +37,7 @@ import fiture.quiamco.com.homefiture.Activities.WeeklyLose;
 import fiture.quiamco.com.homefiture.Adapter.DailyChallengeAdapter;
 import fiture.quiamco.com.homefiture.Maintain.MaintainWeekly;
 import fiture.quiamco.com.homefiture.R;
+import fiture.quiamco.com.homefiture.TotalBodyCircuit.TotalBodyCircuitExercises;
 import fiture.quiamco.com.homefiture.models.DailyChallengeModel;
 import fiture.quiamco.com.homefiture.models.Infos;
 import fiture.quiamco.com.homefiture.models.User;
@@ -323,7 +324,7 @@ public class ProfileFragment extends Fragment {
                 start.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent login = new Intent(getActivity(), Lifestyle.class);
+                        Intent login = new Intent(getActivity(), TotalBodyCircuitExercises.class);
                         startActivity(login);
                     }
                 });

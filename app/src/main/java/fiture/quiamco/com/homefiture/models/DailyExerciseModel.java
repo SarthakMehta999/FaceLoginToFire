@@ -8,6 +8,11 @@ public class DailyExerciseModel {
     private String exerciseName;
     private String status;
 
+    public DailyExerciseModel(String s, String done) {
+        this.exerciseName = s;
+        this.status = done;
+    }
+
     public String getExerciseName() {
         return exerciseName;
     }

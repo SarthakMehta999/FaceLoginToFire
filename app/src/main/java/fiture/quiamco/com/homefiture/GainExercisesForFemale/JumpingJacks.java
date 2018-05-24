@@ -52,10 +52,11 @@ public class JumpingJacks extends AppCompatActivity {
     CountDownTimer countDownTimer;
 
     int count = 0;
-    int seconds =60;
+    int seconds =59;
     int minutes;
     int hours=0;
     int time;
+
 
     Thread t;
     boolean stop = false;
