@@ -15,37 +15,40 @@
         android:layout_height="match_parent"
     tools:context="fiture.quiamco.com.homefiture.Maintain.WedUpperBodyWorkout.StarWed">
 
-        <android.support.v7.widget.CardView
-            android:id="@+id/CardDay1"
+
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="-50dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true">
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true">
 
 
-
-
-
-            <ScrollView
+            <TableLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentStart="true">
-
-
-                <TableLayout
+                android:layout_height="wrap_content"
+                android:stretchColumns="1">
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:stretchColumns="1">
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:layout_marginTop="0dp">
+                    android:orientation="vertical"
+                    android:layout_marginTop="0dp">
 
-                        <android.support.constraint.ConstraintLayout
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/CardDay1"
+                        android:layout_width="match_parent"
+                        android:layout_height="-50dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        >
+
+
+
+
+
+
+
+                    <android.support.constraint.ConstraintLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             >
@@ -119,8 +122,16 @@
                                 app:layout_constraintTop_toBottomOf="@+id/tvExerciseTitle" />
 
                         </android.support.constraint.ConstraintLayout>
+</android.support.v7.widget.CardView>
 
-
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/CardDay2"
+                        android:layout_width="match_parent"
+                        android:layout_height="-50dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        >
                         <android.support.constraint.ConstraintLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
@@ -196,7 +207,16 @@
                                 app:layout_constraintTop_toBottomOf="@+id/tvExerciseTitle20" />
 
                         </android.support.constraint.ConstraintLayout>
+</android.support.v7.widget.CardView>
 
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/CardDay3"
+                        android:layout_width="match_parent"
+                        android:layout_height="-50dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        >
                         <android.support.constraint.ConstraintLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
@@ -273,7 +293,16 @@
 
                         </android.support.constraint.ConstraintLayout>
 
+</android.support.v7.widget.CardView>
 
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/CardDay4"
+                        android:layout_width="match_parent"
+                        android:layout_height="-50dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        >
 
                         <android.support.constraint.ConstraintLayout
                             android:layout_width="match_parent"
@@ -350,7 +379,16 @@
                                 app:layout_constraintTop_toBottomOf="@+id/tvExerciseTitle_2" />
 
                         </android.support.constraint.ConstraintLayout>
+</android.support.v7.widget.CardView>
 
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/CardDay5"
+                        android:layout_width="match_parent"
+                        android:layout_height="-50dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        >
 
                         <android.support.constraint.ConstraintLayout
                             android:layout_width="match_parent"
@@ -427,6 +465,16 @@
                                 app:layout_constraintTop_toBottomOf="@+id/tvExerciseTitle1" />
 
                         </android.support.constraint.ConstraintLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/CardDay6"
+                        android:layout_width="match_parent"
+                        android:layout_height="-50dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        >
 
                         <android.support.constraint.ConstraintLayout
                             android:layout_width="match_parent"
@@ -503,6 +551,17 @@
                                 app:layout_constraintTop_toBottomOf="@+id/tvExerciseTitle1.0" />
 
                         </android.support.constraint.ConstraintLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/CardDay8"
+                        android:layout_width="match_parent"
+                        android:layout_height="-50dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        >
                         <android.support.constraint.ConstraintLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
@@ -578,6 +637,16 @@
                                 app:layout_constraintTop_toBottomOf="@+id/tvExerciseTitle1.1" />
 
                         </android.support.constraint.ConstraintLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/CardDay9"
+                        android:layout_width="match_parent"
+                        android:layout_height="-50dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        >
 
                         <Button
                             android:id="@+id/startBtn13"
@@ -588,10 +657,11 @@
                             android:textSize="30sp"
                             android:backgroundTint="@color/colorPrimaryDark"
                             android:textColor="@color/white"/>
+                    </android.support.v7.widget.CardView>
                     </LinearLayout>
                 </TableLayout>
             </ScrollView>
-        </android.support.v7.widget.CardView>
+
 
     </RelativeLayout>
     </android.support.v4.widget.NestedScrollView>
