@@ -2,10 +2,10 @@ package fiture.quiamco.com.homefiture.Activities;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
@@ -13,11 +13,15 @@ import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.rilixtech.materialfancybutton.MaterialFancyButton;
 
 import at.markushi.ui.CircleButton;
+import fiture.quiamco.com.homefiture.Adapter.WeeklyExercisesAdapter;
 import fiture.quiamco.com.homefiture.R;
 import fiture.quiamco.com.homefiture.models.CircleCountDownView;
+import fiture.quiamco.com.homefiture.models.DailyExerciseModel;
 
 public class ReadyAbCircuits extends AppCompatActivity {
 
@@ -40,7 +44,7 @@ public class ReadyAbCircuits extends AppCompatActivity {
     protected Button startTimerBt, cancelTimerBt;
 
     private TextView mTvMinutes;
-    private TextView mTvSeconds;
+    private TextView mTvSeconds, exerciseName;
 
     CircleButton finish;
     MaterialFancyButton inst;
@@ -58,7 +62,9 @@ public class ReadyAbCircuits extends AppCompatActivity {
     Thread t;
     boolean stop = false;
     private volatile boolean isRunning = true;
-
+    private WeeklyExercisesAdapter adapter;
+    private DatabaseReference dbRef;
+    private DailyExerciseModel dailyExercise;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,6 +87,8 @@ public class ReadyAbCircuits extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
+        dbRef = FirebaseDatabase.getInstance().getReference().child("Weekly Exercises");
+
         finish = (CircleButton) findViewById(R.id.btnFinish);
         finish.setVisibility(View.VISIBLE);
         timerValue = (TextView) findViewById(R.id.timerValue);
@@ -89,6 +97,11 @@ public class ReadyAbCircuits extends AppCompatActivity {
         finish.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View view) {
+
+                String add = dbRef.push().getKey();
+
+                dbRef.child(add).setValue(new DailyExerciseModel(exerciseName.getText().toString(), "done"));
+                dbRef.child(add).child("status").setValue("done");
 
                 Intent intent = new Intent(ReadyAbCircuits.this, Weekly.class);
                 startActivity(intent);
@@ -101,6 +114,7 @@ public class ReadyAbCircuits extends AppCompatActivity {
         countDownView.setVisibility(View.VISIBLE);
         mTvMinutes = (TextView) findViewById(R.id.tvMinutes);
         mTvSeconds = (TextView) findViewById(R.id.tvSec);
+        exerciseName = (TextView) findViewById(R.id.exerciseName);
         countDownView.setVisibility(View.VISIBLE);
         startCountDown();
 

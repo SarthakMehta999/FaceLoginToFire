@@ -36,7 +36,7 @@ public class HighRepAbDays extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
-        start = (Button) findViewById(R.id.startBtn);
+        start = (Button) findViewById(R.id.startBtn14);
 
         start.setOnClickListener(new View.OnClickListener() {
             @Override

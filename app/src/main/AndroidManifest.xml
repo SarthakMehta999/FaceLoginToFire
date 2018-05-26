@@ -97,6 +97,9 @@
         <activity android:name=".Exercises.Workout4day3" />
         <activity android:name=".Exercises.Workout5day3" />
         <activity android:name=".Exercises.Workout6day3" />
+        <activity android:name=".Mesomorph.Mesomorph.Monday.mesomorphday1" />
+        <activity android:name=".Mesomorph.Mesomorph.tuesday.mesomorphday2" />
+        <activity android:name=".Mesomorph.Mesomorph.Wednesday.mesomorphday3" />
         <activity android:name=".Exercises.day3moreheavy" />
         <activity android:name=".Exercises.workout2day2mostheavy" />
         <activity android:name=".Exercises.workout3daymostheavy" />

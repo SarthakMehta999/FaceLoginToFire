@@ -66,4 +66,5 @@ public class WeeklyExercisesAdapter extends BaseAdapter {
 
     };
 
+
 }

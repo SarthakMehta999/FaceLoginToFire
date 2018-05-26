@@ -123,8 +123,8 @@ public class JumpingJacks2 extends AppCompatActivity {
 //        startTimerBt.setVisibility(View.GONE);
 //        cancelTimerBt.setVisibility(View.VISIBLE); // show cancel button
 
-        progress = 59;
-        endTime = 1; // up to finish time
+        progress = 1;
+        endTime = 5; // up to finish time
         minutes = endTime-1;
         time= endTime*60;
 
