@@ -11,7 +11,7 @@ import android.view.View;
 import android.widget.Button;
 
 import at.markushi.ui.CircleButton;
-import fiture.quiamco.com.homefiture.Activities.Weekly;
+import fiture.quiamco.com.homefiture.ExerciseCategories.WeeklyGain;
 import fiture.quiamco.com.homefiture.LoseExcercise.Friday.PushUpsOblique;
 import fiture.quiamco.com.homefiture.R;
 
@@ -35,7 +35,7 @@ public class InsPushUpsOblique extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent im = new Intent(InsPushUpsOblique.this,Weekly.class);
+                Intent im = new Intent(InsPushUpsOblique.this,WeeklyGain.class);
                 startActivity(im);
             }
         });

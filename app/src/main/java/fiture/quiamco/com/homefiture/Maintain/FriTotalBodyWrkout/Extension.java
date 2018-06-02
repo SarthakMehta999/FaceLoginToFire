@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import at.markushi.ui.CircleButton;
-import fiture.quiamco.com.homefiture.Maintain.MaintainWeekly;
+import fiture.quiamco.com.homefiture.ExerciseCategories.MaintainWeekly;
 import fiture.quiamco.com.homefiture.R;
 
 public class Extension extends AppCompatActivity {

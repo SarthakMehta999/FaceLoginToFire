@@ -15,6 +15,7 @@ import android.widget.TextView;
 import com.rilixtech.materialfancybutton.MaterialFancyButton;
 
 import at.markushi.ui.CircleButton;
+import fiture.quiamco.com.homefiture.ExerciseCategories.WeeklyGain;
 import fiture.quiamco.com.homefiture.R;
 import fiture.quiamco.com.homefiture.models.CircleCountDownView;
 
@@ -71,7 +72,7 @@ public class Day3GReadyAbCircuits extends AppCompatActivity {
         finish.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View view) {
-                Intent intent = new Intent(Day3GReadyAbCircuits.this, Weekly.class);
+                Intent intent = new Intent(Day3GReadyAbCircuits.this, WeeklyGain.class);
                 startActivity(intent);
 
             }

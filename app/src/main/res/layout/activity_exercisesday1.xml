@@ -12,7 +12,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="fiture.quiamco.com.homefiture.Endomorph.HighFrequency.Day1.Exercisesday1">
+    tools:context="fiture.quiamco.com.homefiture.Endomorph.HighFrequency.Day1ChestandTriceps.Exercisesday1">
 
     <android.support.v7.widget.CardView
         android:id="@+id/CardDay1"

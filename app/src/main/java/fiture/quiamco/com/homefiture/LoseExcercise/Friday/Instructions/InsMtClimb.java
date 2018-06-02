@@ -11,7 +11,7 @@ import android.view.View;
 import android.widget.Button;
 
 import at.markushi.ui.CircleButton;
-import fiture.quiamco.com.homefiture.Activities.Weekly;
+import fiture.quiamco.com.homefiture.ExerciseCategories.WeeklyGain;
 import fiture.quiamco.com.homefiture.LoseExcercise.Friday.MtClimb;
 import fiture.quiamco.com.homefiture.R;
 
@@ -34,7 +34,7 @@ public class InsMtClimb extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent im = new Intent(InsMtClimb.this,Weekly.class);
+                Intent im = new Intent(InsMtClimb.this,WeeklyGain.class);
                 startActivity(im);
             }
         });

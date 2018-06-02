@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
+import fiture.quiamco.com.homefiture.DayTwoandFourWeeklyGainLowerBodyCardio.BodyWeightsSquats;
 import fiture.quiamco.com.homefiture.R;
 
 public class ExercisesDay2 extends AppCompatActivity {

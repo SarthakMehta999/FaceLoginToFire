@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="fiture.quiamco.com.homefiture.Endomorph.HighFrequency.Day5.Quads.Squats">
+    tools:context="fiture.quiamco.com.homefiture.Endomorph.HighFrequency.Day5QuadsHamsGlutes.Quads.Squats">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/appBarLayout"

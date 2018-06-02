@@ -6,7 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
-import fiture.quiamco.com.homefiture.Maintain.MaintainWeekly;
+import fiture.quiamco.com.homefiture.ExerciseCategories.MaintainWeekly;
 import fiture.quiamco.com.homefiture.R;
 
 public class Rest extends AppCompatActivity {

@@ -7,8 +7,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 
-import fiture.quiamco.com.homefiture.Activities.WeeklyEctomorph;
-import fiture.quiamco.com.homefiture.Ectomorph.Day1ChestTriceps.DumbellBenchPress;
+import fiture.quiamco.com.homefiture.ExerciseCategories.WeeklyEctomorph;
+import fiture.quiamco.com.homefiture.Ectomorph.Day1ChestandTriceps.DumbellBenchPress;
 import fiture.quiamco.com.homefiture.R;
 
 public class ectomorphday1exercises extends AppCompatActivity {

@@ -7,7 +7,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 
-import fiture.quiamco.com.homefiture.Activities.WeeklyEctomorph;
+import fiture.quiamco.com.homefiture.ExerciseCategories.WeeklyEctomorph;
 import fiture.quiamco.com.homefiture.R;
 
 public class EctomorphOptionalDays extends AppCompatActivity {

@@ -17,7 +17,7 @@ import android.widget.TextView;
 import com.rilixtech.materialfancybutton.MaterialFancyButton;
 
 import at.markushi.ui.CircleButton;
-import fiture.quiamco.com.homefiture.Activities.Weekly;
+import fiture.quiamco.com.homefiture.ExerciseCategories.WeeklyGain;
 import fiture.quiamco.com.homefiture.LoseExcercise.Friday.Instructions.InsSquatJacks;
 import fiture.quiamco.com.homefiture.LoseExcercise.Friday.Rest.RestSquatjacks;
 import fiture.quiamco.com.homefiture.R;
@@ -93,7 +93,7 @@ public class SquatJacks extends AppCompatActivity {
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(SquatJacks.this, Weekly.class);
+                Intent intent = new Intent(SquatJacks.this, WeeklyGain.class);
                 startActivity(intent);
             }
         });

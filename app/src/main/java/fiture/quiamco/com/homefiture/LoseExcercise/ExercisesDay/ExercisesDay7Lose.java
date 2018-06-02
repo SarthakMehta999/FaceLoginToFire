@@ -6,7 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
-import fiture.quiamco.com.homefiture.Activities.WeeklyLose;
+import fiture.quiamco.com.homefiture.ExerciseCategories.WeeklyLose;
 import fiture.quiamco.com.homefiture.R;
 
 public class ExercisesDay7Lose extends AppCompatActivity {

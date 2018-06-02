@@ -1,12 +1,10 @@
 package fiture.quiamco.com.homefiture.LoseExcercise.Friday;
 
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.Handler;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -18,13 +16,8 @@ import android.widget.TextView;
 import com.rilixtech.materialfancybutton.MaterialFancyButton;
 
 import at.markushi.ui.CircleButton;
-import fiture.quiamco.com.homefiture.Activities.PikePushUps;
-import fiture.quiamco.com.homefiture.Activities.PushUp;
-import fiture.quiamco.com.homefiture.Activities.Ready;
-import fiture.quiamco.com.homefiture.Activities.Weekly;
 import fiture.quiamco.com.homefiture.LoseExcercise.Friday.Instructions.InsJumpingLunges;
 import fiture.quiamco.com.homefiture.LoseExcercise.Friday.Rest.RestJumpingLunges;
-import fiture.quiamco.com.homefiture.LoseExcercise.Friday.Rest.RestMtClimb;
 import fiture.quiamco.com.homefiture.R;
 import fiture.quiamco.com.homefiture.models.CircleCountDownView;
 

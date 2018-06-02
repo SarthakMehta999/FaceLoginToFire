@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ffff"
-    tools:context="fiture.quiamco.com.homefiture.Ectomorph.Day3LegShoulders.LateralRaise">
+    tools:context="fiture.quiamco.com.homefiture.Ectomorph.Day3LegandShoulders.LateralRaise">
 
 
     <android.support.design.widget.AppBarLayout

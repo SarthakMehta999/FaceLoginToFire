@@ -13,7 +13,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="fiture.quiamco.com.homefiture.Mesomorph.Mesomorph.Wednesday.mesomorphday3">
+    tools:context="fiture.quiamco.com.homefiture.Mesomorph.Mesomorph.CardioDay3.mesomorphday3">
 
     <android.support.v7.widget.CardView
         android:id="@+id/CardDay1"

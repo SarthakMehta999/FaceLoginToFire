@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ffff"
-    tools:context="fiture.quiamco.com.homefiture.Endomorph.MediumFrequency.Day2.Back.BentOverBarbellRow">
+    tools:context="fiture.quiamco.com.homefiture.Endomorph.MediumFrequency.Day2BackShoulders.Back.BentOverBarbellRow">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/appBarLayout"
