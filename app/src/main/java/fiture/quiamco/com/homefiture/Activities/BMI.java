@@ -25,7 +25,7 @@ import fiture.quiamco.com.homefiture.models.User;
 
 public class BMI extends AppCompatActivity {
     private EditText height;
-    private EditText weight;
+    private EditText weight,age;
     private TextView result;
     private MaterialFancyButton proceed;
     private User user;
@@ -68,6 +68,7 @@ public class BMI extends AppCompatActivity {
         height = (EditText) findViewById(R.id.height);
         weight = (EditText) findViewById(R.id.weight);
         result = (TextView) findViewById(R.id.result);
+
         proceed = (MaterialFancyButton) findViewById(R.id.btnProc);
         proceed.setVisibility(View.GONE);
 
@@ -102,18 +103,26 @@ public class BMI extends AppCompatActivity {
             }
 
 
+
             if (heightStr != null && !"".equals(heightStr)
-                    && weightStr != null && !"".equals(weightStr)) {
+                    && weightStr != null && !"".equals(weightStr)
+                 ) {
                 float heightValue = Float.parseFloat(heightStr) / 100;
                 float weightValue = Float.parseFloat(weightStr);
 
                 float bmi = weightValue / (heightValue * heightValue);
 
+//                if (ageValue <19){
+//                    Toast.makeText(this, "user age is lesser than 19", Toast.LENGTH_SHORT).show();
+//                }
+//                else {
+//                    Log.d("iya age", String.valueOf(ageValue)   );
+//                }
                 displayBMI(bmi);
 //            String id = myRef.push().getKey();
 //            myRef.child(id).setValue("height:"+heightStr+"cm"+" "+"weight:"+weightStr+"Kg");
             }
-        }catch (Exception e) {
+        }catch (Exception ignored) {
 
         }
     }
@@ -121,8 +130,10 @@ public class BMI extends AppCompatActivity {
 
     private void displayBMI(float bmi) {
 
+
+
         //Very Severely Underweight
-        if (Float.compare(bmi, 15f) <= 0) {
+        if  (Float.compare(bmi, 15f) <= 0) /*(Float.compare(ageValue,19f))*/ {
             bmiLabel = getString(R.string.very_severely_underweight);
             proceed.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -132,8 +143,11 @@ public class BMI extends AppCompatActivity {
                         height.setError("Please Input Value");
                         weight.setError("Please Input Value");
                     } else {
-                        Intent pt = new Intent(BMI.this, Lifestyle.class);
-                        startActivity(pt);
+                        Intent proc = new Intent(getApplication(), NavDrawer.class);
+                        Bundle bundle = new Bundle();
+                        bundle.putSerializable("user", user);
+                        proc.putExtras(bundle);
+                        startActivity(proc);
                     }
                 }
             });
@@ -151,8 +165,11 @@ public class BMI extends AppCompatActivity {
                         weight.setError("Please Input Value");
                     } else {
 
-                        Intent pt = new Intent(BMI.this, Lifestyle.class);
-                        startActivity(pt);
+                        Intent proc = new Intent(getApplication(), NavDrawer.class);
+                        Bundle bundle = new Bundle();
+                        bundle.putSerializable("user", user);
+                        proc.putExtras(bundle);
+                        startActivity(proc);
                     }
                 }
             });
@@ -167,8 +184,11 @@ public class BMI extends AppCompatActivity {
                         height.setError("Please Input Value");
                         weight.setError("Please Input Value");
                     } else {
-                        Intent pt = new Intent(BMI.this, Lifestyle.class);
-                        startActivity(pt);
+                        Intent proc = new Intent(getApplication(), NavDrawer.class);
+                        Bundle bundle = new Bundle();
+                        bundle.putSerializable("user", user);
+                        proc.putExtras(bundle);
+                        startActivity(proc);
                     }
                 }
             });
@@ -185,8 +205,11 @@ public class BMI extends AppCompatActivity {
                         weight.setError("Please Input Value");
                     } else {
 
-                        Intent pt = new Intent(BMI.this, Lifestyle.class);
-                        startActivity(pt);
+                        Intent proc = new Intent(getApplication(), NavDrawer.class);
+                        Bundle bundle = new Bundle();
+                        bundle.putSerializable("user", user);
+                        proc.putExtras(bundle);
+                        startActivity(proc);
                     }
                 }
             });
@@ -202,8 +225,11 @@ public class BMI extends AppCompatActivity {
                         weight.setError("Please Input Value");
                     } else {
 
-                        Intent pt = new Intent(BMI.this, Lifestyle.class);
-                        startActivity(pt);
+                        Intent proc = new Intent(getApplication(), NavDrawer.class);
+                        Bundle bundle = new Bundle();
+                        bundle.putSerializable("user", user);
+                        proc.putExtras(bundle);
+                        startActivity(proc);
                     }
                 }
             });
@@ -221,8 +247,11 @@ public class BMI extends AppCompatActivity {
                         weight.setError("Please Input Value");
                     } else {
 
-                        Intent pt = new Intent(BMI.this, Lifestyle.class);
-                        startActivity(pt);
+                        Intent proc = new Intent(getApplication(), NavDrawer.class);
+                        Bundle bundle = new Bundle();
+                        bundle.putSerializable("user", user);
+                        proc.putExtras(bundle);
+                        startActivity(proc);
                     }
                 }
             });
@@ -240,8 +269,11 @@ public class BMI extends AppCompatActivity {
                         weight.setError("Please Input Value");
                     } else {
 
-                        Intent pt = new Intent(BMI.this, Lifestyle.class);
-                        startActivity(pt);
+                        Intent proc = new Intent(getApplication(), NavDrawer.class);
+                        Bundle bundle = new Bundle();
+                        bundle.putSerializable("user", user);
+                        proc.putExtras(bundle);
+                        startActivity(proc);
                     }
                 }
             });
@@ -258,8 +290,11 @@ public class BMI extends AppCompatActivity {
                         weight.setError("Please Input Value");
                     } else {
 
-                        Intent pt = new Intent(BMI.this, Lifestyle.class);
-                        startActivity(pt);
+                        Intent proc = new Intent(getApplication(), NavDrawer.class);
+                        Bundle bundle = new Bundle();
+                        bundle.putSerializable("user", user);
+                        proc.putExtras(bundle);
+                        startActivity(proc);
                     }
                 }
             });
