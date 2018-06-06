@@ -162,11 +162,9 @@ public class Lifestyle extends AppCompatActivity {
 //                String value2 = moderate.getText().toString();
 ////                mRootRef.push().setValue(value1);
                 getSurveyResponses();
-                Intent proc = new Intent(Lifestyle.this, NavDrawer.class);
-                Bundle bundle = new Bundle();
-                bundle.putSerializable("user", user);
-                proc.putExtras(bundle);
+                Intent proc = new Intent(Lifestyle.this, BMI.class);
                 startActivity(proc);
+
             }
         });
 

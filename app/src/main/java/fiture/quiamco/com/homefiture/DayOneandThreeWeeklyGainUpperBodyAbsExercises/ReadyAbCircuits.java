@@ -2,16 +2,20 @@ package fiture.quiamco.com.homefiture.DayOneandThreeWeeklyGainUpperBodyAbsExerci
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -23,6 +27,7 @@ import fiture.quiamco.com.homefiture.Adapter.WeeklyExercisesAdapter;
 import fiture.quiamco.com.homefiture.R;
 import fiture.quiamco.com.homefiture.models.CircleCountDownView;
 import fiture.quiamco.com.homefiture.models.DailyExerciseModel;
+import fiture.quiamco.com.homefiture.models.User;
 
 public class ReadyAbCircuits extends AppCompatActivity {
 
@@ -40,7 +45,7 @@ public class ReadyAbCircuits extends AppCompatActivity {
     long timeInMilliseconds = 0L;
     long timeSwapBuff = 0L;
     long updatedTime = 0L;
-
+    private User user;
     protected CircleCountDownView countDownView;
     protected Button startTimerBt, cancelTimerBt;
 
@@ -59,7 +64,7 @@ public class ReadyAbCircuits extends AppCompatActivity {
     int minutes;
     int hours=0;
     int time;
-
+    ImageView homie;
     Thread t;
     boolean stop = false;
     private volatile boolean isRunning = true;
@@ -74,16 +79,62 @@ public class ReadyAbCircuits extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.imToolbar);
         setSupportActionBar(toolbar);
 
+        SharedPreferences sharedPreferences = getSharedPreferences("FitureUser", Context.MODE_PRIVATE);
+        String fname = sharedPreferences.getString("userFname","");
+        String lname = sharedPreferences.getString("userLname","");
+        String bday= sharedPreferences.getString("userBday","");
+        String gender = sharedPreferences.getString("userGender","");
+        String email = sharedPreferences.getString("userEmail","");
+        String pic = sharedPreferences.getString("userPic","");
+        int points = sharedPreferences.getInt("samplePoint",1);
+        Log.d("atayakayawa",points+"shit");
+        user = new User(fname,lname,bday,gender,email,pic,points);
+        String id = sharedPreferences.getString("userKey", "");
         getSupportActionBar().setDisplayShowTitleEnabled(false);
 
-        toolbar.setNavigationIcon(R.drawable.back_btn);
+        toolbar.setNavigationIcon(R.drawable.homeicon);
+
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
-                Intent im = new Intent(ReadyAbCircuits.this,AbCircuits.class);
+                Toast.makeText(ReadyAbCircuits.this, "home is clicked", Toast.LENGTH_SHORT).show();
+                //startActivity(new Intent(getApplicationContext(), NavDrawer.class));
+                Intent im = new Intent(getApplicationContext(), NavDrawer.class);
+                Bundle bundle = new Bundle();
+                bundle.putSerializable("user", user);
+                im.putExtras(bundle);
                 startActivity(im);
+
+
+
             }
         });
+//                homie = (ImageView)findViewById(R.id.Imagehome);
+//                homie.setOnClickListener(new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View v) {
+//
+//
+//                        SharedPreferences sharedPreferences = getSharedPreferences("FitureUser", Context.MODE_PRIVATE);
+//                        String fname = sharedPreferences.getString("userFname","");
+//                        String lname = sharedPreferences.getString("userLname","");
+//                        String bday= sharedPreferences.getString("userBday","");
+//                        String gender = sharedPreferences.getString("userGender","");
+//                        String email = sharedPreferences.getString("userEmail","");
+//                        String pic = sharedPreferences.getString("userPic","");
+//                        int points = sharedPreferences.getInt("samplePoint",1);
+//                        Log.d("atayakayawa",points+"shit");
+//                        user = new User(fname,lname,bday,gender,email,pic,points);
+//                        String id = sharedPreferences.getString("userKey", "");
+//
+//                        Intent hehe  = new Intent(getApplication(), ProfileFragment.class);
+//                        startActivity(hehe);
+//                    }
+//                });
+
+
+
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
@@ -130,7 +181,10 @@ public class ReadyAbCircuits extends AppCompatActivity {
 //
 //            }
 //        });
+
     }
+
+
 
     protected void startCountDown() {
 
