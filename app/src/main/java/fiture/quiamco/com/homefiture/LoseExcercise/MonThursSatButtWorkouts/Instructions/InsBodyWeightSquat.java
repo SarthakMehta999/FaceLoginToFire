@@ -1,4 +1,4 @@
-package fiture.quiamco.com.homefiture.LoseExcercise.MondayTotalBodyStrength.Instructions;
+package fiture.quiamco.com.homefiture.LoseExcercise.MondayButtWorkouts.Instructions;
 
 import android.content.Context;
 import android.content.DialogInterface;
@@ -11,11 +11,11 @@ import android.view.View;
 import android.widget.Button;
 
 import at.markushi.ui.CircleButton;
-import fiture.quiamco.com.homefiture.LoseExcercise.MondayTotalBodyStrength.Plank;
-import fiture.quiamco.com.homefiture.LoseExcercise.MondayTotalBodyStrength.RestBoxStepUp;
+import fiture.quiamco.com.homefiture.ExerciseCategories.WeeklyLose;
+import fiture.quiamco.com.homefiture.LoseExcercise.MondayButtWorkouts.BodyWeightSquat;
 import fiture.quiamco.com.homefiture.R;
 
-public class InsPlank extends AppCompatActivity {
+public class InsBodyWeightSquat extends AppCompatActivity {
 
     CircleButton finish;
     Button inst;
@@ -24,8 +24,7 @@ public class InsPlank extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ins_plank);
-
+        setContentView(R.layout.activity_ins_body_weight_squat2);
         Toolbar toolbar = (Toolbar) findViewById(R.id.imToolbar);
         setSupportActionBar(toolbar);
 
@@ -35,7 +34,7 @@ public class InsPlank extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent im = new Intent(InsPlank.this,RestBoxStepUp.class);
+                Intent im = new Intent(InsBodyWeightSquat.this,WeeklyLose.class);
                 startActivity(im);
             }
         });
@@ -44,11 +43,11 @@ public class InsPlank extends AppCompatActivity {
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         inst = (Button) findViewById(R.id.dialog);
-        finish = (CircleButton)findViewById(R.id.btnFinish);
+        finish = (CircleButton)findViewById(R.id.btnFinish20);
         finish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(InsPlank.this,Plank.class);
+                Intent intent = new Intent(InsBodyWeightSquat.this,BodyWeightSquat.class);
                 startActivity(intent);
             }
         });
@@ -59,8 +58,8 @@ public class InsPlank extends AppCompatActivity {
                 alertDialogBuilder.setTitle("Instructions:");
                 //set dialog message
                 alertDialogBuilder
-                        .setMessage("Quick tip: Make sure you're keeping your core tight! " +
-                                "Do the circuit 3x, resting for 1 minute between each round. ")
+                        .setMessage("Quick tip: Get low, keep your chest up, and don't let your " +
+                                "knees go over your toes during this lower-body move. ")
                         .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int id) {

@@ -1,4 +1,4 @@
-package fiture.quiamco.com.homefiture.LoseExcercise.Wednesday;
+package fiture.quiamco.com.homefiture.LoseExcercise.MondayButtWorkouts;
 
 import android.content.Context;
 import android.content.Intent;
@@ -16,12 +16,11 @@ import android.widget.TextView;
 import com.rilixtech.materialfancybutton.MaterialFancyButton;
 
 import at.markushi.ui.CircleButton;
-import fiture.quiamco.com.homefiture.LoseExcercise.Wednesday.Instructions.InsFoamRolling;
-import fiture.quiamco.com.homefiture.LoseExcercise.Wednesday.Rest.RestFoamRolling;
+import fiture.quiamco.com.homefiture.LoseExcercise.MondayButtWorkouts.Instructions.InsBoxStepUp;
 import fiture.quiamco.com.homefiture.R;
 import fiture.quiamco.com.homefiture.models.CircleCountDownView;
 
-public class FoamRolling extends AppCompatActivity {
+public class RestLyingIsometric extends AppCompatActivity {
     private Handler mHandler = new Handler();
     public static final int ONE_MINUTE = 60000;
     final Context context = this;
@@ -60,11 +59,11 @@ public class FoamRolling extends AppCompatActivity {
     boolean stop = false;
     private volatile boolean isRunning = true;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_foam_rolling);
-
+        setContentView(R.layout.activity_rest_lying_isometric);
         Toolbar toolbar = (Toolbar) findViewById(R.id.imToolbar);
         setSupportActionBar(toolbar);
 
@@ -74,7 +73,7 @@ public class FoamRolling extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent im = new Intent(FoamRolling.this,InsFoamRolling.class);
+                Intent im = new Intent(RestLyingIsometric.this,LyingIsometricycling.class);
                 startActivity(im);
             }
         });
@@ -89,7 +88,7 @@ public class FoamRolling extends AppCompatActivity {
         finish.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View view) {
-                Intent intent = new Intent(FoamRolling.this, RestFoamRolling.class);
+                Intent intent = new Intent(RestLyingIsometric.this, InsBoxStepUp.class);
                 startActivity(intent);
 
             }
@@ -124,7 +123,7 @@ public class FoamRolling extends AppCompatActivity {
 //        cancelTimerBt.setVisibility(View.VISIBLE); // show cancel button
 
         progress = 1;
-        endTime = 1; // up to finish time
+        endTime = 5; // up to finish time
         minutes = endTime-1;
         time= endTime*60;
 

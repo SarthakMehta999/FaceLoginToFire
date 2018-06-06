@@ -1,4 +1,4 @@
-package fiture.quiamco.com.homefiture.LoseExcercise.Wednesday;
+package fiture.quiamco.com.homefiture.LoseExcercise.MondayButtWorkouts;
 
 import android.content.Context;
 import android.content.Intent;
@@ -16,12 +16,11 @@ import android.widget.TextView;
 import com.rilixtech.materialfancybutton.MaterialFancyButton;
 
 import at.markushi.ui.CircleButton;
-import fiture.quiamco.com.homefiture.LoseExcercise.Wednesday.Instructions.InsWalkingLunge;
-import fiture.quiamco.com.homefiture.LoseExcercise.Wednesday.Rest.RestWalkingLunge;
+import fiture.quiamco.com.homefiture.LoseExcercise.MondayButtWorkouts.Instructions.InsDumbellBench;
 import fiture.quiamco.com.homefiture.R;
 import fiture.quiamco.com.homefiture.models.CircleCountDownView;
 
-public class WalkingLunge extends AppCompatActivity {
+public class RestBodyWeight extends AppCompatActivity {
     private Handler mHandler = new Handler();
     public static final int ONE_MINUTE = 60000;
     final Context context = this;
@@ -63,8 +62,7 @@ public class WalkingLunge extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_walking_lunge);
-
+        setContentView(R.layout.activity_rest_body_weight);
         Toolbar toolbar = (Toolbar) findViewById(R.id.imToolbar);
         setSupportActionBar(toolbar);
 
@@ -74,7 +72,7 @@ public class WalkingLunge extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent im = new Intent(WalkingLunge.this,InsWalkingLunge.class);
+                Intent im = new Intent(RestBodyWeight.this,BodyWeightSquat.class);
                 startActivity(im);
             }
         });
@@ -89,7 +87,7 @@ public class WalkingLunge extends AppCompatActivity {
         finish.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View view) {
-                Intent intent = new Intent(WalkingLunge.this, RestWalkingLunge.class);
+                Intent intent = new Intent(RestBodyWeight.this, InsDumbellBench.class);
                 startActivity(intent);
 
             }
@@ -124,7 +122,7 @@ public class WalkingLunge extends AppCompatActivity {
 //        cancelTimerBt.setVisibility(View.VISIBLE); // show cancel button
 
         progress = 1;
-        endTime = 1; // up to finish time
+        endTime = 5; // up to finish time
         minutes = endTime-1;
         time= endTime*60;
 

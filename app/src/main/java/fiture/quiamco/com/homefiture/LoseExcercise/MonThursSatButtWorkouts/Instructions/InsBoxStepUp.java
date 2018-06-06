@@ -1,4 +1,4 @@
-package fiture.quiamco.com.homefiture.LoseExcercise.MondayTotalBodyStrength.Instructions;
+package fiture.quiamco.com.homefiture.LoseExcercise.MondayButtWorkouts.Instructions;
 
 import android.content.Context;
 import android.content.DialogInterface;
@@ -11,12 +11,11 @@ import android.view.View;
 import android.widget.Button;
 
 import at.markushi.ui.CircleButton;
-import fiture.quiamco.com.homefiture.ExerciseCategories.WeeklyLose;
-import fiture.quiamco.com.homefiture.LoseExcercise.MondayTotalBodyStrength.BodyWeightSquat;
+import fiture.quiamco.com.homefiture.ExerciseCategories.WeeklyGain;
+import fiture.quiamco.com.homefiture.LoseExcercise.MondayButtWorkouts.BoxStepUp;
 import fiture.quiamco.com.homefiture.R;
 
-public class InsBodyWeightSquat extends AppCompatActivity {
-
+public class InsBoxStepUp extends AppCompatActivity {
     CircleButton finish;
     Button inst;
     final Context context = this;
@@ -24,7 +23,8 @@ public class InsBodyWeightSquat extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ins_body_weight_squat2);
+        setContentView(R.layout.activity_ins_box_step_up);
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.imToolbar);
         setSupportActionBar(toolbar);
 
@@ -34,7 +34,7 @@ public class InsBodyWeightSquat extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent im = new Intent(InsBodyWeightSquat.this,WeeklyLose.class);
+                Intent im = new Intent(InsBoxStepUp.this,WeeklyGain.class);
                 startActivity(im);
             }
         });
@@ -43,11 +43,11 @@ public class InsBodyWeightSquat extends AppCompatActivity {
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         inst = (Button) findViewById(R.id.dialog);
-        finish = (CircleButton)findViewById(R.id.btnFinish20);
+        finish = (CircleButton)findViewById(R.id.btnFinish);
         finish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(InsBodyWeightSquat.this,BodyWeightSquat.class);
+                Intent intent = new Intent(InsBoxStepUp.this,BoxStepUp.class);
                 startActivity(intent);
             }
         });
@@ -58,8 +58,9 @@ public class InsBodyWeightSquat extends AppCompatActivity {
                 alertDialogBuilder.setTitle("Instructions:");
                 //set dialog message
                 alertDialogBuilder
-                        .setMessage("Quick tip: Get low, keep your chest up, and don't let your " +
-                                "knees go over your toes during this lower-body move. ")
+                        .setMessage("Quick tip: Alternate between your left and right leg, and for an " +
+                                "extra challenge, step your lifted foot into a" +
+                                " lunge as you come down from the box.")
                         .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int id) {
@@ -77,5 +78,6 @@ public class InsBodyWeightSquat extends AppCompatActivity {
             }
 
         });
+
     }
 }

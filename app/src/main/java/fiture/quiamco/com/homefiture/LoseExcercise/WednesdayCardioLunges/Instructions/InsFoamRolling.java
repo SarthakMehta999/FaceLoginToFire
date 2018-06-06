@@ -1,4 +1,4 @@
-package fiture.quiamco.com.homefiture.LoseExcercise.MondayTotalBodyStrength.Instructions;
+package fiture.quiamco.com.homefiture.LoseExcercise.WednesdayCardio.Instructions;
 
 import android.content.Context;
 import android.content.DialogInterface;
@@ -11,18 +11,19 @@ import android.view.View;
 import android.widget.Button;
 
 import at.markushi.ui.CircleButton;
-import fiture.quiamco.com.homefiture.LoseExcercise.MondayTotalBodyStrength.LyingIsometricycling;
-import fiture.quiamco.com.homefiture.LoseExcercise.MondayTotalBodyStrength.RestBentOver;
+import fiture.quiamco.com.homefiture.LoseExcercise.WednesdayCardio.FoamRolling;
+import fiture.quiamco.com.homefiture.LoseExcercise.WednesdayCardio.Rest.RestWalkingLunge;
 import fiture.quiamco.com.homefiture.R;
 
-public class InsLying extends AppCompatActivity {
+public class InsFoamRolling extends AppCompatActivity {
+
     CircleButton finish;
     Button inst;
     final Context context = this;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ins_lying);
+        setContentView(R.layout.activity_ins_foam_rolling);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.imToolbar);
         setSupportActionBar(toolbar);
@@ -33,19 +34,20 @@ public class InsLying extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent im = new Intent(InsLying.this,RestBentOver.class);
+                Intent im = new Intent(InsFoamRolling.this,RestWalkingLunge.class);
                 startActivity(im);
             }
         });
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
+
         inst = (Button) findViewById(R.id.dialog);
         finish = (CircleButton)findViewById(R.id.btnFinish);
         finish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(InsLying.this,LyingIsometricycling.class);
+                Intent intent = new Intent(InsFoamRolling.this,FoamRolling.class);
                 startActivity(intent);
             }
         });
@@ -56,8 +58,10 @@ public class InsLying extends AppCompatActivity {
                 alertDialogBuilder.setTitle("Instructions:");
                 //set dialog message
                 alertDialogBuilder
-                        .setMessage("Quick tip: You can keep your legs on the ground for this " +
-                                "one if that feels more comfortable." )
+                        .setMessage("Lie down with your back on the floor. Place a foam roller underneath " +
+                                "your upper back and cross your arms in front of you, protracting your " +
+                                "shoulder blades. Raise your hips off of the ground, placing your weight onto the " +
+                                "roller. Shift your weight to one side, rolling the upper to mid back. Alternate sides.  ")
                         .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int id) {
@@ -75,6 +79,5 @@ public class InsLying extends AppCompatActivity {
             }
 
         });
-
     }
 }

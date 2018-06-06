@@ -1,4 +1,4 @@
-package fiture.quiamco.com.homefiture.LoseExcercise.MondayTotalBodyStrength.Instructions;
+package fiture.quiamco.com.homefiture.LoseExcercise.MondayButtWorkouts.Instructions;
 
 import android.content.Context;
 import android.content.DialogInterface;
@@ -11,20 +11,18 @@ import android.view.View;
 import android.widget.Button;
 
 import at.markushi.ui.CircleButton;
-import fiture.quiamco.com.homefiture.LoseExcercise.MondayTotalBodyStrength.DumbellBenchPress;
-import fiture.quiamco.com.homefiture.LoseExcercise.MondayTotalBodyStrength.RestBodyWeight;
+import fiture.quiamco.com.homefiture.LoseExcercise.MondayButtWorkouts.LyingIsometricycling;
+import fiture.quiamco.com.homefiture.LoseExcercise.MondayButtWorkouts.RestBentOver;
 import fiture.quiamco.com.homefiture.R;
 
-public class InsDumbellBench extends AppCompatActivity {
-
+public class InsLying extends AppCompatActivity {
     CircleButton finish;
     Button inst;
     final Context context = this;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ins_dumbell_bench);
+        setContentView(R.layout.activity_ins_lying);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.imToolbar);
         setSupportActionBar(toolbar);
@@ -35,20 +33,19 @@ public class InsDumbellBench extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent im = new Intent(InsDumbellBench.this,RestBodyWeight.class);
+                Intent im = new Intent(InsLying.this,RestBentOver.class);
                 startActivity(im);
             }
         });
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
-
         inst = (Button) findViewById(R.id.dialog);
         finish = (CircleButton)findViewById(R.id.btnFinish);
         finish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(InsDumbellBench.this,DumbellBenchPress.class);
+                Intent intent = new Intent(InsLying.this,LyingIsometricycling.class);
                 startActivity(intent);
             }
         });
@@ -59,8 +56,8 @@ public class InsDumbellBench extends AppCompatActivity {
                 alertDialogBuilder.setTitle("Instructions:");
                 //set dialog message
                 alertDialogBuilder
-                        .setMessage("Quick tip: Position yourself so your head, back, " +
-                                "and butt are all on the bench, your feet flat on the floor.")
+                        .setMessage("Quick tip: You can keep your legs on the ground for this " +
+                                "one if that feels more comfortable." )
                         .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int id) {
@@ -78,5 +75,6 @@ public class InsDumbellBench extends AppCompatActivity {
             }
 
         });
+
     }
 }

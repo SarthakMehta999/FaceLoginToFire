@@ -1,4 +1,4 @@
-package fiture.quiamco.com.homefiture.LoseExcercise.MondayTotalBodyStrength;
+package fiture.quiamco.com.homefiture.LoseExcercise.MondayButtWorkouts;
 
 import android.content.Context;
 import android.content.Intent;
@@ -16,11 +16,10 @@ import android.widget.TextView;
 import com.rilixtech.materialfancybutton.MaterialFancyButton;
 
 import at.markushi.ui.CircleButton;
-import fiture.quiamco.com.homefiture.LoseExcercise.MondayTotalBodyStrength.Instructions.InsPlank;
 import fiture.quiamco.com.homefiture.R;
 import fiture.quiamco.com.homefiture.models.CircleCountDownView;
 
-public class Plank extends AppCompatActivity {
+public class ReadyBentOver extends AppCompatActivity {
     private Handler mHandler = new Handler();
     public static final int ONE_MINUTE = 60000;
     final Context context = this;
@@ -62,7 +61,7 @@ public class Plank extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_plank);
+        setContentView(R.layout.activity_ready_bent_over);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.imToolbar);
         setSupportActionBar(toolbar);
@@ -73,7 +72,7 @@ public class Plank extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent im = new Intent(Plank.this,InsPlank.class);
+                Intent im = new Intent(ReadyBentOver.this,RestDumbellBench.class);
                 startActivity(im);
             }
         });
@@ -88,7 +87,7 @@ public class Plank extends AppCompatActivity {
         finish.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View view) {
-                Intent intent = new Intent(Plank.this, RestPlank.class);
+                Intent intent = new Intent(ReadyBentOver.this, RestBentOver.class);
                 startActivity(intent);
 
             }
@@ -123,7 +122,7 @@ public class Plank extends AppCompatActivity {
 //        cancelTimerBt.setVisibility(View.VISIBLE); // show cancel button
 
         progress = 1;
-        endTime = 1; // up to finish time
+        endTime = 5; // up to finish time
         minutes = endTime-1;
         time= endTime*60;
 

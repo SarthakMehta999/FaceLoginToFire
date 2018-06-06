@@ -1,4 +1,4 @@
-package fiture.quiamco.com.homefiture.LoseExcercise.Wednesday.Instructions;
+package fiture.quiamco.com.homefiture.LoseExcercise.MondayButtWorkouts.Instructions;
 
 import android.content.Context;
 import android.content.DialogInterface;
@@ -11,12 +11,11 @@ import android.view.View;
 import android.widget.Button;
 
 import at.markushi.ui.CircleButton;
-import fiture.quiamco.com.homefiture.LoseExcercise.ExercisesDay.ExercisesDay3Lose;
-import fiture.quiamco.com.homefiture.LoseExcercise.Wednesday.WalkingLunge;
+import fiture.quiamco.com.homefiture.LoseExcercise.MondayButtWorkouts.DumbellBenchPress;
+import fiture.quiamco.com.homefiture.LoseExcercise.MondayButtWorkouts.RestBodyWeight;
 import fiture.quiamco.com.homefiture.R;
 
-public class InsWalkingLunge extends AppCompatActivity {
-
+public class InsDumbellBench extends AppCompatActivity {
 
     CircleButton finish;
     Button inst;
@@ -25,7 +24,7 @@ public class InsWalkingLunge extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ins_walking_lunge);
+        setContentView(R.layout.activity_ins_dumbell_bench);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.imToolbar);
         setSupportActionBar(toolbar);
@@ -36,19 +35,20 @@ public class InsWalkingLunge extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent im = new Intent(InsWalkingLunge.this,ExercisesDay3Lose.class);
+                Intent im = new Intent(InsDumbellBench.this,RestBodyWeight.class);
                 startActivity(im);
             }
         });
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
+
         inst = (Button) findViewById(R.id.dialog);
         finish = (CircleButton)findViewById(R.id.btnFinish);
         finish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(InsWalkingLunge.this,WalkingLunge.class);
+                Intent intent = new Intent(InsDumbellBench.this,DumbellBenchPress.class);
                 startActivity(intent);
             }
         });
@@ -59,11 +59,8 @@ public class InsWalkingLunge extends AppCompatActivity {
                 alertDialogBuilder.setTitle("Instructions:");
                 //set dialog message
                 alertDialogBuilder
-                        .setMessage("1. Begin standing with your feet shoulder width apart and your hands on your hips.\n" +
-                                "2. Step forward with one leg, flexing the knees to drop your hips. Descend until your rear knee " +
-                                "nearly touches the ground. Your posture should remain upright, and your front knee should stay above the front foot. \n" +
-                                "3. Drive through the heel of your lead foot and extend both knees to raise yourself back up.\n" +
-                                "4. Step forward with your rear foot, repeating the lunge on the opposite leg.  ")
+                        .setMessage("Quick tip: Position yourself so your head, back, " +
+                                "and butt are all on the bench, your feet flat on the floor.")
                         .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int id) {
@@ -81,6 +78,5 @@ public class InsWalkingLunge extends AppCompatActivity {
             }
 
         });
-
     }
 }

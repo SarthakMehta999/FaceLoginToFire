@@ -1,4 +1,4 @@
-package fiture.quiamco.com.homefiture.LoseExcercise.MondayTotalBodyStrength;
+package fiture.quiamco.com.homefiture.LoseExcercise.MondayButtWorkouts;
 
 import android.content.Context;
 import android.content.Intent;
@@ -16,11 +16,11 @@ import android.widget.TextView;
 import com.rilixtech.materialfancybutton.MaterialFancyButton;
 
 import at.markushi.ui.CircleButton;
-import fiture.quiamco.com.homefiture.LoseExcercise.MondayTotalBodyStrength.Instructions.InsPlank;
+import fiture.quiamco.com.homefiture.ExerciseCategories.WeeklyLose;
 import fiture.quiamco.com.homefiture.R;
 import fiture.quiamco.com.homefiture.models.CircleCountDownView;
 
-public class RestBoxStepUp extends AppCompatActivity {
+public class RestPlank extends AppCompatActivity {
 
     private Handler mHandler = new Handler();
     public static final int ONE_MINUTE = 60000;
@@ -64,7 +64,7 @@ public class RestBoxStepUp extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_rest_box_step_up);
+        setContentView(R.layout.activity_rest_plank);
         Toolbar toolbar = (Toolbar) findViewById(R.id.imToolbar);
         setSupportActionBar(toolbar);
 
@@ -74,7 +74,7 @@ public class RestBoxStepUp extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent im = new Intent(RestBoxStepUp.this,BoxStepUp.class);
+                Intent im = new Intent(RestPlank.this,Plank.class);
                 startActivity(im);
             }
         });
@@ -89,7 +89,7 @@ public class RestBoxStepUp extends AppCompatActivity {
         finish.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View view) {
-                Intent intent = new Intent(RestBoxStepUp.this, InsPlank.class);
+                Intent intent = new Intent(RestPlank.this, WeeklyLose.class);
                 startActivity(intent);
 
             }
@@ -153,7 +153,7 @@ public class RestBoxStepUp extends AppCompatActivity {
                 if(count == 60 && minutes != 0)
                 {
                     minutes--;
-                    count = 59;
+                    count = 0;
                     mTvMinutes.setText(minutes+"");
                     seconds = 59;
                 }

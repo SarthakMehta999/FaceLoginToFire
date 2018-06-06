@@ -1,4 +1,4 @@
-package fiture.quiamco.com.homefiture.LoseExcercise.Wednesday.Instructions;
+package fiture.quiamco.com.homefiture.LoseExcercise.MondayButtWorkouts.Instructions;
 
 import android.content.Context;
 import android.content.DialogInterface;
@@ -11,19 +11,20 @@ import android.view.View;
 import android.widget.Button;
 
 import at.markushi.ui.CircleButton;
-import fiture.quiamco.com.homefiture.LoseExcercise.Wednesday.FoamRolling;
-import fiture.quiamco.com.homefiture.LoseExcercise.Wednesday.Rest.RestWalkingLunge;
+import fiture.quiamco.com.homefiture.LoseExcercise.MondayButtWorkouts.Plank;
+import fiture.quiamco.com.homefiture.LoseExcercise.MondayButtWorkouts.RestBoxStepUp;
 import fiture.quiamco.com.homefiture.R;
 
-public class InsFoamRolling extends AppCompatActivity {
+public class InsPlank extends AppCompatActivity {
 
     CircleButton finish;
     Button inst;
     final Context context = this;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ins_foam_rolling);
+        setContentView(R.layout.activity_ins_plank);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.imToolbar);
         setSupportActionBar(toolbar);
@@ -34,7 +35,7 @@ public class InsFoamRolling extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent im = new Intent(InsFoamRolling.this,RestWalkingLunge.class);
+                Intent im = new Intent(InsPlank.this,RestBoxStepUp.class);
                 startActivity(im);
             }
         });
@@ -47,7 +48,7 @@ public class InsFoamRolling extends AppCompatActivity {
         finish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(InsFoamRolling.this,FoamRolling.class);
+                Intent intent = new Intent(InsPlank.this,Plank.class);
                 startActivity(intent);
             }
         });
@@ -58,10 +59,8 @@ public class InsFoamRolling extends AppCompatActivity {
                 alertDialogBuilder.setTitle("Instructions:");
                 //set dialog message
                 alertDialogBuilder
-                        .setMessage("Lie down with your back on the floor. Place a foam roller underneath " +
-                                "your upper back and cross your arms in front of you, protracting your " +
-                                "shoulder blades. Raise your hips off of the ground, placing your weight onto the " +
-                                "roller. Shift your weight to one side, rolling the upper to mid back. Alternate sides.  ")
+                        .setMessage("Quick tip: Make sure you're keeping your core tight! " +
+                                "Do the circuit 3x, resting for 1 minute between each round. ")
                         .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int id) {

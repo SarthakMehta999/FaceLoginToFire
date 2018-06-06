@@ -1,4 +1,4 @@
-package fiture.quiamco.com.homefiture.LoseExcercise.Wednesday.Rest;
+package fiture.quiamco.com.homefiture.LoseExcercise.MondayButtWorkouts;
 
 import android.content.Context;
 import android.content.Intent;
@@ -16,13 +16,11 @@ import android.widget.TextView;
 import com.rilixtech.materialfancybutton.MaterialFancyButton;
 
 import at.markushi.ui.CircleButton;
-import fiture.quiamco.com.homefiture.LoseExcercise.Wednesday.Instructions.InsFoamRolling;
-import fiture.quiamco.com.homefiture.LoseExcercise.Wednesday.WalkingLunge;
+import fiture.quiamco.com.homefiture.LoseExcercise.MondayButtWorkouts.Instructions.InsBentOver;
 import fiture.quiamco.com.homefiture.R;
 import fiture.quiamco.com.homefiture.models.CircleCountDownView;
 
-public class RestWalkingLunge extends AppCompatActivity {
-
+public class RestDumbellBench extends AppCompatActivity {
     private Handler mHandler = new Handler();
     public static final int ONE_MINUTE = 60000;
     final Context context = this;
@@ -61,11 +59,11 @@ public class RestWalkingLunge extends AppCompatActivity {
     boolean stop = false;
     private volatile boolean isRunning = true;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_rest_walking_lunge);
-
+        setContentView(R.layout.activity_rest_dumbell_bench);
         Toolbar toolbar = (Toolbar) findViewById(R.id.imToolbar);
         setSupportActionBar(toolbar);
 
@@ -75,7 +73,7 @@ public class RestWalkingLunge extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent im = new Intent(RestWalkingLunge.this,WalkingLunge.class);
+                Intent im = new Intent(RestDumbellBench.this,DumbellBenchPress.class);
                 startActivity(im);
             }
         });
@@ -90,7 +88,7 @@ public class RestWalkingLunge extends AppCompatActivity {
         finish.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View view) {
-                Intent intent = new Intent(RestWalkingLunge.this, InsFoamRolling.class);
+                Intent intent = new Intent(RestDumbellBench.this, InsBentOver.class);
                 startActivity(intent);
 
             }

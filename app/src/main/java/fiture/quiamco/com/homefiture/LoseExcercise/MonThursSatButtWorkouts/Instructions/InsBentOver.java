@@ -1,4 +1,4 @@
-package fiture.quiamco.com.homefiture.LoseExcercise.MondayTotalBodyStrength.Instructions;
+package fiture.quiamco.com.homefiture.LoseExcercise.MondayButtWorkouts.Instructions;
 
 import android.content.Context;
 import android.content.DialogInterface;
@@ -11,11 +11,12 @@ import android.view.View;
 import android.widget.Button;
 
 import at.markushi.ui.CircleButton;
-import fiture.quiamco.com.homefiture.ExerciseCategories.WeeklyGain;
-import fiture.quiamco.com.homefiture.LoseExcercise.MondayTotalBodyStrength.BoxStepUp;
+import fiture.quiamco.com.homefiture.LoseExcercise.MondayButtWorkouts.ReadyBentOver;
+import fiture.quiamco.com.homefiture.LoseExcercise.MondayButtWorkouts.RestDumbellBench;
 import fiture.quiamco.com.homefiture.R;
 
-public class InsBoxStepUp extends AppCompatActivity {
+public class InsBentOver extends AppCompatActivity {
+
     CircleButton finish;
     Button inst;
     final Context context = this;
@@ -23,7 +24,7 @@ public class InsBoxStepUp extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ins_box_step_up);
+        setContentView(R.layout.activity_ins_bent_over);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.imToolbar);
         setSupportActionBar(toolbar);
@@ -34,7 +35,7 @@ public class InsBoxStepUp extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent im = new Intent(InsBoxStepUp.this,WeeklyGain.class);
+                Intent im = new Intent(InsBentOver.this,RestDumbellBench.class);
                 startActivity(im);
             }
         });
@@ -47,7 +48,7 @@ public class InsBoxStepUp extends AppCompatActivity {
         finish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(InsBoxStepUp.this,BoxStepUp.class);
+                Intent intent = new Intent(InsBentOver.this,ReadyBentOver.class);
                 startActivity(intent);
             }
         });
@@ -58,9 +59,8 @@ public class InsBoxStepUp extends AppCompatActivity {
                 alertDialogBuilder.setTitle("Instructions:");
                 //set dialog message
                 alertDialogBuilder
-                        .setMessage("Quick tip: Alternate between your left and right leg, and for an " +
-                                "extra challenge, step your lifted foot into a" +
-                                " lunge as you come down from the box.")
+                        .setMessage("Quick tip: Get low, keep your chest up, and don't let your " +
+                                "knees go over your toes during this lower-body move. ")
                         .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int id) {
@@ -78,6 +78,5 @@ public class InsBoxStepUp extends AppCompatActivity {
             }
 
         });
-
     }
 }

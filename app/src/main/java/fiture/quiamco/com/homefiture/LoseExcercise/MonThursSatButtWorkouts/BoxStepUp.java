@@ -1,4 +1,4 @@
-package fiture.quiamco.com.homefiture.LoseExcercise.Wednesday.Rest;
+package fiture.quiamco.com.homefiture.LoseExcercise.MondayButtWorkouts;
 
 import android.content.Context;
 import android.content.Intent;
@@ -16,11 +16,11 @@ import android.widget.TextView;
 import com.rilixtech.materialfancybutton.MaterialFancyButton;
 
 import at.markushi.ui.CircleButton;
-import fiture.quiamco.com.homefiture.ExerciseCategories.WeeklyLose;
+import fiture.quiamco.com.homefiture.LoseExcercise.MondayButtWorkouts.Instructions.InsBoxStepUp;
 import fiture.quiamco.com.homefiture.R;
 import fiture.quiamco.com.homefiture.models.CircleCountDownView;
 
-public class RestFoamRolling extends AppCompatActivity {
+public class BoxStepUp extends AppCompatActivity {
 
     private Handler mHandler = new Handler();
     public static final int ONE_MINUTE = 60000;
@@ -63,7 +63,7 @@ public class RestFoamRolling extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_rest_foam_rolling);
+        setContentView(R.layout.activity_box_step_up);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.imToolbar);
         setSupportActionBar(toolbar);
@@ -74,7 +74,7 @@ public class RestFoamRolling extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent im = new Intent(RestFoamRolling.this,RestFoamRolling.class);
+                Intent im = new Intent(BoxStepUp.this,InsBoxStepUp.class);
                 startActivity(im);
             }
         });
@@ -89,7 +89,7 @@ public class RestFoamRolling extends AppCompatActivity {
         finish.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View view) {
-                Intent intent = new Intent(RestFoamRolling.this, WeeklyLose.class);
+                Intent intent = new Intent(BoxStepUp.this, RestBoxStepUp.class);
                 startActivity(intent);
 
             }

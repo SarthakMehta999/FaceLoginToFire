@@ -1,4 +1,4 @@
-package fiture.quiamco.com.homefiture.LoseExcercise.MondayTotalBodyStrength;
+package fiture.quiamco.com.homefiture.LoseExcercise.WednesdayCardio.Rest;
 
 import android.content.Context;
 import android.content.Intent;
@@ -16,11 +16,12 @@ import android.widget.TextView;
 import com.rilixtech.materialfancybutton.MaterialFancyButton;
 
 import at.markushi.ui.CircleButton;
-import fiture.quiamco.com.homefiture.LoseExcercise.MondayTotalBodyStrength.Instructions.InsLying;
+import fiture.quiamco.com.homefiture.ExerciseCategories.WeeklyLose;
 import fiture.quiamco.com.homefiture.R;
 import fiture.quiamco.com.homefiture.models.CircleCountDownView;
 
-public class LyingIsometricycling extends AppCompatActivity {
+public class RestFoamRolling extends AppCompatActivity {
+
     private Handler mHandler = new Handler();
     public static final int ONE_MINUTE = 60000;
     final Context context = this;
@@ -62,7 +63,8 @@ public class LyingIsometricycling extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_lying_isometricycling);
+        setContentView(R.layout.activity_rest_foam_rolling);
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.imToolbar);
         setSupportActionBar(toolbar);
 
@@ -72,7 +74,7 @@ public class LyingIsometricycling extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent im = new Intent(LyingIsometricycling.this,InsLying.class);
+                Intent im = new Intent(RestFoamRolling.this,RestFoamRolling.class);
                 startActivity(im);
             }
         });
@@ -87,7 +89,7 @@ public class LyingIsometricycling extends AppCompatActivity {
         finish.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View view) {
-                Intent intent = new Intent(LyingIsometricycling.this, RestLyingIsometric.class);
+                Intent intent = new Intent(RestFoamRolling.this, WeeklyLose.class);
                 startActivity(intent);
 
             }
@@ -122,7 +124,7 @@ public class LyingIsometricycling extends AppCompatActivity {
 //        cancelTimerBt.setVisibility(View.VISIBLE); // show cancel button
 
         progress = 1;
-        endTime = 1; // up to finish time
+        endTime = 5; // up to finish time
         minutes = endTime-1;
         time= endTime*60;
 
