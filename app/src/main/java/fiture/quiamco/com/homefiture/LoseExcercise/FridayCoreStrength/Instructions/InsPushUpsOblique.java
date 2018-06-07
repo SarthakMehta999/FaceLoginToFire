@@ -1,4 +1,4 @@
-package fiture.quiamco.com.homefiture.LoseExcercise.Friday.Instructions;
+package fiture.quiamco.com.homefiture.LoseExcercise.FridayCoreStrength.Instructions;
 
 import android.content.Context;
 import android.content.DialogInterface;
@@ -12,7 +12,7 @@ import android.widget.Button;
 
 import at.markushi.ui.CircleButton;
 import fiture.quiamco.com.homefiture.ExerciseCategories.WeeklyGain;
-import fiture.quiamco.com.homefiture.LoseExcercise.Friday.PushUpsOblique;
+import fiture.quiamco.com.homefiture.LoseExcercise.FridayCoreStrength.PushUpsOblique;
 import fiture.quiamco.com.homefiture.R;
 
 public class InsPushUpsOblique extends AppCompatActivity {

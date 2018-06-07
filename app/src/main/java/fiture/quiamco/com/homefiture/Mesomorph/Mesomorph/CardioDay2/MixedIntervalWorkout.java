@@ -20,7 +20,7 @@ import fiture.quiamco.com.homefiture.ExerciseCategories.WeeklyMesomorph;
 import fiture.quiamco.com.homefiture.R;
 import fiture.quiamco.com.homefiture.models.CircleCountDownView;
 
-public class MixedIntervalWrkout extends AppCompatActivity {
+public class MixedIntervalWorkout extends AppCompatActivity {
 
     private Handler mHandler = new Handler();
     public static final int ONE_MINUTE = 60000;
@@ -74,7 +74,7 @@ public class MixedIntervalWrkout extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent im = new Intent(MixedIntervalWrkout.this,mesomorphday2.class);
+                Intent im = new Intent(MixedIntervalWorkout.this,mesomorphday2.class);
                 startActivity(im);
             }
         });
@@ -90,7 +90,7 @@ public class MixedIntervalWrkout extends AppCompatActivity {
         finish.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View view) {
-                Intent intent = new Intent(MixedIntervalWrkout.this, WeeklyMesomorph.class);
+                Intent intent = new Intent(MixedIntervalWorkout.this, WeeklyMesomorph.class);
                 startActivity(intent);
 
             }

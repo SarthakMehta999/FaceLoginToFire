@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ffff"
-    tools:context="fiture.quiamco.com.homefiture.LoseExcercise.Friday.Rest.RestHighKness">
+    tools:context="fiture.quiamco.com.homefiture.LoseExcercise.FridayCoreStrength.Rest.RestHighKness">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/appBarLayout"
@@ -100,9 +100,9 @@
         android:layout_width="320dp"
         android:layout_height="175dp"
         android:background="@drawable/relax"
-        android:layout_marginRight="8dp"
+        android:layout_marginRight="100dp"
         app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginLeft="8dp"
+        android:layout_marginLeft="100dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintHorizontal_bias="0.507"
         android:layout_marginTop="16dp"

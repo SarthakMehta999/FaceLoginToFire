@@ -1,4 +1,4 @@
-package fiture.quiamco.com.homefiture.LoseExcercise.WednesdayCardio.Instructions;
+package fiture.quiamco.com.homefiture.LoseExcercise.WednesdayCardioLunges.Instructions;
 
 import android.content.Context;
 import android.content.DialogInterface;
@@ -12,7 +12,7 @@ import android.widget.Button;
 
 import at.markushi.ui.CircleButton;
 import fiture.quiamco.com.homefiture.LoseExcercise.ExercisesDay.ExercisesDay3Lose;
-import fiture.quiamco.com.homefiture.LoseExcercise.WednesdayCardio.WalkingLunge;
+import fiture.quiamco.com.homefiture.LoseExcercise.WednesdayCardioLunges.WalkingLunge;
 import fiture.quiamco.com.homefiture.R;
 
 public class InsWalkingLunge extends AppCompatActivity {

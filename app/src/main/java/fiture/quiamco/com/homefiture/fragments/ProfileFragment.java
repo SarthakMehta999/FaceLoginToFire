@@ -32,12 +32,12 @@ import java.util.List;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 import fiture.quiamco.com.homefiture.Activities.Lifestyle;
+import fiture.quiamco.com.homefiture.Adapter.DailyChallengeAdapter;
+import fiture.quiamco.com.homefiture.ExerciseCategories.TotalBodyCircuitExercises;
+import fiture.quiamco.com.homefiture.ExerciseCategories.WeeklyEndomorphHighFreq;
 import fiture.quiamco.com.homefiture.ExerciseCategories.WeeklyGain;
 import fiture.quiamco.com.homefiture.ExerciseCategories.WeeklyLose;
-import fiture.quiamco.com.homefiture.Adapter.DailyChallengeAdapter;
-import fiture.quiamco.com.homefiture.ExerciseCategories.MaintainWeekly;
 import fiture.quiamco.com.homefiture.R;
-import fiture.quiamco.com.homefiture.ExerciseCategories.TotalBodyCircuitExercises;
 import fiture.quiamco.com.homefiture.models.DailyChallengeModel;
 import fiture.quiamco.com.homefiture.models.Infos;
 import fiture.quiamco.com.homefiture.models.User;
@@ -295,7 +295,7 @@ public class ProfileFragment extends Fragment {
                         start.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
-                                Intent login = new Intent(getActivity(),MaintainWeekly.class);
+                                Intent login = new Intent(getActivity(), WeeklyEndomorphHighFreq.class);
                                 startActivity(login);
                             }
                         });

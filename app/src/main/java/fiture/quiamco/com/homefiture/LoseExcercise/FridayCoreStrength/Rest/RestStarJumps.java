@@ -1,4 +1,4 @@
-package fiture.quiamco.com.homefiture.LoseExcercise.Friday.Rest;
+package fiture.quiamco.com.homefiture.LoseExcercise.FridayCoreStrength.Rest;
 
 import android.content.Context;
 import android.content.Intent;
@@ -16,8 +16,8 @@ import android.widget.TextView;
 import com.rilixtech.materialfancybutton.MaterialFancyButton;
 
 import at.markushi.ui.CircleButton;
-import fiture.quiamco.com.homefiture.LoseExcercise.Friday.Instructions.InsMtClimb;
-import fiture.quiamco.com.homefiture.LoseExcercise.Friday.StarJumps;
+import fiture.quiamco.com.homefiture.LoseExcercise.FridayCoreStrength.Instructions.InsMtClimb;
+import fiture.quiamco.com.homefiture.LoseExcercise.FridayCoreStrength.StarJumps;
 import fiture.quiamco.com.homefiture.R;
 import fiture.quiamco.com.homefiture.models.CircleCountDownView;
 

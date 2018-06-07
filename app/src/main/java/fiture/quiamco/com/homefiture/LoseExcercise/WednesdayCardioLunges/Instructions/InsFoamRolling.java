@@ -1,4 +1,4 @@
-package fiture.quiamco.com.homefiture.LoseExcercise.WednesdayCardio.Instructions;
+package fiture.quiamco.com.homefiture.LoseExcercise.WednesdayCardioLunges.Instructions;
 
 import android.content.Context;
 import android.content.DialogInterface;
@@ -11,8 +11,8 @@ import android.view.View;
 import android.widget.Button;
 
 import at.markushi.ui.CircleButton;
-import fiture.quiamco.com.homefiture.LoseExcercise.WednesdayCardio.FoamRolling;
-import fiture.quiamco.com.homefiture.LoseExcercise.WednesdayCardio.Rest.RestWalkingLunge;
+import fiture.quiamco.com.homefiture.LoseExcercise.WednesdayCardioLunges.FoamRolling;
+import fiture.quiamco.com.homefiture.LoseExcercise.WednesdayCardioLunges.Rest.RestWalkingLunge;
 import fiture.quiamco.com.homefiture.R;
 
 public class InsFoamRolling extends AppCompatActivity {

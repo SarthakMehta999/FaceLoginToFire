@@ -1,4 +1,4 @@
-package fiture.quiamco.com.homefiture.LoseExcercise.MondayButtWorkouts;
+package fiture.quiamco.com.homefiture.LoseExcercise.MonThursSatButtWorkouts;
 
 import android.content.Context;
 import android.content.Intent;

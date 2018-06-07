@@ -6,7 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
-import fiture.quiamco.com.homefiture.LoseExcercise.Friday.Instructions.InsSquatJacks;
+import fiture.quiamco.com.homefiture.LoseExcercise.FridayCoreStrength.Instructions.InsSquatJacks;
 import fiture.quiamco.com.homefiture.R;
 
 public class ExercisesDay5Lose extends AppCompatActivity {

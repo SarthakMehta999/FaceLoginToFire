@@ -37,7 +37,7 @@ public class WeeklyEndomorphLowFreq extends AppCompatActivity {
                 }
 
                 else if (position == 1) {
-                    Intent defs = new Intent(WeeklyEndomorphLowFreq.this,RestDay.class);
+                    Intent defs = new Intent(WeeklyEndomorphLowFreq.this, fiture.quiamco.com.homefiture.Endomorph.LowFrequency.Day2RestDay.RestDay.class);
                     startActivity(defs);
                     Toast.makeText(WeeklyEndomorphLowFreq.this, "try2", Toast.LENGTH_SHORT).show();
 
@@ -47,7 +47,7 @@ public class WeeklyEndomorphLowFreq extends AppCompatActivity {
                     Toast.makeText(WeeklyEndomorphLowFreq.this, "try3", Toast.LENGTH_SHORT).show();
 
                 } else if (position == 3) {
-                    Intent def = new Intent(WeeklyEndomorphLowFreq.this, RestDay.class);
+                    Intent def = new Intent(WeeklyEndomorphLowFreq.this, fiture.quiamco.com.homefiture.Endomorph.LowFrequency.Day4RestDay.RestDay.class);
                     startActivity(def);
                     Toast.makeText(WeeklyEndomorphLowFreq.this, "try4", Toast.LENGTH_SHORT).show();
 

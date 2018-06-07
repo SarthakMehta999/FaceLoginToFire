@@ -7,7 +7,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 
-import fiture.quiamco.com.homefiture.ExerciseCategories.WeeklyEndomorphLowFreq;
+import fiture.quiamco.com.homefiture.ExerciseCategories.WeeklyEndomorphHighFreq;
 import fiture.quiamco.com.homefiture.R;
 
 public class RestDay extends AppCompatActivity {
@@ -30,7 +30,7 @@ public class RestDay extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent im = new Intent(RestDay.this,WeeklyEndomorphLowFreq.class);
+                Intent im = new Intent(RestDay.this,WeeklyEndomorphHighFreq.class);
                 startActivity(im);
             }
         });
@@ -43,7 +43,7 @@ public class RestDay extends AppCompatActivity {
         start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(RestDay.this,WeeklyEndomorphLowFreq.class);
+                Intent intent = new Intent(RestDay.this,WeeklyEndomorphHighFreq.class);
                 startActivity(intent);
             }
         });

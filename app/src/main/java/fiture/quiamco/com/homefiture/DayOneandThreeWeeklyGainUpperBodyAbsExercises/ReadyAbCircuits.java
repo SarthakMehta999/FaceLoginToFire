@@ -22,8 +22,9 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.rilixtech.materialfancybutton.MaterialFancyButton;
 
 import at.markushi.ui.CircleButton;
-import fiture.quiamco.com.homefiture.ExerciseCategories.WeeklyGain;
+import fiture.quiamco.com.homefiture.Activities.NavDrawer;
 import fiture.quiamco.com.homefiture.Adapter.WeeklyExercisesAdapter;
+import fiture.quiamco.com.homefiture.ExerciseCategories.WeeklyGain;
 import fiture.quiamco.com.homefiture.R;
 import fiture.quiamco.com.homefiture.models.CircleCountDownView;
 import fiture.quiamco.com.homefiture.models.DailyExerciseModel;

@@ -1,4 +1,4 @@
-package fiture.quiamco.com.homefiture.LoseExcercise.WednesdayCardio.Rest;
+package fiture.quiamco.com.homefiture.LoseExcercise.WednesdayCardioLunges.Rest;
 
 import android.content.Context;
 import android.content.Intent;

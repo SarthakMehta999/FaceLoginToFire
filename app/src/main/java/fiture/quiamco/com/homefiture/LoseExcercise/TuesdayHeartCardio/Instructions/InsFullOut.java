@@ -1,4 +1,4 @@
-package fiture.quiamco.com.homefiture.LoseExcercise.TuesdaySprintIntervals.Instructions;
+package fiture.quiamco.com.homefiture.LoseExcercise.TuesdayHeartCardio.Instructions;
 
 import android.content.Context;
 import android.content.DialogInterface;
@@ -12,7 +12,7 @@ import android.widget.Button;
 
 import at.markushi.ui.CircleButton;
 import fiture.quiamco.com.homefiture.LoseExcercise.ExercisesDay.ExercisesDay2Lose;
-import fiture.quiamco.com.homefiture.LoseExcercise.TuesdaySprintIntervals.FullOutSprint;
+import fiture.quiamco.com.homefiture.LoseExcercise.TuesdayHeartCardio.FullOutSprint;
 import fiture.quiamco.com.homefiture.R;
 
 public class InsFullOut extends AppCompatActivity {

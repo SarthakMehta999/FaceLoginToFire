@@ -10,7 +10,7 @@
     <TextView
         android:layout_width="368dp"
         android:layout_height="0dp"
-        android:text="Weekly"
+        android:text="Weekly Mesomorph"
         android:textSize="30dp"
         android:textAlignment="center"
         android:textColor="@color/textColor"

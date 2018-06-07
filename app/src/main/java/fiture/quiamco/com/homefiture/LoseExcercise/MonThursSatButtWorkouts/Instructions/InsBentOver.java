@@ -1,4 +1,4 @@
-package fiture.quiamco.com.homefiture.LoseExcercise.MondayButtWorkouts.Instructions;
+package fiture.quiamco.com.homefiture.LoseExcercise.MonThursSatButtWorkouts.Instructions;
 
 import android.content.Context;
 import android.content.DialogInterface;
@@ -11,8 +11,8 @@ import android.view.View;
 import android.widget.Button;
 
 import at.markushi.ui.CircleButton;
-import fiture.quiamco.com.homefiture.LoseExcercise.MondayButtWorkouts.ReadyBentOver;
-import fiture.quiamco.com.homefiture.LoseExcercise.MondayButtWorkouts.RestDumbellBench;
+import fiture.quiamco.com.homefiture.LoseExcercise.MonThursSatButtWorkouts.ReadyBentOver;
+import fiture.quiamco.com.homefiture.LoseExcercise.MonThursSatButtWorkouts.RestDumbellBench;
 import fiture.quiamco.com.homefiture.R;
 
 public class InsBentOver extends AppCompatActivity {

@@ -123,7 +123,7 @@ public class Rest1 extends AppCompatActivity {
 //        cancelTimerBt.setVisibility(View.VISIBLE); // show cancel button
 
         progress = 1;
-        endTime = 1; // up to finish time
+        endTime = 5; // up to finish time
         minutes = endTime-1;
         time= endTime*20;
 
@@ -165,7 +165,7 @@ public class Rest1 extends AppCompatActivity {
                 //view.setVisibility(View.VISIBLE);
                 cancelTimerBt.setVisibility(View.GONE);
                 minutes=0;
-                seconds=20;
+                seconds=59;
             }
         };
         countDownTimer.start(); // start timer

@@ -1,4 +1,4 @@
-package fiture.quiamco.com.homefiture.LoseExcercise.MondayButtWorkouts.Instructions;
+package fiture.quiamco.com.homefiture.LoseExcercise.MonThursSatButtWorkouts.Instructions;
 
 import android.content.Context;
 import android.content.DialogInterface;
@@ -11,8 +11,8 @@ import android.view.View;
 import android.widget.Button;
 
 import at.markushi.ui.CircleButton;
-import fiture.quiamco.com.homefiture.LoseExcercise.MondayButtWorkouts.DumbellBenchPress;
-import fiture.quiamco.com.homefiture.LoseExcercise.MondayButtWorkouts.RestBodyWeight;
+import fiture.quiamco.com.homefiture.LoseExcercise.MonThursSatButtWorkouts.DumbellBenchPress;
+import fiture.quiamco.com.homefiture.LoseExcercise.MonThursSatButtWorkouts.RestBodyWeight;
 import fiture.quiamco.com.homefiture.R;
 
 public class InsDumbellBench extends AppCompatActivity {

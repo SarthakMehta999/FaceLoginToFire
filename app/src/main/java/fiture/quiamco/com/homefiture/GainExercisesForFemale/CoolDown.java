@@ -16,7 +16,7 @@ import android.widget.TextView;
 import com.rilixtech.materialfancybutton.MaterialFancyButton;
 
 import at.markushi.ui.CircleButton;
-import fiture.quiamco.com.homefiture.ExerciseCategories.WeeklyLose;
+import fiture.quiamco.com.homefiture.ExerciseCategories.TotalBodyCircuitExercises;
 import fiture.quiamco.com.homefiture.R;
 import fiture.quiamco.com.homefiture.models.CircleCountDownView;
 
@@ -89,7 +89,7 @@ public class CoolDown extends AppCompatActivity {
         finish.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View view) {
-                Intent intent = new Intent(CoolDown.this, WeeklyLose.class);
+                Intent intent = new Intent(CoolDown.this, TotalBodyCircuitExercises.class);
                 startActivity(intent);
 
 

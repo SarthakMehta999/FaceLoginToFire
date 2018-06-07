@@ -1,4 +1,4 @@
-package fiture.quiamco.com.homefiture.LoseExcercise.Friday.Instructions;
+package fiture.quiamco.com.homefiture.LoseExcercise.FridayCoreStrength.Instructions;
 
 import android.content.Context;
 import android.content.DialogInterface;
@@ -11,8 +11,8 @@ import android.view.View;
 import android.widget.Button;
 
 import at.markushi.ui.CircleButton;
-import fiture.quiamco.com.homefiture.LoseExcercise.Friday.JumpingLunges;
-import fiture.quiamco.com.homefiture.LoseExcercise.Friday.Rest.RestHighKness;
+import fiture.quiamco.com.homefiture.LoseExcercise.FridayCoreStrength.JumpingLunges;
+import fiture.quiamco.com.homefiture.LoseExcercise.FridayCoreStrength.Rest.RestHighKness;
 import fiture.quiamco.com.homefiture.R;
 
 public class InsJumpingLunges extends AppCompatActivity {
