@@ -1,4 +1,4 @@
-package fiture.quiamco.com.homefiture.LoseExcercise.MonThursSatButtWorkouts;
+package fiture.quiamco.com.homefiture.WeeklyLoseChestpain.Day1;
 
 import android.content.Context;
 import android.content.Intent;
@@ -16,11 +16,12 @@ import android.widget.TextView;
 import com.rilixtech.materialfancybutton.MaterialFancyButton;
 
 import at.markushi.ui.CircleButton;
+import fiture.quiamco.com.homefiture.LoseExcercise.MonThursSatButtWorkouts.Instructions.InsBodyWeightSquat;
+import fiture.quiamco.com.homefiture.LoseExcercise.MonThursSatButtWorkouts.RestBodyWeight;
 import fiture.quiamco.com.homefiture.R;
-import fiture.quiamco.com.homefiture.WeeklyLoseChestpain.Day1.InsLying;
 import fiture.quiamco.com.homefiture.models.CircleCountDownView;
 
-public class RestBodyWeight extends AppCompatActivity {
+public class BodyWeightSquat extends AppCompatActivity {
     private Handler mHandler = new Handler();
     public static final int ONE_MINUTE = 60000;
     final Context context = this;
@@ -58,23 +59,23 @@ public class RestBodyWeight extends AppCompatActivity {
     Thread t;
     boolean stop = false;
     private volatile boolean isRunning = true;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_rest_body_weight);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.imToolbar);
-        setSupportActionBar(toolbar);
+        setContentView(R.layout.activity_body_weight_squat);
 
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.imToolbar);
+    setSupportActionBar(toolbar);
+
+    getSupportActionBar().setDisplayShowTitleEnabled(false);
 
         toolbar.setNavigationIcon(R.drawable.back_btn);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent im = new Intent(RestBodyWeight.this,BodyWeightSquat.class);
-                startActivity(im);
-            }
+@Override
+public void onClick(View v) {
+        Intent im = new Intent(BodyWeightSquat.this,InsBodyWeightSquat.class);
+        startActivity(im);
+        }
         });
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -86,11 +87,11 @@ public class RestBodyWeight extends AppCompatActivity {
         startButton = (MaterialFancyButton) findViewById(R.id.startButton);
         finish.setOnClickListener(new View.OnClickListener() {
 
-            public void onClick(View view) {
-                Intent intent = new Intent(RestBodyWeight.this, InsLying.class);
-                startActivity(intent);
+public void onClick(View view) {
+        Intent intent = new Intent(BodyWeightSquat.this, RestBodyWeight.class);
+        startActivity(intent);
 
-            }
+        }
         });
 
         countDownView = (CircleCountDownView) findViewById(R.id.circle_count_down_view);
@@ -111,9 +112,9 @@ public class RestBodyWeight extends AppCompatActivity {
 //
 //            }
 //        });
-    }
+        }
 
-    protected void startCountDown() {
+protected void startCountDown() {
 
 
         //view.setVisibility(View.GONE); // hide button
@@ -127,55 +128,55 @@ public class RestBodyWeight extends AppCompatActivity {
         time= endTime*60;
 
         countDownTimer = new CountDownTimer(time * 1000 /*finishTime**/, 1000 /*interval**/) {
-            @Override
-            public void onTick(long millisUntilFinished) {
-                countDownView.setProgress(progress, time );
-                progress = progress + 1;
+@Override
+public void onTick(long millisUntilFinished) {
+        countDownView.setProgress(progress, time );
+        progress = progress + 1;
 
-                if(seconds >= 0)
-                {
+        if(seconds >= 0)
+        {
 
-                    mTvMinutes.setText(minutes+"");
-                    if(seconds <10){
-                        mTvSeconds.setText("0"+seconds);
-                        seconds--;
-                        count++;
-                    }else{
-                        mTvSeconds.setText(seconds+"");
-                        seconds--;
-                        count++;
-                    }
+        mTvMinutes.setText(minutes+"");
+        if(seconds <10){
+        mTvSeconds.setText("0"+seconds);
+        seconds--;
+        count++;
+        }else{
+        mTvSeconds.setText(seconds+"");
+        seconds--;
+        count++;
+        }
 
-                }
+        }
 
-                if(count == 60 && minutes != 0)
-                {
-                    minutes--;
-                    count = 0;
-                    mTvMinutes.setText(minutes+"");
-                    seconds = 59;
-                }
+        if(count == 60 && minutes != 0)
+        {
+        minutes--;
+        count = 0;
+        mTvMinutes.setText(minutes+"");
+        seconds = 59;
+        }
 
-            }
+        }
 
-            @Override
-            public void onFinish() {
-                countDownView.setProgress(progress, time);
-                //view.setVisibility(View.VISIBLE);
-                cancelTimerBt.setVisibility(View.GONE);
-                minutes=0;
-                seconds=59;
-            }
+@Override
+public void onFinish() {
+        countDownView.setProgress(progress, time);
+        //view.setVisibility(View.VISIBLE);
+        cancelTimerBt.setVisibility(View.GONE);
+        minutes=0;
+        seconds=59;
+        }
         };
         countDownTimer.start(); // start timer
 
         // hide softkeyboard
         View currentFocus = this.getCurrentFocus();
         if (currentFocus != null) {
-            InputMethodManager imm = (InputMethodManager)this.getSystemService(Context.INPUT_METHOD_SERVICE);
-            imm.hideSoftInputFromWindow(currentFocus.getWindowToken(), 0);
+        InputMethodManager imm = (InputMethodManager)this.getSystemService(Context.INPUT_METHOD_SERVICE);
+        imm.hideSoftInputFromWindow(currentFocus.getWindowToken(), 0);
         }
-    }
+        }
 //    public void startTime(){
 //        startTime = SystemClock.uptimeMillis();
 //        customHandler.postDelayed(updateTimerThread, 0);
@@ -205,4 +206,4 @@ public class RestBodyWeight extends AppCompatActivity {
 //
 //    };
 
-}
+        }

@@ -120,7 +120,6 @@
         <activity android:name=".Exercises.exercise5mostheavy" />
         =======
         >>>>>>> origin/master
-
         <activity android:name=".Exercises.exercise1mostheavyd2" />
         <activity android:name=".Exercises.exercise2mostheavyd2" />
         <activity android:name=".Exercises.exercise3mostheavyd2" />
@@ -134,7 +133,6 @@
         <activity android:name=".Exercises.exercise5mostheavyd3" />
         <activity android:name=".Exercises.exercise6mostheavyd3" />
         <activity android:name=".Activities.MyRank" />
-
         <activity android:name=".ExerciseCategories.WeeklyEctomorph" />
         <activity android:name=".Ectomorph.Day1ChestandTriceps.Dips" />
         <activity android:name=".Ectomorph.Day1ChestandTriceps.DumbellBenchPress" />
@@ -380,13 +378,13 @@
         <activity android:name=".Maintain.FriTotalBodyWrkout.LegSquat" />
         <activity android:name=".Maintain.FriTotalBodyWrkout.ToeTap" />
         <activity android:name=".Maintain.FriTotalBodyWrkout.PulsingLunges" />
-        <activity android:name=".Maintain.FriTotalBodyWrkout.StartFri"/>
-        <activity android:name=".GainPainInLegs.AbCircuits"/>
-        <activity android:name=".GainPainInLegs.Day2andDay4.Rest"/>
-        <activity android:name=".GainPainInLegs.ExercisesPainInLegsDay1"/>
-        <activity android:name=".GainChestpain.ExercisesChestDay1"/>
-        <activity android:name=".GainChestpain.PikePushUps"/>
-        <activity android:name=".GainChestpain.Pullups"/>
+        <activity android:name=".Maintain.FriTotalBodyWrkout.StartFri" />
+        <activity android:name=".GainPainInLegs.AbCircuits" />
+        <activity android:name=".GainPainInLegs.Day2andDay4.Rest" />
+        <activity android:name=".GainPainInLegs.ExercisesPainInLegsDay1" />
+        <activity android:name=".GainChestpain.ExercisesChestDay1" />
+        <activity android:name=".GainChestpain.PikePushUps" />
+        <activity android:name=".GainChestpain.Pullups" />
         <activity android:name=".GainChestpain.PushUp">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -394,6 +392,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".WeeklyLoseChestpain.Day1.ChestPainDay1" />
+        <activity android:name=".ExerciseCategories.WeeklyLoseChestPain"></activity>
     </application>
 
 </manifest>
