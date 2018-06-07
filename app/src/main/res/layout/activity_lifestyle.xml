@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="800dp"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
 
     >
@@ -186,15 +186,15 @@
             android:layout_marginBottom="8dp"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
-            android:layout_marginTop="532dp"
+            android:layout_marginTop="520dp"
             android:gravity="center_horizontal"
-            android:text="PROCEED"
+            android:text="@string/proceed"
             fancy:layout_constraintBottom_toBottomOf="parent"
-            fancy:layout_constraintHorizontal_bias="0.53"
+            fancy:layout_constraintHorizontal_bias="0.501"
             fancy:layout_constraintLeft_toLeftOf="parent"
             fancy:layout_constraintRight_toRightOf="parent"
             fancy:layout_constraintTop_toTopOf="parent"
-            fancy:layout_constraintVertical_bias="0.51"
+            fancy:layout_constraintVertical_bias="0.433"
             fancy:mfb_defaultColor="@color/colorPrimary"
             fancy:mfb_focusColor="@color/backgroundforallscreen"
             fancy:mfb_iconFont="fontawesome.ttf"
@@ -225,7 +225,7 @@
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
                 android:layout_marginStart="8dp"
-                android:text="Gain more muscles"
+                android:text="@string/gain_more_muscles"
                 android:textColor="#F5F5F5"
                 android:checked="true"
                 app:layout_constraintHorizontal_bias="0.115"
@@ -241,7 +241,7 @@
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
                 android:layout_marginStart="8dp"
-                android:text="Lose Weight"
+                android:text="@string/lose_weight"
                 android:textColor="#F5F5F5"
                 app:layout_constraintHorizontal_bias="0.084"
                 app:layout_constraintLeft_toLeftOf="parent"
@@ -256,7 +256,7 @@
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
                 android:layout_marginStart="8dp"
-                android:text="Maintain Weight"
+                android:text="@string/maintain_weight"
                 android:textColor="#F5F5F5"
                 app:layout_constraintHorizontal_bias="0.105"
                 app:layout_constraintLeft_toLeftOf="parent"
@@ -278,7 +278,7 @@
                 android:id="@+id/rbtnChest"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Chest pain"
+                android:text="@string/chest_pain"
                 android:textColor="#F5F5F5"
                 android:checked="true"
                 />
@@ -288,49 +288,24 @@
                 android:layout_below="@+id/rbtnChest"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Shortness of breath"
+                android:text="@string/shortness_of_breath"
                 android:textColor="#F5F5F5"/>
-
-            <CheckBox
-                android:id="@+id/rbtnDizziness"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Dizziness"
-                android:textColor="#F5F5F5"
-                android:layout_below="@+id/rbtnShortness"
-                />
-
-            <CheckBox
-                android:id="@+id/rbtnRapid"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Rapid heartbeat"
-                android:textColor="#F5F5F5"
-                android:layout_below="@+id/rbtnDizziness"
-                />
-
-            <CheckBox
-                android:id="@+id/rbtnHeart"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Heart murmur"
-                android:textColor="#F5F5F5"
-                android:layout_below="@+id/rbtnRapid"/>
+            
 
             <CheckBox
                 android:id="@+id/rbtnPain"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Pain in the lower legs"
-                android:textColor="#F5F5F5"
-                android:layout_below="@+id/rbtnHeart"
+                 android:textColor="#F5F5F5"
+                android:layout_below="@+id/rbtnShortness"
                 />
 
             <CheckBox
                 android:id="@+id/rbtnNone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="None"
+                android:text="@string/none"
                 android:textColor="#F5F5F5"
                 android:layout_below="@+id/rbtnPain"/>
         </RelativeLayout>

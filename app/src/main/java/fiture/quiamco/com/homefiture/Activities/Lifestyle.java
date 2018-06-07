@@ -114,11 +114,11 @@ public class Lifestyle extends AppCompatActivity {
         maintain = (RadioButton) findViewById(R.id.rbtnMaintain);
         //Physical Conditions
 
-        rapid = (CheckBox) findViewById(R.id.rbtnRapid);
+
         chest = (CheckBox) findViewById(R.id.rbtnChest);
-        heart = (CheckBox) findViewById(R.id.rbtnHeart);
+
         pain = (CheckBox) findViewById(R.id.rbtnPain);
-        dizziness = (CheckBox) findViewById(R.id.rbtnDizziness);
+
         shortness = (CheckBox) findViewById(R.id.rbtnShortness);
         none = (CheckBox) findViewById(R.id.rbtnNone);
 
@@ -218,7 +218,7 @@ public class Lifestyle extends AppCompatActivity {
     }
 
     private String fitnessResponse, goalResponse;
-    private ArrayList<String> ilnesses;
+    private ArrayList<String> illnesses;
 
     public void getSurveyResponses() {
         switch (fitness.getCheckedRadioButtonId()) {
@@ -248,28 +248,28 @@ public class Lifestyle extends AppCompatActivity {
                 break;
         }
 
-        ilnesses = new ArrayList<>();
+        illnesses = new ArrayList<>();
 
         if (chest.isChecked()) {
-            ilnesses.add("chest pain");
+            illnesses.add("chest pain");
         }
         if (shortness.isChecked()) {
-            ilnesses.add("shortness of breath");
+            illnesses.add("shortness of breath");
         }
-        if (dizziness.isChecked()) {
-            ilnesses.add("dizziness");
-        }
-        if (rapid.isChecked()) {
-            ilnesses.add("rapid heartbeat");
-        }
-        if (heart.isChecked()) {
-            ilnesses.add("heart murmur");
-        }
+//        if (dizziness.isChecked()) {
+//            illnesses.add("dizziness");
+//        }
+//        if (rapid.isChecked()) {
+//            illnesses.add("rapid heartbeat");
+//        }
+//        if (heart.isChecked()) {
+//            illnesses.add("heart murmur");
+//        }
         if (pain.isChecked()) {
-            ilnesses.add("pain in the lower legs");
+            illnesses.add("pain in the lower legs");
         }
         if (none.isChecked()) {
-            ilnesses.add("none");
+            illnesses.add("none");
         }
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
@@ -280,8 +280,8 @@ public class Lifestyle extends AppCompatActivity {
         else {
             surveyResponseRef.child(userId).child("fitnessLevel").setValue(fitnessResponse);
             surveyResponseRef.child(userId).child("goal").setValue(goalResponse);
-            for (int i = 0; i < ilnesses.size(); i++) {
-                surveyResponseRef.child(userId).child("illnesses").child(String.valueOf(i + 1)).setValue(ilnesses.get(i));
+            for (int i = 0; i < illnesses.size(); i++) {
+                surveyResponseRef.child(userId).child("illnesses").child(String.valueOf(i + 1)).setValue(illnesses.get(i));
             }
         }
         SharedPreferences sharedPreferences = getSharedPreferences("FitureUser", Context.MODE_PRIVATE);
@@ -290,15 +290,15 @@ public class Lifestyle extends AppCompatActivity {
 
         editor.putString("userFitnessResponse" ,fitnessResponse);
         editor.putString("userGoal",goalResponse);
-        editor.putString("userIlnesses", String.valueOf(ilnesses));
+        editor.putString("userIlnesses", String.valueOf(illnesses));
         editor.apply();
 
-        Log.d("Responses",fitnessResponse+""+goalResponse+""+ilnesses);
+        Log.d("Responses",fitnessResponse+""+goalResponse+""+illnesses);
 
         final User user = new User();
         user.setFitnessResponse(fitnessResponse);
         user.setGoal(goalResponse);
-        user.setIlnesses(String.valueOf(ilnesses));
+        user.setIlnesses(String.valueOf(illnesses));
 
     }
 

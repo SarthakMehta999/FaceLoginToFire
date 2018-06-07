@@ -57,5 +57,15 @@
 
     <!--Radio Button Values-->
 
-    <string name="light_rb">Lightly Active (1 "n dash" 2 times a month or less)</string>
+    <string name="light_rb">Lightly Active (1 - 2 times a month or less)</string>
+    <string name="chest_pain">Chest pain</string>
+    <string name="shortness_of_breath">Shortness of breath</string>
+    <string name="dizziness">Dizziness</string>
+    <string name="rapid_heartbeat">Rapid heartbeat</string>
+    <string name="none">None</string>
+    <string name="maintain_weight">Maintain Weight</string>
+    <string name="lose_weight">Lose Weight</string>
+    <string name="gain_more_muscles">Gain more muscles</string>
+    <string name="proceed">PROCEED</string>
+    <string name="heart_murmur">Heart murmur</string>
 </resources>

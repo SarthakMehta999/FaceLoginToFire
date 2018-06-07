@@ -380,7 +380,14 @@
         <activity android:name=".Maintain.FriTotalBodyWrkout.LegSquat" />
         <activity android:name=".Maintain.FriTotalBodyWrkout.ToeTap" />
         <activity android:name=".Maintain.FriTotalBodyWrkout.PulsingLunges" />
-        <activity android:name=".Maintain.FriTotalBodyWrkout.StartFri">
+        <activity android:name=".Maintain.FriTotalBodyWrkout.StartFri"/>
+        <activity android:name=".GainPainInLegs.AbCircuits"/>
+        <activity android:name=".GainPainInLegs.Day2andDay4.Rest"/>
+        <activity android:name=".GainPainInLegs.ExercisesPainInLegsDay1"/>
+        <activity android:name=".GainChestpain.ExercisesChestDay1"/>
+        <activity android:name=".GainChestpain.PikePushUps"/>
+        <activity android:name=".GainChestpain.Pullups"/>
+        <activity android:name=".GainChestpain.PushUp">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

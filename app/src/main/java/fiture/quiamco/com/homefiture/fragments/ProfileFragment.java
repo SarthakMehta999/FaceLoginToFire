@@ -36,6 +36,8 @@ import fiture.quiamco.com.homefiture.Adapter.DailyChallengeAdapter;
 import fiture.quiamco.com.homefiture.ExerciseCategories.TotalBodyCircuitExercises;
 import fiture.quiamco.com.homefiture.ExerciseCategories.WeeklyEndomorphHighFreq;
 import fiture.quiamco.com.homefiture.ExerciseCategories.WeeklyGain;
+import fiture.quiamco.com.homefiture.ExerciseCategories.WeeklyGainChestpain;
+import fiture.quiamco.com.homefiture.ExerciseCategories.WeeklyGainPainLegs;
 import fiture.quiamco.com.homefiture.ExerciseCategories.WeeklyLose;
 import fiture.quiamco.com.homefiture.R;
 import fiture.quiamco.com.homefiture.models.DailyChallengeModel;
@@ -271,13 +273,35 @@ public class ProfileFragment extends Fragment {
 //        });
         switch (bmiLabel) {
             case "Underweight":
-                start.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Intent login = new Intent(getActivity(), WeeklyGain.class);
-                        startActivity(login);
+
+                if(ilness.equals("chest pain")) {
+                    start.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent login = new Intent(getActivity(), WeeklyGainChestpain.class);
+                            startActivity(login);
+                        }
+                    });
+                }
+                else if(ilness.equals("shortness of breath")) {
+                    start.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent login = new Intent(getActivity(), WeeklyGain.class);
+                            startActivity(login);
+                        }
+                    });
+                }
+                    else if(ilness.equals("pain in the lower legs")){
+                    start.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent login = new Intent(getActivity(), WeeklyGainPainLegs.class);
+                            startActivity(login);
+                        }
+                    });
                     }
-                });
+
                 break;
             case "Overweight":
                 start.setOnClickListener(new View.OnClickListener() {

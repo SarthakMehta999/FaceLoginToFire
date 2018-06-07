@@ -8,21 +8,18 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
-import android.widget.Toast;
 
-import fiture.quiamco.com.homefiture.Activities.ExercisesDay1;
-import fiture.quiamco.com.homefiture.Activities.ExercisesDay2;
-import fiture.quiamco.com.homefiture.Activities.ExercisesDay3;
-import fiture.quiamco.com.homefiture.Activities.ExercisesDay4;
 import fiture.quiamco.com.homefiture.Adapter.WeeklyExercisesAdapter;
+import fiture.quiamco.com.homefiture.GainPainInLegs.Day2andDay4.Rest;
+import fiture.quiamco.com.homefiture.GainPainInLegs.ExercisesPainInLegsDay1;
 import fiture.quiamco.com.homefiture.R;
 
-public class WeeklyGain extends AppCompatActivity {
+public class WeeklyGainPainLegs extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_weekly);
+        setContentView(R.layout.activity_weekly_gain_pain_legs);
 
         GridView gridview = (GridView) findViewById(R.id.gridview);
         gridview.setAdapter(new WeeklyExercisesAdapter(this));
@@ -30,27 +27,26 @@ public class WeeklyGain extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View v,
                                     int position, long id) {
                 if (position == 0) {
-                 Intent def = new Intent(WeeklyGain.this, ExercisesDay1.class);
+                    Intent def = new Intent(getApplication(), ExercisesPainInLegsDay1.class);
                     startActivity(def);
-                    Toast.makeText(WeeklyGain.this, "try1", Toast.LENGTH_SHORT).show();
+
 //                    Toast.makeText(Weekly.this, "" + position,
 //                            Toast.LENGTH_SHORT).show();
                 }
 
-                 else if (position == 1) {
-                    Intent defs = new Intent(WeeklyGain.this, ExercisesDay2.class);
+                else if (position == 1) {
+                    Intent defs = new Intent(getApplication(), Rest.class);
                     startActivity(defs);
-                    Toast.makeText(WeeklyGain.this, "try2", Toast.LENGTH_SHORT).show();
 
                 } else if (position == 2) {
-                    Intent def = new Intent(WeeklyGain.this, ExercisesDay3.class);
+                    Intent def = new Intent(getApplication(), ExercisesPainInLegsDay1.class);
                     startActivity(def);
-                    Toast.makeText(WeeklyGain.this, "try3", Toast.LENGTH_SHORT).show();
+
 
                 } else if (position == 3) {
-                    Intent def = new Intent(WeeklyGain.this, ExercisesDay4.class);
+                    Intent def = new Intent(getApplication(), Rest.class);
                     startActivity(def);
-                    Toast.makeText(WeeklyGain.this, "try4", Toast.LENGTH_SHORT).show();
+
                 }
 
             }
