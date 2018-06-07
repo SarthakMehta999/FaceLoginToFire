@@ -21,8 +21,6 @@ public class ExercisesDay3Lose extends AppCompatActivity {
 
 
 
-
-
         start = (Button) findViewById(R.id.startBtn14);
 
         start.setOnClickListener(new View.OnClickListener() {

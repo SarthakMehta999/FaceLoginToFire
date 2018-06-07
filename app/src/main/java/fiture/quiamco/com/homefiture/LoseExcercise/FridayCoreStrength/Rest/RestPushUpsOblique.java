@@ -16,9 +16,9 @@ import android.widget.TextView;
 import com.rilixtech.materialfancybutton.MaterialFancyButton;
 
 import at.markushi.ui.CircleButton;
-import fiture.quiamco.com.homefiture.LoseExcercise.FridayCoreStrength.Instructions.InsStarJumps;
 import fiture.quiamco.com.homefiture.LoseExcercise.FridayCoreStrength.PushUpsOblique;
 import fiture.quiamco.com.homefiture.R;
+import fiture.quiamco.com.homefiture.WeeklyLoseChestpain.Day5.InsThighSlapJumps;
 import fiture.quiamco.com.homefiture.models.CircleCountDownView;
 
 public class RestPushUpsOblique extends AppCompatActivity {
@@ -91,7 +91,7 @@ public class RestPushUpsOblique extends AppCompatActivity {
         finish.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View view) {
-                Intent intent = new Intent(RestPushUpsOblique.this, InsStarJumps.class);
+                Intent intent = new Intent(RestPushUpsOblique.this, InsThighSlapJumps.class);
                 startActivity(intent);
 
             }

@@ -393,7 +393,13 @@
             </intent-filter>
         </activity>
         <activity android:name=".WeeklyLoseChestpain.Day1.ChestPainDay1" />
-        <activity android:name=".ExerciseCategories.WeeklyLoseChestPain"></activity>
+        <activity android:name=".ExerciseCategories.WeeklyLoseChestPain" />
+        <activity android:name=".WeeklyLoseChestpain.Day2.ChestPainDay2" />
+        <activity android:name=".WeeklyLoseChestpain.Day3.ChestPainDay3" />
+        <activity android:name=".WeeklyLoseChestpain.Day4.ChestPainDay4" />
+        <activity android:name=".WeeklyLoseChestpain.Day5.ChestPainDay5" />
+        <activity android:name=".WeeklyLoseChestpain.Day6.ChestPainDay6" />
+        <activity android:name=".WeeklyLoseChestpain.Day7.ChestPainDay7"></activity>
     </application>
 
 </manifest>

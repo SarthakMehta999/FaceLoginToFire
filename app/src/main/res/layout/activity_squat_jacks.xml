@@ -24,15 +24,7 @@
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary">
 
-            <ImageView
-                android:layout_width="20dp"
-                android:id="@+id/homeIcon"
-                android:layout_height="25dp"
-                android:background="@drawable/homeicon"
-                android:layout_alignParentRight="true"
-                android:layout_gravity="right"
-                android:foregroundGravity="right"
-                android:paddingRight="45dp"/>
+
 
         </android.support.v7.widget.Toolbar>
 

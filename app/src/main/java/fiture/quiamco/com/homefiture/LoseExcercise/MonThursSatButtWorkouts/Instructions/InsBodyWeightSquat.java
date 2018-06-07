@@ -11,9 +11,9 @@ import android.view.View;
 import android.widget.Button;
 
 import at.markushi.ui.CircleButton;
-import fiture.quiamco.com.homefiture.ExerciseCategories.WeeklyLose;
 import fiture.quiamco.com.homefiture.LoseExcercise.MonThursSatButtWorkouts.BodyWeightSquat;
 import fiture.quiamco.com.homefiture.R;
+import fiture.quiamco.com.homefiture.WeeklyLoseChestpain.Day1.ChestPainDay1;
 
 public class InsBodyWeightSquat extends AppCompatActivity {
 
@@ -34,7 +34,7 @@ public class InsBodyWeightSquat extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent im = new Intent(InsBodyWeightSquat.this,WeeklyLose.class);
+                Intent im = new Intent(InsBodyWeightSquat.this,ChestPainDay1.class);
                 startActivity(im);
             }
         });
