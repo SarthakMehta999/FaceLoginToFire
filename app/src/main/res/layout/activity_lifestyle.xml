@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="800dp"
+    android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
 
     >
@@ -23,30 +23,30 @@
         <!--android:orientation="vertical"-->
         <!--app:layout_constraintGuide_percent="0.28" />-->
 
-        <RelativeLayout
-            android:id="@+id/linear"
-            android:layout_width="373dp"
-            android:layout_height="59dp"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:layout_editor_absoluteX="12dp">
+        <!--<RelativeLayout-->
+            <!--android:id="@+id/linear"-->
+            <!--android:layout_width="373dp"-->
+            <!--android:layout_height="59dp"-->
+            <!--app:layout_constraintHorizontal_bias="0.0"-->
+            <!--app:layout_constraintLeft_toLeftOf="parent"-->
+            <!--app:layout_constraintRight_toRightOf="parent"-->
+            <!--app:layout_constraintTop_toTopOf="parent"-->
+            <!--tools:layout_editor_absoluteX="12dp">-->
 
-            <TextView
-                android:id="@+id/lifestlyeText"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:elevation="1dp"
-                android:gravity="center_horizontal"
-                android:paddingTop="10dp"
-                android:text="Questions"
-                android:textColor="#cffebf"
-                android:textSize="32sp" />
+            <!--<TextView-->
+                <!--android:id="@+id/lifestlyeText"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_alignParentStart="true"-->
+                <!--android:layout_alignParentTop="true"-->
+                <!--android:elevation="1dp"-->
+                <!--android:gravity="center_horizontal"-->
+                <!--android:paddingTop="10dp"-->
+                <!--android:text="Questions"-->
+                <!--android:textColor="#cffebf"-->
+                <!--android:textSize="32sp" />-->
 
-        </RelativeLayout>
+        <!--</RelativeLayout>-->
 
 
         <TextView
@@ -179,29 +179,7 @@
         </RadioGroup>
 
 
-        <com.rilixtech.materialfancybutton.MaterialFancyButton
-            android:id="@+id/btnProceed"
-            android:layout_width="105dp"
-            android:layout_height="40dp"
-            android:layout_marginBottom="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginTop="520dp"
-            android:gravity="center_horizontal"
-            android:text="@string/proceed"
-            fancy:layout_constraintBottom_toBottomOf="parent"
-            fancy:layout_constraintHorizontal_bias="0.501"
-            fancy:layout_constraintLeft_toLeftOf="parent"
-            fancy:layout_constraintRight_toRightOf="parent"
-            fancy:layout_constraintTop_toTopOf="parent"
-            fancy:layout_constraintVertical_bias="0.433"
-            fancy:mfb_defaultColor="@color/colorPrimary"
-            fancy:mfb_focusColor="@color/backgroundforallscreen"
-            fancy:mfb_iconFont="fontawesome.ttf"
-            fancy:mfb_iconPosition="left"
-            fancy:mfb_radius="30dp"
-            fancy:mfb_text="Proceed"
-            fancy:mfb_textColor="#F5F5F5" />
+
 
         <RadioGroup
             android:id="@+id/rgGoal"
@@ -309,7 +287,27 @@
                 android:textColor="#F5F5F5"
                 android:layout_below="@+id/rbtnPain"/>
         </RelativeLayout>
+        <com.rilixtech.materialfancybutton.MaterialFancyButton
+            android:id="@+id/btnProceed"
+            android:layout_width="105dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="602dp"
+            android:gravity="center_horizontal"
+            android:text="@string/proceed"
 
+            fancy:layout_constraintHorizontal_bias="0.501"
+            fancy:layout_constraintLeft_toLeftOf="parent"
+            fancy:layout_constraintRight_toRightOf="parent"
+            fancy:layout_constraintTop_toTopOf="parent"
+            fancy:mfb_defaultColor="@color/colorPrimary"
+            fancy:mfb_focusColor="@color/backgroundforallscreen"
+            fancy:mfb_iconFont="fontawesome.ttf"
+            fancy:mfb_iconPosition="left"
+            fancy:mfb_radius="30dp"
+            fancy:mfb_text="Proceed"
+            fancy:mfb_textColor="#F5F5F5" />
 
     </android.support.constraint.ConstraintLayout>
 

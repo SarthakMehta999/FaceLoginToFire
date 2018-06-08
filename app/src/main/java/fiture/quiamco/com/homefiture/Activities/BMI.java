@@ -143,7 +143,7 @@ public class BMI extends AppCompatActivity {
                         height.setError("Please Input Value");
                         weight.setError("Please Input Value");
                     } else {
-                        Intent proc = new Intent(getApplication(), NavDrawer.class);
+                        Intent proc = new Intent(getApplication(), Lifestyle.class);
                         Bundle bundle = new Bundle();
                         bundle.putSerializable("user", user);
                         proc.putExtras(bundle);
@@ -165,7 +165,7 @@ public class BMI extends AppCompatActivity {
                         weight.setError("Please Input Value");
                     } else {
 
-                        Intent proc = new Intent(getApplication(), NavDrawer.class);
+                        Intent proc = new Intent(getApplication(), Lifestyle.class);
                         Bundle bundle = new Bundle();
                         bundle.putSerializable("user", user);
                         proc.putExtras(bundle);
@@ -184,7 +184,7 @@ public class BMI extends AppCompatActivity {
                         height.setError("Please Input Value");
                         weight.setError("Please Input Value");
                     } else {
-                        Intent proc = new Intent(getApplication(), NavDrawer.class);
+                        Intent proc = new Intent(getApplication(), Lifestyle.class);
                         Bundle bundle = new Bundle();
                         bundle.putSerializable("user", user);
                         proc.putExtras(bundle);
@@ -205,7 +205,7 @@ public class BMI extends AppCompatActivity {
                         weight.setError("Please Input Value");
                     } else {
 
-                        Intent proc = new Intent(getApplication(), NavDrawer.class);
+                        Intent proc = new Intent(getApplication(), Lifestyle.class);
                         Bundle bundle = new Bundle();
                         bundle.putSerializable("user", user);
                         proc.putExtras(bundle);
@@ -225,7 +225,7 @@ public class BMI extends AppCompatActivity {
                         weight.setError("Please Input Value");
                     } else {
 
-                        Intent proc = new Intent(getApplication(), NavDrawer.class);
+                        Intent proc = new Intent(getApplication(), Lifestyle.class);
                         Bundle bundle = new Bundle();
                         bundle.putSerializable("user", user);
                         proc.putExtras(bundle);
@@ -247,7 +247,7 @@ public class BMI extends AppCompatActivity {
                         weight.setError("Please Input Value");
                     } else {
 
-                        Intent proc = new Intent(getApplication(), NavDrawer.class);
+                        Intent proc = new Intent(getApplication(), Lifestyle.class);
                         Bundle bundle = new Bundle();
                         bundle.putSerializable("user", user);
                         proc.putExtras(bundle);
@@ -269,7 +269,7 @@ public class BMI extends AppCompatActivity {
                         weight.setError("Please Input Value");
                     } else {
 
-                        Intent proc = new Intent(getApplication(), NavDrawer.class);
+                        Intent proc = new Intent(getApplication(), Lifestyle.class);
                         Bundle bundle = new Bundle();
                         bundle.putSerializable("user", user);
                         proc.putExtras(bundle);
@@ -290,7 +290,7 @@ public class BMI extends AppCompatActivity {
                         weight.setError("Please Input Value");
                     } else {
 
-                        Intent proc = new Intent(getApplication(), NavDrawer.class);
+                        Intent proc = new Intent(getApplication(),Lifestyle.class);
                         Bundle bundle = new Bundle();
                         bundle.putSerializable("user", user);
                         proc.putExtras(bundle);

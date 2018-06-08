@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
@@ -86,8 +87,8 @@ public class Lifestyle extends AppCompatActivity {
 //        Log.d("asdasda",user.getfName());
 //        mRootRef = new Firebase("https://fiture-dfae4.firebaseio.com/");
 
-        TextView tv_hello = (TextView) findViewById(R.id.lifestlyeText);
-        tv_hello.setTypeface(EasyFonts.robotoThin(this));
+//        TextView tv_hello = (TextView) findViewById(R.id.lifestlyeText);
+//        tv_hello.setTypeface(EasyFonts.robotoThin(this));
 
         TextView textView = (TextView) findViewById(R.id.textView3);
         textView.setTypeface(EasyFonts.robotoThin(this));
@@ -126,25 +127,25 @@ public class Lifestyle extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(none.isChecked()){
-                    rapid.setChecked(false);
+
                     chest.setChecked(false);
-                    heart.setChecked(false);
+
                     pain.setChecked(false);
-                    dizziness.setChecked(false);
+
                     shortness.setChecked(false);
 
-                    rapid.setClickable(false);
+
                     chest.setClickable(false);
-                    heart.setClickable(false);
+
                     pain.setClickable(false);
-                    dizziness.setClickable(false);
+
                     shortness.setClickable(false);
                 }else{
-                    rapid.setClickable(true);
+
                     chest.setClickable(true);
-                    heart.setClickable(true);
+
                     pain.setClickable(true);
-                    dizziness.setClickable(true);
+
                     shortness.setClickable(true);
                 }
             }
@@ -162,7 +163,10 @@ public class Lifestyle extends AppCompatActivity {
 //                String value2 = moderate.getText().toString();
 ////                mRootRef.push().setValue(value1);
                 getSurveyResponses();
-                Intent proc = new Intent(Lifestyle.this, BMI.class);
+                Intent proc = new Intent(getApplication(), NavDrawer.class);
+                Bundle bundle = new Bundle();
+                bundle.putSerializable("user", user);
+                proc.putExtras(bundle);
                 startActivity(proc);
 
             }
@@ -271,7 +275,8 @@ public class Lifestyle extends AppCompatActivity {
         if (none.isChecked()) {
             illnesses.add("none");
         }
-
+        String joined = TextUtils.join(", ", illnesses);
+        Log.d("suree?",joined);
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference surveyResponseRef = database.getReference("UserSurveyResponses");
         if(surveyResponseRef.child(userId).equals(userId)){
@@ -290,7 +295,7 @@ public class Lifestyle extends AppCompatActivity {
 
         editor.putString("userFitnessResponse" ,fitnessResponse);
         editor.putString("userGoal",goalResponse);
-        editor.putString("userIlnesses", String.valueOf(illnesses));
+        editor.putString("userIllnesses", joined);
         editor.apply();
 
         Log.d("Responses",fitnessResponse+""+goalResponse+""+illnesses);

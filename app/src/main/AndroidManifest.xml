@@ -175,6 +175,8 @@
         <activity android:name=".GainExercisesForFemale.WalkingLunges" />
         <activity android:name=".GainExercisesForFemale.WalkingLunges2" />
         <activity android:name=".ExerciseCategories.WeeklyGain" />
+        <activity android:name=".ExerciseCategories.WeeklyGainChestpain" />
+        <activity android:name=".ExerciseCategories.WeeklyGainPainLegs" />
         <activity android:name=".DayOneandThreeWeeklyGainUpperBodyAbsExercises.Ready" />
         <activity android:name=".DayOneandThreeWeeklyGainUpperBodyAbsExercises.PushUp" />
         <activity android:name=".Activities.ExercisesDay1" />
@@ -399,7 +401,17 @@
         <activity android:name=".WeeklyLoseChestpain.Day4.ChestPainDay4" />
         <activity android:name=".WeeklyLoseChestpain.Day5.ChestPainDay5" />
         <activity android:name=".WeeklyLoseChestpain.Day6.ChestPainDay6" />
-        <activity android:name=".WeeklyLoseChestpain.Day7.ChestPainDay7"></activity>
+        <activity android:name=".WeeklyLoseChestpain.Day7.ChestPainDay7" />
+        <activity android:name=".ExerciseCategories.WeeklyLosePainInLegs" />
+        <activity android:name=".WeeklyLosePainInLegs.Day1" />
+        <activity android:name=".WeeklyLosePainInLegs.CalfStretch" />
+        <activity android:name=".WeeklyLosePainInLegs.Day1Instructions.InsCalfStretch" />
+        <activity android:name=".WeeklyLosePainInLegs.Quadriceps_Stretch" />
+        <activity android:name=".WeeklyLosePainInLegs.HamstringStretch" />
+        <activity android:name=".WeeklyLosePainInLegs.HipFlexorsStretch" />
+        <activity android:name=".WeeklyLosePainInLegs.Day1Instructions.InsQuadricepsStretch" />
+        <activity android:name=".WeeklyLosePainInLegs.Day1Instructions.InsHamstringStretch" />
+        <activity android:name=".WeeklyLosePainInLegs.Day1Instructions.InsHipFlexorsStretch"></activity>
     </application>
 
 </manifest>

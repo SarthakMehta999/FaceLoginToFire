@@ -5,11 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary"
-    tools:context="fiture.quiamco.com.homefiture.ExerciseCategories.WeeklyGainPainLegs">
+    tools:context="fiture.quiamco.com.homefiture.ExerciseCategories.WeeklyLosePainInLegs">
+
     <TextView
         android:layout_width="368dp"
         android:layout_height="0dp"
-        android:text="Weekly Gain Pained Legs"
+        android:text="Weekly Lose Pained Legs"
         android:textSize="30dp"
         android:textAlignment="center"
         android:textColor="@color/textColor"

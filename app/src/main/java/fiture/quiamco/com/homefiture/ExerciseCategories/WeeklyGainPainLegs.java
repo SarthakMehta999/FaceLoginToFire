@@ -1,10 +1,8 @@
 package fiture.quiamco.com.homefiture.ExerciseCategories;
 
-import android.app.FragmentManager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
@@ -21,7 +19,7 @@ public class WeeklyGainPainLegs extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_weekly_gain_pain_legs);
 
-        GridView gridview = (GridView) findViewById(R.id.gridview);
+        GridView gridview = (GridView) findViewById(R.id.gridview1);
         gridview.setAdapter(new WeeklyExercisesAdapter(this));
         gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View v,
@@ -51,17 +49,6 @@ public class WeeklyGainPainLegs extends AppCompatActivity {
 
             }
         });
-    }
-    @Override
-    public void onBackPressed(){
-        FragmentManager fm = getFragmentManager();
-        if (fm.getBackStackEntryCount() > 0) {
-            Log.i("MainActivity", "popping backstack");
-            fm.popBackStack();
-        } else {
-            Log.i("MainActivity", "nothing on backstack, calling super");
-            super.onBackPressed();
-        }
     }
 
 }
