@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="fiture.quiamco.com.homefiture.WeeklyLosePainInLegs.HamstringStretch"
-    android:background="#ffffff">
+    tools:context="fiture.quiamco.com.homefiture.LosePainInLegs.Day1.StraightLegRaises">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/appBarLayout"
@@ -49,7 +48,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:text="Hamstring Stretch"
+        android:text="Straight Leg Raises"
         android:textSize="30sp"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -82,7 +81,7 @@
     <pl.droidsonroids.gif.GifTextView
         android:layout_width="305dp"
         android:layout_height="165dp"
-        android:background="@drawable/hamstringstretch"
+        android:background="@drawable/straightlegraises"
         android:layout_marginRight="8dp"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginLeft="8dp"
@@ -112,3 +111,4 @@
         android:layout_marginBottom="8dp" />
 
 </android.support.constraint.ConstraintLayout>
+

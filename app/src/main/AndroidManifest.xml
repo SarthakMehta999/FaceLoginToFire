@@ -404,6 +404,122 @@
         <activity android:name=".WeeklyLoseChestpain.Day7.ChestPainDay7" />
         <activity android:name=".ExerciseCategories.WeeklyLosePainInLegs" />
         <activity android:name=".WeeklyLosePainInLegs.Day1" />
+        <activity android:name=".LosePainInLegs.Day1.LosePainInLegsDay1" />
+        <activity android:name=".LosePainInLegs.Day2.LosePainInLegsDay2" />
+        <activity android:name=".LosePainInLegs.Day3.LosePainInLegsDay3" />
+        <activity android:name=".LosePainInLegs.Day4.LosePainInLegsDay4" />
+        <activity android:name=".LosePainInLegs.Day5.LosePainInLegsDay5" />
+        <activity android:name=".LosePainInLegs.Day6.LosePainInLegsDay6" />
+        <activity android:name=".LosePainInLegs.Day7.LosePainInLegsDay7" />
+        <activity android:name=".LosePainInLegs.Day1.InsUpandDownsLosePainLegs" />
+        <activity android:name=".LosePainInLegs.Day2.InsUpandDownsLosePainLegs" />
+        <activity android:name=".LosePainInLegs.Day3.InsUpandDownsLosePainLegs" />
+        <activity android:name=".LosePainInLegs.Day4.InsUpandDownsLosePainLegs" />
+        <activity android:name=".LosePainInLegs.Day1.UpandDowns" />
+        <activity android:name=".LosePainInLegs.Day2.UpandDowns" />
+        <activity android:name=".LosePainInLegs.Day3.UpandDowns" />
+        <activity android:name=".LosePainInLegs.Day4.UpandDowns" />
+        <activity android:name=".LosePainInLegs.Day1.RestUpandDowns" />
+        <activity android:name=".LosePainInLegs.Day2.RestUpandDowns" />
+        <activity android:name=".LosePainInLegs.Day3.RestUpandDowns" />
+        <activity android:name=".LosePainInLegs.Day4.RestUpandDowns" />
+        <activity android:name=".LosePainInLegs.Day1.InsHamstringStretch" />
+        <activity android:name=".LosePainInLegs.Day2.InsHamstringStretch" />
+        <activity android:name=".LosePainInLegs.Day3.InsHamstringStretch" />
+        <activity android:name=".LosePainInLegs.Day4.InsHamstringStretch" />
+        <activity android:name=".LosePainInLegs.Day1.HamstringStretch" />
+        <activity android:name=".LosePainInLegs.Day2.HamstringStretch" />
+        <activity android:name=".LosePainInLegs.Day3.HamstringStretch" />
+        <activity android:name=".LosePainInLegs.Day4.HamstringStretch" />
+        <activity android:name=".LosePainInLegs.Day1.RestHamstringStretch" />
+        <activity android:name=".LosePainInLegs.Day2.RestHamstringStretch" />
+        <activity android:name=".LosePainInLegs.Day3.RestHamstringStretch" />
+        <activity android:name=".LosePainInLegs.Day4.RestHamstringStretch" />
+        <activity android:name=".LosePainInLegs.Day1.InsCalfRaises" />
+        <activity android:name=".LosePainInLegs.Day2.InsCalfRaises" />
+        <activity android:name=".LosePainInLegs.Day3.InsCalfRaises" />
+        <activity android:name=".LosePainInLegs.Day4.InsCalfRaises" />
+        <activity android:name=".LosePainInLegs.Day1.CalfRaises" />
+        <activity android:name=".LosePainInLegs.Day2.CalfRaises" />
+        <activity android:name=".LosePainInLegs.Day3.CalfRaises" />
+        <activity android:name=".LosePainInLegs.Day4.CalfRaises" />
+        <activity android:name=".LosePainInLegs.Day1.RestCalfRaises" />
+        <activity android:name=".LosePainInLegs.Day2.RestCalfRaises" />
+        <activity android:name=".LosePainInLegs.Day3.RestCalfRaises" />
+        <activity android:name=".LosePainInLegs.Day4.RestCalfRaises" />
+        <activity android:name=".LosePainInLegs.Day1.InsCalfStretch" />
+        <activity android:name=".LosePainInLegs.Day2.InsCalfStretch" />
+        <activity android:name=".LosePainInLegs.Day3.InsCalfStretch" />
+        <activity android:name=".LosePainInLegs.Day4.InsCalfStretch" />
+        <activity android:name=".LosePainInLegs.Day1.CalfStretch" />
+        <activity android:name=".LosePainInLegs.Day2.CalfStretch" />
+        <activity android:name=".LosePainInLegs.Day3.CalfStretch" />
+        <activity android:name=".LosePainInLegs.Day4.CalfStretch" />
+        <activity android:name=".LosePainInLegs.Day1.RestCalfStretch" />
+        <activity android:name=".LosePainInLegs.Day2.RestCalfStretch" />
+        <activity android:name=".LosePainInLegs.Day3.RestCalfStretch" />
+        <activity android:name=".LosePainInLegs.Day4.RestCalfStretch" />
+        <activity android:name=".LosePainInLegs.Day1.StraightLegRaises" />
+        <activity android:name=".LosePainInLegs.Day2.StraightLegRaises" />
+        <activity android:name=".LosePainInLegs.Day3.StraightLegRaises" />
+        <activity android:name=".LosePainInLegs.Day4.StraightLegRaises" />
+        <activity android:name=".LosePainInLegs.Day1.InsStraightLegRaise" />
+        <activity android:name=".LosePainInLegs.Day2.InsStraightLegRaise" />
+        <activity android:name=".LosePainInLegs.Day3.InsStraightLegRaise" />
+        <activity android:name=".LosePainInLegs.Day4.InsStraightLegRaise" />
+        <activity android:name=".LosePainInLegs.Day1.RestStraightLegRaises" />
+        <activity android:name=".LosePainInLegs.Day2.RestStraightLegRaises" />
+        <activity android:name=".LosePainInLegs.Day3.RestStraightLegRaises" />
+        <activity android:name=".LosePainInLegs.Day4.RestStraightLegRaises" />
+        <activity android:name=".LosePainInLegs.Day1.InsHamstringCurls" />
+        <activity android:name=".LosePainInLegs.Day2.InsHamstringCurls" />
+        <activity android:name=".LosePainInLegs.Day3.InsHamstringCurls" />
+        <activity android:name=".LosePainInLegs.Day4.InsHamstringCurls" />
+        <activity android:name=".LosePainInLegs.Day1.HamstringCurls" />
+        <activity android:name=".LosePainInLegs.Day2.HamstringCurls" />
+        <activity android:name=".LosePainInLegs.Day3.HamstringCurls" />
+        <activity android:name=".LosePainInLegs.Day4.HamstringCurls" />
+        <activity android:name=".LosePainInLegs.Day1.RestHamstringCurls" />
+        <activity android:name=".LosePainInLegs.Day2.RestHamstringCurls" />
+        <activity android:name=".LosePainInLegs.Day3.RestHamstringCurls" />
+        <activity android:name=".LosePainInLegs.Day4.RestHamstringCurls" />
+        <activity android:name=".LosePainInLegs.Day1.InsKneeRolls" />
+        <activity android:name=".LosePainInLegs.Day2.InsKneeRolls" />
+        <activity android:name=".LosePainInLegs.Day3.InsKneeRolls" />
+        <activity android:name=".LosePainInLegs.Day4.InsKneeRolls" />
+        <activity android:name=".ExerciseCategories.WeeklyLosePainLegs" />
+
+        <activity android:name=".LosePainInLegs.Day1.KneeRolls" />
+        <activity android:name=".LosePainInLegs.Day2.KneeRolls" />
+        <activity android:name=".LosePainInLegs.Day3.KneeRolls" />
+        <activity android:name=".LosePainInLegs.Day4.KneeRolls" />
+
+        <activity android:name=".LosePainInLegs.Day1.RestKneeRolls" />
+        <activity android:name=".LosePainInLegs.Day2.RestKneeRolls" />
+        <activity android:name=".LosePainInLegs.Day3.RestKneeRolls" />
+        <activity android:name=".LosePainInLegs.Day4.RestKneeRolls" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         <activity android:name=".WeeklyLosePainInLegs.CalfStretch" />
         <activity android:name=".WeeklyLosePainInLegs.Day1Instructions.InsCalfStretch" />
         <activity android:name=".WeeklyLosePainInLegs.Quadriceps_Stretch" />

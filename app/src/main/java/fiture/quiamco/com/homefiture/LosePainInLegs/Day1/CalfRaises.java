@@ -1,11 +1,11 @@
-package fiture.quiamco.com.homefiture.LoseExcercise.MonThursSatButtWorkouts;
+package fiture.quiamco.com.homefiture.LosePainInLegs.Day1;
 
 import android.content.Context;
 import android.content.Intent;
-import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
@@ -17,10 +17,10 @@ import com.rilixtech.materialfancybutton.MaterialFancyButton;
 
 import at.markushi.ui.CircleButton;
 import fiture.quiamco.com.homefiture.R;
-import fiture.quiamco.com.homefiture.WeeklyLoseChestpain.Day1.InsLying;
 import fiture.quiamco.com.homefiture.models.CircleCountDownView;
 
-public class RestBodyWeight extends AppCompatActivity {
+public class CalfRaises extends AppCompatActivity {
+
     private Handler mHandler = new Handler();
     public static final int ONE_MINUTE = 60000;
     final Context context = this;
@@ -62,7 +62,7 @@ public class RestBodyWeight extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_rest_body_weight);
+        setContentView(R.layout.activity_calf_raises);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.imToolbar);
         setSupportActionBar(toolbar);
@@ -73,7 +73,7 @@ public class RestBodyWeight extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent im = new Intent(RestBodyWeight.this,BodyWeightSquat.class);
+                Intent im = new Intent(CalfRaises.this,InsCalfRaises.class);
                 startActivity(im);
             }
         });
@@ -88,7 +88,7 @@ public class RestBodyWeight extends AppCompatActivity {
         finish.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View view) {
-                Intent intent = new Intent(RestBodyWeight.this, InsLying.class);
+                Intent intent = new Intent(CalfRaises.this, RestCalfRaises.class);
                 startActivity(intent);
 
             }

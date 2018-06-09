@@ -1,4 +1,4 @@
-package fiture.quiamco.com.homefiture.LoseExcercise.MonThursSatButtWorkouts;
+package fiture.quiamco.com.homefiture.LosePainInLegs.Day3;
 
 import android.content.Context;
 import android.content.Intent;
@@ -16,11 +16,12 @@ import android.widget.TextView;
 import com.rilixtech.materialfancybutton.MaterialFancyButton;
 
 import at.markushi.ui.CircleButton;
+import fiture.quiamco.com.homefiture.LosePainInLegs.Day1.LosePainInLegsDay1;
 import fiture.quiamco.com.homefiture.R;
-import fiture.quiamco.com.homefiture.WeeklyLoseChestpain.Day1.InsLying;
 import fiture.quiamco.com.homefiture.models.CircleCountDownView;
 
-public class RestBodyWeight extends AppCompatActivity {
+public class RestKneeRolls extends AppCompatActivity {
+
     private Handler mHandler = new Handler();
     public static final int ONE_MINUTE = 60000;
     final Context context = this;
@@ -59,10 +60,11 @@ public class RestBodyWeight extends AppCompatActivity {
     boolean stop = false;
     private volatile boolean isRunning = true;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_rest_body_weight);
+        setContentView(R.layout.activity_rest_knee_rolls);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.imToolbar);
         setSupportActionBar(toolbar);
@@ -73,7 +75,7 @@ public class RestBodyWeight extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent im = new Intent(RestBodyWeight.this,BodyWeightSquat.class);
+                Intent im = new Intent(RestKneeRolls.this,KneeRolls.class);
                 startActivity(im);
             }
         });
@@ -88,7 +90,7 @@ public class RestBodyWeight extends AppCompatActivity {
         finish.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View view) {
-                Intent intent = new Intent(RestBodyWeight.this, InsLying.class);
+                Intent intent = new Intent(RestKneeRolls.this, LosePainInLegsDay1.class);
                 startActivity(intent);
 
             }
