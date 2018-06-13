@@ -17,7 +17,8 @@ public class ExercisesDay4 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.exercisesday4);
 
-        start = (Button) findViewById(R.id.startBtn13);
+
+        start = (Button) findViewById(R.id.startBtn14);
 
         start.setOnClickListener(new View.OnClickListener() {
             @Override

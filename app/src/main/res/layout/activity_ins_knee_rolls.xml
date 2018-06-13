@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="fiture.quiamco.com.homefiture.LosePainInLegs.Day1.InsKneeRolls">
+  >
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/appBarLayout"
@@ -53,7 +53,7 @@
     <pl.droidsonroids.gif.GifTextView
         android:layout_width="307dp"
         android:layout_height="188dp"
-        android:background="@drawable/kneerolls"
+        android:background="@drawable/knee_tucks"
         android:layout_marginRight="8dp"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginLeft="8dp"

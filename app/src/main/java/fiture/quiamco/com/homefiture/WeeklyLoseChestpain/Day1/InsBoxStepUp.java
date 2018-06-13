@@ -16,6 +16,7 @@ import fiture.quiamco.com.homefiture.LoseExcercise.MonThursSatButtWorkouts.BoxSt
 import fiture.quiamco.com.homefiture.R;
 
 public class InsBoxStepUp extends AppCompatActivity {
+
     CircleButton finish;
     Button inst;
     final Context context = this;

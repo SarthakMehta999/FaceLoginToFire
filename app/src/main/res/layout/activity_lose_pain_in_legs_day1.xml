@@ -33,7 +33,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Day 1"
+            android:text="Monday"
             android:textAlignment="center"
             android:textSize="30sp"
             android:textStyle="bold" />
@@ -613,7 +613,7 @@
                                 android:layout_marginStart="8dp"
                                 android:layout_marginTop="8dp"
                                 android:scaleType="centerCrop"
-                                android:background="@drawable/kneerollslag"
+                                android:background="@drawable/knee_tucks"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toTopOf="parent"
@@ -675,6 +675,9 @@
                                 app:layout_constraintTop_toBottomOf="@+id/tvExerciseTitle1" />
 
                         </android.support.constraint.ConstraintLayout>
+
+
+
                     </android.support.v7.widget.CardView>
 
 

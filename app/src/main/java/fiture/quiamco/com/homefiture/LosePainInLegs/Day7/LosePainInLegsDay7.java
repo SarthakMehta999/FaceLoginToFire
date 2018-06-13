@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
+import fiture.quiamco.com.homefiture.ExerciseCategories.WeeklyLosePainLegs;
 import fiture.quiamco.com.homefiture.R;
 
 public class LosePainInLegsDay7 extends AppCompatActivity {
@@ -23,7 +24,7 @@ public class LosePainInLegsDay7 extends AppCompatActivity {
         start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplication(),LosePainInLegsDay7.class);
+                Intent intent = new Intent(getApplication(),WeeklyLosePainLegs.class);
                 startActivity(intent);
             }
         });

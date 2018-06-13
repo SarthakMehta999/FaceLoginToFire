@@ -43,7 +43,7 @@
     <pl.droidsonroids.gif.GifTextView
         android:layout_width="307dp"
         android:layout_height="188dp"
-        android:background="@drawable/bodyweightsquat"
+        android:background="@drawable/bodyweightsquatlose"
         android:layout_marginRight="8dp"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginLeft="8dp"

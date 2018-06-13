@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="fiture.quiamco.com.homefiture.WeeklyLosePainInLegs.Day1Instructions.InsHamstringStretch">
+    tools:context="fiture.quiamco.com.homefiture.LosePainInLegs.Day4.InsHamstringStretch">
     <android.support.design.widget.AppBarLayout
         android:id="@+id/appBarLayout"
         android:layout_width="368dp"

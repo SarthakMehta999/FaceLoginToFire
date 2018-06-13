@@ -38,8 +38,9 @@ import fiture.quiamco.com.homefiture.ExerciseCategories.WeeklyGainChestpain;
 import fiture.quiamco.com.homefiture.ExerciseCategories.WeeklyGainPainLegs;
 import fiture.quiamco.com.homefiture.ExerciseCategories.WeeklyLose;
 import fiture.quiamco.com.homefiture.ExerciseCategories.WeeklyLoseChestPain;
-import fiture.quiamco.com.homefiture.ExerciseCategories.WeeklyLosePainInLegs;
 import fiture.quiamco.com.homefiture.ExerciseCategories.WeeklyLosePainLegs;
+import fiture.quiamco.com.homefiture.ExerciseCategories.WeeklyLoseShortnessOfBreath;
+import fiture.quiamco.com.homefiture.ExerciseCategories.WeeklyMaintainChestPain;
 import fiture.quiamco.com.homefiture.R;
 import fiture.quiamco.com.homefiture.models.DailyChallengeModel;
 import fiture.quiamco.com.homefiture.models.Infos;
@@ -308,7 +309,7 @@ public class ProfileFragment extends Fragment {
                     start.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            Intent login = new Intent(getActivity(), WeeklyLosePainLegs.class);
+                            Intent login = new Intent(getActivity(), WeeklyLoseShortnessOfBreath.class);
                             startActivity(login);
                         }
                     });
@@ -396,7 +397,7 @@ public class ProfileFragment extends Fragment {
                     start.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            Intent login = new Intent(getActivity(), WeeklyLosePainInLegs.class);
+                            Intent login = new Intent(getActivity(), WeeklyLosePainLegs.class);
                             startActivity(login);
                         }
                     });
@@ -590,7 +591,7 @@ public class ProfileFragment extends Fragment {
                                 start.setOnClickListener(new View.OnClickListener() {
                                     @Override
                                     public void onClick(View v) {
-                                        Intent login = new Intent(getActivity(), WeeklyLosePainLegs.class);
+                                        Intent login = new Intent(getActivity(), WeeklyMaintainChestPain.class);
                                         startActivity(login);
                                     }
                                 });

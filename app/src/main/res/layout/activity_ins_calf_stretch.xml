@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ffff"
-    tools:context="fiture.quiamco.com.homefiture.WeeklyLosePainInLegs.Day1Instructions.InsCalfStretch">
+    tools:context="fiture.quiamco.com.homefiture.LosePainInLegs.Day1.InsCalfStretch">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/appBarLayout"
@@ -105,7 +105,7 @@
         app:layout_constraintBottom_toBottomOf="parent" />
 
     <at.markushi.ui.CircleButton
-        android:id="@+id/btnFinish"
+        android:id="@+id/btnFinish20"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_marginLeft="8dp"
