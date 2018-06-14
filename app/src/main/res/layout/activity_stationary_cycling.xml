@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:context="fiture.quiamco.com.homefiture.ShortnessOfBreathMaintain.Day1.StationaryCycling"
     android:background="#ffff" >
 
     <android.support.design.widget.AppBarLayout
@@ -43,10 +44,10 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:textColor="@color/bg_register"
-        android:layout_width="200dp"
-        android:layout_height="46dp"
-      android:textAlignment="center"
-        android:text="PULLUPS"
+        android:layout_width="214dp"
+        android:layout_height="72dp"
+        android:layout_centerHorizontal="true"
+        android:text="STATIONARY CYCLING"
         android:textSize="25sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -57,7 +58,7 @@
         app:layout_constraintTop_toBottomOf="@+id/toolbar2"
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginBottom="8dp"
-        app:layout_constraintVertical_bias="0.093" />
+        app:layout_constraintVertical_bias="0.035" />
 
 
 
@@ -79,9 +80,9 @@
 
 
     <pl.droidsonroids.gif.GifTextView
-        android:layout_width="222dp"
-        android:layout_height="224dp"
-        android:background="@drawable/pullups"
+        android:layout_width="254dp"
+        android:layout_height="191dp"
+        android:background="@drawable/stationary_cycling"
         android:layout_marginRight="8dp"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginLeft="8dp"
@@ -94,7 +95,6 @@
         android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginBottom="8dp"
-        app:layout_constraintVertical_bias="0.488"
-        tools:layout_editor_absoluteY="197dp" />
+        app:layout_constraintVertical_bias="0.489" />
 
 </android.support.constraint.ConstraintLayout>
