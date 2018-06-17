@@ -16,7 +16,7 @@ import android.widget.TextView;
 import com.rilixtech.materialfancybutton.MaterialFancyButton;
 
 import at.markushi.ui.CircleButton;
-import fiture.quiamco.com.homefiture.Endomorph.HighFrequency.Day1ChestandTriceps.Exercisesday1;
+import fiture.quiamco.com.homefiture.ExerciseCategories.WeeklyEndomorphHighFreq;
 import fiture.quiamco.com.homefiture.R;
 import fiture.quiamco.com.homefiture.models.CircleCountDownView;
 
@@ -74,7 +74,7 @@ public class BenchPressIncline extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent im = new Intent(BenchPressIncline.this,Exercisesday1.class);
+                Intent im = new Intent(BenchPressIncline.this,WeeklyEndomorphHighFreq.class);
                 startActivity(im);
             }
         });

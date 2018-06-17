@@ -11,7 +11,7 @@ import android.view.View;
 import android.widget.Button;
 
 import at.markushi.ui.CircleButton;
-import fiture.quiamco.com.homefiture.Activities.ExercisesDay1;
+import fiture.quiamco.com.homefiture.ExerciseCategories.WeeklyGain;
 import fiture.quiamco.com.homefiture.R;
 
 public class PushUp extends AppCompatActivity {
@@ -33,7 +33,7 @@ public class PushUp extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent im = new Intent(PushUp.this,ExercisesDay1.class);
+                Intent im = new Intent(PushUp.this,WeeklyGain.class);
                 startActivity(im);
             }
         });

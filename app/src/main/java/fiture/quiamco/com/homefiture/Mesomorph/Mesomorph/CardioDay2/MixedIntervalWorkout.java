@@ -74,7 +74,7 @@ public class MixedIntervalWorkout extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent im = new Intent(MixedIntervalWorkout.this,mesomorphday2.class);
+                Intent im = new Intent(MixedIntervalWorkout.this,WeeklyMesomorph.class);
                 startActivity(im);
             }
         });

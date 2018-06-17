@@ -74,7 +74,7 @@ public class LongJump extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent im = new Intent(LongJump.this,mesomorphday1.class);
+                Intent im = new Intent(LongJump.this,WeeklyMesomorph.class);
                 startActivity(im);
             }
         });

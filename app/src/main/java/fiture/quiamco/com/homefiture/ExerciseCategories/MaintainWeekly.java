@@ -6,7 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
-import android.widget.Toast;
 
 import fiture.quiamco.com.homefiture.Adapter.WeeklyExercisesAdapter;
 import fiture.quiamco.com.homefiture.Maintain.FriTotalBodyWrkout.StartFri;
@@ -39,30 +38,24 @@ public class MaintainWeekly extends AppCompatActivity {
                 else if (position == 1) {
                     Intent defs = new Intent(getApplication(), Exercisesday1.class);
                     startActivity(defs);
-                    Toast.makeText(getApplication(), "try2", Toast.LENGTH_SHORT).show();
 
                 } else if (position == 2) {
                     Intent def = new Intent(getApplication(), StarWed.class);
                     startActivity(def);
-                    Toast.makeText(getApplication(), "try3", Toast.LENGTH_SHORT).show();
 
                 } else if (position == 3) {
                     Intent def = new Intent(getApplication(), fiture.quiamco.com.homefiture.Maintain.ThuCardio.Exercisesday1.class);
                     startActivity(def);
-                    Toast.makeText(getApplication(), "try4", Toast.LENGTH_SHORT).show();
 
                 } else if (position == 4) {
                     Intent def = new Intent(getApplication(), StartFri.class);
                     startActivity(def);
-                    Toast.makeText(getApplication(), "try5", Toast.LENGTH_SHORT).show();
                 } else if (position == 5) {
                     Intent def = new Intent(getApplication(), fiture.quiamco.com.homefiture.Maintain.SatCardio.Exercisesday1.class);
                     startActivity(def);
-                    Toast.makeText(getApplication(), "try6", Toast.LENGTH_SHORT).show();
                 } else if (position == 6) {
                     Intent def = new Intent(getApplication(), Rest.class);
                     startActivity(def);
-                    Toast.makeText(getApplication(), "try6", Toast.LENGTH_SHORT).show();
 
                 }
             }

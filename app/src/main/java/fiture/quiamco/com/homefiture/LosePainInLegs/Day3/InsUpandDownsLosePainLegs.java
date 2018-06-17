@@ -11,7 +11,7 @@ import android.view.View;
 import android.widget.Button;
 
 import at.markushi.ui.CircleButton;
-import fiture.quiamco.com.homefiture.LosePainInLegs.Day2.LosePainInLegsDay2;
+import fiture.quiamco.com.homefiture.ExerciseCategories.WeeklyLosePainLegs;
 import fiture.quiamco.com.homefiture.R;
 
 public class InsUpandDownsLosePainLegs extends AppCompatActivity {
@@ -34,7 +34,7 @@ public class InsUpandDownsLosePainLegs extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent im = new Intent(InsUpandDownsLosePainLegs.this,LosePainInLegsDay2.class);
+                Intent im = new Intent(InsUpandDownsLosePainLegs.this,WeeklyLosePainLegs.class);
                 startActivity(im);
             }
         });

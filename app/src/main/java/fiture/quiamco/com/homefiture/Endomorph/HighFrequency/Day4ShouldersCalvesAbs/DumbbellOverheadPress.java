@@ -16,6 +16,7 @@ import android.widget.TextView;
 import com.rilixtech.materialfancybutton.MaterialFancyButton;
 
 import at.markushi.ui.CircleButton;
+import fiture.quiamco.com.homefiture.ExerciseCategories.WeeklyEndomorphHighFreq;
 import fiture.quiamco.com.homefiture.R;
 import fiture.quiamco.com.homefiture.models.CircleCountDownView;
 
@@ -73,7 +74,7 @@ public class DumbbellOverheadPress extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent im = new Intent(DumbbellOverheadPress.this,DumbbellOverheadPress.class);
+                Intent im = new Intent(DumbbellOverheadPress.this,WeeklyEndomorphHighFreq.class);
                 startActivity(im);
             }
         });

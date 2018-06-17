@@ -16,9 +16,9 @@ import android.widget.TextView;
 import com.rilixtech.materialfancybutton.MaterialFancyButton;
 
 import at.markushi.ui.CircleButton;
+import fiture.quiamco.com.homefiture.ExerciseCategories.WeeklyLose;
 import fiture.quiamco.com.homefiture.LoseExcercise.TuesdayHeartCardio.ModeratePaceJog;
 import fiture.quiamco.com.homefiture.R;
-import fiture.quiamco.com.homefiture.WeeklyLoseChestpain.Day2.ChestPainDay2;
 import fiture.quiamco.com.homefiture.models.CircleCountDownView;
 
 public class RestModeratePace extends AppCompatActivity {
@@ -90,7 +90,7 @@ public class RestModeratePace extends AppCompatActivity {
         finish.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View view) {
-                Intent intent = new Intent(RestModeratePace.this, ChestPainDay2.class);
+                Intent intent = new Intent(RestModeratePace.this, WeeklyLose.class);
                 startActivity(intent);
 
             }

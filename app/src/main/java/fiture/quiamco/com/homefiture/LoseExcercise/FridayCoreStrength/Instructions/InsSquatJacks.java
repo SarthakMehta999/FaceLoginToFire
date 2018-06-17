@@ -11,7 +11,7 @@ import android.view.View;
 import android.widget.Button;
 
 import at.markushi.ui.CircleButton;
-import fiture.quiamco.com.homefiture.LoseExcercise.ExercisesDay.ExercisesDay5Lose;
+import fiture.quiamco.com.homefiture.ExerciseCategories.WeeklyLose;
 import fiture.quiamco.com.homefiture.LoseExcercise.FridayCoreStrength.SquatJacks;
 import fiture.quiamco.com.homefiture.R;
 
@@ -35,7 +35,7 @@ public class InsSquatJacks extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent im = new Intent(InsSquatJacks.this,ExercisesDay5Lose.class);
+                Intent im = new Intent(InsSquatJacks.this,WeeklyLose.class);
                 startActivity(im);
             }
         });

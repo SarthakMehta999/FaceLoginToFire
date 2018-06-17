@@ -6,7 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
-import android.widget.Toast;
 
 import fiture.quiamco.com.homefiture.Adapter.WeeklyExercisesAdapter;
 import fiture.quiamco.com.homefiture.Endomorph.HighFrequency.Day1ChestandTriceps.Exercisesday1;
@@ -33,7 +32,6 @@ public class WeeklyEndomorphHighFreq extends AppCompatActivity {
                 if (position == 0) {
                     Intent def = new Intent(WeeklyEndomorphHighFreq.this, Exercisesday1.class);
                     startActivity(def);
-                    Toast.makeText(WeeklyEndomorphHighFreq.this, "try1", Toast.LENGTH_SHORT).show();
 //                    Toast.makeText(Weekly.this, "" + position,
 //                            Toast.LENGTH_SHORT).show();
                 }
@@ -41,30 +39,24 @@ public class WeeklyEndomorphHighFreq extends AppCompatActivity {
                 else if (position == 1) {
                     Intent defs = new Intent(WeeklyEndomorphHighFreq.this, Exercisesday2.class);
                     startActivity(defs);
-                    Toast.makeText(WeeklyEndomorphHighFreq.this, "try2", Toast.LENGTH_SHORT).show();
 
                 } else if (position == 2) {
                     Intent def = new Intent(WeeklyEndomorphHighFreq.this, Exercisesday3.class);
                     startActivity(def);
-                    Toast.makeText(WeeklyEndomorphHighFreq.this, "try3", Toast.LENGTH_SHORT).show();
 
                 } else if (position == 3) {
                     Intent def = new Intent(WeeklyEndomorphHighFreq.this, exercisesday4.class);
                     startActivity(def);
-                    Toast.makeText(WeeklyEndomorphHighFreq.this, "try4", Toast.LENGTH_SHORT).show();
 
                 } else if (position == 4) {
                     Intent def = new Intent(WeeklyEndomorphHighFreq.this, exercisesday5.class);
                     startActivity(def);
-                    Toast.makeText(WeeklyEndomorphHighFreq.this, "", Toast.LENGTH_SHORT).show();
                 } else if (position == 5) {
                     Intent def = new Intent(WeeklyEndomorphHighFreq.this, exerciseday6.class);
                     startActivity(def);
-                    Toast.makeText(WeeklyEndomorphHighFreq.this, "", Toast.LENGTH_SHORT).show();
                 } else if (position == 6) {
                     Intent def = new Intent(WeeklyEndomorphHighFreq.this, RestDay.class);
                     startActivity(def);
-                    Toast.makeText(WeeklyEndomorphHighFreq.this, "", Toast.LENGTH_SHORT).show();
 
                 }
             }

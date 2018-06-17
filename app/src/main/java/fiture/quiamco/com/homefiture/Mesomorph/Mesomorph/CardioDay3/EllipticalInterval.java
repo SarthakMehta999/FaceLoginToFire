@@ -75,7 +75,7 @@ public class EllipticalInterval extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent im = new Intent(EllipticalInterval.this,mesomorphday3.class);
+                Intent im = new Intent(EllipticalInterval.this,WeeklyMesomorph.class);
                 startActivity(im);
             }
         });

@@ -6,13 +6,15 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
-import android.widget.Toast;
 
 import fiture.quiamco.com.homefiture.Activities.ExercisesDay1;
 import fiture.quiamco.com.homefiture.Activities.ExercisesDay2;
 import fiture.quiamco.com.homefiture.Activities.ExercisesDay3;
 import fiture.quiamco.com.homefiture.Activities.ExercisesDay4;
 import fiture.quiamco.com.homefiture.Adapter.WeeklyExercisesAdapter;
+import fiture.quiamco.com.homefiture.DayOneandThreeWeeklyGainUpperBodyAbsExercises.ExercisesDay5;
+import fiture.quiamco.com.homefiture.DayOneandThreeWeeklyGainUpperBodyAbsExercises.ExercisesDay6;
+import fiture.quiamco.com.homefiture.DayOneandThreeWeeklyGainUpperBodyAbsExercises.ExercisesDay7;
 import fiture.quiamco.com.homefiture.R;
 
 public class WeeklyGain extends AppCompatActivity {
@@ -38,22 +40,31 @@ public class WeeklyGain extends AppCompatActivity {
                  else if (position == 1) {
                     Intent defs = new Intent(WeeklyGain.this, ExercisesDay2.class);
                     startActivity(defs);
-                    Toast.makeText(WeeklyGain.this, "try2", Toast.LENGTH_SHORT).show();
 
                 } else if (position == 2) {
                     Intent def = new Intent(WeeklyGain.this, ExercisesDay3.class);
                     startActivity(def);
-                    Toast.makeText(WeeklyGain.this, "try3", Toast.LENGTH_SHORT).show();
 
                 } else if (position == 3) {
                     Intent def = new Intent(WeeklyGain.this, ExercisesDay4.class);
                     startActivity(def);
-                    Toast.makeText(WeeklyGain.this, "try4", Toast.LENGTH_SHORT).show();
-                }
 
-            }
-        });
+                } else if (position == 4) {
+                Intent def = new Intent(getApplication(), ExercisesDay5.class);
+                startActivity(def);
+
+                } else if (position == 5) {
+                Intent def = new Intent(getApplication(), ExercisesDay6.class);
+                startActivity(def);
+
+                } else if (position == 6) {
+                Intent def = new Intent(getApplication(), ExercisesDay7.class);
+                startActivity(def);
+
+
+        }
     }
+});
+        }
 
-
-}
+        }

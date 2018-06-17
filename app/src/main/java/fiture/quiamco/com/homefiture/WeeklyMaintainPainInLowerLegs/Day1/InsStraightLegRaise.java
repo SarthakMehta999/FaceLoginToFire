@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.Button;
 
 import at.markushi.ui.CircleButton;
+import fiture.quiamco.com.homefiture.ExerciseCategories.WeeklyMaintainPainInLowerLegs;
 import fiture.quiamco.com.homefiture.R;
 
 public class InsStraightLegRaise extends AppCompatActivity {
@@ -33,7 +34,7 @@ public class InsStraightLegRaise extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent im = new Intent(getApplication(),Day1MaintainPainLowerLegs.class);
+                Intent im = new Intent(getApplication(),WeeklyMaintainPainInLowerLegs.class);
                 startActivity(im);
             }
         });

@@ -16,7 +16,7 @@ import android.widget.TextView;
 import com.rilixtech.materialfancybutton.MaterialFancyButton;
 
 import at.markushi.ui.CircleButton;
-import fiture.quiamco.com.homefiture.Ectomorph.LayoutEcto.ectomorphday1exercises;
+import fiture.quiamco.com.homefiture.ExerciseCategories.WeeklyEctomorph;
 import fiture.quiamco.com.homefiture.R;
 import fiture.quiamco.com.homefiture.models.CircleCountDownView;
 
@@ -74,7 +74,7 @@ public class DumbellBenchPress extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent im = new Intent(DumbellBenchPress.this,ectomorphday1exercises.class);
+                Intent im = new Intent(DumbellBenchPress.this,WeeklyEctomorph.class);
                 startActivity(im);
             }
         });

@@ -16,6 +16,7 @@ import android.widget.TextView;
 import com.rilixtech.materialfancybutton.MaterialFancyButton;
 
 import at.markushi.ui.CircleButton;
+import fiture.quiamco.com.homefiture.ExerciseCategories.WeeklyEctomorph;
 import fiture.quiamco.com.homefiture.R;
 import fiture.quiamco.com.homefiture.models.CircleCountDownView;
 
@@ -73,7 +74,7 @@ public class Crunch extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent im = new Intent(Crunch.this,HighRepAbDays.class);
+                Intent im = new Intent(Crunch.this,WeeklyEctomorph.class);
                 startActivity(im);
             }
         });

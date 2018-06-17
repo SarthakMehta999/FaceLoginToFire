@@ -3,15 +3,15 @@ package fiture.quiamco.com.homefiture.DayTwoandFourWeeklyGainLowerBodyCardio;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 
 import at.markushi.ui.CircleButton;
-import fiture.quiamco.com.homefiture.Activities.ExercisesDay1;
+import fiture.quiamco.com.homefiture.ExerciseCategories.WeeklyGain;
 import fiture.quiamco.com.homefiture.R;
 
 public class BodyWeightsSquats extends AppCompatActivity {
@@ -34,7 +34,7 @@ public class BodyWeightsSquats extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent im = new Intent(BodyWeightsSquats.this,ExercisesDay1.class);
+                Intent im = new Intent(BodyWeightsSquats.this,WeeklyGain.class);
                 startActivity(im);
             }
         });
