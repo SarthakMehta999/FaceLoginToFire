@@ -40,6 +40,8 @@ public class Lifestyle extends AppCompatActivity {
     private RadioGroup fitness, workout, goal;
     private User user;
     String value;
+    String bmiLabel;
+    TextView goalTextView;
     private Infos infos;
     //    DatabaseReference databaseReference;
     private DatabaseReference userAns;
@@ -74,7 +76,7 @@ public class Lifestyle extends AppCompatActivity {
         String height = sharedPreferences.getString("userHeight", "");
         String weight = sharedPreferences.getString("userWeight", "");
         String BMI = sharedPreferences.getString("userBMI", "");
-        String bmiLabel = sharedPreferences.getString("userBMILabel", "");
+        bmiLabel = sharedPreferences.getString("userBMILabel", "");
         Log.d("atayakayawa", points + "shit");
 
         Log.d("testingzz", "weight: " + weight);
@@ -94,8 +96,7 @@ public class Lifestyle extends AppCompatActivity {
         textView.setTypeface(EasyFonts.robotoThin(this));
         TextView textView1 = (TextView) findViewById(R.id.textView6);
         textView1.setTypeface(EasyFonts.robotoThin(this));
-        TextView textView2 = (TextView) findViewById(R.id.textView7);
-        textView2.setTypeface(EasyFonts.robotoThin(this));
+
         findViews();
 
 
@@ -103,6 +104,11 @@ public class Lifestyle extends AppCompatActivity {
 
     private void findViews() {
         //Activity
+
+
+         goalTextView = (TextView) findViewById(R.id.textView7);
+        goalTextView.setTypeface(EasyFonts.robotoThin(this));
+
         fitness = (RadioGroup) findViewById(R.id.rgFitness);
         not = (RadioButton) findViewById(R.id.rbtnNot);
         light = (RadioButton) findViewById(rbtnLight);
@@ -150,6 +156,29 @@ public class Lifestyle extends AppCompatActivity {
                 }
             }
         });
+
+
+        if (bmiLabel.equals("Overweight")){
+            goalTextView.setVisibility(View.GONE);
+            gain.setVisibility(View.GONE);
+            lose.setVisibility(View.GONE);
+            maintain.setVisibility(View.GONE);
+
+        }
+        else if(bmiLabel.equals("Underweight"))
+        {
+            goalTextView.setVisibility(View.GONE);
+            gain.setVisibility(View.GONE);
+            lose.setVisibility(View.GONE);
+            maintain.setVisibility(View.GONE);
+        }
+        else {
+
+            goalTextView.setVisibility(View.VISIBLE);
+            gain.setVisibility(View.VISIBLE);
+            lose.setVisibility(View.VISIBLE);
+            maintain.setVisibility(View.VISIBLE);
+        }
 
 //        value = light.getText().toString();
 //
@@ -277,6 +306,7 @@ public class Lifestyle extends AppCompatActivity {
         }
         String joined = TextUtils.join(", ", illnesses);
         Log.d("suree?",joined);
+
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference surveyResponseRef = database.getReference("UserSurveyResponses");
         if(surveyResponseRef.child(userId).equals(userId)){

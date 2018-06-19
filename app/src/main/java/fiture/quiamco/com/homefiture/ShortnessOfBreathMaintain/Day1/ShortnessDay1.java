@@ -24,5 +24,7 @@ public class ShortnessDay1 extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
     }
 }

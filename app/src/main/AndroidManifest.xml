@@ -516,6 +516,9 @@
         <activity android:name=".ExerciseCategories.WeeklyGainShortness" />
         <activity android:name=".ShortnessGain.Sday2.ShortnessGainDay2"></activity>
         <activity android:name=".Activities.SplashActivity"/>
+        <activity android:name=".GainChestpain.Rest1"/>
+        <activity android:name=".GainChestpain.Rest2"/>
+        <activity android:name=".GainChestpain.Rest3"/>
     </application>
 
 </manifest>

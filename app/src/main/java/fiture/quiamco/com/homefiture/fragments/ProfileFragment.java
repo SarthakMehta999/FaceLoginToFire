@@ -32,14 +32,16 @@ import java.util.List;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 import fiture.quiamco.com.homefiture.Adapter.DailyChallengeAdapter;
-import fiture.quiamco.com.homefiture.ExerciseCategories.MaintainWeekly;
 import fiture.quiamco.com.homefiture.ExerciseCategories.WeeklyGain;
 import fiture.quiamco.com.homefiture.ExerciseCategories.WeeklyGainChestpain;
 import fiture.quiamco.com.homefiture.ExerciseCategories.WeeklyGainPainLegs;
+import fiture.quiamco.com.homefiture.ExerciseCategories.WeeklyGainShortness;
 import fiture.quiamco.com.homefiture.ExerciseCategories.WeeklyLose;
 import fiture.quiamco.com.homefiture.ExerciseCategories.WeeklyLoseChestPain;
 import fiture.quiamco.com.homefiture.ExerciseCategories.WeeklyLosePainLegs;
+import fiture.quiamco.com.homefiture.ExerciseCategories.WeeklyLoseShortnessOfBreath;
 import fiture.quiamco.com.homefiture.ExerciseCategories.WeeklyMaintainChestPain;
+import fiture.quiamco.com.homefiture.ExerciseCategories.WeeklyShortnessForMaintain;
 import fiture.quiamco.com.homefiture.R;
 import fiture.quiamco.com.homefiture.models.DailyChallengeModel;
 import fiture.quiamco.com.homefiture.models.Infos;
@@ -49,7 +51,7 @@ import fiture.quiamco.com.homefiture.models.User;
  * Created by User on 02/09/2017.
  */
 
-public class ProfileFragment extends Fragment {
+public class    ProfileFragment extends Fragment {
 
     private ShareDialog shareDialog;
     private String TAG = "ProfileFragment";
@@ -278,13 +280,40 @@ public class ProfileFragment extends Fragment {
 
         if(bmiLabel.equals("Normal")) {
             if (goal.equals("maintain weight")) {
-                start.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Intent login = new Intent(getActivity(), MaintainWeekly.class);
-                        startActivity(login);
-                    }
-                });
+                if (ilness.equals("chest pain")) {
+                    start.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent login = new Intent(getActivity(), WeeklyMaintainChestPain.class);
+                            startActivity(login);
+                        }
+
+                    });
+                }else if(ilness.equals("shortness of breath")){
+                    start.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent login = new Intent(getActivity(), WeeklyShortnessForMaintain.class);
+                            startActivity(login);
+                        }
+                    });
+                }else if(ilness.equals("pain in the lower legs")){
+                    start.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent login = new Intent(getActivity(), WeeklyLosePainLegs.class);
+                            startActivity(login);
+                        }
+                    });
+                }else {
+                    start.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent login = new Intent(getActivity(), WeeklyLose.class);
+                            startActivity(login);
+                        }
+                    });
+                }
             }else if(goal.equals("lose weight")) {
 
                 if (ilness.equals("chest pain")) {
@@ -365,248 +394,52 @@ public class ProfileFragment extends Fragment {
 //////Overweight
 
         if(bmiLabel.equals("Overweight")) {
-            if (goal.equals("maintain weight")) {
+
+
+            if (ilness.equals("chest pain")) {
                 start.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent login = new Intent(getActivity(), MaintainWeekly.class);
+                        Intent login = new Intent(getActivity(), WeeklyLoseChestPain.class);
+                        startActivity(login);
+                    }
+
+                });
+            } else if (ilness.equals("shortness of breath")) {
+                start.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent login = new Intent(getActivity(), WeeklyLoseShortnessOfBreath.class);
                         startActivity(login);
                     }
                 });
-            }else if(goal.equals("lose weight")) {
-
-                if (ilness.equals("chest pain")) {
-                    start.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            Intent login = new Intent(getActivity(), WeeklyLoseChestPain.class);
-                            startActivity(login);
-                        }
-
-                    });
-                }else if(ilness.equals("shortness of breath")){
-                    start.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            Intent login = new Intent(getActivity(), WeeklyLose.class);
-                            startActivity(login);
-                        }
-                    });
-                }else if(ilness.equals("pain in the lower legs")){
-                    start.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            Intent login = new Intent(getActivity(), WeeklyLosePainLegs.class);
-                            startActivity(login);
-                        }
-                    });
-                }else{
-                    start.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            Intent login = new Intent(getActivity(), WeeklyLose.class);
-                            startActivity(login);
-                        }
-                    });
-                }
-            }else if(goal.equals("gain more")) {
-                if (ilness.equals("chest pain")) {
-                    start.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            Intent login = new Intent(getActivity(), WeeklyGainChestpain.class);
-                            startActivity(login);
-                        }
-                    });
-                } else if (ilness.equals("shortness of breath")) {
-                    start.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            Intent login = new Intent(getActivity(), WeeklyGain.class);
-                            startActivity(login);
-                        }
-                    });
-                } else if (ilness.equals("pain in the lower legs")) {
-                    start.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            Intent login = new Intent(getActivity(), WeeklyGainPainLegs.class);
-                            startActivity(login);
-                        }
-                    });
-                } else {
-                    start.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            Intent login = new Intent(getActivity(), WeeklyGain.class);
-                            startActivity(login);
-                        }
-                    });
-                }
+            } else if (ilness.equals("pain in the lower legs")) {
+                start.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent login = new Intent(getActivity(), WeeklyLosePainLegs.class);
+                        startActivity(login);
+                    }
+                });
+            } else {
+                start.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent login = new Intent(getActivity(), WeeklyLose.class);
+                        startActivity(login);
+                    }
+                });
             }
+
+
         }
 
-//        switch (bmiLabel) {
-//            case "Overweight":
-//                switch (goal) {
-//                    case "maintain weight":
-//                        start.setOnClickListener(new View.OnClickListener() {
-//                            @Override
-//                            public void onClick(View v) {
-//                                Intent login = new Intent(getActivity(), MaintainWeekly.class);
-//                                startActivity(login);
-//                            }
-//                        });
-//                        break;
-//                    case "lose weight":
-////
-//                        switch (ilness) {
-//                            case "chest pain":
-//                                start.setOnClickListener(new View.OnClickListener() {
-//                                    @Override
-//                                    public void onClick(View v) {
-//                                        Intent login = new Intent(getActivity(), WeeklyLoseChestPain.class);
-//                                        startActivity(login);
-//                                    }
-//                                });
-//                                break;
-//                            case "shortness of breath":
-//                                start.setOnClickListener(new View.OnClickListener() {
-//                                    @Override
-//                                    public void onClick(View v) {
-//                                        Intent login = new Intent(getActivity(), WeeklyLose.class);
-//                                        startActivity(login);
-//                                    }
-//                                });
-//                                break;
-//                            case "pain in the lower legs":
-//                                start.setOnClickListener(new View.OnClickListener() {
-//                                    @Override
-//                                    public void onClick(View v) {
-//                                        Intent login = new Intent(getActivity(), WeeklyLosePainInLegs.class);
-//                                        startActivity(login);
-//                                    }
-//                                });
-//                                break;
-//                            default:
-//                                start.setOnClickListener(new View.OnClickListener() {
-//                                    @Override
-//                                    public void onClick(View v) {
-//                                        Intent login = new Intent(getActivity(), WeeklyLose.class);
-//                                        startActivity(login);
-//                                    }
-//                                });
-//                                break;
-//
-//                        }
-//                    case "gain more":
-//                        switch (ilness) {
-//                            case "chest pain":
-//                                start.setOnClickListener(new View.OnClickListener() {
-//                                    @Override
-//                                    public void onClick(View v) {
-//                                        Intent login = new Intent(getActivity(), WeeklyGainChestpain.class);
-//                                        startActivity(login);
-//                                    }
-//                                });
-//                                break;
-//                            case "shortness of breath":
-//                                start.setOnClickListener(new View.OnClickListener() {
-//                                    @Override
-//                                    public void onClick(View v) {
-//                                        Intent login = new Intent(getActivity(), WeeklyGain.class);
-//                                        startActivity(login);
-//                                    }
-//                                });
-//                                break;
-//                            case "pain in the lower legs":
-//                                start.setOnClickListener(new View.OnClickListener() {
-//                                    @Override
-//                                    public void onClick(View v) {
-//                                        Intent login = new Intent(getActivity(), WeeklyGainPainLegs.class);
-//                                        startActivity(login);
-//                                    }
-//                                });
-//                                break;
-//                            default:
-//                                start.setOnClickListener(new View.OnClickListener() {
-//                                    @Override
-//                                    public void onClick(View v) {
-//                                        Intent login = new Intent(getActivity(), WeeklyGain.class);
-//                                        startActivity(login);
-//                                    }
-//                                });
-//                                break;
-//
-//                        }
-//                        break;
-//
-//                }
 
-//                    case "Overweight":
-////                        start.setOnClickListener(new View.OnClickListener() {
-////                            @Override
-////                            public void onClick(View v) {
-////                                Intent login = new Intent(getActivity(), WeeklyGainChestpain.class);
-////                                startActivity(login);
-////                            }
-////                        });
 
     //Underweight
         switch (bmiLabel) {
             case "Underweight":
-                switch (goal) {
-                    case "maintain weight":
-                        start.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View v) {
-                                Intent login = new Intent(getActivity(), MaintainWeekly.class);
-                                startActivity(login);
-                            }
-                        });
-                        break;
-                    case "lose weight":
-//
-                        switch (ilness) {
-                            case "chest pain":
-                                start.setOnClickListener(new View.OnClickListener() {
-                                    @Override
-                                    public void onClick(View v) {
-                                        Intent login = new Intent(getActivity(), WeeklyLoseChestPain.class);
-                                        startActivity(login);
-                                    }
-                                });
-                                break;
-                            case "shortness of breath":
-                                start.setOnClickListener(new View.OnClickListener() {
-                                    @Override
-                                    public void onClick(View v) {
-                                        Intent login = new Intent(getActivity(), WeeklyLose.class);
-                                        startActivity(login);
-                                    }
-                                });
-                                break;
-                            case "pain in the lower legs":
-                                start.setOnClickListener(new View.OnClickListener() {
-                                    @Override
-                                    public void onClick(View v) {
-                                        Intent login = new Intent(getActivity(), WeeklyMaintainChestPain.class);
-                                        startActivity(login);
-                                    }
-                                });
-                                break;
-                            default:
-                                start.setOnClickListener(new View.OnClickListener() {
-                                    @Override
-                                    public void onClick(View v) {
-                                        Intent login = new Intent(getActivity(), WeeklyLose.class);
-                                        startActivity(login);
-                                    }
-                                });
-                                break;
-                        }
 
-                    case "gain more":
                         switch (ilness) {
                             case "chest pain":
                                 start.setOnClickListener(new View.OnClickListener() {
@@ -621,7 +454,7 @@ public class ProfileFragment extends Fragment {
                                 start.setOnClickListener(new View.OnClickListener() {
                                     @Override
                                     public void onClick(View v) {
-                                        Intent login = new Intent(getActivity(), WeeklyGain.class);
+                                        Intent login = new Intent(getActivity(), WeeklyGainShortness.class);
                                         startActivity(login);
                                     }
                                 });
@@ -648,201 +481,7 @@ public class ProfileFragment extends Fragment {
                         }
                         break;
                 }
-        }
-//                        switch (goal) {
-//                            case "maintain weight":
-//                                start.setOnClickListener(new View.OnClickListener() {
-//                                    @Override
-//                                    public void onClick(View v) {
-//                                        Intent login = new Intent(getActivity(), MaintainWeekly.class);
-//                                        startActivity(login);
-//                                    }
-//                                });
-//                                break;
-//                            case "lose weight":
-//                                switch (ilness) {
-//                                    case "chest pain":
-//                                        start.setOnClickListener(new View.OnClickListener() {
-//                                            @Override
-//                                            public void onClick(View v) {
-//                                                Intent login = new Intent(getActivity(), WeeklyLoseChestPain.class);
-//                                                startActivity(login);
-//                                            }
-//                                        });
-//                                        break;
-//                                    case "shortness of breath":
-//                                        start.setOnClickListener(new View.OnClickListener() {
-//                                            @Override
-//                                            public void onClick(View v) {
-//                                                Intent login = new Intent(getActivity(), WeeklyLose.class);
-//                                                startActivity(login);
-//                                            }
-//                                        });
-//                                        break;
-//                                    case "pain in the lower legs":
-//                                        start.setOnClickListener(new View.OnClickListener() {
-//                                            @Override
-//                                            public void onClick(View v) {
-//                                                Intent login = new Intent(getActivity(), WeeklyLosePainInLegs.class);
-//                                                startActivity(login);
-//                                            }
-//                                        });
-//                                        break;
-//                                    default:
-//                                        start.setOnClickListener(new View.OnClickListener() {
-//                                            @Override
-//                                            public void onClick(View v) {
-//                                                Intent login = new Intent(getActivity(), WeeklyLose.class);
-//                                                startActivity(login);
-//                                            }
-//                                        });
-//                                        break;
-//                                }
-//                            case "gain more":
-//                                switch (ilness) {
-//                                    case "chest pain":
-//                                        start.setOnClickListener(new View.OnClickListener() {
-//                                            @Override
-//                                            public void onClick(View v) {
-//                                                Intent login = new Intent(getActivity(), WeeklyGainChestpain.class);
-//                                                startActivity(login);
-//                                            }
-//                                        });
-//                                        break;
-//                                    case "shortness of breath":
-//                                        start.setOnClickListener(new View.OnClickListener() {
-//                                            @Override
-//                                            public void onClick(View v) {
-//                                                Intent login = new Intent(getActivity(), WeeklyGain.class);
-//                                                startActivity(login);
-//                                            }
-//                                        });
-//                                        break;
-//                                    case "pain in the lower legs":
-//                                        start.setOnClickListener(new View.OnClickListener() {
-//                                            @Override
-//                                            public void onClick(View v) {
-//                                                Intent login = new Intent(getActivity(), WeeklyGainPainLegs.class);
-//                                                startActivity(login);
-//                                            }
-//                                        });
-//                                        break;
-//                                    default:
-//                                        start.setOnClickListener(new View.OnClickListener() {
-//                                            @Override
-//                                            public void onClick(View v) {
-//                                                Intent login = new Intent(getActivity(), WeeklyGain.class);
-//                                                startActivity(login);
-//                                            }
-//                                        });
-//                                        break;
-//
-//                                }
-//                        }
-//                        break;
-//                    case "Normal":
-//
-//                        switch (goal) {
-//                            case "maintain weight":
-//                                start.setOnClickListener(new View.OnClickListener() {
-//                                    @Override
-//                                    public void onClick(View v) {
-//                                        Intent login = new Intent(getActivity(), MaintainWeekly.class);
-//                                        startActivity(login);
-//                                    }
-//                                });
-//                                break;
-//                            case "lose weight":
-//                                switch (ilness) {
-//                                    case "chest pain":
-//                                        start.setOnClickListener(new View.OnClickListener() {
-//                                            @Override
-//                                            public void onClick(View v) {
-//                                                Intent login = new Intent(getActivity(), WeeklyLoseChestPain.class);
-//                                                startActivity(login);
-//                                            }
-//                                        });
-//                                        break;
-//                                    case "shortness of breath":
-//                                        start.setOnClickListener(new View.OnClickListener() {
-//                                            @Override
-//                                            public void onClick(View v) {
-//                                                Intent login = new Intent(getActivity(), WeeklyLose.class);
-//                                                startActivity(login);
-//                                            }
-//                                        });
-//                                        break;
-//                                    case "pain in the lower legs":
-//                                        start.setOnClickListener(new View.OnClickListener() {
-//                                            @Override
-//                                            public void onClick(View v) {
-//                                                Intent login = new Intent(getActivity(), WeeklyLosePainInLegs.class);
-//                                                startActivity(login);
-//                                            }
-//                                        });
-//                                        break;
-//                                    default:
-//                                        start.setOnClickListener(new View.OnClickListener() {
-//                                            @Override
-//                                            public void onClick(View v) {
-//                                                Intent login = new Intent(getActivity(), WeeklyLose.class);
-//                                                startActivity(login);
-//                                            }
-//                                        });
-//                                        break;
-//                                }
-//                            case "gain more":
-//                                switch (ilness) {
-//                                    case "chest pain":
-//                                        start.setOnClickListener(new View.OnClickListener() {
-//                                            @Override
-//                                            public void onClick(View v) {
-//                                                Intent login = new Intent(getActivity(), WeeklyGainChestpain.class);
-//                                                startActivity(login);
-//                                            }
-//                                        });
-//                                        break;
-//                                    case "shortness of breath":
-//                                        start.setOnClickListener(new View.OnClickListener() {
-//                                            @Override
-//                                            public void onClick(View v) {
-//                                                Intent login = new Intent(getActivity(), WeeklyGain.class);
-//                                                startActivity(login);
-//                                            }
-//                                        });
-//                                        break;
-//                                    case "pain in the lower legs":
-//                                        start.setOnClickListener(new View.OnClickListener() {
-//                                            @Override
-//                                            public void onClick(View v) {
-//                                                Intent login = new Intent(getActivity(), WeeklyGainPainLegs.class);
-//                                                startActivity(login);
-//                                            }
-//                                        });
-//                                        break;
-//                                    default:
-//                                        start.setOnClickListener(new View.OnClickListener() {
-//                                            @Override
-//                                            public void onClick(View v) {
-//                                                Intent login = new Intent(getActivity(), WeeklyGain.class);
-//                                                startActivity(login);
-//                                            }
-//                                        });
-//                                        break;
-//
-//                                }
-//                        }
 
-
-//                            default:
-//                                start.setOnClickListener(new View.OnClickListener() {
-//                                    @Override
-//                                    public void onClick(View v) {
-//                                        Intent login = new Intent(getActivity(), TotalBodyCircuitExercises.class);
-//                                        startActivity(login);
-//                                    }
-//                                });
-//                                break;
 
                         challenge.setOnClickListener(new View.OnClickListener() {
                             @Override

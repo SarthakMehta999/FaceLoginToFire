@@ -11,7 +11,6 @@ import android.view.View;
 import android.widget.Button;
 
 import at.markushi.ui.CircleButton;
-import fiture.quiamco.com.homefiture.DayOneandThreeWeeklyGainUpperBodyAbsExercises.ReadyPullups;
 import fiture.quiamco.com.homefiture.ExerciseCategories.WeeklyGainChestpain;
 import fiture.quiamco.com.homefiture.R;
 
@@ -47,7 +46,7 @@ public class Pullups extends AppCompatActivity {
         finish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Pullups.this,ReadyPullups.class);
+                Intent intent = new Intent(Pullups.this,Rest3.class);
                 startActivity(intent);
             }
         });

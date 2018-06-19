@@ -10,10 +10,12 @@ import fiture.quiamco.com.homefiture.R;
 
 public class SlowWalk extends AppCompatActivity {
     CircleButton finish;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_slow_walk);
+
 
         finish.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -22,5 +24,6 @@ public class SlowWalk extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
     }
 }
