@@ -11,7 +11,7 @@ import android.view.View;
 import android.widget.Button;
 
 import at.markushi.ui.CircleButton;
-import fiture.quiamco.com.homefiture.LoseExcercise.FridayCoreStrength.HighKness;
+import fiture.quiamco.com.homefiture.ExerciseCategories.WeeklyLoseChestPain;
 import fiture.quiamco.com.homefiture.R;
 
 public class InsHighKnees extends AppCompatActivity {
@@ -34,7 +34,7 @@ public class InsHighKnees extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent im = new Intent(InsHighKnees.this,InsSquatsLegSide.class);
+                Intent im = new Intent(InsHighKnees.this,WeeklyLoseChestPain.class);
                 startActivity(im);
             }
         });
@@ -47,7 +47,7 @@ public class InsHighKnees extends AppCompatActivity {
         finish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(InsHighKnees.this,HighKness.class);
+                Intent intent = new Intent(InsHighKnees.this, fiture.quiamco.com.homefiture.WeeklyLoseChestpain.Day5.HighKness.class);
                 startActivity(intent);
             }
         });

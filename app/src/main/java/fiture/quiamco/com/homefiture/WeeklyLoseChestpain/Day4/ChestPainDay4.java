@@ -22,7 +22,7 @@ public class ChestPainDay4 extends AppCompatActivity {
         start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplication(), fiture.quiamco.com.homefiture.LoseExcercise.MonThursSatButtWorkouts.Instructions.InsBodyWeightSquat.class);
+                Intent intent = new Intent(getApplication(),InsBodyWeightSquat .class);
                 startActivity(intent);
             }
         });

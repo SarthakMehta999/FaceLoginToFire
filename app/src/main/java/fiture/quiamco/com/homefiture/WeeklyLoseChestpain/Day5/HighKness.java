@@ -16,8 +16,7 @@ import android.widget.TextView;
 import com.rilixtech.materialfancybutton.MaterialFancyButton;
 
 import at.markushi.ui.CircleButton;
-import fiture.quiamco.com.homefiture.LoseExcercise.FridayCoreStrength.Instructions.InsHighKnees;
-import fiture.quiamco.com.homefiture.LoseExcercise.FridayCoreStrength.Rest.RestHighKness;
+import fiture.quiamco.com.homefiture.ExerciseCategories.WeeklyLoseChestPain;
 import fiture.quiamco.com.homefiture.R;
 import fiture.quiamco.com.homefiture.models.CircleCountDownView;
 
@@ -74,7 +73,7 @@ public class HighKness extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent im = new Intent(HighKness.this,InsHighKnees.class);
+                Intent im = new Intent(HighKness.this,WeeklyLoseChestPain.class);
                 startActivity(im);
             }
         });
@@ -89,7 +88,7 @@ public class HighKness extends AppCompatActivity {
         finish.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View view) {
-                Intent intent = new Intent(HighKness.this, RestHighKness.class);
+                Intent intent = new Intent(HighKness.this, fiture.quiamco.com.homefiture.WeeklyLoseChestpain.Day5.RestHighKness.class);
                 startActivity(intent);
 
             }

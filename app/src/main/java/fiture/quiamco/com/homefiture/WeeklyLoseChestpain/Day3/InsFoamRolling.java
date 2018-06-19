@@ -12,7 +12,6 @@ import android.widget.Button;
 
 import at.markushi.ui.CircleButton;
 import fiture.quiamco.com.homefiture.ExerciseCategories.WeeklyLoseChestPain;
-import fiture.quiamco.com.homefiture.LoseExcercise.WednesdayCardioLunges.FoamRolling;
 import fiture.quiamco.com.homefiture.R;
 
 public class InsFoamRolling extends AppCompatActivity {
@@ -47,7 +46,7 @@ public class InsFoamRolling extends AppCompatActivity {
         finish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(InsFoamRolling.this,FoamRolling.class);
+                Intent intent = new Intent(InsFoamRolling.this, fiture.quiamco.com.homefiture.WeeklyLoseChestpain.Day3.FoamRolling.class);
                 startActivity(intent);
             }
         });

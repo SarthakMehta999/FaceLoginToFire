@@ -18,8 +18,7 @@ import com.rilixtech.materialfancybutton.MaterialFancyButton;
 
 import at.markushi.ui.CircleButton;
 import fiture.quiamco.com.homefiture.ExerciseCategories.WeeklyGain;
-import fiture.quiamco.com.homefiture.LoseExcercise.FridayCoreStrength.Instructions.InsSquatJacks;
-import fiture.quiamco.com.homefiture.LoseExcercise.FridayCoreStrength.Rest.RestSquatjacks;
+import fiture.quiamco.com.homefiture.ExerciseCategories.WeeklyLoseChestPain;
 import fiture.quiamco.com.homefiture.R;
 import fiture.quiamco.com.homefiture.models.CircleCountDownView;
 
@@ -78,7 +77,7 @@ public class SquatJacks extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent im = new Intent(SquatJacks.this,InsSquatJacks.class);
+                Intent im = new Intent(SquatJacks.this,WeeklyLoseChestPain.class);
                 startActivity(im);
             }
         });
@@ -102,7 +101,7 @@ public class SquatJacks extends AppCompatActivity {
         finish.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View view) {
-                Intent intent = new Intent(SquatJacks.this, RestSquatjacks.class);
+                Intent intent = new Intent(SquatJacks.this, fiture.quiamco.com.homefiture.WeeklyLoseChestpain.Day5.RestSquatjacks.class);
                 startActivity(intent);
 
             }

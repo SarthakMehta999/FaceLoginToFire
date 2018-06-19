@@ -16,7 +16,7 @@ import android.widget.TextView;
 import com.rilixtech.materialfancybutton.MaterialFancyButton;
 
 import at.markushi.ui.CircleButton;
-import fiture.quiamco.com.homefiture.LoseExcercise.MonThursSatButtWorkouts.BodyWeightSquat;
+import fiture.quiamco.com.homefiture.ExerciseCategories.WeeklyLoseChestPain;
 import fiture.quiamco.com.homefiture.LoseExcercise.MonThursSatButtWorkouts.Instructions.InsDumbellBench;
 import fiture.quiamco.com.homefiture.R;
 import fiture.quiamco.com.homefiture.models.CircleCountDownView;
@@ -73,7 +73,7 @@ public class RestBodyWeight extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent im = new Intent(RestBodyWeight.this,BodyWeightSquat.class);
+                Intent im = new Intent(RestBodyWeight.this,WeeklyLoseChestPain.class);
                 startActivity(im);
             }
         });
@@ -88,7 +88,7 @@ public class RestBodyWeight extends AppCompatActivity {
         finish.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View view) {
-                Intent intent = new Intent(RestBodyWeight.this, InsDumbellBench.class);
+                Intent intent = new Intent(RestBodyWeight.this, InsLying.class);
                 startActivity(intent);
 
             }

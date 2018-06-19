@@ -16,8 +16,7 @@ import android.widget.TextView;
 import com.rilixtech.materialfancybutton.MaterialFancyButton;
 
 import at.markushi.ui.CircleButton;
-import fiture.quiamco.com.homefiture.LoseExcercise.MonThursSatButtWorkouts.BoxStepUp;
-import fiture.quiamco.com.homefiture.LoseExcercise.MonThursSatButtWorkouts.Instructions.InsPlank;
+import fiture.quiamco.com.homefiture.ExerciseCategories.WeeklyLoseChestPain;
 import fiture.quiamco.com.homefiture.R;
 import fiture.quiamco.com.homefiture.models.CircleCountDownView;
 
@@ -75,7 +74,7 @@ public class RestBoxStepUp extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent im = new Intent(RestBoxStepUp.this,BoxStepUp.class);
+                Intent im = new Intent(RestBoxStepUp.this,WeeklyLoseChestPain.class);
                 startActivity(im);
             }
         });
@@ -90,7 +89,7 @@ public class RestBoxStepUp extends AppCompatActivity {
         finish.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View view) {
-                Intent intent = new Intent(RestBoxStepUp.this, InsPlank.class);
+                Intent intent = new Intent(RestBoxStepUp.this, WeeklyLoseChestPain.class);
                 startActivity(intent);
 
             }

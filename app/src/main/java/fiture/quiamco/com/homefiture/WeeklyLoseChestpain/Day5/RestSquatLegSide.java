@@ -16,8 +16,7 @@ import android.widget.TextView;
 import com.rilixtech.materialfancybutton.MaterialFancyButton;
 
 import at.markushi.ui.CircleButton;
-import fiture.quiamco.com.homefiture.LoseExcercise.FridayCoreStrength.Instructions.InsHighKnees;
-import fiture.quiamco.com.homefiture.LoseExcercise.FridayCoreStrength.SquatsLegSide;
+import fiture.quiamco.com.homefiture.ExerciseCategories.WeeklyLoseChestPain;
 import fiture.quiamco.com.homefiture.R;
 import fiture.quiamco.com.homefiture.models.CircleCountDownView;
 
@@ -76,7 +75,7 @@ public class RestSquatLegSide extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent im = new Intent(RestSquatLegSide.this,SquatsLegSide.class);
+                Intent im = new Intent(RestSquatLegSide.this,WeeklyLoseChestPain.class);
                 startActivity(im);
             }
         });
@@ -91,7 +90,7 @@ public class RestSquatLegSide extends AppCompatActivity {
         finish.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View view) {
-                Intent intent = new Intent(RestSquatLegSide.this, InsHighKnees.class);
+                Intent intent = new Intent(RestSquatLegSide.this, fiture.quiamco.com.homefiture.WeeklyLoseChestpain.Day5.InsHighKnees.class);
                 startActivity(intent);
 
             }

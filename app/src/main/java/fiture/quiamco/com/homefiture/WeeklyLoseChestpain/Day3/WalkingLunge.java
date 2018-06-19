@@ -16,8 +16,7 @@ import android.widget.TextView;
 import com.rilixtech.materialfancybutton.MaterialFancyButton;
 
 import at.markushi.ui.CircleButton;
-import fiture.quiamco.com.homefiture.LoseExcercise.WednesdayCardioLunges.Instructions.InsWalkingLunge;
-import fiture.quiamco.com.homefiture.LoseExcercise.WednesdayCardioLunges.Rest.RestWalkingLunge;
+import fiture.quiamco.com.homefiture.ExerciseCategories.WeeklyLoseChestPain;
 import fiture.quiamco.com.homefiture.R;
 import fiture.quiamco.com.homefiture.models.CircleCountDownView;
 
@@ -74,7 +73,7 @@ public class WalkingLunge extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent im = new Intent(WalkingLunge.this,InsWalkingLunge.class);
+                Intent im = new Intent(WalkingLunge.this,WeeklyLoseChestPain.class);
                 startActivity(im);
             }
         });
@@ -89,7 +88,7 @@ public class WalkingLunge extends AppCompatActivity {
         finish.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View view) {
-                Intent intent = new Intent(WalkingLunge.this, RestWalkingLunge.class);
+                Intent intent = new Intent(WalkingLunge.this, fiture.quiamco.com.homefiture.WeeklyLoseChestpain.Day3.RestWalkingLunge.class);
                 startActivity(intent);
 
             }

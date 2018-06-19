@@ -11,8 +11,7 @@ import android.view.View;
 import android.widget.Button;
 
 import at.markushi.ui.CircleButton;
-import fiture.quiamco.com.homefiture.LoseExcercise.MonThursSatButtWorkouts.LyingIsometricycling;
-import fiture.quiamco.com.homefiture.LoseExcercise.MonThursSatButtWorkouts.RestBentOver;
+import fiture.quiamco.com.homefiture.ExerciseCategories.WeeklyLoseChestPain;
 import fiture.quiamco.com.homefiture.R;
 
 public class InsLying extends AppCompatActivity {
@@ -33,7 +32,7 @@ public class InsLying extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent im = new Intent(InsLying.this,RestBentOver.class);
+                Intent im = new Intent(InsLying.this,WeeklyLoseChestPain.class);
                 startActivity(im);
             }
         });
@@ -45,7 +44,7 @@ public class InsLying extends AppCompatActivity {
         finish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(InsLying.this,LyingIsometricycling.class);
+                Intent intent = new Intent(InsLying.this, fiture.quiamco.com.homefiture.WeeklyLoseChestpain.Day1.LyingIsometricycling.class);
                 startActivity(intent);
             }
         });

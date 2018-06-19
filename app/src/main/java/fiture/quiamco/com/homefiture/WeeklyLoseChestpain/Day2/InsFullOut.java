@@ -11,7 +11,7 @@ import android.view.View;
 import android.widget.Button;
 
 import at.markushi.ui.CircleButton;
-import fiture.quiamco.com.homefiture.LoseExcercise.TuesdayHeartCardio.FullOutSprint;
+import fiture.quiamco.com.homefiture.ExerciseCategories.WeeklyLoseChestPain;
 import fiture.quiamco.com.homefiture.R;
 
 public class InsFullOut extends AppCompatActivity {
@@ -33,7 +33,7 @@ public class InsFullOut extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent im = new Intent(InsFullOut.this,ChestPainDay2.class);
+                Intent im = new Intent(InsFullOut.this,WeeklyLoseChestPain.class);
                 startActivity(im);
             }
         });
@@ -46,7 +46,7 @@ public class InsFullOut extends AppCompatActivity {
         finish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(InsFullOut.this,FullOutSprint.class);
+                Intent intent = new Intent(InsFullOut.this, fiture.quiamco.com.homefiture.WeeklyLoseChestpain.Day2.FullOutSprint.class);
                 startActivity(intent);
             }
         });

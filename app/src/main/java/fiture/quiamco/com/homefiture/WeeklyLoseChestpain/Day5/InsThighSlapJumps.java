@@ -11,8 +11,7 @@ import android.view.View;
 import android.widget.Button;
 
 import at.markushi.ui.CircleButton;
-import fiture.quiamco.com.homefiture.LoseExcercise.FridayCoreStrength.Rest.RestMtClimb;
-import fiture.quiamco.com.homefiture.LoseExcercise.FridayCoreStrength.ThighSlapJumps;
+import fiture.quiamco.com.homefiture.ExerciseCategories.WeeklyLoseChestPain;
 import fiture.quiamco.com.homefiture.R;
 
 public class InsThighSlapJumps extends AppCompatActivity {
@@ -35,7 +34,7 @@ public class InsThighSlapJumps extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent im = new Intent(InsThighSlapJumps.this,RestPushUpsOblique.class);
+                Intent im = new Intent(InsThighSlapJumps.this,WeeklyLoseChestPain.class);
                 startActivity(im);
             }
         });
@@ -48,7 +47,7 @@ public class InsThighSlapJumps extends AppCompatActivity {
         finish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(InsThighSlapJumps.this,ThighSlapJumps.class);
+                Intent intent = new Intent(InsThighSlapJumps.this, fiture.quiamco.com.homefiture.WeeklyLoseChestpain.Day5.ThighSlapJumps.class);
                 startActivity(intent);
             }
         });
