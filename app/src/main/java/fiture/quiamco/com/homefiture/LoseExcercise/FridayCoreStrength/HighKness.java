@@ -74,7 +74,7 @@ public class HighKness extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent im = new Intent(HighKness.this,InsHighKnees.class);
+                Intent im = new Intent(getApplication(),InsHighKnees.class);
                 startActivity(im);
             }
         });
@@ -89,7 +89,7 @@ public class HighKness extends AppCompatActivity {
         finish.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View view) {
-                Intent intent = new Intent(HighKness.this, RestHighKness.class);
+                Intent intent = new Intent(getApplication(), RestHighKness.class);
                 startActivity(intent);
 
             }

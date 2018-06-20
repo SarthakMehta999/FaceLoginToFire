@@ -312,10 +312,10 @@ public class BMI extends AppCompatActivity {
         SharedPreferences sharedPreferences = getSharedPreferences("FitureUser", Context.MODE_PRIVATE);
         final SharedPreferences.Editor editor = sharedPreferences.edit();
 
-        Log.d("testingzz","weight: " + weightStr +" "+"kg");
-        Log.d("testingzz","height: " + heightStr);
-        Log.d("testingzz","bmi: " + String.valueOf(bmi));
-        Log.d("testingzz","bmi label:" + bmiLabel);
+        Log.d("testing","weight: " + weightStr +" "+"kg");
+        Log.d("testing","height: " + heightStr);
+        Log.d("testing","bmi: " + String.valueOf(bmi));
+        Log.d("testing","bmi label:" + bmiLabel);
 
         editor.putString("userWeight" ,weightStr + " "+"kg");
         editor.putString("userHeight",heightStr +" "+"cm");

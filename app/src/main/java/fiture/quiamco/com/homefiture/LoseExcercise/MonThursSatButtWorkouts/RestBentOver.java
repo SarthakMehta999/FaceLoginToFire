@@ -74,7 +74,7 @@ public class RestBentOver extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent im = new Intent(RestBentOver.this,RestBentOver.class);
+                Intent im = new Intent(RestBentOver.this,ReadyBentOver.class);
                 startActivity(im);
             }
         });
@@ -124,7 +124,7 @@ public class RestBentOver extends AppCompatActivity {
 //        cancelTimerBt.setVisibility(View.VISIBLE); // show cancel button
 
         progress = 1;
-        endTime = 1; // up to finish time
+        endTime = 5; // up to finish time
         minutes = endTime-1;
         time= endTime*60;
 

@@ -17,6 +17,7 @@ import com.rilixtech.materialfancybutton.MaterialFancyButton;
 
 import at.markushi.ui.CircleButton;
 import fiture.quiamco.com.homefiture.ExerciseCategories.WeeklyGainChestpain;
+import fiture.quiamco.com.homefiture.ExerciseCategories.WeeklyGainPainLegs;
 import fiture.quiamco.com.homefiture.R;
 import fiture.quiamco.com.homefiture.models.CircleCountDownView;
 
@@ -89,7 +90,7 @@ public class Rest3 extends AppCompatActivity {
         finish.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View view) {
-                Intent intent = new Intent(Rest3.this, WeeklyGainChestpain.class);
+                Intent intent = new Intent(Rest3.this, WeeklyGainPainLegs.class);
                 startActivity(intent);
 
 
@@ -125,7 +126,7 @@ public class Rest3 extends AppCompatActivity {
 //        cancelTimerBt.setVisibility(View.VISIBLE); // show cancel button
 
         progress = 1;
-        endTime = 1; // up to finish time
+        endTime = 5; // up to finish time
         minutes = endTime-1;
         time= endTime*60;
 

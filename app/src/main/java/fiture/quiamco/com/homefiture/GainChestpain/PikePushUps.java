@@ -34,7 +34,7 @@ public class PikePushUps extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent im = new Intent(PikePushUps.this,WeeklyGainChestpain.class);
+                Intent im = new Intent(getApplication(),WeeklyGainChestpain.class);
                 startActivity(im);
             }
         });
@@ -43,11 +43,11 @@ public class PikePushUps extends AppCompatActivity {
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         inst = (Button) findViewById(R.id.dialog);
-        finish = (CircleButton)findViewById(R.id.btnFinish);
+        finish = (CircleButton)findViewById(R.id.btnFinish44);
         finish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(PikePushUps.this,Rest2.class);
+                Intent intent = new Intent(getApplication(), Rest2.class);
                 startActivity(intent);
             }
         });
@@ -70,6 +70,8 @@ public class PikePushUps extends AppCompatActivity {
                                 // if this button is clicked, close
                                 // current activity
 
+
+
                             }
                         });
 
@@ -81,7 +83,5 @@ public class PikePushUps extends AppCompatActivity {
             }
 
         });
-
     }
 }
-

@@ -12,6 +12,7 @@ import android.widget.Button;
 
 import at.markushi.ui.CircleButton;
 import fiture.quiamco.com.homefiture.DayOneandThreeWeeklyGainUpperBodyAbsExercises.ReadyAbCircuits;
+import fiture.quiamco.com.homefiture.ExerciseCategories.WeeklyGainPainLegs;
 import fiture.quiamco.com.homefiture.R;
 
 public class AbCircuits extends AppCompatActivity {
@@ -35,7 +36,7 @@ public class AbCircuits extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent im = new Intent(AbCircuits.this,ExercisesPainInLegsDay1.class);
+                Intent im = new Intent(AbCircuits.this,WeeklyGainPainLegs.class);
                 startActivity(im);
             }
         });

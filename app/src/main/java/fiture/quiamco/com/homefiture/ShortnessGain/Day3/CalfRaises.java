@@ -73,7 +73,7 @@ public class CalfRaises extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent im = new Intent(CalfRaises.this,Ocrunch.class);
+                Intent im = new Intent(CalfRaises.this,Hopping.class);
                 startActivity(im);
             }
         });
@@ -88,7 +88,7 @@ public class CalfRaises extends AppCompatActivity {
         finish.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View view) {
-                Intent intent = new Intent(CalfRaises.this, Hopping.class);
+                Intent intent = new Intent(CalfRaises.this, SideLift.class);
                 startActivity(intent);
 
             }
