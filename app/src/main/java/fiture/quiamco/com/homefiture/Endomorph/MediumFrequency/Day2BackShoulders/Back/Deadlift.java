@@ -16,7 +16,7 @@ import android.widget.TextView;
 import com.rilixtech.materialfancybutton.MaterialFancyButton;
 
 import at.markushi.ui.CircleButton;
-import fiture.quiamco.com.homefiture.Endomorph.MediumFrequency.Day2BackShoulders.exercisesday2med;
+import fiture.quiamco.com.homefiture.ExerciseCategories.WeeklyEndomorphMedFreq;
 import fiture.quiamco.com.homefiture.R;
 import fiture.quiamco.com.homefiture.models.CircleCountDownView;
 
@@ -74,7 +74,7 @@ public class Deadlift extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent im = new Intent(Deadlift.this,exercisesday2med.class);
+                Intent im = new Intent(Deadlift.this,WeeklyEndomorphMedFreq.class);
                 startActivity(im);
             }
         });

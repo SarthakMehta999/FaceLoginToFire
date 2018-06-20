@@ -6,7 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
-import fiture.quiamco.com.homefiture.ExerciseCategories.MaintainWeekly;
+import fiture.quiamco.com.homefiture.ExerciseCategories.WeeklyGainChestpain;
 import fiture.quiamco.com.homefiture.R;
 
 public class Rest extends AppCompatActivity {
@@ -19,7 +19,7 @@ public class Rest extends AppCompatActivity {
         finish.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View view) {
-                Intent intent = new Intent(getApplication(), MaintainWeekly.class);
+                Intent intent = new Intent(getApplication(), WeeklyGainChestpain.class);
                 startActivity(intent);
 
             }

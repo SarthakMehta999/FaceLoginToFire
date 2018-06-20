@@ -6,6 +6,8 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 
+import java.util.ArrayList;
+
 import fiture.quiamco.com.homefiture.R;
 
 /**
@@ -14,16 +16,28 @@ import fiture.quiamco.com.homefiture.R;
 
 public class WeeklyExercisesAdapter extends BaseAdapter {
     private Context mContext;
-
+    private ArrayList<String> dailyArrayList;
     public WeeklyExercisesAdapter(Context c) {
         mContext = c;
+        dailyArrayList = new ArrayList<>();
+        dailyArrayList.add("open");
+        dailyArrayList.add("locked");
+        dailyArrayList.add("locked");
+        dailyArrayList.add("locked");
+        dailyArrayList.add("locked");
+        dailyArrayList.add("locked");
+        dailyArrayList.add("locked");
     }
+
+
 
     @Override
     public int getCount() {
         return mThumbIds.length;
 
     }
+
+
 
     @Override
     public Object getItem(int position) {
@@ -48,10 +62,26 @@ public class WeeklyExercisesAdapter extends BaseAdapter {
             imageView = (ImageView) convertView;
         }
 
-        imageView.setImageResource(mThumbIds[position]);
+
+        if(this.isLocked(position)){
+            imageView.setImageResource(R.drawable.locknum);
+        }else{
+            imageView.setImageResource(mThumbIds[position]);
+        }
+
+//        imageView.setImageResource(mThumbIds[position]);
         return imageView;
 
     }
+
+    private boolean isLocked(int position){
+        if(this.dailyArrayList.get(position) == "locked"){
+            return true;
+        }
+        return false;
+    }
+
+
     private Integer[] mThumbIds = {
             R.drawable.one, R.drawable.two,R.drawable.three,R.drawable.four,
             R.drawable.five, R.drawable.six,R.drawable.seven

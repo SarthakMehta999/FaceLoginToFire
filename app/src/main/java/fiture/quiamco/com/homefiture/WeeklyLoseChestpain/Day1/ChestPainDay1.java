@@ -6,7 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
-import fiture.quiamco.com.homefiture.LoseExcercise.MonThursSatButtWorkouts.Instructions.InsBodyWeightSquat;
 import fiture.quiamco.com.homefiture.R;
 
 public class ChestPainDay1 extends AppCompatActivity {
@@ -21,7 +20,7 @@ public class ChestPainDay1 extends AppCompatActivity {
         start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplication(),InsBodyWeightSquat.class);
+                Intent intent = new Intent(getApplication(), fiture.quiamco.com.homefiture.WeeklyLoseChestpain.Day1.InsBodyWeightSquat.class);
                 startActivity(intent);
             }
         });

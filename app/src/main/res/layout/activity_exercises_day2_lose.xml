@@ -84,7 +84,7 @@
                             android:layout_marginStart="8dp"
                             android:layout_marginTop="8dp"
                             android:scaleType="centerCrop"
-                            android:background="@drawable/moderatepacejog"
+                            android:background="@drawable/fulloutsprint"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
@@ -171,7 +171,7 @@
                             android:layout_marginStart="8dp"
                             android:layout_marginTop="8dp"
                             android:scaleType="centerCrop"
-                            android:background="@drawable/fulloutsprint"
+                            android:background="@drawable/moderatepacejog"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"

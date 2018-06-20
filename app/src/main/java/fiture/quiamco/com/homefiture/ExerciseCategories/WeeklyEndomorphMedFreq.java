@@ -41,30 +41,24 @@ public class WeeklyEndomorphMedFreq extends AppCompatActivity {
                 else if (position == 1) {
                     Intent defs = new Intent(WeeklyEndomorphMedFreq.this, exercisesday2med.class);
                     startActivity(defs);
-                    Toast.makeText(WeeklyEndomorphMedFreq.this, "try2", Toast.LENGTH_SHORT).show();
 
                 } else if (position == 2) {
                     Intent def = new Intent(WeeklyEndomorphMedFreq.this, exerciseday3med.class);
                     startActivity(def);
-                    Toast.makeText(WeeklyEndomorphMedFreq.this, "try3", Toast.LENGTH_SHORT).show();
 
                 } else if (position == 3) {
                     Intent def = new Intent(WeeklyEndomorphMedFreq.this, RestDayMed.class);
                     startActivity(def);
-                    Toast.makeText(WeeklyEndomorphMedFreq.this, "try4", Toast.LENGTH_SHORT).show();
 
                 } else if (position == 4) {
                     Intent def = new Intent(WeeklyEndomorphMedFreq.this, exercisesday5med.class);
                     startActivity(def);
-                    Toast.makeText(WeeklyEndomorphMedFreq.this, "", Toast.LENGTH_SHORT).show();
                 } else if (position == 5) {
                     Intent def = new Intent(WeeklyEndomorphMedFreq.this, exercisesday6med.class);
                     startActivity(def);
-                    Toast.makeText(WeeklyEndomorphMedFreq.this, "", Toast.LENGTH_SHORT).show();
                 } else if (position == 6) {
                     Intent def = new Intent(WeeklyEndomorphMedFreq.this, RestDayMedSun.class);
                     startActivity(def);
-                    Toast.makeText(WeeklyEndomorphMedFreq.this, "", Toast.LENGTH_SHORT).show();
 
                 }
             }

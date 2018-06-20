@@ -74,7 +74,7 @@ public class Cardio extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent im = new Intent(Cardio.this, exerciseday3med.class);
+                Intent im = new Intent(Cardio.this, WeeklyEndomorphMedFreq.class);
                 startActivity(im);
             }
         });

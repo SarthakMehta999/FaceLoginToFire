@@ -57,7 +57,10 @@ public class DailyChallengeAdapter extends RecyclerView.Adapter<RecyclerView.Vie
     public void onBindViewHolder(RecyclerView.ViewHolder holder, final int position) {
         if(holder instanceof RecyclerView.ViewHolder){
             ViewHolder viewHolder = (ViewHolder) holder;
+
+
             Glide.with(context).load(dailyChallenge.get(position).getDailyExerciseImage()).into(viewHolder.exerciseImg);
+
             viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
