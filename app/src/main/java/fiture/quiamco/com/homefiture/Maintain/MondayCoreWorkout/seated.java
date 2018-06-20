@@ -2,22 +2,27 @@ package fiture.quiamco.com.homefiture.Maintain.MondayCoreWorkout;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.rilixtech.materialfancybutton.MaterialFancyButton;
 
 import at.markushi.ui.CircleButton;
 import fiture.quiamco.com.homefiture.R;
 import fiture.quiamco.com.homefiture.models.CircleCountDownView;
+import fiture.quiamco.com.homefiture.models.User;
 
 public class seated extends AppCompatActivity {
 
@@ -58,12 +63,14 @@ public class seated extends AppCompatActivity {
     Thread t;
     boolean stop = false;
     private volatile boolean isRunning = true;
-
+    String userId;
+    User user;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_seated);
-
+        SharedPreferences sharedPreferences = getSharedPreferences("FitureUser", Context.MODE_PRIVATE);
+        userId = sharedPreferences.getString("userKey", "");
         Toolbar toolbar = (Toolbar) findViewById(R.id.imToolbar);
         setSupportActionBar(toolbar);
 
@@ -90,7 +97,18 @@ public class seated extends AppCompatActivity {
 
             public void onClick(View view) {
                 Intent intent = new Intent(getApplication(), RestSeated.class);
-                startActivity(intent);
+
+                FirebaseDatabase database = FirebaseDatabase.getInstance();
+                DatabaseReference surveyResponseRef = database.getReference("weeklyExercise");
+                if (surveyResponseRef.child(userId).equals(userId)) {
+                    Log.d("it exists", user.getfName());
+                } else {
+                    surveyResponseRef.child(userId).child("Maintain");
+                    surveyResponseRef.child(userId).child("Maintain").child("Day1");
+                    surveyResponseRef.child(userId).child("Maintain").child("Day1").child("Exercise 1").setValue("Stability");
+                    surveyResponseRef.child(userId).child("Maintain").child("Day1").child("Exercise 2").setValue("Seated");
+                    startActivity(intent);
+                }
 
             }
         });

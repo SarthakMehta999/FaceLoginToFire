@@ -65,6 +65,7 @@ public class rollout extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rollout);
 
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.imToolbar);
         setSupportActionBar(toolbar);
 
@@ -91,7 +92,8 @@ public class rollout extends AppCompatActivity {
 
             public void onClick(View view) {
                 Intent intent = new Intent(getApplication(), RestRollOut.class);
-                startActivity(intent);
+
+                    startActivity(intent);
 
             }
         });

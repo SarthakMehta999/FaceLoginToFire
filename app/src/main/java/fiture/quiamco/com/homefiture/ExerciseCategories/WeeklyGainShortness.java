@@ -12,9 +12,10 @@ import fiture.quiamco.com.homefiture.R;
 import fiture.quiamco.com.homefiture.ShortnessGain.Day3.ShortnessGainDay3;
 import fiture.quiamco.com.homefiture.ShortnessGain.Sday1.ShortnessGainDay1;
 import fiture.quiamco.com.homefiture.ShortnessGain.Sday2.ShortnessGainDay2;
+import fiture.quiamco.com.homefiture.models.User;
 
 public class WeeklyGainShortness extends AppCompatActivity {
-
+    final User user = new User();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +29,7 @@ public class WeeklyGainShortness extends AppCompatActivity {
                                     int position, long id) {
 //                if (itemsLocked) return;
                 if (position == 0) {
+                    user.setStatus("done");
                     Intent def = new Intent(getApplication(), ShortnessGainDay1.class);
                     startActivity(def);
 
@@ -36,34 +38,35 @@ public class WeeklyGainShortness extends AppCompatActivity {
                 }
 
                 else if (position == 1) {
-//                    itemsLocked = true;
-
-//                    //do stuff
-//                    Intent intent = new Intent(...);
-//                    itemsLocked = false;
-//                    startActivity(intent);
+                    user.setStatus("done");
+//
                     Intent defs = new Intent(getApplication(), ShortnessGainDay2.class);
                     startActivity(defs);
 
 
                 } else if (position == 2) {
+                    user.setStatus("pending");
                     Intent def = new Intent(getApplication(), ShortnessGainDay3.class);
                     startActivity(def);
 
 
                 } else if (position == 3) {
+                    user.setStatus("pending");
                     Intent def = new Intent(getApplication(), ShortnessGainDay1.class);
                     startActivity(def);
 
                 } else if (position == 4) {
+                    user.setStatus("pending");
                     Intent def = new Intent(getApplication(), ShortnessGainDay2.class);
                     startActivity(def);
 
                 } else if (position == 5) {
+                    user.setStatus("pending");
                     Intent def = new Intent(getApplication(), ShortnessGainDay1.class);
                     startActivity(def);
 
                 } else if (position == 6) {
+                    user.setStatus("pending");
                     Intent def = new Intent(getApplication(), ShortnessGainDay3.class);
                     startActivity(def);
 

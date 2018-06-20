@@ -2,23 +2,28 @@ package fiture.quiamco.com.homefiture.Maintain.TuesdayCardio;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.rilixtech.materialfancybutton.MaterialFancyButton;
 
 import at.markushi.ui.CircleButton;
 import fiture.quiamco.com.homefiture.ExerciseCategories.MaintainWeekly;
 import fiture.quiamco.com.homefiture.R;
 import fiture.quiamco.com.homefiture.models.CircleCountDownView;
+import fiture.quiamco.com.homefiture.models.User;
 
 public class SkullCrushers extends AppCompatActivity {
 
@@ -59,12 +64,17 @@ public class SkullCrushers extends AppCompatActivity {
     Thread t;
     boolean stop = false;
     private volatile boolean isRunning = true;
-
+    User user;
+    String userId;
+    FirebaseDatabase database = FirebaseDatabase.getInstance();
+    DatabaseReference surveyResponseRef = database.getReference("weeklyExercise");
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_skull_crushers);
-
+        SharedPreferences sharedPreferences = getSharedPreferences("FitureUser", Context.MODE_PRIVATE);
+        userId = sharedPreferences.getString("userKey", "");
+        sharedPreferences = getSharedPreferences("FitureUser", Context.MODE_PRIVATE);
         Toolbar toolbar = (Toolbar) findViewById(R.id.imToolbar);
         setSupportActionBar(toolbar);
 
@@ -91,10 +101,23 @@ public class SkullCrushers extends AppCompatActivity {
 
             public void onClick(View view) {
                 Intent intent = new Intent(SkullCrushers.this, MaintainWeekly.class);
-                startActivity(intent);
-
+                if (surveyResponseRef.child(userId).equals(userId)) {
+                    Log.d("it exists", user.getfName());
+                } else {
+                    surveyResponseRef.child(userId).child("Maintain");
+                    surveyResponseRef.child(userId).child("Maintain").child("Day2");
+                    surveyResponseRef.child(userId).child("Maintain").child("Day2").child("ExT 1").setValue("Bench Press Incline");
+                    surveyResponseRef.child(userId).child("Maintain").child("Day2").child("ExT 2").setValue("Bench Press Decline");
+                    surveyResponseRef.child(userId).child("Maintain").child("Day2").child("ExT 3").setValue("Bench Press Dumbbells");
+                    surveyResponseRef.child(userId).child("Maintain").child("Day2").child("ExT 4").setValue("Weighted Bench Dip");
+                    surveyResponseRef.child(userId).child("Maintain").child("Day2").child("ExT 5").setValue("SkullCrushers");
+                    surveyResponseRef.child(userId).child("Maintain").child("Status").setValue("done");
+                    startActivity(intent);
+                }
             }
         });
+
+
 
         countDownView = (CircleCountDownView) findViewById(R.id.circle_count_down_view);
         countDownView.setVisibility(View.VISIBLE);
@@ -102,6 +125,8 @@ public class SkullCrushers extends AppCompatActivity {
         mTvSeconds = (TextView) findViewById(R.id.tvSec);
         countDownView.setVisibility(View.VISIBLE);
         startCountDown();
+
+
 
 //        pauseButton = (MaterialFancyButton) findViewById(R.id.pauseButton);
 //

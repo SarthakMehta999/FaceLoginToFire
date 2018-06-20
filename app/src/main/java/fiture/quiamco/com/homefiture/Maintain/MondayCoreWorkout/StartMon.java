@@ -22,6 +22,7 @@ public class StartMon extends AppCompatActivity {
             finish.setOnClickListener(new View.OnClickListener() {
 
                 public void onClick(View view) {
+
                     Intent intent = new Intent(getApplication(), stability.class);
                     startActivity(intent);
 

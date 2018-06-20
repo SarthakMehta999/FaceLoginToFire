@@ -51,9 +51,9 @@ public class stability extends AppCompatActivity {
     CountDownTimer countDownTimer;
 
     int count = 0;
-    int seconds =59;
+    int seconds = 59;
     int minutes;
-    int hours=0;
+    int hours = 0;
     int time;
 
     Thread t;
@@ -75,7 +75,7 @@ public class stability extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent im = new Intent(getApplication(),MaintainWeekly.class);
+                Intent im = new Intent(getApplication(), MaintainWeekly.class);
                 startActivity(im);
             }
         });
@@ -91,11 +91,17 @@ public class stability extends AppCompatActivity {
         finish.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View view) {
+
                 Intent intent = new Intent(getApplication(), RestStability.class);
-                startActivity(intent);
+
+
+                    startActivity(intent);
 
             }
         });
+
+
+
 
         countDownView = (CircleCountDownView) findViewById(R.id.circle_count_down_view);
         countDownView.setVisibility(View.VISIBLE);
@@ -115,6 +121,7 @@ public class stability extends AppCompatActivity {
 //
 //            }
 //        });
+
     }
 
     protected void startCountDown() {

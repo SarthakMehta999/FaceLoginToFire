@@ -6,16 +6,16 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
-import android.widget.Toast;
 
 import fiture.quiamco.com.homefiture.Adapter.WeeklyExercisesAdapter;
-import fiture.quiamco.com.homefiture.Mesomorph.Mesomorph.LegsDay1.mesomorphday1;
-import fiture.quiamco.com.homefiture.Mesomorph.Mesomorph.CardioDay3.mesomorphday3;
 import fiture.quiamco.com.homefiture.Mesomorph.Mesomorph.CardioDay2.mesomorphday2;
+import fiture.quiamco.com.homefiture.Mesomorph.Mesomorph.CardioDay3.mesomorphday3;
+import fiture.quiamco.com.homefiture.Mesomorph.Mesomorph.LegsDay1.mesomorphday1;
 import fiture.quiamco.com.homefiture.R;
+import fiture.quiamco.com.homefiture.models.User;
 
 public class WeeklyMesomorph extends AppCompatActivity {
-
+    final User user = new User();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,22 +26,24 @@ public class WeeklyMesomorph extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View v,
                                     int position, long id) {
                 if (position == 0) {
+                    user.setStatus("done");
                     Intent def = new Intent(WeeklyMesomorph.this, mesomorphday1.class);
                     startActivity(def);
-                    Toast.makeText(WeeklyMesomorph.this, "try1", Toast.LENGTH_SHORT).show();
+
 //                    Toast.makeText(Weekly.this, "" + position,
 //                            Toast.LENGTH_SHORT).show();
                 }
 
                 else if (position == 1) {
+                    user.setStatus("done");
                     Intent defs = new Intent(WeeklyMesomorph.this, mesomorphday2.class);
                     startActivity(defs);
-                    Toast.makeText(WeeklyMesomorph.this, "try2", Toast.LENGTH_SHORT).show();
+
 
                 } else if (position == 2) {
+                    user.setStatus("pending");
                     Intent def = new Intent(WeeklyMesomorph.this, mesomorphday3.class);
                     startActivity(def);
-                    Toast.makeText(WeeklyMesomorph.this, "try3", Toast.LENGTH_SHORT).show();
 
                 }
             }

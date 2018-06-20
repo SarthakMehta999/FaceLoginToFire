@@ -58,6 +58,7 @@ public class spiderman extends AppCompatActivity {
     Thread t;
     boolean stop = false;
     private volatile boolean isRunning = true;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -89,7 +90,9 @@ public class spiderman extends AppCompatActivity {
 
             public void onClick(View view) {
                 Intent intent = new Intent(getApplication(), RestSpiderman.class);
-                startActivity(intent);
+
+                    startActivity(intent);
+
 
             }
         });

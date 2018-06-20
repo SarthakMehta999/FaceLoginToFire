@@ -66,6 +66,7 @@ public class KneeTucks extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_knee_tucks);
 
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.imToolbar);
         setSupportActionBar(toolbar);
 
@@ -92,7 +93,7 @@ public class KneeTucks extends AppCompatActivity {
 
             public void onClick(View view) {
                 Intent intent = new Intent(getApplication(), RestKneeTucks.class);
-                startActivity(intent);
+                    startActivity(intent);
 
             }
         });

@@ -11,9 +11,10 @@ import fiture.quiamco.com.homefiture.Adapter.WeeklyExercisesAdapter;
 import fiture.quiamco.com.homefiture.GainPainInLegs.Day2andDay4.Rest;
 import fiture.quiamco.com.homefiture.GainPainInLegs.ExercisesPainInLegsDay1;
 import fiture.quiamco.com.homefiture.R;
+import fiture.quiamco.com.homefiture.models.User;
 
 public class WeeklyGainPainLegs extends AppCompatActivity {
-
+    final User user = new User();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +26,7 @@ public class WeeklyGainPainLegs extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View v,
                                     int position, long id) {
                 if (position == 0) {
+                    user.setStatus("done");
                     Intent def = new Intent(getApplication(), ExercisesPainInLegsDay1.class);
                     startActivity(def);
 
@@ -33,15 +35,18 @@ public class WeeklyGainPainLegs extends AppCompatActivity {
                 }
 
                 else if (position == 1) {
+                    user.setStatus("done");
                     Intent defs = new Intent(getApplication(), Rest.class);
                     startActivity(defs);
 
                 } else if (position == 2) {
+                    user.setStatus("done");
                     Intent def = new Intent(getApplication(), ExercisesPainInLegsDay1.class);
                     startActivity(def);
 
 
                 } else if (position == 3) {
+                    user.setStatus("done");
                     Intent def = new Intent(getApplication(), Rest.class);
                     startActivity(def);
 

@@ -357,13 +357,30 @@
         <activity android:name=".Endomorph.MediumFrequency.Day6Legs.exercisesday6med" />
         <activity android:name=".Maintain.MondayCoreWorkout.StartMon" />
         <activity android:name=".Maintain.MondayCoreWorkout.stability" />
+        <activity android:name=".Maintain.MondayCoreWorkout.RestStability"/>
         <activity android:name=".Maintain.MondayCoreWorkout.seated" />
+        <activity android:name=".Maintain.MondayCoreWorkout.RestSeated" />
         <activity android:name=".Maintain.MondayCoreWorkout.rollout" />
+        <activity android:name=".Maintain.MondayCoreWorkout.RestRollOut" />
         <activity android:name=".Maintain.MondayCoreWorkout.KneeTucks" />
+        <activity android:name=".Maintain.MondayCoreWorkout.RestKneeTucks" />
         <activity android:name=".Maintain.MondayCoreWorkout.spiderman" />
+        <activity android:name=".Maintain.MondayCoreWorkout.RestSpiderman" />
         <activity android:name=".Maintain.MondayCoreWorkout.sideLift" />
+        <activity android:name=".Maintain.MondayCoreWorkout.RestSideLift" />
         <activity android:name=".Maintain.MondayCoreWorkout.crunch" />
+        <activity android:name=".Maintain.MondayCoreWorkout.RestCrunch" />
         <activity android:name=".ExerciseCategories.MaintainWeekly" />
+        <activity android:name=".Maintain.TuesdayCardio.Exercisesday1"/>
+        <activity android:name=".Maintain.TuesdayCardio.BenchPressDecline"/>
+        <activity android:name=".Maintain.TuesdayCardio.BenchPressIncline"/>
+        <activity android:name=".Maintain.TuesdayCardio.WeightedBenchDips"/>
+        <activity android:name=".Maintain.TuesdayCardio.SkullCrushers"/>
+        <activity android:name=".Maintain.TuesdayCardio.Dumbbells"/>
+        <activity android:name=".Maintain.ThuCardio.BenchPressIncline"/>
+        <activity android:name=".Maintain.ThuCardio.Dumbbells"/>
+        <activity android:name=".Maintain.ThuCardio.SkullCrushers"/>
+        <activity android:name=".Maintain.ThuCardio.WeightedBenchDips"/>
         <activity android:name=".Maintain.WedUpperBodyWorkout.standing" />
         <activity android:name=".Maintain.WedUpperBodyWorkout.Alternating" />
         <activity android:name=".Maintain.WedUpperBodyWorkout.Walking" />
@@ -402,6 +419,8 @@
         <activity android:name=".WeeklyLoseChestpain.Day5.ChestPainDay5" />
         <activity android:name=".WeeklyLoseChestpain.Day6.ChestPainDay6" />
         <activity android:name=".WeeklyLoseChestpain.Day7.ChestPainDay7" />
+
+
         <!--<activity android:name=".ExerciseCategories.WeeklyLosePainInLegs" />-->
         <!--<activity android:name=".WeeklyLosePainInLegs.Day1" />-->
         <activity android:name=".LosePainInLegs.Day1.LosePainInLegsDay1" />

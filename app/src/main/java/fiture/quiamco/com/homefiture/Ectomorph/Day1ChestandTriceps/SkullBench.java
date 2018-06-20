@@ -2,23 +2,28 @@ package fiture.quiamco.com.homefiture.Ectomorph.Day1ChestandTriceps;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.rilixtech.materialfancybutton.MaterialFancyButton;
 
 import at.markushi.ui.CircleButton;
 import fiture.quiamco.com.homefiture.ExerciseCategories.WeeklyEctomorph;
 import fiture.quiamco.com.homefiture.R;
 import fiture.quiamco.com.homefiture.models.CircleCountDownView;
+import fiture.quiamco.com.homefiture.models.User;
 
 public class SkullBench extends AppCompatActivity {
 
@@ -59,13 +64,18 @@ public class SkullBench extends AppCompatActivity {
     Thread t;
     boolean stop = false;
     private volatile boolean isRunning = true;
-
+    User user;
+    String userId;
+    FirebaseDatabase database = FirebaseDatabase.getInstance();
+    DatabaseReference surveyResponseRef = database.getReference("weeklyExercise");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_skull_bench);
-
+        SharedPreferences sharedPreferences = getSharedPreferences("FitureUser", Context.MODE_PRIVATE);
+        userId = sharedPreferences.getString("userKey", "");
+        sharedPreferences = getSharedPreferences("FitureUser", Context.MODE_PRIVATE);
         Toolbar toolbar = (Toolbar) findViewById(R.id.imToolbar);
         setSupportActionBar(toolbar);
 
@@ -92,8 +102,22 @@ public class SkullBench extends AppCompatActivity {
 
             public void onClick(View view) {
                 Intent intent = new Intent(SkullBench.this, WeeklyEctomorph.class);
-                startActivity(intent);
 
+                if (surveyResponseRef.child(userId).equals(userId)) {
+                    Log.d("it exists", user.getfName());
+                } else {
+                    surveyResponseRef.child(userId).child("Ectomorph");
+                    surveyResponseRef.child(userId).child("Ectomorph").child("Day1");
+                    surveyResponseRef.child(userId).child("Ectomorph").child("Day1").child("Exercise 1").setValue("Stability");
+                    surveyResponseRef.child(userId).child("Ectomorph").child("Day1").child("Exercise 2").setValue("Seated");
+                    surveyResponseRef.child(userId).child("Ectomorph").child("Day1").child("Exercise 3").setValue("Rollout");
+                    surveyResponseRef.child(userId).child("Ectomorph").child("Day1").child("Exercise 4").setValue("KneeTucks");
+                    surveyResponseRef.child(userId).child("Ectomorph").child("Day1").child("Exercise 5").setValue("Spiderman");
+                    surveyResponseRef.child(userId).child("Ectomorph").child("Day1").child("Exercise 6").setValue("Side Lift");
+                    surveyResponseRef.child(userId).child("Ectomorph").child("Day1").child("Exercise 7").setValue("Oblique Crunch");
+                    surveyResponseRef.child(userId).child("Ectomorph").child("Status").setValue("done");
+                    startActivity(intent);
+                }
             }
         });
 

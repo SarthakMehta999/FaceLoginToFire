@@ -16,9 +16,10 @@ import fiture.quiamco.com.homefiture.LoseExcercise.ExercisesDay.ExercisesDay5Los
 import fiture.quiamco.com.homefiture.LoseExcercise.ExercisesDay.ExercisesDay6Lose;
 import fiture.quiamco.com.homefiture.LoseExcercise.ExercisesDay.ExercisesDay7Lose;
 import fiture.quiamco.com.homefiture.R;
+import fiture.quiamco.com.homefiture.models.User;
 
 public class WeeklyLose extends AppCompatActivity {
-
+    final User user = new User();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,35 +31,42 @@ public class WeeklyLose extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View v,
                                     int position, long id) {
                 if (position == 0) {
+                    user.setStatus("done");
                     Intent def = new Intent(WeeklyLose.this, ExercisesDay1Lose.class);
                     startActivity(def);
 
                 }
 
                 else if (position == 1) {
+                    user.setStatus("done");
                     Intent defs = new Intent(WeeklyLose.this, ExercisesDay2Lose.class);
                     startActivity(defs);
 
 
                 } else if (position == 2) {
+                    user.setStatus("pending");
                     Intent def = new Intent(WeeklyLose.this, ExercisesDay3Lose.class);
                     startActivity(def);
 
 
                 } else if (position == 3) {
+                    user.setStatus("pending");
                     Intent def = new Intent(WeeklyLose.this, ExercisesDay4Lose.class);
                     startActivity(def);
 
 
                 } else if (position == 4) {
+                    user.setStatus("pending");
                     Intent def = new Intent(WeeklyLose.this, ExercisesDay5Lose.class);
                     startActivity(def);
 
                 } else if (position == 5) {
+                    user.setStatus("pending");
                     Intent def = new Intent(WeeklyLose.this, ExercisesDay6Lose.class);
                     startActivity(def);
 
                 } else if (position == 6) {
+                    user.setStatus("pending");
                     Intent def = new Intent(WeeklyLose.this, ExercisesDay7Lose.class);
                     startActivity(def);
 

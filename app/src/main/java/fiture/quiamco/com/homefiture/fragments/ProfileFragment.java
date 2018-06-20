@@ -33,6 +33,7 @@ import java.util.List;
 import de.hdodenhof.circleimageview.CircleImageView;
 import fiture.quiamco.com.homefiture.Adapter.DailyChallengeAdapter;
 import fiture.quiamco.com.homefiture.ExerciseCategories.MaintainWeekly;
+import fiture.quiamco.com.homefiture.ExerciseCategories.WeeklyEctomorph;
 import fiture.quiamco.com.homefiture.ExerciseCategories.WeeklyGain;
 import fiture.quiamco.com.homefiture.ExerciseCategories.WeeklyGainChestpain;
 import fiture.quiamco.com.homefiture.ExerciseCategories.WeeklyGainPainLegs;
@@ -43,6 +44,7 @@ import fiture.quiamco.com.homefiture.ExerciseCategories.WeeklyLosePainLegs;
 import fiture.quiamco.com.homefiture.ExerciseCategories.WeeklyLoseShortnessOfBreath;
 import fiture.quiamco.com.homefiture.ExerciseCategories.WeeklyMaintainChestPain;
 import fiture.quiamco.com.homefiture.ExerciseCategories.WeeklyMaintainPainInLowerLegs;
+import fiture.quiamco.com.homefiture.ExerciseCategories.WeeklyMesomorph;
 import fiture.quiamco.com.homefiture.ExerciseCategories.WeeklyShortnessForMaintain;
 import fiture.quiamco.com.homefiture.R;
 import fiture.quiamco.com.homefiture.models.DailyChallengeModel;
@@ -113,6 +115,9 @@ public class    ProfileFragment extends Fragment {
             R.drawable.chec4,
             R.drawable.chec5
     };
+
+
+
     private FirebaseDatabase database;
     private DatabaseReference myRef, userRef,alterUserData;
     private SharedPreferences sharedPreferences;
@@ -436,7 +441,46 @@ public class    ProfileFragment extends Fragment {
 
 
         }
+        if(bmiLabel.equals("Obese Class 1")) {
 
+
+            if (ilness.equals("chest pain")) {
+                start.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent login = new Intent(getActivity(), WeeklyEctomorph.class);
+                        startActivity(login);
+                    }
+
+                });
+            } else if (ilness.equals("shortness of breath")) {
+                start.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent login = new Intent(getActivity(), WeeklyEctomorph.class);
+                        startActivity(login);
+                    }
+                });
+            } else if (ilness.equals("pain in the lower legs")) {
+                start.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent login = new Intent(getActivity(), WeeklyMesomorph.class);
+                        startActivity(login);
+                    }
+                });
+            } else {
+                start.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent login = new Intent(getActivity(), WeeklyLose.class);
+                        startActivity(login);
+                    }
+                });
+            }
+
+
+        }
 
 
     //Underweight

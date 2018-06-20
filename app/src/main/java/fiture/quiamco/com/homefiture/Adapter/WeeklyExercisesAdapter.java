@@ -1,14 +1,18 @@
 package fiture.quiamco.com.homefiture.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
+import fiture.quiamco.com.homefiture.Maintain.MondayCoreWorkout.StartMon;
 import fiture.quiamco.com.homefiture.R;
+import fiture.quiamco.com.homefiture.models.User;
 
 /**
  * Created by User on 09/04/2018.
@@ -17,6 +21,10 @@ import fiture.quiamco.com.homefiture.R;
 public class WeeklyExercisesAdapter extends BaseAdapter {
     private Context mContext;
     private ArrayList<String> dailyArrayList;
+    private ArrayList<User> dailyExercise;
+
+    ImageView imageView;
+    final User user = new User();
     public WeeklyExercisesAdapter(Context c) {
         mContext = c;
         dailyArrayList = new ArrayList<>();
@@ -27,16 +35,79 @@ public class WeeklyExercisesAdapter extends BaseAdapter {
         dailyArrayList.add("locked");
         dailyArrayList.add("locked");
         dailyArrayList.add("locked");
+
+//        user = new User(context,"");
+
+
     }
 
+    public WeeklyExercisesAdapter(Context mContext, ArrayList<String> dailyArrayList, ArrayList<User> dailyExercise, ImageView imageView, Integer[] mThumbIds) {
+        this.mContext = mContext;
+        this.dailyArrayList = dailyArrayList;
+        this.dailyExercise = dailyExercise;
+        this.imageView = imageView;
+        this.mThumbIds = mThumbIds;
+    }
+
+    @Override
+    public boolean areAllItemsEnabled() {
+        return true;
+    }
+
+    @Override
+    public boolean isEnabled(int position) {
+        // Return true for clickable, false for not
+
+        if (position == 0) {
+            Intent def = new Intent(mContext, StartMon.class);
+            mContext.startActivity(def);
+            return true;
+        }else if (position == 1) {
+
+            if (user.getStatus().equals("done")) {
+//                Intent defs = new Intent(mContext, Exercisesday1.class);
+//                mContext.startActivity(defs);
+                return true;
+
+            }else {
+
+                Toast.makeText(mContext, "Please perform the previous exercise to unlock this!", Toast.LENGTH_SHORT).show();
+                return false;
+            }
+        }
+        else if (position == 2) {
 
 
+                Toast.makeText(mContext, "Please perform the previous exercise to unlock this!", Toast.LENGTH_SHORT).show();
+                return false;
+
+        }else if(position == 3){
+
+            Toast.makeText(mContext, "Please perform the previous exercise to unlock this!", Toast.LENGTH_SHORT).show();
+            return false;
+        }else if(position==4){
+
+            Toast.makeText(mContext, "Please perform the previous exercise to unlock this!", Toast.LENGTH_SHORT).show();
+            return false;
+        }else if(position==5){
+
+            Toast.makeText(mContext, "Please perform the previous exercise to unlock this!", Toast.LENGTH_SHORT).show();
+            return false;
+        }else if(position==6){
+
+            Toast.makeText(mContext, "Please perform the previous exercise to unlock this!", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+
+
+
+        return false;
+    }
     @Override
     public int getCount() {
         return mThumbIds.length;
 
     }
-
 
 
     @Override
@@ -51,7 +122,7 @@ public class WeeklyExercisesAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        ImageView imageView;
+
         if (convertView == null) {
             // if it's not recycled, initialize some attributes
             imageView = new ImageView(mContext);
@@ -62,25 +133,35 @@ public class WeeklyExercisesAdapter extends BaseAdapter {
             imageView = (ImageView) convertView;
         }
 
+//
+//        if (this.isLocked(position)) {
+//            imageView.setImageResource(R.drawable.locknum);
+//
+//        } else {
+//            imageView.setImageResource(mThumbIds[position]);
+//        }
 
-        if(this.isLocked(position)){
-            imageView.setImageResource(R.drawable.locknum);
-        }else{
-            imageView.setImageResource(mThumbIds[position]);
-        }
-
-//        imageView.setImageResource(mThumbIds[position]);
+        imageView.setImageResource(mThumbIds[position]);
         return imageView;
 
     }
 
-    private boolean isLocked(int position){
-        if(this.dailyArrayList.get(position) == "locked"){
-            return true;
-        }
-        return false;
-    }
 
+
+//    private boolean isLocked(int position) {
+//
+//        if (this.dailyArrayList.get(position) == "locked") {
+////            if (dailyExercise.get(position).getStatus().equalsIgnoreCase("lock")) {
+//
+//                return true;
+//
+//            } else {
+//                Intent defs = new Intent(mContext, Exercisesday1.class);
+//                mContext.startActivity(defs);
+//                return false;
+//            }
+//
+//    }
 
     private Integer[] mThumbIds = {
             R.drawable.one, R.drawable.two,R.drawable.three,R.drawable.four,

@@ -16,9 +16,10 @@ import fiture.quiamco.com.homefiture.Endomorph.HighFrequency.Day5QuadsHamsGlutes
 import fiture.quiamco.com.homefiture.Endomorph.HighFrequency.Day6CardioMixedInterval.exerciseday6;
 import fiture.quiamco.com.homefiture.Endomorph.HighFrequency.Day7RestDay.RestDay;
 import fiture.quiamco.com.homefiture.R;
+import fiture.quiamco.com.homefiture.models.User;
 
 public class WeeklyEndomorphHighFreq extends AppCompatActivity {
-
+    final User user = new User();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +31,7 @@ public class WeeklyEndomorphHighFreq extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View v,
                                     int position, long id) {
                 if (position == 0) {
+                    user.setStatus("done");
                     Intent def = new Intent(WeeklyEndomorphHighFreq.this, Exercisesday1.class);
                     startActivity(def);
 //                    Toast.makeText(Weekly.this, "" + position,
@@ -37,24 +39,30 @@ public class WeeklyEndomorphHighFreq extends AppCompatActivity {
                 }
 
                 else if (position == 1) {
+                    user.setStatus("done");
                     Intent defs = new Intent(WeeklyEndomorphHighFreq.this, Exercisesday2.class);
                     startActivity(defs);
 
                 } else if (position == 2) {
+                    user.setStatus("pending");
                     Intent def = new Intent(WeeklyEndomorphHighFreq.this, Exercisesday3.class);
                     startActivity(def);
 
                 } else if (position == 3) {
+                    user.setStatus("pending");
                     Intent def = new Intent(WeeklyEndomorphHighFreq.this, exercisesday4.class);
                     startActivity(def);
 
                 } else if (position == 4) {
+                    user.setStatus("pending");
                     Intent def = new Intent(WeeklyEndomorphHighFreq.this, exercisesday5.class);
                     startActivity(def);
                 } else if (position == 5) {
+                    user.setStatus("pending");
                     Intent def = new Intent(WeeklyEndomorphHighFreq.this, exerciseday6.class);
                     startActivity(def);
                 } else if (position == 6) {
+                    user.setStatus("pending");
                     Intent def = new Intent(WeeklyEndomorphHighFreq.this, RestDay.class);
                     startActivity(def);
 

@@ -2,6 +2,7 @@ package fiture.quiamco.com.homefiture.Maintain.MondayCoreWorkout;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.Handler;
@@ -16,6 +17,7 @@ import android.widget.TextView;
 import com.rilixtech.materialfancybutton.MaterialFancyButton;
 
 import at.markushi.ui.CircleButton;
+import fiture.quiamco.com.homefiture.ExerciseCategories.MaintainWeekly;
 import fiture.quiamco.com.homefiture.R;
 import fiture.quiamco.com.homefiture.models.CircleCountDownView;
 
@@ -57,12 +59,17 @@ public class RestStability extends AppCompatActivity {
 
     Thread t;
     boolean stop = false;
+    String userId,day,exercise;
     private volatile boolean isRunning = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rest_stability);
+        SharedPreferences sharedPreferences = getSharedPreferences("FitureUser", Context.MODE_PRIVATE);
+        userId = sharedPreferences.getString("userKey","");
+        String day = sharedPreferences.getString  ("Day" ,"Day1");
+        String exercise = sharedPreferences.getString("Exercise","Stability");
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.imToolbar);
         setSupportActionBar(toolbar);
@@ -73,7 +80,7 @@ public class RestStability extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent im = new Intent(getApplication(),RestStability.class);
+                Intent im = new Intent(getApplication(),MaintainWeekly.class);
                 startActivity(im);
             }
         });
@@ -112,7 +119,9 @@ public class RestStability extends AppCompatActivity {
 //
 //            }
 //        });
+
     }
+
 
     protected void startCountDown() {
 

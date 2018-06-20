@@ -16,9 +16,10 @@ import fiture.quiamco.com.homefiture.WeeklyMaintainChestPain.Day4.Day4MaintainCh
 import fiture.quiamco.com.homefiture.WeeklyMaintainChestPain.Day5.Day5MaintainChestPain;
 import fiture.quiamco.com.homefiture.WeeklyMaintainChestPain.Day6.Day6MaintainChestPain;
 import fiture.quiamco.com.homefiture.WeeklyMaintainChestPain.Day7.Day7MaintainChestPain;
+import fiture.quiamco.com.homefiture.models.User;
 
 public class WeeklyMaintainChestPain extends AppCompatActivity {
-
+    final User user = new User();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,35 +31,42 @@ public class WeeklyMaintainChestPain extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View v,
                                     int position, long id) {
                 if (position == 0) {
+                    user.setStatus("done");
                     Intent def = new Intent(getApplication(), Day1MaintainChestPain.class);
                     startActivity(def);
 
                 }
 
                 else if (position == 1) {
+                    user.setStatus("done");
                     Intent defs = new Intent(getApplication(), Day2MaintainChestPain.class);
                     startActivity(defs);
 
 
                 } else if (position == 2) {
+                    user.setStatus("pending");
                     Intent def = new Intent(getApplication(), Day3MaintainChestPain.class);
                     startActivity(def);
 
 
                 } else if (position == 3) {
+                    user.setStatus("pending");
                     Intent def = new Intent(getApplication(), Day4MaintainChestPain.class);
                     startActivity(def);
 
 
                 } else if (position == 4) {
+                    user.setStatus("pending");
                     Intent def = new Intent(getApplication(), Day5MaintainChestPain.class);
                     startActivity(def);
 
                 } else if (position == 5) {
+                    user.setStatus("pending");
                     Intent def = new Intent(getApplication(), Day6MaintainChestPain.class);
                     startActivity(def);
 
                 } else if (position == 6) {
+                    user.setStatus("pending");
                     Intent def = new Intent(getApplication(), Day7MaintainChestPain.class);
                     startActivity(def);
 

@@ -16,9 +16,10 @@ import fiture.quiamco.com.homefiture.LosePainInLegs.Day5.LosePainInLegsDay5;
 import fiture.quiamco.com.homefiture.LosePainInLegs.Day6.LosePainInLegsDay6;
 import fiture.quiamco.com.homefiture.LosePainInLegs.Day7.LosePainInLegsDay7;
 import fiture.quiamco.com.homefiture.R;
+import fiture.quiamco.com.homefiture.models.User;
 
 public class WeeklyLosePainLegs extends AppCompatActivity {
-
+    final User user = new User();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +31,7 @@ public class WeeklyLosePainLegs extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View v,
                                     int position, long id) {
                 if (position == 0) {
+                    user.setStatus("done");
                     Intent def = new Intent(getApplication(), LosePainInLegsDay1.class);
                     startActivity(def);
 
@@ -37,28 +39,34 @@ public class WeeklyLosePainLegs extends AppCompatActivity {
                 }
 
                 else if (position == 1) {
+                    user.setStatus("done");
                     Intent defs = new Intent(getApplication(), LosePainInLegsDay2.class);
                     startActivity(defs);
 
                 } else if (position == 2) {
+                    user.setStatus("pending");
                     Intent def = new Intent(getApplication(), LosePainInLegsDay3.class);
                     startActivity(def);
 
 
                 } else if (position == 3) {
+                    user.setStatus("pending");
                     Intent def = new Intent(getApplication(), LosePainInLegsDay4.class);
                     startActivity(def);
 
 
                 } else if (position == 4) {
+                    user.setStatus("pending");
                     Intent def = new Intent(getApplication(), LosePainInLegsDay5.class);
                     startActivity(def);
 
                 } else if (position == 5) {
+                    user.setStatus("pending");
                     Intent def = new Intent(getApplication(), LosePainInLegsDay6.class);
                     startActivity(def);
 
                 } else if (position == 6) {
+                    user.setStatus("pending");
                     Intent def = new Intent(getApplication(), LosePainInLegsDay7.class);
                     startActivity(def);
 

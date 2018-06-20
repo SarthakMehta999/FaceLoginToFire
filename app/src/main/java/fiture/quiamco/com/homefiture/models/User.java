@@ -31,6 +31,7 @@ public class User implements Serializable, Comparable<User> {
     private String fitnessResponse;
     private String goal;
     private String ilnesses;
+    private String status;
     public User() {
     }
 
@@ -44,7 +45,8 @@ public class User implements Serializable, Comparable<User> {
         this.userPoints = userPoints;
     }
 
-    public User(String fName, String lName, String birthDate, String gender, String email, String imageUrl, int userPoints, String height, String weight, String BMI, String bmiLabel) {
+    public User(String fName, String lName, String birthDate, String gender, String email, String imageUrl, int userPoints, String height,
+                String weight, String BMI, String bmiLabel) {
         this.fName = fName;
         this.lName = lName;
         this.birthDate = birthDate;
@@ -56,6 +58,7 @@ public class User implements Serializable, Comparable<User> {
         this.weight = weight;
         this.BMI = BMI;
         this.bmiLabel = bmiLabel;
+
     }
 
     public User(String fName, String lName, String birthDate, String gender, String email, String imageUrl, int userPoints, String height,
@@ -74,6 +77,25 @@ public class User implements Serializable, Comparable<User> {
         this.fitnessResponse = fitnessResponse;
         this.goal = goal;
         this.ilnesses = ilnesses;
+    }
+
+    public User(String fName, String lName, String birthDate, String gender, String email, String imageUrl, int userPoints,
+                String height, String weight, String BMI, String bmiLabel, String fitnessResponse, String goal, String ilnesses, String status) {
+        this.fName = fName;
+        this.lName = lName;
+        this.birthDate = birthDate;
+        this.gender = gender;
+        this.email = email;
+        this.imageUrl = imageUrl;
+        this.userPoints = userPoints;
+        this.height = height;
+        this.weight = weight;
+        this.BMI = BMI;
+        this.bmiLabel = bmiLabel;
+        this.fitnessResponse = fitnessResponse;
+        this.goal = goal;
+        this.ilnesses = ilnesses;
+        this.status = status;
     }
 
     public int getUserPoints() {
@@ -187,6 +209,14 @@ public class User implements Serializable, Comparable<User> {
 
     public void setBmiLabel(String bmiLabel) {
         this.bmiLabel = bmiLabel;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
     /*@Override
     public int compare(User o1, User o2) {

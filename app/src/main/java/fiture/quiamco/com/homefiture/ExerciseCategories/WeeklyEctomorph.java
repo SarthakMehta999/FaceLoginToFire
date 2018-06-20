@@ -16,9 +16,10 @@ import fiture.quiamco.com.homefiture.Ectomorph.LayoutEcto.ectomorphday1exercises
 import fiture.quiamco.com.homefiture.Ectomorph.LowRepAbDay.ectomorphlowrepday;
 import fiture.quiamco.com.homefiture.Ectomorph.OptionalDays.EctomorphOptionalDays;
 import fiture.quiamco.com.homefiture.R;
+import fiture.quiamco.com.homefiture.models.User;
 
 public class WeeklyEctomorph extends AppCompatActivity {
-
+    final User user = new User();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,34 +31,40 @@ public class WeeklyEctomorph extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View v,
                                     int position, long id) {
                 if (position == 0) {
+                    user.setStatus("done");
                     Intent def = new Intent(WeeklyEctomorph.this, ectomorphday1exercises.class);
                     startActivity(def);
-                    Toast.makeText(WeeklyEctomorph.this, "try1", Toast.LENGTH_SHORT).show();
+
+
 //                    Toast.makeText(Weekly.this, "" + position,
 //                            Toast.LENGTH_SHORT).show();
                 }
 
                 else if (position == 1) {
+                    user.setStatus("done");
                     Intent defs = new Intent(WeeklyEctomorph.this, EctomorphDay2.class);
                     startActivity(defs);
-                    Toast.makeText(WeeklyEctomorph.this, "try2", Toast.LENGTH_SHORT).show();
+
 
                 } else if (position == 2) {
+                    user.setStatus("pending");
                     Intent def = new Intent(WeeklyEctomorph.this, Ectomorphday3exercises.class);
                     startActivity(def);
-                    Toast.makeText(WeeklyEctomorph.this, "try3", Toast.LENGTH_SHORT).show();
+
 
                 } else if (position == 3) {
+                    user.setStatus("pending");
                     Intent def = new Intent(WeeklyEctomorph.this, HighRepAbDays.class);
                     startActivity(def);
-                    Toast.makeText(WeeklyEctomorph.this, "try4", Toast.LENGTH_SHORT).show();
 
                 } else if (position == 4) {
+                    user.setStatus("pending");
                     Intent def = new Intent(WeeklyEctomorph.this, ectomorphlowrepday.class);
                     startActivity(def);
-                    Toast.makeText(WeeklyEctomorph.this, "try", Toast.LENGTH_SHORT).show();
+                ;
 
                 } else if (position == 5) {
+                    user.setStatus("pending");
                     Intent def = new Intent(WeeklyEctomorph.this, EctomorphOptionalDays.class);
                     startActivity(def);
                     Toast.makeText(WeeklyEctomorph.this, "try", Toast.LENGTH_SHORT).show();
