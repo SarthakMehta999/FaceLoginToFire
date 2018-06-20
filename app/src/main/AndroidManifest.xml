@@ -975,13 +975,8 @@
         <!--<activity android:name=".WeeklyLosePainInLegs.Day1Instructions.InsHipFlexorsStretch" />-->
         <activity android:name=".ExerciseCategories.WeeklyShortnessForMaintain" />
         <activity android:name=".ShortnessOfBreathMaintain.Day1.ShortnessDay1" />
-        <activity android:name=".ShortnessOfBreathMaintain.Day1.SlowWalk" />
-        <activity android:name=".ShortnessOfBreathMaintain.Day1.QuadricepsStretch" />
-        <activity android:name=".ShortnessOfBreathMaintain.Day1.StationaryCycling" />
         <activity android:name=".ShortnessOfBreathMaintain.Day2.ShortnessDay2" />
         <activity android:name=".ShortnessOfBreathMaintain.Day3.ShortnessDay3" />
-        <activity android:name=".ShortnessOfBreathMaintain.Day3.Hopping" />
-        <activity android:name=".ShortnessOfBreathMaintain.Day3.ModerateWalk" />
         <activity android:name=".ExerciseCategories.WeeklyGainShortness" />
         <activity android:name=".Activities.SplashActivity"/>
         <activity android:name=".GainChestpain.Rest1"/>
