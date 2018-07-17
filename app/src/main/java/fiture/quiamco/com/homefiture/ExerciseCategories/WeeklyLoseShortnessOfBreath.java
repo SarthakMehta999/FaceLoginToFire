@@ -31,7 +31,7 @@ public class WeeklyLoseShortnessOfBreath extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View v,
                                     int position, long id) {
                 if (position == 0) {
-                    user.setStatus("done");
+//                    user.setStatus("done");
                     Intent def = new Intent(getApplication(), Day1LoseShortnessOfBreath.class);
                     startActivity(def);
 
@@ -39,34 +39,34 @@ public class WeeklyLoseShortnessOfBreath extends AppCompatActivity {
                 }
 
                 else if (position == 1) {
-                    user.setStatus("done");
+//                    user.setStatus("done");
                     Intent defs = new Intent(getApplication(), Day2LoseShortnessOfBreath.class);
                     startActivity(defs);
 
                 } else if (position == 2) {
-                    user.setStatus("pending");
+//                    user.setStatus("pending");
                     Intent def = new Intent(getApplication(), Day3LoseShortnessOfBreath.class);
                     startActivity(def);
 
 
                 } else if (position == 3) {
-                    user.setStatus("pending");
+//                    user.setStatus("pending");
                     Intent def = new Intent(getApplication(), Day4LoseShortnessOfBreath.class);
                     startActivity(def);
 
 
                 } else if (position == 4) {
-                    user.setStatus("pending");
+//                    user.setStatus("pending");
                     Intent def = new Intent(getApplication(), Day5LoseShortnessOfBreath.class);
                     startActivity(def);
 
                 } else if (position == 5) {
-                    user.setStatus("pending");
+//                    user.setStatus("pending");
                     Intent def = new Intent(getApplication(), Day6LoseShortnessOfBreath.class);
                     startActivity(def);
 
                 } else if (position == 6) {
-                    user.setStatus("pending");
+//                    user.setStatus("pending");
                     Intent def = new Intent(getApplication(), Day7LoseShortnessOfBreath.class);
                     startActivity(def);
 

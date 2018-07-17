@@ -26,7 +26,7 @@ public class WeeklyMesomorph extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View v,
                                     int position, long id) {
                 if (position == 0) {
-                    user.setStatus("done");
+//                    user.setStatus("done");
                     Intent def = new Intent(WeeklyMesomorph.this, mesomorphday1.class);
                     startActivity(def);
 
@@ -35,13 +35,13 @@ public class WeeklyMesomorph extends AppCompatActivity {
                 }
 
                 else if (position == 1) {
-                    user.setStatus("done");
+//                    user.setStatus("done");
                     Intent defs = new Intent(WeeklyMesomorph.this, mesomorphday2.class);
                     startActivity(defs);
 
 
                 } else if (position == 2) {
-                    user.setStatus("pending");
+//                    user.setStatus("pending");
                     Intent def = new Intent(WeeklyMesomorph.this, mesomorphday3.class);
                     startActivity(def);
 

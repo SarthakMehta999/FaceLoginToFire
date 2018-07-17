@@ -31,7 +31,7 @@ public class WeeklyLoseChestPain extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View v,
                                     int position, long id) {
                 if (position == 0) {
-                    user.setStatus("done");
+//                    user.setStatus("done");
                     Intent def = new Intent(getApplication(), ChestPainDay1.class);
                     startActivity(def);
 
@@ -39,35 +39,35 @@ public class WeeklyLoseChestPain extends AppCompatActivity {
                 }
 
                 else if (position == 1) {
-                    user.setStatus("done");
+//                    user.setStatus("done");
                     Intent defs = new Intent(getApplication(), fiture.quiamco.com.homefiture.WeeklyLoseChestpain.Day2.ChestPainDay2.class);
                     startActivity(defs);
 
                 } else if (position == 2) {
-                    user.setStatus("pending");
+//                    user.setStatus("pending");
                     Intent def = new Intent(getApplication(), ChestPainDay3.class);
                     startActivity(def);
 
 
                 } else if (position == 3) {
-                    user.setStatus("pending");
+//                    user.setStatus("pending");
                     Intent def = new Intent(getApplication(), ChestPainDay4.class);
                     startActivity(def);
 
 
                 } else if (position == 4) {
-                    user.setStatus("pending");
+//                    user.setStatus("pending");
                     Intent def = new Intent(getApplication(), ChestPainDay5.class);
                     startActivity(def);
 
 
                 } else if (position == 5) {
-                    user.setStatus("pending");
+//                    user.setStatus("pending");
                     Intent def = new Intent(getApplication(), ChestPainDay6.class);
                     startActivity(def);
 
                 } else if (position == 6) {
-                    user.setStatus("pending");
+//                    user.setStatus("pending");
                     Intent def = new Intent(getApplication(), ChestPainDay7.class);
                     startActivity(def);
 

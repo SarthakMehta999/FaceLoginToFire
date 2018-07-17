@@ -26,7 +26,7 @@ public class WeeklyGainPainLegs extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View v,
                                     int position, long id) {
                 if (position == 0) {
-                    user.setStatus("done");
+//                    user.setStatus("done");
                     Intent def = new Intent(getApplication(), ExercisesPainInLegsDay1.class);
                     startActivity(def);
 
@@ -35,18 +35,18 @@ public class WeeklyGainPainLegs extends AppCompatActivity {
                 }
 
                 else if (position == 1) {
-                    user.setStatus("done");
+//                    user.setStatus("done");
                     Intent defs = new Intent(getApplication(), Rest.class);
                     startActivity(defs);
 
                 } else if (position == 2) {
-                    user.setStatus("done");
+//                    user.setStatus("done");
                     Intent def = new Intent(getApplication(), ExercisesPainInLegsDay1.class);
                     startActivity(def);
 
 
                 } else if (position == 3) {
-                    user.setStatus("done");
+//                    user.setStatus("done");
                     Intent def = new Intent(getApplication(), Rest.class);
                     startActivity(def);
 

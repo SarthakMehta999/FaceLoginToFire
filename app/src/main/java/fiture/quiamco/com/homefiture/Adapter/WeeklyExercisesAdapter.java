@@ -18,7 +18,7 @@ import fiture.quiamco.com.homefiture.models.User;
  * Created by User on 09/04/2018.
  */
 
-public class WeeklyExercisesAdapter extends BaseAdapter {
+public class    WeeklyExercisesAdapter extends BaseAdapter {
     private Context mContext;
     private ArrayList<String> dailyArrayList;
     private ArrayList<User> dailyExercise;

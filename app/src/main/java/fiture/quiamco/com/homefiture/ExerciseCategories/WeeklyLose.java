@@ -31,20 +31,21 @@ public class WeeklyLose extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View v,
                                     int position, long id) {
                 if (position == 0) {
-                    user.setStatus("done");
+//                    user.setStatus("done");
+                   
                     Intent def = new Intent(WeeklyLose.this, ExercisesDay1Lose.class);
                     startActivity(def);
 
                 }
 
                 else if (position == 1) {
-                    user.setStatus("done");
+//                    user.setStatus("done");
                     Intent defs = new Intent(WeeklyLose.this, ExercisesDay2Lose.class);
                     startActivity(defs);
 
 
                 } else if (position == 2) {
-                    user.setStatus("pending");
+//                    user.setStatus("pending");
                     Intent def = new Intent(WeeklyLose.this, ExercisesDay3Lose.class);
                     startActivity(def);
 
@@ -56,17 +57,17 @@ public class WeeklyLose extends AppCompatActivity {
 
 
                 } else if (position == 4) {
-                    user.setStatus("pending");
+//                    user.setStatus("pending");
                     Intent def = new Intent(WeeklyLose.this, ExercisesDay5Lose.class);
                     startActivity(def);
 
                 } else if (position == 5) {
-                    user.setStatus("pending");
+//                    user.setStatus("pending");
                     Intent def = new Intent(WeeklyLose.this, ExercisesDay6Lose.class);
                     startActivity(def);
 
                 } else if (position == 6) {
-                    user.setStatus("pending");
+//                    user.setStatus("pending");
                     Intent def = new Intent(WeeklyLose.this, ExercisesDay7Lose.class);
                     startActivity(def);
 

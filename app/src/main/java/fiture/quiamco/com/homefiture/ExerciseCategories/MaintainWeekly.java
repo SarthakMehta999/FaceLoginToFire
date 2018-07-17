@@ -43,7 +43,7 @@ public class MaintainWeekly extends AppCompatActivity {
 
 //                if (itemsLocked) return;
                 if (position == 0) {
-                    user.setStatus("done");
+//                    user.setStatus("done");
                     Intent def = new Intent(getApplication(), StartMon.class);
                     startActivity(def);
 
@@ -53,7 +53,7 @@ public class MaintainWeekly extends AppCompatActivity {
 
                 else if (position == 1) {
                     if (surveyResponseRef.child("Exercise 7").equals("Exercise 7")) {
-                        user.setStatus("done");
+//                        user.setStatus("done");
 
                         Intent defs = new Intent(getApplicationContext(), Exercisesday1.class);
                 startActivity(defs);
@@ -63,30 +63,30 @@ public class MaintainWeekly extends AppCompatActivity {
                     }
                     else{
 
-                        user.setStatus("pending");
+//                        user.setStatus("pending");
                     }
 
 
                 } else if (position == 2) {
-                    user.setStatus("pending");
+//                    user.setStatus("pending");
                     Intent def = new Intent(getApplication(), StarWed.class);
                     startActivity(def);
 
                 } else if (position == 3) {
-                    user.setStatus("pending");
+//                    user.setStatus("pending");
                     Intent def = new Intent(getApplication(), fiture.quiamco.com.homefiture.Maintain.ThuCardio.Exercisesday1.class);
                     startActivity(def);
 
                 } else if (position == 4) {
-                    user.setStatus("pending");
+//                    user.setStatus("pending");
                     Intent def = new Intent(getApplication(), StartFri.class);
                     startActivity(def);
                 } else if (position == 5) {
-                    user.setStatus("pending");
+//                    user.setStatus("pending");
                     Intent def = new Intent(getApplication(), fiture.quiamco.com.homefiture.Maintain.SatCardio.Exercisesday1.class);
                     startActivity(def);
                 } else if (position == 6) {
-                    user.setStatus("pending");
+//                    user.setStatus("pending");
                     Intent def = new Intent(getApplication(), Rest.class);
                     startActivity(def);
 
