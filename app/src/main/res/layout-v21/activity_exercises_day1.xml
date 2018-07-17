@@ -144,6 +144,28 @@
                             app:layout_constraintStart_toEndOf="@+id/textView2"
                             app:layout_constraintTop_toBottomOf="@+id/tvExerciseTitle" />
 
+                        <Button
+                            android:id="@+id/equipmentsmondaygain1"
+                            android:layout_width="152dp"
+                            android:layout_height="48dp"
+                            android:text="Equipments"
+                            android:textSize="15sp"
+                            android:textColor="@color/colorPrimary"
+                            style="?android:attr/borderlessButtonStyle"
+                            android:layout_marginLeft="8dp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            android:layout_marginRight="8dp"
+                            app:layout_constraintRight_toRightOf="parent"
+                            android:layout_marginTop="0dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            android:layout_marginBottom="8dp"
+                            app:layout_constraintVertical_bias="0.0"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="8dp"
+                            app:layout_constraintHorizontal_bias="0.452"
+                            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+
                     </android.support.constraint.ConstraintLayout>
 
                     </android.support.v7.widget.CardView>
@@ -231,6 +253,27 @@
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toEndOf="@+id/textView21"
                             app:layout_constraintTop_toBottomOf="@+id/tvExerciseTitle20" />
+
+                        <Button
+                            android:id="@+id/equipmentsmondaygain2"
+                            android:layout_width="152dp"
+                            android:layout_height="48dp"
+                            android:text="Equipments"
+                            android:textSize="15sp"
+                            android:textColor="@color/colorPrimary"
+                            style="?android:attr/borderlessButtonStyle"
+                            android:layout_marginLeft="8dp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            android:layout_marginRight="8dp"
+                            app:layout_constraintRight_toRightOf="parent"
+                            android:layout_marginTop="0dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            android:layout_marginBottom="8dp"
+                            app:layout_constraintVertical_bias="0.0"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="8dp"
+                            app:layout_constraintHorizontal_bias="0.452"
+                            app:layout_constraintTop_toBottomOf="@+id/textView21" />
 
                     </android.support.constraint.ConstraintLayout>
                     </android.support.v7.widget.CardView>
@@ -320,6 +363,27 @@
                             app:layout_constraintStart_toEndOf="@+id/textView_10"
                             app:layout_constraintTop_toBottomOf="@+id/tvExerciseTitle_1" />
 
+                        <Button
+                            android:id="@+id/equipmentsmondaygain3"
+                            android:layout_width="152dp"
+                            android:layout_height="48dp"
+                            android:text="Equipments"
+                            android:textSize="15sp"
+                            android:textColor="@color/colorPrimary"
+                            style="?android:attr/borderlessButtonStyle"
+                            android:layout_marginLeft="8dp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            android:layout_marginRight="8dp"
+                            app:layout_constraintRight_toRightOf="parent"
+                            android:layout_marginTop="0dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            android:layout_marginBottom="8dp"
+                            app:layout_constraintVertical_bias="0.0"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="8dp"
+                            app:layout_constraintHorizontal_bias="0.452"
+                            app:layout_constraintTop_toBottomOf="@+id/textView_10" />
+
                     </android.support.constraint.ConstraintLayout>
                     </android.support.v7.widget.CardView>
 
@@ -351,7 +415,7 @@
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
-                            tools:layout_editor_absoluteX="8dp"
+                            tools:layout_editor_absoluteX="33dp"
                             app:layout_constraintVertical_bias="0.0" />
 
                         <TextView
@@ -407,6 +471,27 @@
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toEndOf="@+id/textView_3"
                             app:layout_constraintTop_toBottomOf="@+id/tvExerciseTitle_2" />
+
+                        <Button
+                            android:id="@+id/equipmentsmondaygain4"
+                            android:layout_width="152dp"
+                            android:layout_height="48dp"
+                            android:text="Equipments"
+                            android:textSize="15sp"
+                            android:textColor="@color/colorPrimary"
+                            style="?android:attr/borderlessButtonStyle"
+                            android:layout_marginLeft="8dp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            android:layout_marginRight="8dp"
+                            app:layout_constraintRight_toRightOf="parent"
+                            android:layout_marginTop="8dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            android:layout_marginBottom="8dp"
+                            app:layout_constraintVertical_bias="0.0"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="8dp"
+                            app:layout_constraintHorizontal_bias="0.452"
+                            app:layout_constraintTop_toBottomOf="@+id/textView_3" />
 
                     </android.support.constraint.ConstraintLayout>
                     </android.support.v7.widget.CardView>
@@ -497,6 +582,26 @@
                             app:layout_constraintStart_toEndOf="@+id/textView10"
                             app:layout_constraintTop_toBottomOf="@+id/tvExerciseTitle1" />
 
+                        <Button
+                            android:id="@+id/equipmentsmondaygain5"
+                            android:layout_width="152dp"
+                            android:layout_height="48dp"
+                            android:text="Equipments"
+                            android:textSize="15sp"
+                            android:textColor="@color/colorPrimary"
+                            style="?android:attr/borderlessButtonStyle"
+                            android:layout_marginLeft="8dp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            android:layout_marginRight="8dp"
+                            app:layout_constraintRight_toRightOf="parent"
+                            android:layout_marginTop="0dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            android:layout_marginBottom="8dp"
+                            app:layout_constraintVertical_bias="0.0"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="8dp"
+                            app:layout_constraintHorizontal_bias="0.452"
+                            app:layout_constraintTop_toBottomOf="@+id/textView10" />
                     </android.support.constraint.ConstraintLayout>
                     </android.support.v7.widget.CardView>
 
