@@ -32,7 +32,7 @@ public class WeeklyMaintainPainInLowerLegs extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View v,
                                     int position, long id) {
                 if (position == 0) {
-                    user.setStatus("done");
+//                    user.setStatus("done");
                     Intent def = new Intent(getApplication(), Day1MaintainPainLowerLegs.class);
                     startActivity(def);
 
@@ -40,34 +40,34 @@ public class WeeklyMaintainPainInLowerLegs extends AppCompatActivity {
                 }
 
                 else if (position == 1) {
-                    user.setStatus("done");
+//                    user.setStatus("done");
                     Intent defs = new Intent(getApplication(), Day2MaintainPainLowerLegs.class);
                     startActivity(defs);
 
                 } else if (position == 2) {
-                    user.setStatus("pending");
+//                    user.setStatus("pending");
                     Intent def = new Intent(getApplication(), Day3MaintainPainLowerLegs.class);
                     startActivity(def);
 
 
                 } else if (position == 3) {
-                    user.setStatus("pending");
+//                    user.setStatus("pending");
                     Intent def = new Intent(getApplication(), Day4MaintainPainLowerLegs.class);
                     startActivity(def);
 
 
                 } else if (position == 4) {
-                    user.setStatus("pending");
+//                    user.setStatus("pending");
                     Intent def = new Intent(getApplication(), Day5MaintainPainLowerLegs.class);
                     startActivity(def);
 
                 } else if (position == 5) {
-                    user.setStatus("pending");
+//                    user.setStatus("pending");
                     Intent def = new Intent(getApplication(), Day6MaintainLowerLegs.class);
                     startActivity(def);
 
                 } else if (position == 6) {
-                    user.setStatus("pending");
+//                    user.setStatus("pending");
                     Intent def = new Intent(getApplication(), Day7MaintainPainLowerLegs.class);
                     startActivity(def);
 
