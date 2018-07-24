@@ -38,8 +38,8 @@ public class MaintainWeekly extends AppCompatActivity {
         gridview.setAdapter(new WeeklyExercisesAdapter(this));
         gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
-            public void onItemClick(AdapterView<?> parent, View v,
-                                    int position, long id) {
+                public void onItemClick(AdapterView<?> parent, View v,
+                                        int position, long id) {
 
 //                if (itemsLocked) return;
                 if (position == 0) {

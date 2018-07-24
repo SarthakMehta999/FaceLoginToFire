@@ -68,4 +68,7 @@
     <string name="gain_more_muscles">Gain more muscles</string>
     <string name="proceed">PROCEED</string>
     <string name="heart_murmur">Heart murmur</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

@@ -405,12 +405,7 @@
         <activity android:name=".GainChestpain.PikePushUps" />
         <activity android:name=".GainChestpain.Pullups" />
         <activity android:name=".GainChestpain.PushUp">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
         <activity android:name=".WeeklyLoseChestpain.Day1.ChestPainDay1" />
         <activity android:name=".ExerciseCategories.WeeklyLoseChestPain" />
         <activity android:name=".WeeklyLoseChestpain.Day2.ChestPainDay2" />
@@ -571,8 +566,6 @@
         <activity android:name=".WeeklyLoseChestpain.Day6.RestBodyWeight" />
         <activity android:name=".WeeklyLoseChestpain.Day6.RestBoxStepUp" />
         <activity android:name=".WeeklyLoseChestpain.Day6.RestLyingIsometric" />
-
-
         <activity android:name=".WeeklyMaintainPainInLowerLegs.Day1.InsStraightLegRaise" />
         <activity android:name=".WeeklyMaintainPainInLowerLegs.Day1.InsHamstringCurls" />
         <activity android:name=".WeeklyMaintainPainInLowerLegs.Day1.InsProneStraightLegRaise" />
@@ -907,12 +900,7 @@
         <activity android:name=".Maintain.FriTotalBodyWrkout.RestPulsingLunges" />
         <activity android:name=".Maintain.FriTotalBodyWrkout.RestToeTap" />
         <activity android:name=".Maintain.FriTotalBodyWrkout.RestTricepsExtension" />
-        <activity android:name=".Maintain.TuesdayCardio.Exercisesday1" />
-        <activity android:name=".Maintain.TuesdayCardio.BenchPressDecline" />
-        <activity android:name=".Maintain.TuesdayCardio.BenchPressIncline" />
-        <activity android:name=".Maintain.TuesdayCardio.Dumbbells" />
-        <activity android:name=".Maintain.TuesdayCardio.SkullCrushers" />
-        <activity android:name=".Maintain.TuesdayCardio.WeightedBenchDips" />
+
         <activity android:name=".Maintain.WedUpperBodyWorkout.RestAlternating" />
         <activity android:name=".Maintain.WedUpperBodyWorkout.RestDiamond" />
         <activity android:name=".Maintain.WedUpperBodyWorkout.RestFront" />
@@ -921,18 +909,9 @@
         <activity android:name=".Maintain.WedUpperBodyWorkout.RestTriceps" />
         <activity android:name=".Maintain.WedUpperBodyWorkout.RestWalking" />
         <activity android:name=".Maintain.ThuCardio.BenchPressDecline" />
-        <activity android:name=".Maintain.ThuCardio.BenchPressIncline" />
-        <activity android:name=".Maintain.ThuCardio.Dumbbells" />
+
         <activity android:name=".Maintain.ThuCardio.Exercisesday1" />
-        <activity android:name=".Maintain.ThuCardio.SkullCrushers" />
-        <activity android:name=".Maintain.ThuCardio.WeightedBenchDips" />
-        <activity android:name=".Maintain.MondayCoreWorkout.RestCrunch" />
-        <activity android:name=".Maintain.MondayCoreWorkout.RestKneeTucks" />
-        <activity android:name=".Maintain.MondayCoreWorkout.RestRollOut" />
-        <activity android:name=".Maintain.MondayCoreWorkout.RestSeated" />
-        <activity android:name=".Maintain.MondayCoreWorkout.RestSideLift" />
-        <activity android:name=".Maintain.MondayCoreWorkout.RestSpiderman" />
-        <activity android:name=".Maintain.MondayCoreWorkout.RestStability" />
+
         <activity android:name=".Maintain.SatCardio.BenchPressDecline" />
         <activity android:name=".Maintain.SatCardio.BenchPressIncline" />
         <activity android:name=".Maintain.SatCardio.Dumbbells" />
@@ -969,7 +948,7 @@
         <activity android:name=".ShortnessOfBreathMaintain.Day1.SlowWalk" />
         <activity android:name=".ShortnessOfBreathMaintain.Day1.StationaryCycling" />
 
-
+</activity>
 
 
 

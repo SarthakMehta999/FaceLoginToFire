@@ -96,6 +96,7 @@ public void onClick(View v) {
         });
 
         startButton = (MaterialFancyButton) findViewById(R.id.startButton);
+        finish.setVisibility(View.GONE);
         finish.setOnClickListener(new View.OnClickListener() {
 
 public void onClick(View view) {
@@ -174,6 +175,7 @@ public void onTick(long millisUntilFinished) {
 public void onFinish() {
         countDownView.setProgress(progress, time);
         //view.setVisibility(View.VISIBLE);
+        finish.setVisibility(View.VISIBLE);
         cancelTimerBt.setVisibility(View.GONE);
         minutes=0;
         seconds=59;

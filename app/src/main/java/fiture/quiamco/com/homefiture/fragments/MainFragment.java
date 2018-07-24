@@ -38,7 +38,7 @@ public class MainFragment extends Fragment {
     private TextView nameAndSurname, tvGender;
     private String nS;
     private MaterialFancyButton share, logout,start;
-    private View rootView;
+        private View rootView;
     private User user;
     FirebaseDatabase database;
     Firebase mRef;

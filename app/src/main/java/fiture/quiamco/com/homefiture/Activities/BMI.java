@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.support.design.widget.TextInputEditText;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
@@ -24,16 +25,16 @@ import fiture.quiamco.com.homefiture.models.Infos;
 import fiture.quiamco.com.homefiture.models.User;
 
 public class BMI extends AppCompatActivity {
-    private EditText height;
-    private EditText weight,age;
+    private TextInputEditText height;
+    private TextInputEditText weight,age;
     private TextView result;
-    private MaterialFancyButton proceed;
+    private MaterialFancyButton proceed,calc;
     private User user;
     private Firebase mRootRef;
     private Infos infos;
     private String id;
     String heightStr;
-    String weightStr;
+    String weightStr,ageStr;
     String bmiLabel = "";
     String bmiStat;
 //    FirebaseDatabase database = FirebaseDatabase.getInstance();
@@ -65,10 +66,13 @@ public class BMI extends AppCompatActivity {
         id = sharedPreferences.getString("userKey", "");
 
 //        mRootRef = new Firebase("https://fiture-dfae4.firebaseio.com/");
-        height = (EditText) findViewById(R.id.height);
-        weight = (EditText) findViewById(R.id.weight);
-        result = (TextView) findViewById(R.id.result);
-
+        height = (TextInputEditText) findViewById(R.id.height);
+        weight = (TextInputEditText) findViewById(R.id.weight);
+        age = (TextInputEditText)findViewById(R.id.age);
+//        result = (TextView) findViewById(R.id.result);
+//        result.setVisibility(View.VISIBLE);c
+        calc = (MaterialFancyButton) findViewById(R.id.calc);
+        calc.setVisibility(View.VISIBLE);
         proceed = (MaterialFancyButton) findViewById(R.id.btnProc);
         proceed.setVisibility(View.GONE);
 
@@ -79,12 +83,14 @@ public class BMI extends AppCompatActivity {
 
 
     public void calculateBMI(View v) {
+
         try {
             InputMethodManager imm = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
             imm.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
 
             heightStr = height.getText().toString();
             weightStr = weight.getText().toString();
+            ageStr = age.getText().toString();
 
 
 //        String value1 = height.getText().toString();
@@ -98,7 +104,9 @@ public class BMI extends AppCompatActivity {
                 height.setError("Please Input Value");
                 weight.setError("Please Input Value");
 
-            } else {
+            }
+ else {
+                calc.setVisibility(View.GONE);
                 proceed.setVisibility(View.VISIBLE);
             }
 
@@ -175,23 +183,23 @@ public class BMI extends AppCompatActivity {
             });
             //Underweight
         } else if (Float.compare(bmi, 16f) > 0  &&  Float.compare(bmi, 18.5f) <= 0) {
-            bmiLabel = getString(R.string.underweight);
-            proceed.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-
-                    if (height.getText().toString().trim().equals("") || weight.getText().toString().trim().equals("")) {
-                        height.setError("Please Input Value");
-                        weight.setError("Please Input Value");
-                    } else {
-                        Intent proc = new Intent(getApplication(), Lifestyle.class);
-                        Bundle bundle = new Bundle();
-                        bundle.putSerializable("user", user);
-                        proc.putExtras(bundle);
-                        startActivity(proc);
-                    }
-                }
-            });
+//            bmiLabel = getString(R.string.underweight);
+////            proceed.setOnClickListener(new View.OnClickListener() {
+////                @Override
+////                public void onClick(View v) {
+////
+////                    if (height.getText().toString().trim().equals("") || weight.getText().toString().trim().equals("")) {
+////                        height.setError("Please Input Value");
+////                        weight.setError("Please Input Value");
+////                    } else {
+////                        Intent proc = new Intent(getApplication(), Lifestyle.class);
+////                        Bundle bundle = new Bundle();
+////                        bundle.putSerializable("user", user);
+////                        proc.putExtras(bundle);
+////                        startActivity(proc);
+////                    }
+////                }
+////            });
         }
         //Normal
         else if (Float.compare(bmi, 18.5f) > 0  &&  Float.compare(bmi, 25f) <= 0) {
@@ -228,7 +236,7 @@ public class BMI extends AppCompatActivity {
                         Intent proc = new Intent(getApplication(), Lifestyle.class);
                         Bundle bundle = new Bundle();
                         bundle.putSerializable("user", user);
-                        proc.putExtras(bundle);
+                         proc.putExtras(bundle);
                         startActivity(proc);
                     }
                 }
@@ -236,7 +244,7 @@ public class BMI extends AppCompatActivity {
 
             //Class 1
         } else if (Float.compare(bmi, 30f) > 0  &&  Float.compare(bmi, 35f) <= 0) {
-            bmiLabel = getString(R.string.obese_class_i);
+//            bmiLabel = getString(R.string.obese_class_i);
             Toast.makeText(this, "Class 1 (low-risk) obesity, if BMI is 30.0 to 34.9", Toast.LENGTH_LONG).show();
             proceed.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -302,7 +310,26 @@ public class BMI extends AppCompatActivity {
         }
 
         bmiStat = "BMI:" +"\n" + bmi + " \n\n"  + bmiLabel;
-        result.setText(bmiStat);
+//        result.setText(bmiStat);
+//        proceed.setVisibility(View.VISIBLE);
+//        proceed.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+//
+//                    if (height.getText().toString().trim().equals("") || weight.getText().toString().trim().equals("")) {
+//                        height.setError("Please Input Value");
+//                        weight.setError("Please Input Value");
+//                    } else {
+//
+//                        Intent proc = new Intent(getApplication(),Lifestyle.class);
+//                        Bundle bundle = new Bundle();
+//                        bundle.putSerializable("user", user);
+//                        proc.putExtras(bundle);
+//                        startActivity(proc);
+//                    }
+//                }
+//            });
+
 
         final Infos infos = new Infos();
         infos.setHeight(heightStr +""+ "cm");
@@ -321,6 +348,7 @@ public class BMI extends AppCompatActivity {
         editor.putString("userHeight",heightStr +" "+"cm");
         editor.putString("userBMI",String.valueOf(bmi));
         editor.putString("userBMILabel",bmiLabel);
+        editor.putString("userAge",ageStr);
         editor.apply();
 
 
