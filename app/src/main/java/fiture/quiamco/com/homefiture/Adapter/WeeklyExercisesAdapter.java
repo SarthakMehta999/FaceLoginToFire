@@ -18,7 +18,7 @@ import fiture.quiamco.com.homefiture.models.User;
  * Created by User on 09/04/2018.
  */
 
-public class    WeeklyExercisesAdapter extends BaseAdapter {
+public class  WeeklyExercisesAdapter extends BaseAdapter {
     private Context mContext;
     private ArrayList<String> dailyArrayList;
     private ArrayList<User> dailyExercise;
@@ -49,60 +49,60 @@ public class    WeeklyExercisesAdapter extends BaseAdapter {
         this.mThumbIds = mThumbIds;
     }
 
-    @Override
-    public boolean areAllItemsEnabled() {
-        return true;
-    }
-
-    @Override
-    public boolean isEnabled(int position) {
-        // Return true for clickable, false for not
-
-        if (position == 0) {
-            Intent def = new Intent(mContext, StartMon.class);
-            mContext.startActivity(def);
-            return true;
-        }else if (position == 1) {
-
-            if (user.getStatus().equals("done")) {
-//                Intent defs = new Intent(mContext, Exercisesday1.class);
-//                mContext.startActivity(defs);
-                return true;
-
-            }else {
-
-                Toast.makeText(mContext, "Please perform the previous exercise to unlock this!", Toast.LENGTH_SHORT).show();
-                return false;
-            }
-        }
-        else if (position == 2) {
-
-
-                Toast.makeText(mContext, "Please perform the previous exercise to unlock this!", Toast.LENGTH_SHORT).show();
-                return false;
-
-        }else if(position == 3){
-
-            Toast.makeText(mContext, "Please perform the previous exercise to unlock this!", Toast.LENGTH_SHORT).show();
-            return false;
-        }else if(position==4){
-
-            Toast.makeText(mContext, "Please perform the previous exercise to unlock this!", Toast.LENGTH_SHORT).show();
-            return false;
-        }else if(position==5){
-
-            Toast.makeText(mContext, "Please perform the previous exercise to unlock this!", Toast.LENGTH_SHORT).show();
-            return false;
-        }else if(position==6){
-
-            Toast.makeText(mContext, "Please perform the previous exercise to unlock this!", Toast.LENGTH_SHORT).show();
-            return false;
-        }
-
-
-
-        return false;
-    }
+//    @Override
+//    public boolean areAllItemsEnabled() {
+//        return true;
+//    }
+//
+//    @Override
+//    public boolean isEnabled(int position) {
+//        // Return true for clickable, false for not
+//
+//        if (position == 0) {
+//            Intent def = new Intent(mContext, StartMon.class);
+//            mContext.startActivity(def);
+//            return true;
+//        }else if (position == 1) {
+//
+////            if (user.getStatus().equals("done")) {
+////                Intent defs = new Intent(mContext, Exercisesday1.class);
+////                mContext.startActivity(defs);
+//                return true;
+////
+////            }else {
+////
+////                Toast.makeText(mContext, "Please perform the previous exercise to unlock this!", Toast.LENGTH_SHORT).show();
+////                return false;
+////            }
+//        }
+//        else if (position == 2) {
+//
+//
+//                Toast.makeText(mContext, "Please perform the previous exercise to unlock this!", Toast.LENGTH_SHORT).show();
+//                return false;
+//
+//        }else if(position == 3){
+//
+//            Toast.makeText(mContext, "Please perform the previous exercise to unlock this!", Toast.LENGTH_SHORT).show();
+//            return false;
+//        }else if(position==4){
+//
+//            Toast.makeText(mContext, "Please perform the previous exercise to unlock this!", Toast.LENGTH_SHORT).show();
+//            return false;
+//        }else if(position==5){
+//
+//            Toast.makeText(mContext, "Please perform the previous exercise to unlock this!", Toast.LENGTH_SHORT).show();
+//            return false;
+//        }else if(position==6){
+//
+//            Toast.makeText(mContext, "Please perform the previous exercise to unlock this!", Toast.LENGTH_SHORT).show();
+//            return false;
+//        }
+//
+//
+//
+//        return false;
+//    }
     @Override
     public int getCount() {
         return mThumbIds.length;

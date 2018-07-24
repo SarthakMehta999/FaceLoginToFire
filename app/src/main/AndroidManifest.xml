@@ -357,13 +357,30 @@
         <activity android:name=".Endomorph.MediumFrequency.Day6Legs.exercisesday6med" />
         <activity android:name=".Maintain.MondayCoreWorkout.StartMon" />
         <activity android:name=".Maintain.MondayCoreWorkout.stability" />
+        <activity android:name=".Maintain.MondayCoreWorkout.RestStability"/>
         <activity android:name=".Maintain.MondayCoreWorkout.seated" />
+        <activity android:name=".Maintain.MondayCoreWorkout.RestSeated" />
         <activity android:name=".Maintain.MondayCoreWorkout.rollout" />
+        <activity android:name=".Maintain.MondayCoreWorkout.RestRollOut" />
         <activity android:name=".Maintain.MondayCoreWorkout.KneeTucks" />
+        <activity android:name=".Maintain.MondayCoreWorkout.RestKneeTucks" />
         <activity android:name=".Maintain.MondayCoreWorkout.spiderman" />
+        <activity android:name=".Maintain.MondayCoreWorkout.RestSpiderman" />
         <activity android:name=".Maintain.MondayCoreWorkout.sideLift" />
+        <activity android:name=".Maintain.MondayCoreWorkout.RestSideLift" />
         <activity android:name=".Maintain.MondayCoreWorkout.crunch" />
+        <activity android:name=".Maintain.MondayCoreWorkout.RestCrunch" />
         <activity android:name=".ExerciseCategories.MaintainWeekly" />
+        <activity android:name=".Maintain.TuesdayCardio.Exercisesday1"/>
+        <activity android:name=".Maintain.TuesdayCardio.BenchPressDecline"/>
+        <activity android:name=".Maintain.TuesdayCardio.BenchPressIncline"/>
+        <activity android:name=".Maintain.TuesdayCardio.WeightedBenchDips"/>
+        <activity android:name=".Maintain.TuesdayCardio.SkullCrushers"/>
+        <activity android:name=".Maintain.TuesdayCardio.Dumbbells"/>
+        <activity android:name=".Maintain.ThuCardio.BenchPressIncline"/>
+        <activity android:name=".Maintain.ThuCardio.Dumbbells"/>
+        <activity android:name=".Maintain.ThuCardio.SkullCrushers"/>
+        <activity android:name=".Maintain.ThuCardio.WeightedBenchDips"/>
         <activity android:name=".Maintain.WedUpperBodyWorkout.standing" />
         <activity android:name=".Maintain.WedUpperBodyWorkout.Alternating" />
         <activity android:name=".Maintain.WedUpperBodyWorkout.Walking" />
@@ -402,8 +419,10 @@
         <activity android:name=".WeeklyLoseChestpain.Day5.ChestPainDay5" />
         <activity android:name=".WeeklyLoseChestpain.Day6.ChestPainDay6" />
         <activity android:name=".WeeklyLoseChestpain.Day7.ChestPainDay7" />
-        <!-- <activity android:name=".ExerciseCategories.WeeklyLosePainInLegs" /> -->
-        <!-- <activity android:name=".WeeklyLosePainInLegs.Day1" /> -->
+
+
+        <!--<activity android:name=".ExerciseCategories.WeeklyLosePainInLegs" />-->
+        <!--<activity android:name=".WeeklyLosePainInLegs.Day1" />-->
         <activity android:name=".LosePainInLegs.Day1.LosePainInLegsDay1" />
         <activity android:name=".LosePainInLegs.Day2.LosePainInLegsDay2" />
         <activity android:name=".LosePainInLegs.Day3.LosePainInLegsDay3" />
@@ -552,6 +571,8 @@
         <activity android:name=".WeeklyLoseChestpain.Day6.RestBodyWeight" />
         <activity android:name=".WeeklyLoseChestpain.Day6.RestBoxStepUp" />
         <activity android:name=".WeeklyLoseChestpain.Day6.RestLyingIsometric" />
+
+
         <activity android:name=".WeeklyMaintainPainInLowerLegs.Day1.InsStraightLegRaise" />
         <activity android:name=".WeeklyMaintainPainInLowerLegs.Day1.InsHamstringCurls" />
         <activity android:name=".WeeklyMaintainPainInLowerLegs.Day1.InsProneStraightLegRaise" />
@@ -926,7 +947,7 @@
         <activity android:name=".ShortnessGain.Day3.ModerateWalk" />
         <activity android:name=".ShortnessGain.Day3.Ocrunch" />
         <activity android:name=".ShortnessGain.Day3.SideLift" />
-        <activity android:name=".ShortnessGain.Sday1.HamstringStretch" />
+       <activity android:name=".ShortnessGain.Sday1.HamstringStretch" />
         <activity android:name=".ShortnessGain.Sday1.QuadricepsStretch" />
         <activity android:name=".ShortnessGain.Sday1.SlowWalk" />
         <activity android:name=".ShortnessGain.Sday1.StationaryCycling" />
@@ -948,24 +969,38 @@
         <activity android:name=".ShortnessOfBreathMaintain.Day1.SlowWalk" />
         <activity android:name=".ShortnessOfBreathMaintain.Day1.StationaryCycling" />
 
-        <!-- <activity android:name=".WeeklyLosePainInLegs.CalfStretch" /> -->
-        <!-- <activity android:name=".WeeklyLosePainInLegs.Day1Instructions.InsCalfStretch" /> -->
-        <!-- <activity android:name=".WeeklyLosePainInLegs.Quadriceps_Stretch" /> -->
-        <!-- <activity android:name=".WeeklyLosePainInLegs.HamstringStretch" /> -->
-        <!-- <activity android:name=".WeeklyLosePainInLegs.HipFlexorsStretch" /> -->
-        <!-- <activity android:name=".WeeklyLosePainInLegs.Day1Instructions.InsQuadricepsStretch" /> -->
-        <!-- <activity android:name=".WeeklyLosePainInLegs.Day1Instructions.InsHamstringStretch" /> -->
-        <!-- <activity android:name=".WeeklyLosePainInLegs.Day1Instructions.InsHipFlexorsStretch" /> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!--<activity android:name=".WeeklyLosePainInLegs.CalfStretch" />-->
+        <!--<activity android:name=".WeeklyLosePainInLegs.Day1Instructions.InsCalfStretch" />-->
+        <!--<activity android:name=".WeeklyLosePainInLegs.Quadriceps_Stretch" />-->
+        <!--<activity android:name=".WeeklyLosePainInLegs.HamstringStretch" />-->
+        <!--<activity android:name=".WeeklyLosePainInLegs.HipFlexorsStretch" />-->
+        <!--<activity android:name=".WeeklyLosePainInLegs.Day1Instructions.InsQuadricepsStretch" />-->
+        <!--<activity android:name=".WeeklyLosePainInLegs.Day1Instructions.InsHamstringStretch" />-->
+        <!--<activity android:name=".WeeklyLosePainInLegs.Day1Instructions.InsHipFlexorsStretch" />-->
         <activity android:name=".ExerciseCategories.WeeklyShortnessForMaintain" />
         <activity android:name=".ShortnessOfBreathMaintain.Day1.ShortnessDay1" />
         <activity android:name=".ShortnessOfBreathMaintain.Day2.ShortnessDay2" />
         <activity android:name=".ShortnessOfBreathMaintain.Day3.ShortnessDay3" />
         <activity android:name=".ExerciseCategories.WeeklyGainShortness" />
-        <activity android:name=".Activities.SplashActivity" />
-        <activity android:name=".GainChestpain.Rest1" />
-        <activity android:name=".GainChestpain.Rest2" />
-        <activity android:name=".GainChestpain.Rest3" />
-        <activity android:name=".DayOneandThreeWeeklyGainUpperBodyAbsExercises.DayOneandThreeWeeklyGainUpperEquipments"></activity>
+        <activity android:name=".Activities.SplashActivity"/>
+        <activity android:name=".GainChestpain.Rest1"/>
+        <activity android:name=".GainChestpain.Rest2"/>
+        <activity android:name=".GainChestpain.Rest3"/>
     </application>
 
 </manifest>

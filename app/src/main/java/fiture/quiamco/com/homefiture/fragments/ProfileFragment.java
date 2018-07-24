@@ -60,7 +60,7 @@ public class    ProfileFragment extends Fragment {
     private ShareDialog shareDialog;
     private String TAG = "ProfileFragment";
     private CircleImageView profileImage;
-    private TextView nameAndSurname, tvEmail, tvGender, tvBirthday, Bmi,tvWeight,tvHeight;
+    private TextView nameAndSurname, tvEmail, tvGender, tvBirthday, tvBmiVal,tvBmiLabel,tvWeight,tvHeight;
     private EditText Weight, Height;
     private Button share, logout, start;
     private MaterialFancyButton challenge;
@@ -123,6 +123,7 @@ public class    ProfileFragment extends Fragment {
     private SharedPreferences sharedPreferences;
     private String id;
     private String bmiLabel;
+    private String BMI;
     private int j = 0;
 
     @Nullable
@@ -139,7 +140,12 @@ public class    ProfileFragment extends Fragment {
         alterUserData = database.getReference("User Data");
         sharedPreferences = getContext().getSharedPreferences("FitureUser", Context.MODE_PRIVATE);
         id = sharedPreferences.getString("userKey", "");
+        BMI = sharedPreferences.getString("userBMI", "");
         bmiLabel = sharedPreferences.getString("userBMILabel", "");
+        BMI = sharedPreferences.getString("userBMI4", "");
+        bmiLabel = sharedPreferences.getString("userBMILabel", "");
+        String Height = sharedPreferences.getString("userHeight", "");
+        String Weight = sharedPreferences.getString("userWeight", "");
         surveyResponse = sharedPreferences.getString("userFitnessResponse","");
         goal = sharedPreferences.getString("userGoal","");
         ilness = sharedPreferences.getString("userIllnesses","");
@@ -157,8 +163,10 @@ public class    ProfileFragment extends Fragment {
         nameAndSurname.setText(user.getfName() + " " + user.getlName());
 //        tvEmail.setText(user.getEmail());
         tvGender.setText(user.getGender());
-        tvHeight.setText(user.getHeight());
-        tvWeight.setText(user.getWeight());
+        tvHeight.setText(Height);
+        tvWeight.setText(Weight);
+        tvBmiVal.setText(BMI);
+        tvBmiLabel.setText(bmiLabel);
 //        tvBirthday.setText(user.getBirthDate());
 //        Weight.getText(user.getWeight().toString());
 //
@@ -193,6 +201,8 @@ public class    ProfileFragment extends Fragment {
         tvBirthday = (TextView) rootView.findViewById(R.id.tvBirthday);
         tvWeight = (TextView) rootView.findViewById(R.id.tvWeight);
         tvHeight = (TextView) rootView.findViewById(R.id.tvHeight);
+        tvBmiVal = (TextView) rootView.findViewById(R.id.tvBmiVal);
+        tvBmiLabel = (TextView) rootView.findViewById(R.id.tvBmiLabel);
 //        Weight = (TextView) rootView.findViewById(R.id.tvWeight);
 //        Height = (TextView) rootView.findViewById(R.id.tvHeight);
 

@@ -24,6 +24,7 @@ import com.facebook.share.widget.ShareDialog;
 
 import fiture.quiamco.com.homefiture.Pedometer.Pedometer_Main;
 import fiture.quiamco.com.homefiture.R;
+import fiture.quiamco.com.homefiture.fragments.BmiFragment;
 import fiture.quiamco.com.homefiture.fragments.MainFragment;
 import fiture.quiamco.com.homefiture.fragments.ProfileFragment;
 import fiture.quiamco.com.homefiture.models.User;
@@ -98,16 +99,16 @@ public class NavDrawer extends AppCompatActivity
 
 //        FragmentManager fam = getSupportFragmentManager();
 //        fam.beginTransaction().replace(R.id.content_frame,new ProfileFragment().newInstance(user)).commit();
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                getSupportFragmentManager()
-                        .beginTransaction()
-                        .setCustomAnimations(android.R.anim.fade_in, android.R.anim.fade_out)
-                        .replace(R.id.content_frame, new ProfileFragment().newInstance(user))
-                        .commit();
-            }
-        }, 0);
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    getSupportFragmentManager()
+                            .beginTransaction()
+                            .setCustomAnimations(android.R.anim.fade_in, android.R.anim.fade_out)
+                            .replace(R.id.content_frame, new ProfileFragment().newInstance(user))
+                            .commit();
+                }
+            }, 0);
     }
     public void fragment() {
         new Handler().postDelayed(new Runnable() {
@@ -133,7 +134,18 @@ public class NavDrawer extends AppCompatActivity
             }
         }, 0);
     }
-
+    public void fragmentC() {
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                getSupportFragmentManager()
+                        .beginTransaction()
+                        .setCustomAnimations(android.R.anim.fade_in, android.R.anim.fade_out)
+                        .replace(R.id.content_frame, new BmiFragment().newInstance(user))
+                        .commit();
+            }
+        }, 0);
+    }
 
 
 
@@ -183,10 +195,10 @@ public class NavDrawer extends AppCompatActivity
         FragmentManager fm  = getSupportFragmentManager();
         // Handle navigation view item clicks here.
         int id = item.getItemId();
-        if (id == R.id.leaderboard) {
+        if (id == R.id.bmi) {
 //            Intent inte = new Intent(NavDrawer.this, Leaderboards.class);
 //            startActivity(inte);
-            fragmentA();
+            fragmentC();
 
 //            finish();
         } else if (id == R.id.pedometer) {
