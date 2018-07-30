@@ -19,7 +19,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activities.Splash2">
+        <activity android:name=".Activities.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -948,20 +948,6 @@
         <activity android:name=".ShortnessOfBreathMaintain.Day1.SlowWalk" />
         <activity android:name=".ShortnessOfBreathMaintain.Day1.StationaryCycling" />
 
-</activity>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         <!--<activity android:name=".WeeklyLosePainInLegs.CalfStretch" />-->
         <!--<activity android:name=".WeeklyLosePainInLegs.Day1Instructions.InsCalfStretch" />-->
@@ -976,10 +962,11 @@
         <activity android:name=".ShortnessOfBreathMaintain.Day2.ShortnessDay2" />
         <activity android:name=".ShortnessOfBreathMaintain.Day3.ShortnessDay3" />
         <activity android:name=".ExerciseCategories.WeeklyGainShortness" />
-        <activity android:name=".Activities.SplashActivity"/>
+        <activity android:name=".Activities.Splash2"/>
         <activity android:name=".GainChestpain.Rest1"/>
         <activity android:name=".GainChestpain.Rest2"/>
         <activity android:name=".GainChestpain.Rest3"/>
+        </activity>
     </application>
 
 </manifest>

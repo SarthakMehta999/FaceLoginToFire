@@ -142,7 +142,7 @@ public class    ProfileFragment extends Fragment {
         id = sharedPreferences.getString("userKey", "");
         BMI = sharedPreferences.getString("userBMI", "");
         bmiLabel = sharedPreferences.getString("userBMILabel", "");
-        BMI = sharedPreferences.getString("userBMI4", "");
+        BMI = sharedPreferences.getString("userBMI", "");
         bmiLabel = sharedPreferences.getString("userBMILabel", "");
         String Height = sharedPreferences.getString("userHeight", "");
         String Weight = sharedPreferences.getString("userWeight", "");
