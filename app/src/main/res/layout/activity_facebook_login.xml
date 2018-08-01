@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    android:background="@drawable/backgroundgradient"
+    android:background="@drawable/translucent_loginbg"
     tools:context="fiture.quiamco.com.homefiture.Activities.FacebookLoginActivity">
 
     <ProgressBar
@@ -68,8 +68,9 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dip"
-            android:background="#6f62d0"
+            android:background="#cc423e"
             android:text="@string/btn_login"
+            android:textSize="17sp"
             android:textColor="#ECEFF1" />
 
         <Button
