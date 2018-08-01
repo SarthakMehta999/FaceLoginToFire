@@ -182,7 +182,7 @@ public class FacebookLoginActivity extends AppCompatActivity {
 
 
 //        loginButton.setReadPermissions("email", "user_birthday","user_posts","user_photos","public_profile");
-        loginButton.setReadPermissions(Arrays.asList("email", "user_birthday", "user_posts", "user_photos", "public_profile","user_friends"));
+        loginButton.setReadPermissions(Arrays.asList("email", "user_birthday", "user_posts", "user_photos   ", "public_profile","user_friends"));
         loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
             @Override
             public void onSuccess(final LoginResult loginResult) {
