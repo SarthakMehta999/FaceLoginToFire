@@ -31,8 +31,8 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder>{
         this.context = context;
         this.users = users;
 
-        Log.d("dugaazxc", String.valueOf(users.size()));
-        Log.d("animal",users.get(0).getImageUrl());
+        Log.d("dc", String.valueOf(users.size()));
+        Log.d("al",users.get(0).getImageUrl());
     }
 
 
@@ -57,7 +57,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder>{
 
     @Override
     public int getItemCount() {
-        Log.e("piste",users.size()+"");
+        Log.e("pup",users.size()+"");
         return users.size();
     }
 

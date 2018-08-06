@@ -11,7 +11,6 @@ import android.view.View;
 import android.widget.Button;
 
 import at.markushi.ui.CircleButton;
-import fiture.quiamco.com.homefiture.LoseExcercise.MonThursSatButtWorkouts.RestBentOver;
 import fiture.quiamco.com.homefiture.R;
 
 public class InsLying extends AppCompatActivity {
@@ -32,7 +31,7 @@ public class InsLying extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent im = new Intent(InsLying.this,RestBentOver.class);
+                Intent im = new Intent(InsLying.this,RestBodyWeight.class);
                 startActivity(im);
             }
         });

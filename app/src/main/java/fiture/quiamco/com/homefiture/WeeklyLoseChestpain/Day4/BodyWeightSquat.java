@@ -72,7 +72,7 @@ public class BodyWeightSquat extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
 @Override
 public void onClick(View v) {
-        Intent im = new Intent(BodyWeightSquat.this,WeeklyLoseChestPain.class);
+        Intent im = new Intent(BodyWeightSquat.this,InsBodyWeightSquat.class);
         startActivity(im);
         }
         });

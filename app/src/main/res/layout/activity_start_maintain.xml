@@ -168,6 +168,27 @@ tools:context="fiture.quiamco.com.homefiture.ExerciseCategories.TotalBodyCircuit
                     app:layout_constraintStart_toEndOf="@+id/textView2"
                     app:layout_constraintTop_toBottomOf="@+id/tvExerciseTitle" />
 
+                <Button
+                    android:id="@+id/equipmentsmondaymaintain1"
+                    android:layout_width="152dp"
+                    android:layout_height="48dp"
+                    android:text="Equipments"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorPrimary"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_marginLeft="8dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_marginRight="8dp"
+                    app:layout_constraintRight_toRightOf="@+id/tvExerciseDesc"
+                    android:layout_marginTop="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintVertical_bias="0.0"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintHorizontal_bias="0.303"
+                    app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
             </android.support.constraint.ConstraintLayout>
                 </android.support.v7.widget.CardView>
 
@@ -254,6 +275,27 @@ tools:context="fiture.quiamco.com.homefiture.ExerciseCategories.TotalBodyCircuit
             app:layout_constraintStart_toEndOf="@+id/textView21"
             app:layout_constraintTop_toBottomOf="@+id/tvExerciseTitle20" />
 
+        <Button
+            android:id="@+id/equipmentsmondaymaintain2"
+            android:layout_width="152dp"
+            android:layout_height="48dp"
+            android:text="Equipments"
+            android:textSize="15sp"
+            android:textColor="@color/colorPrimary"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginRight="8dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintVertical_bias="1.0"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintHorizontal_bias="0.306"
+            app:layout_constraintTop_toBottomOf="@+id/tvExerciseDesc20" />
+
     </android.support.constraint.ConstraintLayout>
                 </android.support.v7.widget.CardView>
 
@@ -339,6 +381,27 @@ tools:context="fiture.quiamco.com.homefiture.ExerciseCategories.TotalBodyCircuit
                     app:layout_constraintStart_toEndOf="@+id/textView_10"
                     app:layout_constraintTop_toBottomOf="@+id/tvExerciseTitle_1" />
 
+                <Button
+                    android:id="@+id/equipmentsmondaymaintain3"
+                    android:layout_width="152dp"
+                    android:layout_height="48dp"
+                    android:text="Equipments"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorPrimary"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_marginLeft="8dp"
+                    app:layout_constraintLeft_toLeftOf="@+id/imageView_1"
+                    android:layout_marginRight="8dp"
+                    app:layout_constraintRight_toRightOf="@+id/tvExerciseDesc_1"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintVertical_bias="1.0"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintHorizontal_bias="0.311"
+                    app:layout_constraintTop_toBottomOf="@+id/textView_10" />
+
             </android.support.constraint.ConstraintLayout>
     </android.support.v7.widget.CardView>
 
@@ -423,6 +486,27 @@ tools:context="fiture.quiamco.com.homefiture.ExerciseCategories.TotalBodyCircuit
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/textView_3"
                     app:layout_constraintTop_toBottomOf="@+id/tvExerciseTitle_2" />
+
+                <Button
+                    android:id="@+id/equipmentsmondaymaintain4"
+                    android:layout_width="152dp"
+                    android:layout_height="48dp"
+                    android:text="Equipments"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorPrimary"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_marginLeft="8dp"
+                    app:layout_constraintLeft_toLeftOf="@+id/imageView_2"
+                    android:layout_marginRight="8dp"
+                    app:layout_constraintRight_toRightOf="@+id/tvExerciseDesc_2"
+                    android:layout_marginTop="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintVertical_bias="1.0"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintHorizontal_bias="0.369"
+                    app:layout_constraintTop_toBottomOf="@+id/textView_3" />
 
             </android.support.constraint.ConstraintLayout>
                 </android.support.v7.widget.CardView>
@@ -510,6 +594,27 @@ tools:context="fiture.quiamco.com.homefiture.ExerciseCategories.TotalBodyCircuit
                     app:layout_constraintStart_toEndOf="@+id/textView10"
                     app:layout_constraintTop_toBottomOf="@+id/tvExerciseTitle1" />
 
+                <Button
+                    android:id="@+id/equipmentsmondaymaintain5"
+                    android:layout_width="152dp"
+                    android:layout_height="48dp"
+                    android:text="Equipments"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorPrimary"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_marginLeft="8dp"
+                    app:layout_constraintLeft_toLeftOf="@+id/imageView1"
+                    android:layout_marginRight="8dp"
+                    app:layout_constraintRight_toRightOf="@+id/tvExerciseDesc1"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintVertical_bias="1.0"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintHorizontal_bias="0.369"
+                    app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
             </android.support.constraint.ConstraintLayout>
         </android.support.v7.widget.CardView>
 
@@ -595,6 +700,27 @@ tools:context="fiture.quiamco.com.homefiture.ExerciseCategories.TotalBodyCircuit
                     app:layout_constraintStart_toEndOf="@+id/textView10.0"
                     app:layout_constraintTop_toBottomOf="@+id/tvExerciseTitle1.0" />
 
+                <Button
+                    android:id="@+id/equipmentsmondaymaintain6"
+                    android:layout_width="152dp"
+                    android:layout_height="48dp"
+                    android:text="Equipments"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorPrimary"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_marginLeft="8dp"
+                    app:layout_constraintLeft_toLeftOf="@+id/imageView1.0"
+                    android:layout_marginRight="8dp"
+                    app:layout_constraintRight_toRightOf="@+id/tvExerciseDesc1.0"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintVertical_bias="1.0"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintHorizontal_bias="0.369"
+                    app:layout_constraintTop_toBottomOf="@+id/textView10.0" />
+
             </android.support.constraint.ConstraintLayout>
                 </android.support.v7.widget.CardView>
 
@@ -679,6 +805,27 @@ tools:context="fiture.quiamco.com.homefiture.ExerciseCategories.TotalBodyCircuit
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/textView10.1"
                     app:layout_constraintTop_toBottomOf="@+id/tvExerciseTitle1.1" />
+
+                <Button
+                    android:id="@+id/equipmentsmondaymaintain7"
+                    android:layout_width="152dp"
+                    android:layout_height="48dp"
+                    android:text="Equipments"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorPrimary"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_marginLeft="8dp"
+                    app:layout_constraintLeft_toLeftOf="@+id/imageView1.1"
+                    android:layout_marginRight="8dp"
+                    app:layout_constraintRight_toRightOf="@+id/tvExerciseDesc1.1"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintVertical_bias="1.0"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintHorizontal_bias="0.369"
+                    app:layout_constraintTop_toBottomOf="@+id/textView10.1" />
 
             </android.support.constraint.ConstraintLayout>
                 </android.support.v7.widget.CardView>

@@ -7,6 +7,7 @@ import android.os.CountDownTimer;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
@@ -16,7 +17,6 @@ import android.widget.TextView;
 import com.rilixtech.materialfancybutton.MaterialFancyButton;
 
 import at.markushi.ui.CircleButton;
-import fiture.quiamco.com.homefiture.ExerciseCategories.WeeklyLoseChestPain;
 import fiture.quiamco.com.homefiture.R;
 import fiture.quiamco.com.homefiture.models.CircleCountDownView;
 
@@ -51,9 +51,9 @@ public class BodyWeightSquat extends AppCompatActivity {
     CountDownTimer countDownTimer;
 
     int count = 0;
-    int seconds =59;
+    int seconds = 59;
     int minutes;
-    int hours=0;
+    int hours = 0;
     int time;
 
     Thread t;
@@ -67,34 +67,34 @@ public class BodyWeightSquat extends AppCompatActivity {
         setContentView(R.layout.activity_body_weight_squat);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.imToolbar);
-    setSupportActionBar(toolbar);
+        setSupportActionBar(toolbar);
 
-    getSupportActionBar().setDisplayShowTitleEnabled(false);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
 
         toolbar.setNavigationIcon(R.drawable.back_btn);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-@Override
-public void onClick(View v) {
-        Intent im = new Intent(BodyWeightSquat.this,WeeklyLoseChestPain.class);
-        startActivity(im);
-        }
+            @Override
+            public void onClick(View v) {
+                Intent im = new Intent(BodyWeightSquat.this, InsBodyWeightSquat.class);
+                startActivity(im);
+            }
         });
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
-        finish = (CircleButton) findViewById(R.id.btnFinish);
+        finish = (CircleButton) findViewById(R.id.btnFinishbody);
         finish.setVisibility(View.VISIBLE);
         timerValue = (TextView) findViewById(R.id.timerValue);
 
-        startButton = (MaterialFancyButton) findViewById(R.id.startButton);
-        finish.setOnClickListener(new View.OnClickListener() {
-
-public void onClick(View view) {
-        Intent intent = new Intent(BodyWeightSquat.this, fiture.quiamco.com.homefiture.WeeklyLoseChestpain.Day1.RestBodyWeight.class);
-        startActivity(intent);
-
-        }
-        });
+       startButton = (MaterialFancyButton) findViewById(R.id.startButton);
+//        finish.setOnClickListener(new View.OnClickListener() {
+//
+//public void onClick(View view) {
+//        Intent intent = new Intent(BodyWeightSquat.this, fiture.quiamco.com.homefiture.WeeklyLoseChestpain.Day1.RestBodyWeight.class);
+//        startActivity(intent);
+//
+//        }
+//        });
 
         countDownView = (CircleCountDownView) findViewById(R.id.circle_count_down_view);
         countDownView.setVisibility(View.VISIBLE);
@@ -114,9 +114,9 @@ public void onClick(View view) {
 //
 //            }
 //        });
-        }
+    }
 
-protected void startCountDown() {
+    protected void startCountDown() {
 
 
         //view.setVisibility(View.GONE); // hide button
@@ -125,60 +125,64 @@ protected void startCountDown() {
 //        cancelTimerBt.setVisibility(View.VISIBLE); // show cancel button
 
         progress = 1;
-        endTime = 5; // up to finish time
-        minutes = endTime-1;
-        time= endTime*60;
+        endTime = 1; // up to finish time
+        minutes = endTime - 1;
+        time = endTime * 60;
 
         countDownTimer = new CountDownTimer(time * 1000 /*finishTime**/, 1000 /*interval**/) {
-@Override
-public void onTick(long millisUntilFinished) {
-        countDownView.setProgress(progress, time );
-        progress = progress + 1;
+            @Override
+            public void onTick(long millisUntilFinished) {
+                countDownView.setProgress(progress, time);
+                progress = progress + 1;
 
-        if(seconds >= 0)
-        {
+                if (seconds >=0) {
 
-        mTvMinutes.setText(minutes+"");
-        if(seconds <10){
-        mTvSeconds.setText("0"+seconds);
-        seconds--;
-        count++;
-        }else{
-        mTvSeconds.setText(seconds+"");
-        seconds--;
-        count++;
-        }
+                    mTvMinutes.setText(minutes + "");
+                    if(minutes==0&&seconds==0){
+                        Log.d("Test", "0 tanan");
+                        mTvSeconds.setText(seconds + "");
+                        Intent intent = new Intent(BodyWeightSquat.this, RestBodyWeight.class);
+                        startActivity(intent);
+                    }else
+                        if (seconds < 10) {
+                        mTvSeconds.setText("0" + seconds);
+                        seconds--;
+                        count++;
+                    } else {
+                        mTvSeconds.setText(seconds + "");
+                        seconds--;
+                        count++;
+                    }
 
-        }
+                }
 
-        if(count == 60 && minutes != 0)
-        {
-        minutes--;
-        count = 0;
-        mTvMinutes.setText(minutes+"");
-        seconds = 59;
-        }
+                if (count == 60 && minutes != 0) {
+                    minutes--;
+                    count = 0;
+                    mTvMinutes.setText(minutes + "");
+                    seconds = 59;
+                }
 
-        }
+            }
 
-@Override
-public void onFinish() {
-        countDownView.setProgress(progress, time);
-        //view.setVisibility(View.VISIBLE);
-        cancelTimerBt.setVisibility(View.GONE);
-        minutes=0;
-        seconds=59;
-        }
+            @Override
+            public void onFinish() {
+                countDownView.setProgress(progress, time);
+                //view.setVisibility(View.VISIBLE);
+                cancelTimerBt.setVisibility(View.GONE);
+                minutes = 0;
+                seconds = 59;
+            }
         };
         countDownTimer.start(); // start timer
 
         // hide softkeyboard
         View currentFocus = this.getCurrentFocus();
         if (currentFocus != null) {
-        InputMethodManager imm = (InputMethodManager)this.getSystemService(Context.INPUT_METHOD_SERVICE);
-        imm.hideSoftInputFromWindow(currentFocus.getWindowToken(), 0);
+            InputMethodManager imm = (InputMethodManager) this.getSystemService(Context.INPUT_METHOD_SERVICE);
+            imm.hideSoftInputFromWindow(currentFocus.getWindowToken(), 0);
         }
-        }
+    }
 //    public void startTime(){
 //        startTime = SystemClock.uptimeMillis();
 //        customHandler.postDelayed(updateTimerThread, 0);
@@ -208,4 +212,4 @@ public void onFinish() {
 //
 //    };
 
-        }
+}

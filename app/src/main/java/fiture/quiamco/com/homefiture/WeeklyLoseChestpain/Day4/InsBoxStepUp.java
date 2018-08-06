@@ -11,7 +11,6 @@ import android.view.View;
 import android.widget.Button;
 
 import at.markushi.ui.CircleButton;
-import fiture.quiamco.com.homefiture.ExerciseCategories.WeeklyLoseChestPain;
 import fiture.quiamco.com.homefiture.R;
 
 public class InsBoxStepUp extends AppCompatActivity {
@@ -33,7 +32,7 @@ public class InsBoxStepUp extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent im = new Intent(InsBoxStepUp.this,WeeklyLoseChestPain.class);
+                Intent im = new Intent(InsBoxStepUp.this,RestLyingIsometric.class);
                 startActivity(im);
             }
         });

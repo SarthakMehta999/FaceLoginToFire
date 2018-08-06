@@ -145,7 +145,7 @@
                             app:layout_constraintTop_toBottomOf="@+id/tvExerciseTitle" />
 
                         <Button
-                            android:id="@+id/equipmentsmondaygain1"
+                            android:id="@+id/equipmentsmondaygainplowerlegs1"
                             android:layout_width="152dp"
                             android:layout_height="48dp"
                             android:text="Equipments"
@@ -255,7 +255,7 @@
                             app:layout_constraintTop_toBottomOf="@+id/tvExerciseTitle20" />
 
                         <Button
-                            android:id="@+id/equipmentsmondaygain2"
+                            android:id="@+id/equipmentsmondaygainplowerlegs2"
                             android:layout_width="152dp"
                             android:layout_height="48dp"
                             android:text="Equipments"
@@ -364,7 +364,7 @@
                             app:layout_constraintTop_toBottomOf="@+id/tvExerciseTitle_1" />
 
                         <Button
-                            android:id="@+id/equipmentsmondaygain3"
+                            android:id="@+id/equipmentsmondaygainplowerlegs3"
                             android:layout_width="152dp"
                             android:layout_height="48dp"
                             android:text="Equipments"
@@ -473,7 +473,7 @@
                             app:layout_constraintTop_toBottomOf="@+id/tvExerciseTitle_2" />
 
                         <Button
-                            android:id="@+id/equipmentsmondaygain4"
+                            android:id="@+id/equipmentsmondaygainplowerlegs4"
                             android:layout_width="152dp"
                             android:layout_height="48dp"
                             android:text="Equipments"
@@ -583,7 +583,7 @@
                             app:layout_constraintTop_toBottomOf="@+id/tvExerciseTitle1" />
 
                         <Button
-                            android:id="@+id/equipmentsmondaygain5"
+                            android:id="@+id/equipmentsmondaygainplowerlegs5"
                             android:layout_width="152dp"
                             android:layout_height="48dp"
                             android:text="Equipments"
@@ -615,7 +615,7 @@
                         >
 
                     <Button
-                        android:id="@+id/startBtn13"
+                        android:id="@+id/startBtn31"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_alignParentBottom="true"

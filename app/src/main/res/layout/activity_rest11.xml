@@ -63,7 +63,7 @@
 
 
     <at.markushi.ui.CircleButton
-        android:id="@+id/startBtn13"
+        android:id="@+id/btnFinish12"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:src="@drawable/checked"
@@ -82,7 +82,7 @@
     <pl.droidsonroids.gif.GifTextView
         android:layout_width="274dp"
         android:layout_height="216dp"
-        android:background="@drawable/rest"
+        android:background="@drawable/relax"
         android:layout_marginRight="8dp"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginLeft="8dp"

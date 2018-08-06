@@ -127,6 +127,27 @@
                                 app:layout_constraintTop_toBottomOf="@+id/tvExerciseTitle"
                                 tools:layout_editor_absoluteX="214dp" />
 
+                            <Button
+                                android:id="@+id/equipmentsthursdaylosepainlowerlegs1"
+                                android:layout_width="152dp"
+                                android:layout_height="48dp"
+                                android:text="Equipments"
+                                android:textSize="15sp"
+                                android:textColor="@color/colorPrimary"
+                                style="?android:attr/borderlessButtonStyle"
+                                android:layout_marginLeft="8dp"
+                                app:layout_constraintLeft_toLeftOf="@+id/imageView"
+                                android:layout_marginRight="8dp"
+                                app:layout_constraintRight_toRightOf="@+id/tvExerciseDesc"
+                                android:layout_marginTop="0dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                android:layout_marginBottom="8dp"
+                                app:layout_constraintVertical_bias="0.0"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginEnd="8dp"
+                                app:layout_constraintHorizontal_bias="0.306"
+                                app:layout_constraintTop_toBottomOf="@+id/tvExerciseDesc" />
+
                         </android.support.constraint.ConstraintLayout>
 
                     </android.support.v7.widget.CardView>
@@ -206,6 +227,27 @@
                                 app:layout_constraintTop_toBottomOf="@+id/tvExerciseTitle20"
                                 tools:layout_editor_absoluteX="218dp" />
 
+                            <Button
+                                android:id="@+id/equipmentsthursdaylosepainlowerlegs2"
+                                android:layout_width="152dp"
+                                android:layout_height="48dp"
+                                android:text="Equipments"
+                                android:textSize="15sp"
+                                android:textColor="@color/colorPrimary"
+                                style="?android:attr/borderlessButtonStyle"
+                                android:layout_marginLeft="8dp"
+                                app:layout_constraintLeft_toLeftOf="@+id/imageView2"
+                                android:layout_marginRight="8dp"
+                                app:layout_constraintRight_toRightOf="@+id/tvExerciseDesc20"
+                                android:layout_marginTop="8dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                android:layout_marginBottom="8dp"
+                                app:layout_constraintVertical_bias="0.0"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginEnd="8dp"
+                                app:layout_constraintHorizontal_bias="0.306"
+                                app:layout_constraintTop_toBottomOf="@+id/tvExerciseDesc20" />
+
                         </android.support.constraint.ConstraintLayout>
                     </android.support.v7.widget.CardView>
 
@@ -284,6 +326,27 @@
                                 app:layout_constraintStart_toEndOf="@+id/textView_10"
                                 app:layout_constraintTop_toBottomOf="@+id/tvExerciseTitle_1"
                                 tools:layout_editor_absoluteX="218dp" />
+
+                            <Button
+                                android:id="@+id/equipmentsthursdaylosepainlowerlegs3"
+                                android:layout_width="152dp"
+                                android:layout_height="48dp"
+                                android:text="Equipments"
+                                android:textSize="15sp"
+                                android:textColor="@color/colorPrimary"
+                                style="?android:attr/borderlessButtonStyle"
+                                android:layout_marginLeft="8dp"
+                                app:layout_constraintLeft_toLeftOf="@+id/imageView_1"
+                                android:layout_marginRight="8dp"
+                                app:layout_constraintRight_toRightOf="@+id/tvExerciseDesc_1"
+                                android:layout_marginTop="0dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                android:layout_marginBottom="8dp"
+                                app:layout_constraintVertical_bias="0.0"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginEnd="8dp"
+                                app:layout_constraintHorizontal_bias="0.306"
+                                app:layout_constraintTop_toBottomOf="@+id/tvExerciseDesc_1" />
 
                         </android.support.constraint.ConstraintLayout>
 
@@ -365,6 +428,27 @@
                                 app:layout_constraintTop_toBottomOf="@+id/tvExerciseTitle_2"
                                 tools:layout_editor_absoluteX="218dp" />
 
+                            <Button
+                                android:id="@+id/equipmentsthursdaylosepainlowerlegs4"
+                                android:layout_width="152dp"
+                                android:layout_height="48dp"
+                                android:text="Equipments"
+                                android:textSize="15sp"
+                                android:textColor="@color/colorPrimary"
+                                style="?android:attr/borderlessButtonStyle"
+                                android:layout_marginLeft="8dp"
+                                app:layout_constraintLeft_toLeftOf="@+id/imageView_2"
+                                android:layout_marginRight="8dp"
+                                app:layout_constraintRight_toRightOf="@+id/tvExerciseDesc_2"
+                                android:layout_marginTop="0dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                android:layout_marginBottom="8dp"
+                                app:layout_constraintVertical_bias="0.0"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginEnd="8dp"
+                                app:layout_constraintHorizontal_bias="0.306"
+                                app:layout_constraintTop_toBottomOf="@+id/tvExerciseDesc_2" />
+
                         </android.support.constraint.ConstraintLayout>
                     </android.support.v7.widget.CardView>
 
@@ -445,6 +529,27 @@
                                 app:layout_constraintTop_toBottomOf="@+id/tvExerciseTitle1"
                                 tools:layout_editor_absoluteX="218dp" />
 
+                            <Button
+                                android:id="@+id/equipmentsthursdaylosepainlowerlegs5"
+                                android:layout_width="152dp"
+                                android:layout_height="48dp"
+                                android:text="Equipments"
+                                android:textSize="15sp"
+                                android:textColor="@color/colorPrimary"
+                                style="?android:attr/borderlessButtonStyle"
+                                android:layout_marginLeft="8dp"
+                                app:layout_constraintLeft_toLeftOf="@+id/imageView1"
+                                android:layout_marginRight="8dp"
+                                app:layout_constraintRight_toRightOf="@+id/tvExerciseDesc1"
+                                android:layout_marginTop="8dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                android:layout_marginBottom="8dp"
+                                app:layout_constraintVertical_bias="0.0"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginEnd="8dp"
+                                app:layout_constraintHorizontal_bias="0.306"
+                                app:layout_constraintTop_toBottomOf="@+id/tvExerciseDesc1" />
+
                         </android.support.constraint.ConstraintLayout>
                     </android.support.v7.widget.CardView>
 
@@ -524,6 +629,27 @@
                                 app:layout_constraintTop_toBottomOf="@+id/tvExerciseTitle1"
                                 tools:layout_editor_absoluteX="218dp" />
 
+                            <Button
+                                android:id="@+id/equipmentsthursdaylosepainlowerlegs6"
+                                android:layout_width="152dp"
+                                android:layout_height="48dp"
+                                android:text="Equipments"
+                                android:textSize="15sp"
+                                android:textColor="@color/colorPrimary"
+                                style="?android:attr/borderlessButtonStyle"
+                                android:layout_marginLeft="8dp"
+                                app:layout_constraintLeft_toLeftOf="@+id/imageView1"
+                                android:layout_marginRight="8dp"
+                                app:layout_constraintRight_toRightOf="@+id/tvExerciseDesc1"
+                                android:layout_marginTop="0dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                android:layout_marginBottom="8dp"
+                                app:layout_constraintVertical_bias="0.0"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginEnd="8dp"
+                                app:layout_constraintHorizontal_bias="0.306"
+                                app:layout_constraintTop_toBottomOf="@+id/tvExerciseDesc1" />
+
                         </android.support.constraint.ConstraintLayout>
                     </android.support.v7.widget.CardView>
 
@@ -602,6 +728,27 @@
                                 app:layout_constraintStart_toEndOf="@+id/textView10"
                                 app:layout_constraintTop_toBottomOf="@+id/tvExerciseTitle1"
                                 tools:layout_editor_absoluteX="218dp" />
+
+                            <Button
+                                android:id="@+id/equipmentsthursdaylosepainlowerlegs7"
+                                android:layout_width="152dp"
+                                android:layout_height="48dp"
+                                android:text="Equipments"
+                                android:textSize="15sp"
+                                android:textColor="@color/colorPrimary"
+                                style="?android:attr/borderlessButtonStyle"
+                                android:layout_marginLeft="8dp"
+                                app:layout_constraintLeft_toLeftOf="@+id/imageView1"
+                                android:layout_marginRight="8dp"
+                                app:layout_constraintRight_toRightOf="@+id/tvExerciseDesc1"
+                                android:layout_marginTop="8dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                android:layout_marginBottom="8dp"
+                                app:layout_constraintVertical_bias="0.0"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginEnd="8dp"
+                                app:layout_constraintHorizontal_bias="0.306"
+                                app:layout_constraintTop_toBottomOf="@+id/tvExerciseDesc1" />
 
                         </android.support.constraint.ConstraintLayout>
                     </android.support.v7.widget.CardView>

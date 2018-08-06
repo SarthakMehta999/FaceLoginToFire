@@ -11,11 +11,14 @@ import fiture.quiamco.com.homefiture.R;
 
 public class Rest extends AppCompatActivity {
     Button finish;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rest11);
-        finish = (Button)findViewById(R.id.startBtn13);
+
+
+        finish = (Button)findViewById(R.id.btnFinish12);
         finish.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View view) {

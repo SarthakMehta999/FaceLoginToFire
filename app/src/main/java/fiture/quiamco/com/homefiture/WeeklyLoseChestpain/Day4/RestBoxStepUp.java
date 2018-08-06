@@ -74,7 +74,7 @@ public class RestBoxStepUp extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent im = new Intent(RestBoxStepUp.this,WeeklyLoseChestPain.class);
+                Intent im = new Intent(RestBoxStepUp.this,BoxStepUp.class);
                 startActivity(im);
             }
         });

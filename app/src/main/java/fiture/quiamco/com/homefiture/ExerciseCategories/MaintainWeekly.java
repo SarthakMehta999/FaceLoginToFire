@@ -52,19 +52,19 @@ public class MaintainWeekly extends AppCompatActivity {
                 }
 
                 else if (position == 1) {
-                    if (surveyResponseRef.child("Exercise 7").equals("Exercise 7")) {
-//                        user.setStatus("done");
+//                    if (surveyResponseRef.child("Exercise 7").equals("Exercise 7")) {
+////                        user.setStatus("done");
 
                         Intent defs = new Intent(getApplicationContext(), Exercisesday1.class);
                 startActivity(defs);
                         Log.d("it exists", "it does");
 
 
-                    }
-                    else{
-
-//                        user.setStatus("pending");
-                    }
+//                    }
+//                    else{
+//
+////                        user.setStatus("pending");
+//                    }
 
 
                 } else if (position == 2) {

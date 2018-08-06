@@ -7,17 +7,17 @@ import android.os.CountDownTimer;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.rilixtech.materialfancybutton.MaterialFancyButton;
 
 import at.markushi.ui.CircleButton;
-import fiture.quiamco.com.homefiture.ExerciseCategories.WeeklyGainChestpain;
-import fiture.quiamco.com.homefiture.ExerciseCategories.WeeklyLoseChestPain;
 import fiture.quiamco.com.homefiture.R;
 import fiture.quiamco.com.homefiture.models.CircleCountDownView;
 
@@ -51,7 +51,7 @@ public class RestBodyWeight extends AppCompatActivity {
     CountDownTimer countDownTimer;
 
     int count = 0;
-    int seconds =59;
+    int seconds = 30;
     int minutes;
     int hours=0;
     int time;
@@ -74,26 +74,26 @@ public class RestBodyWeight extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent im = new Intent(RestBodyWeight.this,WeeklyLoseChestPain.class);
+                Intent im = new Intent(RestBodyWeight.this,BodyWeightSquat.class);
                 startActivity(im);
             }
         });
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
-        finish = (CircleButton) findViewById(R.id.btnFinish);
+        finish = (CircleButton) findViewById(R.id.btnFinishrest);
         finish.setVisibility(View.VISIBLE);
         timerValue = (TextView) findViewById(R.id.timerValue);
 
-        startButton = (MaterialFancyButton) findViewById(R.id.startButton);
-        finish.setOnClickListener(new View.OnClickListener() {
-
-            public void onClick(View view) {
-                Intent intent = new Intent(RestBodyWeight.this, InsLying.class);
-                startActivity(intent);
-
-            }
-        });
+       startButton = (MaterialFancyButton) findViewById(R.id.startButton);
+//        finish.setOnClickListener(new View.OnClickListener() {
+//
+//            public void onClick(View view) {
+//                Intent intent = new Intent(RestBodyWeight.this, InsLying.class);
+//                startActivity(intent);
+//
+//            }
+//        });
 
         countDownView = (CircleCountDownView) findViewById(R.id.circle_count_down_view);
         countDownView.setVisibility(View.VISIBLE);
@@ -123,8 +123,8 @@ public class RestBodyWeight extends AppCompatActivity {
 //        startTimerBt.setVisibility(View.GONE);
 //        cancelTimerBt.setVisibility(View.VISIBLE); // show cancel button
 
-        progress = 1;
-        endTime = 5; // up to finish time
+        progress = 30;
+        endTime = 1; // up to finish time
         minutes = endTime-1;
         time= endTime*60;
 
@@ -134,8 +134,11 @@ public class RestBodyWeight extends AppCompatActivity {
                 countDownView.setProgress(progress, time );
                 progress = progress + 1;
 
-                if(seconds >= 0)
+                if(seconds > 0)
                 {
+
+                    Log.d("please","sulod seconds");
+                    Log.d("NumSec", seconds+"");
 
                     mTvMinutes.setText(minutes+"");
                     if(seconds <10){
@@ -148,7 +151,22 @@ public class RestBodyWeight extends AppCompatActivity {
                         count++;
                     }
 
+                }else{
+                    mTvSeconds.setText(seconds+"");
                 }
+
+                finish.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        if(seconds==0){
+                            Log.d("ShawnIyat","sulod seconds");
+                            Intent intent = new Intent(RestBodyWeight.this, InsLying.class);
+                            startActivity(intent);
+                        }else{
+                            Toast.makeText(getApplicationContext(), "You still have time to relax.", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
 
                 if(count == 60 && minutes != 0)
                 {
@@ -166,7 +184,16 @@ public class RestBodyWeight extends AppCompatActivity {
                 //view.setVisibility(View.VISIBLE);
                 cancelTimerBt.setVisibility(View.GONE);
                 minutes=0;
-                seconds=59;
+                seconds=1;
+
+//                finish.setOnClickListener(new View.OnClickListener() {
+//
+//                    public void onClick(View view) {
+//                        Intent intent = new Intent(RestBodyWeight.this, InsLying.class);
+//                        startActivity(intent);
+//
+//                    }
+//                });
             }
         };
         countDownTimer.start(); // start timer

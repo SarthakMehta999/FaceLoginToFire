@@ -92,7 +92,7 @@ public class RestCrunch extends AppCompatActivity {
                 startActivity(im);
             }
         });
-        user.setStatus("done");
+
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         finish = (CircleButton) findViewById(R.id.btnFinish);

@@ -74,7 +74,7 @@ public class RestModeratePace extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent im = new Intent(RestModeratePace.this,WeeklyLoseChestPain.class);
+                Intent im = new Intent(RestModeratePace.this,ModeratePaceJog.class);
                 startActivity(im);
             }
         });

@@ -72,7 +72,7 @@ public class RestBodyWeight extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent im = new Intent(RestBodyWeight.this,WeeklyLoseChestPain.class);
+                Intent im = new Intent(RestBodyWeight.this,BodyWeightSquat.class);
                 startActivity(im);
             }
         });

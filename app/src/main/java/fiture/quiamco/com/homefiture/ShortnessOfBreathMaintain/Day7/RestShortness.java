@@ -10,7 +10,9 @@ import fiture.quiamco.com.homefiture.ExerciseCategories.WeeklyShortnessForMainta
 import fiture.quiamco.com.homefiture.R;
 
 public class RestShortness extends AppCompatActivity {
+
     Button finish;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

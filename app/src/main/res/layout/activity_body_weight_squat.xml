@@ -64,7 +64,7 @@
 
 
     <at.markushi.ui.CircleButton
-        android:id="@+id/btnFinish"
+        android:id="@+id/btnFinishbody"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:src="@drawable/checked"

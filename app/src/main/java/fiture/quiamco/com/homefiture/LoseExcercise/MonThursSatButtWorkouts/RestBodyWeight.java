@@ -50,8 +50,8 @@ public class RestBodyWeight extends AppCompatActivity {
     CountDownTimer countDownTimer;
 
     int count = 0;
-    int seconds =59;
-    int minutes;
+    int seconds = 30;
+    int minutes ;
     int hours=0;
     int time;
 
@@ -85,14 +85,14 @@ public class RestBodyWeight extends AppCompatActivity {
         timerValue = (TextView) findViewById(R.id.timerValue);
 
         startButton = (MaterialFancyButton) findViewById(R.id.startButton);
-        finish.setOnClickListener(new View.OnClickListener() {
-
-            public void onClick(View view) {
-                Intent intent = new Intent(RestBodyWeight.this, InsDumbellBench.class);
-                startActivity(intent);
-
-            }
-        });
+//        finish.setOnClickListener(new View.OnClickListener() {
+//
+//            public void onClick(View view) {
+//                Intent intent = new Intent(RestBodyWeight.this, InsDumbellBench.class);
+//                startActivity(intent);
+//
+//            }
+//        });
 
         countDownView = (CircleCountDownView) findViewById(R.id.circle_count_down_view);
         countDownView.setVisibility(View.VISIBLE);
@@ -123,9 +123,9 @@ public class RestBodyWeight extends AppCompatActivity {
 //        cancelTimerBt.setVisibility(View.VISIBLE); // show cancel button
 
         progress = 1;
-        endTime = 5; // up to finish time
+        endTime = 120; // up to finish time
         minutes = endTime-1;
-        time= endTime*60;
+        time= endTime*5;
 
         countDownTimer = new CountDownTimer(time * 1000 /*finishTime**/, 1000 /*interval**/) {
             @Override
@@ -154,7 +154,7 @@ public class RestBodyWeight extends AppCompatActivity {
                     minutes--;
                     count = 0;
                     mTvMinutes.setText(minutes+"");
-                    seconds = 59;
+                    seconds = 30;
                 }
 
             }
@@ -164,8 +164,17 @@ public class RestBodyWeight extends AppCompatActivity {
                 countDownView.setProgress(progress, time);
                 //view.setVisibility(View.VISIBLE);
                 cancelTimerBt.setVisibility(View.GONE);
-                minutes=0;
-                seconds=59;
+                minutes = 1;
+                seconds=30;
+                finish.setOnClickListener(new View.OnClickListener() {
+
+                    public void onClick(View view) {
+                        Intent intent = new Intent(RestBodyWeight.this, InsDumbellBench.class);
+                        startActivity(intent);
+
+                    }
+                });
+
             }
         };
         countDownTimer.start(); // start timer

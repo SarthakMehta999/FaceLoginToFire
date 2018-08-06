@@ -69,80 +69,210 @@
                         android:layout_marginRight="10dp"
                         >
 
-                    <android.support.constraint.ConstraintLayout
+                        <android.support.constraint.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            >
+
+                            <pl.droidsonroids.gif.GifTextView
+                                android:id="@+id/imageView"
+                                android:layout_width="78dp"
+                                android:layout_height="78dp"
+                                android:layout_marginBottom="8dp"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:scaleType="centerCrop"
+                                android:background="@drawable/bodyweightsquats"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/textView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginStart="8dp"
+                                android:text="Title: "
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                app:layout_constraintStart_toEndOf="@+id/imageView"
+                                app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+                            <TextView
+                                android:id="@+id/tvExerciseTitle"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="8dp"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginRight="8dp"
+                                android:layout_marginStart="8dp"
+                                android:text="Bodyweight Squats"
+                                android:textSize="16sp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/textView"
+                                app:layout_constraintTop_toTopOf="@+id/textView" />
+
+                            <TextView
+                                android:id="@+id/textView2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:text="Description: "
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                app:layout_constraintStart_toEndOf="@+id/imageView"
+                                app:layout_constraintTop_toBottomOf="@+id/tvExerciseTitle" />
+
+                            <TextView
+                                android:id="@+id/tvExerciseDesc"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="8dp"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginRight="8dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:text="3 sets of 10 – 15 repetitions"
+                                android:textSize="16sp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/textView2"
+                                app:layout_constraintTop_toBottomOf="@+id/tvExerciseTitle" />
+
+                            <Button
+                                android:id="@+id/equipmentsmondaylose1"
+                                android:layout_width="152dp"
+                                android:layout_height="48dp"
+                                android:text="Equipments"
+                                android:textSize="15sp"
+                                android:textColor="@color/colorPrimary"
+                                style="?android:attr/borderlessButtonStyle"
+                                android:layout_marginLeft="8dp"
+                                app:layout_constraintLeft_toLeftOf="@+id/imageView"
+                                android:layout_marginTop="0dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                android:layout_marginBottom="8dp"
+                                app:layout_constraintVertical_bias="0.0"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginEnd="8dp"
+                                app:layout_constraintTop_toBottomOf="@+id/textView2"
+                                android:layout_marginRight="8dp"
+                                app:layout_constraintRight_toRightOf="@+id/tvExerciseDesc"
+                                app:layout_constraintHorizontal_bias="0.312" />
+
+                        </android.support.constraint.ConstraintLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/CardDay2"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="-50dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
                         >
 
-                        <pl.droidsonroids.gif.GifTextView
-                            android:id="@+id/imageView"
-                            android:layout_width="78dp"
-                            android:layout_height="78dp"
-                            android:layout_marginBottom="8dp"
-                            android:layout_marginLeft="8dp"
-                            android:layout_marginStart="8dp"
-                            android:layout_marginTop="8dp"
-                            android:scaleType="centerCrop"
-                            android:background="@drawable/bodyweightsquats"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
 
-                        <TextView
-                            android:id="@+id/textView"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="8dp"
-                            android:layout_marginStart="8dp"
-                            android:text="Title: "
-                            android:textSize="16sp"
-                            android:textStyle="bold"
-                            app:layout_constraintStart_toEndOf="@+id/imageView"
-                            app:layout_constraintTop_toTopOf="@+id/imageView" />
+                        <android.support.constraint.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            >
 
-                        <TextView
-                            android:id="@+id/tvExerciseTitle"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginEnd="8dp"
-                            android:layout_marginLeft="8dp"
-                            android:layout_marginRight="8dp"
-                            android:layout_marginStart="8dp"
-                            android:text="Bodyweight Squats"
-                            android:textSize="16sp"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toEndOf="@+id/textView"
-                            app:layout_constraintTop_toTopOf="@+id/textView" />
+                            <pl.droidsonroids.gif.GifTextView
+                                android:id="@+id/imageView2"
+                                android:layout_width="82dp"
+                                android:layout_height="74dp"
+                                android:layout_marginBottom="8dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:scaleType="centerCrop"
+                                android:background="@drawable/dumbbellbenchpress"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                tools:layout_editor_absoluteX="8dp"
+                                app:layout_constraintVertical_bias="0.0" />
 
-                        <TextView
-                            android:id="@+id/textView2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="8dp"
-                            android:layout_marginStart="8dp"
-                            android:layout_marginTop="8dp"
-                            android:text="Description: "
-                            android:textSize="16sp"
-                            android:textStyle="bold"
-                            app:layout_constraintStart_toEndOf="@+id/imageView"
-                            app:layout_constraintTop_toBottomOf="@+id/tvExerciseTitle" />
+                            <TextView
+                                android:id="@+id/textView20"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginStart="8dp"
+                                android:text="Title: "
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                app:layout_constraintStart_toEndOf="@+id/imageView2"
+                                app:layout_constraintTop_toTopOf="@+id/imageView2" />
 
-                        <TextView
-                            android:id="@+id/tvExerciseDesc"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginEnd="8dp"
-                            android:layout_marginLeft="8dp"
-                            android:layout_marginRight="8dp"
-                            android:layout_marginStart="8dp"
-                            android:layout_marginTop="8dp"
-                            android:text="3 sets of 10 – 15 repetitions"
-                            android:textSize="16sp"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toEndOf="@+id/textView2"
-                            app:layout_constraintTop_toBottomOf="@+id/tvExerciseTitle" />
+                            <TextView
+                                android:id="@+id/tvExerciseTitle20"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="8dp"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginRight="8dp"
+                                android:layout_marginStart="8dp"
+                                android:text="Dumbbell Bench Press"
+                                android:textSize="16sp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/textView20"
+                                app:layout_constraintTop_toTopOf="@+id/textView20" />
 
-                    </android.support.constraint.ConstraintLayout>
+                            <TextView
+                                android:id="@+id/textView21"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:text="Description: "
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                app:layout_constraintStart_toEndOf="@+id/imageView2"
+                                app:layout_constraintTop_toBottomOf="@+id/tvExerciseTitle20" />
+
+                            <TextView
+                                android:id="@+id/tvExerciseDesc20"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="8dp"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginRight="8dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:text="3 sets of 12 repetitions"
+                                android:textSize="16sp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/textView21"
+                                app:layout_constraintTop_toBottomOf="@+id/tvExerciseTitle20" />
+
+                            <Button
+                                android:id="@+id/equipmentsmondaylose2"
+                                android:layout_width="152dp"
+                                android:layout_height="48dp"
+                                android:text="Equipments"
+                                android:textSize="15sp"
+                                android:textColor="@color/colorPrimary"
+                                style="?android:attr/borderlessButtonStyle"
+                                android:layout_marginLeft="8dp"
+                                app:layout_constraintLeft_toLeftOf="@+id/imageView2"
+                                android:layout_marginRight="8dp"
+                                app:layout_constraintRight_toRightOf="@+id/tvExerciseDesc20"
+                                android:layout_marginTop="8dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                android:layout_marginBottom="8dp"
+                                app:layout_constraintVertical_bias="0.6"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginEnd="8dp"
+                                app:layout_constraintHorizontal_bias="0.343"
+                                app:layout_constraintTop_toBottomOf="@+id/textView21" />
+
+                        </android.support.constraint.ConstraintLayout>
 
                     </android.support.v7.widget.CardView>
 
@@ -157,174 +287,107 @@
 
 
 
-                    <android.support.constraint.ConstraintLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        >
+                        <android.support.constraint.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            >
 
-                        <pl.droidsonroids.gif.GifTextView
-                            android:id="@+id/imageView2"
-                            android:layout_width="82dp"
-                            android:layout_height="74dp"
-                            android:layout_marginBottom="8dp"
-                            android:layout_marginStart="8dp"
-                            android:layout_marginTop="8dp"
-                            android:scaleType="centerCrop"
-                            android:background="@drawable/dumbbellbenchpress"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            tools:layout_editor_absoluteX="8dp"
-                            app:layout_constraintVertical_bias="0.0" />
+                            <pl.droidsonroids.gif.GifTextView
+                                android:id="@+id/imageView_1"
+                                android:layout_width="82dp"
+                                android:layout_height="74dp"
+                                android:layout_marginBottom="8dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:scaleType="centerCrop"
+                                android:background="@drawable/bentoverow"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                tools:layout_editor_absoluteX="8dp"
+                                app:layout_constraintVertical_bias="0.0" />
 
-                        <TextView
-                            android:id="@+id/textView20"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="8dp"
-                            android:layout_marginStart="8dp"
-                            android:text="Title: "
-                            android:textSize="16sp"
-                            android:textStyle="bold"
-                            app:layout_constraintStart_toEndOf="@+id/imageView2"
-                            app:layout_constraintTop_toTopOf="@+id/imageView2" />
+                            <TextView
+                                android:id="@+id/textView_1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginStart="8dp"
+                                android:text="Title: "
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                app:layout_constraintStart_toEndOf="@+id/imageView_1"
+                                app:layout_constraintTop_toTopOf="@+id/imageView_1" />
 
-                        <TextView
-                            android:id="@+id/tvExerciseTitle20"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginEnd="8dp"
-                            android:layout_marginLeft="8dp"
-                            android:layout_marginRight="8dp"
-                            android:layout_marginStart="8dp"
-                            android:text="Dumbbell Bench Press"
-                            android:textSize="16sp"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toEndOf="@+id/textView20"
-                            app:layout_constraintTop_toTopOf="@+id/textView20" />
+                            <TextView
+                                android:id="@+id/tvExerciseTitle_1"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="8dp"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginRight="8dp"
+                                android:layout_marginStart="8dp"
+                                android:text="Dumbbell Row"
+                                android:textSize="16sp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/textView_1"
+                                app:layout_constraintTop_toTopOf="@+id/textView_1" />
 
-                        <TextView
-                            android:id="@+id/textView21"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="8dp"
-                            android:layout_marginStart="8dp"
-                            android:layout_marginTop="8dp"
-                            android:text="Description: "
-                            android:textSize="16sp"
-                            android:textStyle="bold"
-                            app:layout_constraintStart_toEndOf="@+id/imageView2"
-                            app:layout_constraintTop_toBottomOf="@+id/tvExerciseTitle20" />
+                            <TextView
+                                android:id="@+id/textView_10"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:text="Description: "
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                app:layout_constraintStart_toEndOf="@+id/imageView_1"
+                                app:layout_constraintTop_toBottomOf="@+id/tvExerciseTitle_1" />
 
-                        <TextView
-                            android:id="@+id/tvExerciseDesc20"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginEnd="8dp"
-                            android:layout_marginLeft="8dp"
-                            android:layout_marginRight="8dp"
-                            android:layout_marginStart="8dp"
-                            android:layout_marginTop="8dp"
-                            android:text="3 sets of 12 repetitions"
-                            android:textSize="16sp"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toEndOf="@+id/textView21"
-                            app:layout_constraintTop_toBottomOf="@+id/tvExerciseTitle20" />
+                            <TextView
+                                android:id="@+id/tvExerciseDesc_1"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="8dp"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginRight="8dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:text="3 sets of 12 repetitions each side"
+                                android:textSize="16sp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/textView_10"
+                                app:layout_constraintTop_toBottomOf="@+id/tvExerciseTitle_1" />
 
-                    </android.support.constraint.ConstraintLayout>
+                            <Button
+                                android:id="@+id/equipmentsmondaylose3"
+                                android:layout_width="152dp"
+                                android:layout_height="48dp"
+                                android:text="Equipments"
+                                android:textSize="15sp"
+                                android:textColor="@color/colorPrimary"
+                                style="?android:attr/borderlessButtonStyle"
+                                android:layout_marginLeft="8dp"
+                                app:layout_constraintLeft_toLeftOf="@+id/imageView_1"
+                                android:layout_marginRight="8dp"
+                                app:layout_constraintRight_toRightOf="@+id/tvExerciseDesc_1"
+                                android:layout_marginTop="8dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                android:layout_marginBottom="8dp"
+                                app:layout_constraintVertical_bias="0.6"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginEnd="8dp"
+                                app:layout_constraintHorizontal_bias="0.35"
+                                app:layout_constraintTop_toBottomOf="@+id/textView_10" />
 
-                    </android.support.v7.widget.CardView>
-
-                    <android.support.v7.widget.CardView
-                        android:id="@+id/CardDay3"
-                        android:layout_width="match_parent"
-                        android:layout_height="-50dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
-                        >
-
-
-                    <android.support.constraint.ConstraintLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        >
-
-                        <pl.droidsonroids.gif.GifTextView
-                            android:id="@+id/imageView_1"
-                            android:layout_width="82dp"
-                            android:layout_height="74dp"
-                            android:layout_marginBottom="8dp"
-                            android:layout_marginStart="8dp"
-                            android:layout_marginTop="8dp"
-                            android:scaleType="centerCrop"
-                            android:background="@drawable/bentoverow"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            tools:layout_editor_absoluteX="8dp"
-                            app:layout_constraintVertical_bias="0.0" />
-
-                        <TextView
-                            android:id="@+id/textView_1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="8dp"
-                            android:layout_marginStart="8dp"
-                            android:text="Title: "
-                            android:textSize="16sp"
-                            android:textStyle="bold"
-                            app:layout_constraintStart_toEndOf="@+id/imageView_1"
-                            app:layout_constraintTop_toTopOf="@+id/imageView_1" />
-
-                        <TextView
-                            android:id="@+id/tvExerciseTitle_1"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginEnd="8dp"
-                            android:layout_marginLeft="8dp"
-                            android:layout_marginRight="8dp"
-                            android:layout_marginStart="8dp"
-                            android:text="Dumbbell Row"
-                            android:textSize="16sp"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toEndOf="@+id/textView_1"
-                            app:layout_constraintTop_toTopOf="@+id/textView_1" />
-
-                        <TextView
-                            android:id="@+id/textView_10"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="8dp"
-                            android:layout_marginStart="8dp"
-                            android:layout_marginTop="8dp"
-                            android:text="Description: "
-                            android:textSize="16sp"
-                            android:textStyle="bold"
-                            app:layout_constraintStart_toEndOf="@+id/imageView_1"
-                            app:layout_constraintTop_toBottomOf="@+id/tvExerciseTitle_1" />
-
-                        <TextView
-                            android:id="@+id/tvExerciseDesc_1"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginEnd="8dp"
-                            android:layout_marginLeft="8dp"
-                            android:layout_marginRight="8dp"
-                            android:layout_marginStart="8dp"
-                            android:layout_marginTop="8dp"
-                            android:text="3 sets of 12 repetitions each side"
-                            android:textSize="16sp"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toEndOf="@+id/textView_10"
-                            app:layout_constraintTop_toBottomOf="@+id/tvExerciseTitle_1" />
-
-                    </android.support.constraint.ConstraintLayout>
+                        </android.support.constraint.ConstraintLayout>
 
                     </android.support.v7.widget.CardView>
 
                     <android.support.v7.widget.CardView
-                        android:id="@+id/CardDay3"
+                        android:id="@+id/CardDay2"
                         android:layout_width="match_parent"
                         android:layout_height="-50dp"
                         android:layout_marginTop="10dp"
@@ -335,86 +398,108 @@
 
 
 
-                    <android.support.constraint.ConstraintLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        >
 
-                        <pl.droidsonroids.gif.GifTextView
-                            android:id="@+id/imageView_2"
-                            android:layout_width="82dp"
-                            android:layout_height="74dp"
-                            android:layout_marginBottom="8dp"
-                            android:layout_marginStart="8dp"
-                            android:layout_marginTop="8dp"
-                            android:scaleType="centerCrop"
-                            android:background="@drawable/lyingisometriclying"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            tools:layout_editor_absoluteX="8dp"
-                            app:layout_constraintVertical_bias="0.0" />
+                        <android.support.constraint.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            >
 
-                        <TextView
-                            android:id="@+id/textView_2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="8dp"
-                            android:layout_marginStart="8dp"
-                            android:text="Title: "
-                            android:textSize="16sp"
-                            android:textStyle="bold"
-                            app:layout_constraintStart_toEndOf="@+id/imageView_2"
-                            app:layout_constraintTop_toTopOf="@+id/imageView_2" />
+                            <pl.droidsonroids.gif.GifTextView
+                                android:id="@+id/imageView_2"
+                                android:layout_width="82dp"
+                                android:layout_height="74dp"
+                                android:layout_marginBottom="8dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:scaleType="centerCrop"
+                                android:background="@drawable/lyingisometriclying"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                tools:layout_editor_absoluteX="8dp"
+                                app:layout_constraintVertical_bias="0.0" />
 
-                        <TextView
-                            android:id="@+id/tvExerciseTitle_2"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginEnd="8dp"
-                            android:layout_marginLeft="8dp"
-                            android:layout_marginRight="8dp"
-                            android:layout_marginStart="8dp"
-                            android:text="Lying Isometric Y"
-                            android:textSize="16sp"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toEndOf="@+id/textView_2"
-                            app:layout_constraintTop_toTopOf="@+id/textView_2" />
+                            <TextView
+                                android:id="@+id/textView_2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginStart="8dp"
+                                android:text="Title: "
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                app:layout_constraintStart_toEndOf="@+id/imageView_2"
+                                app:layout_constraintTop_toTopOf="@+id/imageView_2" />
 
-                        <TextView
-                            android:id="@+id/textView_3"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="8dp"
-                            android:layout_marginStart="8dp"
-                            android:layout_marginTop="8dp"
-                            android:text="Description: "
-                            android:textSize="16sp"
-                            android:textStyle="bold"
-                            app:layout_constraintStart_toEndOf="@+id/imageView_2"
-                            app:layout_constraintTop_toBottomOf="@+id/tvExerciseTitle_2" />
+                            <TextView
+                                android:id="@+id/tvExerciseTitle_2"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="8dp"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginRight="8dp"
+                                android:layout_marginStart="8dp"
+                                android:text="Lying Isometricly"
+                                android:textSize="16sp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/textView_2"
+                                app:layout_constraintTop_toTopOf="@+id/textView_2" />
 
-                        <TextView
-                            android:id="@+id/tvExerciseDesc_2"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginEnd="8dp"
-                            android:layout_marginLeft="8dp"
-                            android:layout_marginRight="8dp"
-                            android:layout_marginStart="8dp"
-                            android:layout_marginTop="8dp"
-                            android:text="Hold for 30 seconds"
-                            android:textSize="16sp"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toEndOf="@+id/textView_3"
-                            app:layout_constraintTop_toBottomOf="@+id/tvExerciseTitle_2" />
+                            <TextView
+                                android:id="@+id/textView_3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:text="Description: "
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                app:layout_constraintStart_toEndOf="@+id/imageView_2"
+                                app:layout_constraintTop_toBottomOf="@+id/tvExerciseTitle_2" />
 
-                    </android.support.constraint.ConstraintLayout>
+                            <TextView
+                                android:id="@+id/tvExerciseDesc_2"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="8dp"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginRight="8dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:text="Hold for 30 seconds"
+                                android:textSize="16sp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/textView_3"
+                                app:layout_constraintTop_toBottomOf="@+id/tvExerciseTitle_2" />
+
+                            <Button
+                                android:id="@+id/equipmentsmondaylose4"
+                                android:layout_width="152dp"
+                                android:layout_height="48dp"
+                                android:text="Equipments"
+                                android:textSize="15sp"
+                                android:textColor="@color/colorPrimary"
+                                style="?android:attr/borderlessButtonStyle"
+                                android:layout_marginLeft="8dp"
+                                app:layout_constraintLeft_toLeftOf="@+id/imageView_2"
+                                android:layout_marginRight="8dp"
+                                app:layout_constraintRight_toRightOf="@+id/tvExerciseDesc_2"
+                                android:layout_marginTop="0dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                android:layout_marginBottom="8dp"
+                                app:layout_constraintVertical_bias="0.0"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginEnd="8dp"
+                                app:layout_constraintTop_toBottomOf="@+id/textView_3"
+                                app:layout_constraintHorizontal_bias="0.387" />
+
+                        </android.support.constraint.ConstraintLayout>
 
                     </android.support.v7.widget.CardView>
 
                     <android.support.v7.widget.CardView
-                        android:id="@+id/CardDay3"
+                        android:id="@+id/CardDay2"
                         android:layout_width="match_parent"
                         android:layout_height="-50dp"
                         android:layout_marginTop="10dp"
@@ -424,86 +509,107 @@
 
 
 
-                    <android.support.constraint.ConstraintLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        >
+                        <android.support.constraint.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            >
 
-                        <pl.droidsonroids.gif.GifTextView
-                            android:id="@+id/imageView1"
-                            android:layout_width="82dp"
-                            android:layout_height="74dp"
-                            android:layout_marginBottom="8dp"
-                            android:layout_marginStart="8dp"
-                            android:layout_marginTop="8dp"
-                            android:scaleType="centerCrop"
-                            android:background="@drawable/boxstepup"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            tools:layout_editor_absoluteX="8dp"
-                            app:layout_constraintVertical_bias="0.0" />
+                            <pl.droidsonroids.gif.GifTextView
+                                android:id="@+id/imageView1"
+                                android:layout_width="82dp"
+                                android:layout_height="74dp"
+                                android:layout_marginBottom="8dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:scaleType="centerCrop"
+                                android:background="@drawable/boxstepup"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                tools:layout_editor_absoluteX="8dp"
+                                app:layout_constraintVertical_bias="0.0" />
 
-                        <TextView
-                            android:id="@+id/textView1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="8dp"
-                            android:layout_marginStart="8dp"
-                            android:text="Title: "
-                            android:textSize="16sp"
-                            android:textStyle="bold"
-                            app:layout_constraintStart_toEndOf="@+id/imageView1"
-                            app:layout_constraintTop_toTopOf="@+id/imageView1" />
+                            <TextView
+                                android:id="@+id/textView1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginStart="8dp"
+                                android:text="Title: "
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                app:layout_constraintStart_toEndOf="@+id/imageView1"
+                                app:layout_constraintTop_toTopOf="@+id/imageView1" />
 
-                        <TextView
-                            android:id="@+id/tvExerciseTitle1"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginEnd="8dp"
-                            android:layout_marginLeft="8dp"
-                            android:layout_marginRight="8dp"
-                            android:layout_marginStart="8dp"
-                            android:text="Box Step-Ups"
-                            android:textSize="16sp"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toEndOf="@+id/textView1"
-                            app:layout_constraintTop_toTopOf="@+id/textView1" />
+                            <TextView
+                                android:id="@+id/tvExerciseTitle1"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="8dp"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginRight="8dp"
+                                android:layout_marginStart="8dp"
+                                android:text="Box Step-Ups"
+                                android:textSize="16sp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/textView1"
+                                app:layout_constraintTop_toTopOf="@+id/textView1" />
 
-                        <TextView
-                            android:id="@+id/textView10"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="8dp"
-                            android:layout_marginStart="8dp"
-                            android:layout_marginTop="8dp"
-                            android:text="Description: "
-                            android:textSize="16sp"
-                            android:textStyle="bold"
-                            app:layout_constraintStart_toEndOf="@+id/imageView1"
-                            app:layout_constraintTop_toBottomOf="@+id/tvExerciseTitle1" />
+                            <TextView
+                                android:id="@+id/textView10"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:text="Description: "
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                app:layout_constraintStart_toEndOf="@+id/imageView1"
+                                app:layout_constraintTop_toBottomOf="@+id/tvExerciseTitle1" />
 
-                        <TextView
-                            android:id="@+id/tvExerciseDesc1"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginEnd="8dp"
-                            android:layout_marginLeft="8dp"
-                            android:layout_marginRight="8dp"
-                            android:layout_marginStart="8dp"
-                            android:layout_marginTop="8dp"
-                            android:text="3 sets of 15 reps each leg"
-                            android:textSize="16sp"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toEndOf="@+id/textView10"
-                            app:layout_constraintTop_toBottomOf="@+id/tvExerciseTitle1" />
+                            <TextView
+                                android:id="@+id/tvExerciseDesc1"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="8dp"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginRight="8dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:text="3 sets of 15 reps each leg"
+                                android:textSize="16sp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/textView10"
+                                app:layout_constraintTop_toBottomOf="@+id/tvExerciseTitle1" />
 
-                    </android.support.constraint.ConstraintLayout>
+                            <Button
+                                android:id="@+id/equipmentsmondaylose5"
+                                android:layout_width="152dp"
+                                android:layout_height="48dp"
+                                android:text="Equipments"
+                                android:textSize="15sp"
+                                android:textColor="@color/colorPrimary"
+                                style="?android:attr/borderlessButtonStyle"
+                                android:layout_marginLeft="8dp"
+                                app:layout_constraintLeft_toLeftOf="@+id/imageView1"
+                                android:layout_marginRight="8dp"
+                                app:layout_constraintRight_toRightOf="@+id/tvExerciseDesc1"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                android:layout_marginBottom="8dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginEnd="8dp"
+                                android:layout_marginTop="8dp"
+                                app:layout_constraintTop_toBottomOf="@+id/textView10"
+                                app:layout_constraintHorizontal_bias="0.387"
+                                app:layout_constraintVertical_bias="0.392" />
+
+                        </android.support.constraint.ConstraintLayout>
 
                     </android.support.v7.widget.CardView>
 
                     <android.support.v7.widget.CardView
-                        android:id="@+id/CardDay3"
+                        android:id="@+id/CardDay2"
                         android:layout_width="match_parent"
                         android:layout_height="-50dp"
                         android:layout_marginTop="10dp"
@@ -512,81 +618,103 @@
                         >
 
 
-                    <android.support.constraint.ConstraintLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        >
 
-                        <pl.droidsonroids.gif.GifTextView
-                            android:id="@+id/imageView1.0"
-                            android:layout_width="82dp"
-                            android:layout_height="74dp"
-                            android:layout_marginBottom="8dp"
-                            android:layout_marginStart="8dp"
-                            android:layout_marginTop="8dp"
-                            android:scaleType="centerCrop"
-                            android:background="@drawable/plank"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            tools:layout_editor_absoluteX="8dp"
-                            app:layout_constraintVertical_bias="0.0" />
+                        <android.support.constraint.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            >
 
-                        <TextView
-                            android:id="@+id/textView1.0"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="8dp"
-                            android:layout_marginStart="8dp"
-                            android:text="Title: "
-                            android:textSize="16sp"
-                            android:textStyle="bold"
-                            app:layout_constraintStart_toEndOf="@+id/imageView1.0"
-                            app:layout_constraintTop_toTopOf="@+id/imageView1.0" />
+                            <pl.droidsonroids.gif.GifTextView
+                                android:id="@+id/imageView1.0"
+                                android:layout_width="82dp"
+                                android:layout_height="74dp"
+                                android:layout_marginBottom="8dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:scaleType="centerCrop"
+                                android:background="@drawable/plank"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                tools:layout_editor_absoluteX="8dp"
+                                app:layout_constraintVertical_bias="0.0" />
 
-                        <TextView
-                            android:id="@+id/tvExerciseTitle1.0"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginEnd="8dp"
-                            android:layout_marginLeft="8dp"
-                            android:layout_marginRight="8dp"
-                            android:layout_marginStart="8dp"
-                            android:text="Plank"
-                            android:textSize="16sp"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toEndOf="@+id/textView1.0"
-                            app:layout_constraintTop_toTopOf="@+id/textView1.0" />
+                            <TextView
+                                android:id="@+id/textView1.0"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginStart="8dp"
+                                android:text="Title: "
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                app:layout_constraintStart_toEndOf="@+id/imageView1.0"
+                                app:layout_constraintTop_toTopOf="@+id/imageView1.0" />
 
-                        <TextView
-                            android:id="@+id/textView10.0"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="8dp"
-                            android:layout_marginStart="8dp"
-                            android:layout_marginTop="8dp"
-                            android:text="Description: "
-                            android:textSize="16sp"
-                            android:textStyle="bold"
-                            app:layout_constraintStart_toEndOf="@+id/imageView1.0"
-                            app:layout_constraintTop_toBottomOf="@+id/tvExerciseTitle1.0" />
+                            <TextView
+                                android:id="@+id/tvExerciseTitle1.0"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="8dp"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginRight="8dp"
+                                android:layout_marginStart="8dp"
+                                android:text="Plank"
+                                android:textSize="16sp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/textView1.0"
+                                app:layout_constraintTop_toTopOf="@+id/textView1.0" />
 
-                        <TextView
-                            android:id="@+id/tvExerciseDesc1.0"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginEnd="8dp"
-                            android:layout_marginLeft="8dp"
-                            android:layout_marginRight="8dp"
-                            android:layout_marginStart="8dp"
-                            android:layout_marginTop="8dp"
-                            android:text="Hold for 30 seconds"
-                            android:textSize="16sp"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toEndOf="@+id/textView10.0"
-                            app:layout_constraintTop_toBottomOf="@+id/tvExerciseTitle1.0" />
+                            <TextView
+                                android:id="@+id/textView10.0"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:text="Description: "
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                app:layout_constraintStart_toEndOf="@+id/imageView1.0"
+                                app:layout_constraintTop_toBottomOf="@+id/tvExerciseTitle1.0" />
 
-                    </android.support.constraint.ConstraintLayout>
+                            <TextView
+                                android:id="@+id/tvExerciseDesc1.0"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="8dp"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginRight="8dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:text="Hold for 30 seconds"
+                                android:textSize="16sp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/textView10.0"
+                                app:layout_constraintTop_toBottomOf="@+id/tvExerciseTitle1.0" />
+
+                            <Button
+                                android:id="@+id/equipmentsmondaylose6"
+                                android:layout_width="152dp"
+                                android:layout_height="48dp"
+                                android:text="Equipments"
+                                android:textSize="15sp"
+                                android:textColor="@color/colorPrimary"
+                                style="?android:attr/borderlessButtonStyle"
+                                android:layout_marginLeft="8dp"
+                                app:layout_constraintLeft_toLeftOf="@+id/imageView1.0"
+                                android:layout_marginRight="8dp"
+                                app:layout_constraintRight_toRightOf="@+id/tvExerciseDesc1.0"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                android:layout_marginBottom="8dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginEnd="8dp"
+                                app:layout_constraintHorizontal_bias="0.318"
+                                android:layout_marginTop="8dp"
+                                app:layout_constraintTop_toBottomOf="@+id/textView10.0"
+                                app:layout_constraintVertical_bias="0.0" />
+
+                        </android.support.constraint.ConstraintLayout>
 
                     </android.support.v7.widget.CardView>
 

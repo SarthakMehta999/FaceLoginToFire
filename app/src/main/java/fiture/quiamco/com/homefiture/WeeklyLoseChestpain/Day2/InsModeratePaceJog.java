@@ -13,7 +13,6 @@ import android.widget.Button;
 import at.markushi.ui.CircleButton;
 import fiture.quiamco.com.homefiture.ExerciseCategories.WeeklyLoseChestPain;
 import fiture.quiamco.com.homefiture.R;
-import fiture.quiamco.com.homefiture.WeeklyLoseChestpain.Day3.InsWalkingLunge;
 
 public class InsModeratePaceJog extends AppCompatActivity {
     CircleButton finish;
@@ -33,7 +32,7 @@ public class InsModeratePaceJog extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent im = new Intent(InsModeratePaceJog.this,WeeklyLoseChestPain.class);
+                Intent im = new Intent(InsModeratePaceJog.this,RestFullOut.class);
                 startActivity(im);
             }
         });
@@ -46,7 +45,7 @@ public class InsModeratePaceJog extends AppCompatActivity {
         finish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(InsModeratePaceJog.this, InsWalkingLunge.class);
+                Intent intent = new Intent(InsModeratePaceJog.this, ModeratePaceJog.class);
                 startActivity(intent);
             }
         });
