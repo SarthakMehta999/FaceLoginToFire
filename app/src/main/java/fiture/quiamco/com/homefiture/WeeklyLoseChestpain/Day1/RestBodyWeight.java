@@ -81,8 +81,8 @@ public class RestBodyWeight extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
-        finish = (CircleButton) findViewById(R.id.btnFinishrest);
-        finish.setVisibility(View.VISIBLE);
+//        finish = (CircleButton) findViewById(R.id.btnFinishrest);
+//        finish.setVisibility(View.VISIBLE);
         timerValue = (TextView) findViewById(R.id.timerValue);
 
        startButton = (MaterialFancyButton) findViewById(R.id.startButton);
@@ -158,12 +158,12 @@ public class RestBodyWeight extends AppCompatActivity {
                 finish.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        if(seconds==0){
-                            Log.d("ShawnIyat","sulod seconds");
-                            Intent intent = new Intent(RestBodyWeight.this, InsLying.class);
-                            startActivity(intent);
-                        }else{
-                            Toast.makeText(getApplicationContext(), "You still have time to relax.", Toast.LENGTH_SHORT).show();
+                       if(seconds==0){
+                           Log.d("ShawnIyat","sulod seconds");
+                           Intent intent = new Intent(RestBodyWeight.this, InsLying.class);
+                           startActivity(intent);
+                       }else{
+                           Toast.makeText(getApplicationContext(), "You still have time to relax.", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });

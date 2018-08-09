@@ -145,7 +145,7 @@
                             app:layout_constraintTop_toBottomOf="@+id/tvExerciseTitle" />
 
                         <Button
-                            android:id="@+id/equipmentsmondaygainplowerlegs1"
+                            android:id="@+id/equipmentsmondaygainday1"
                             android:layout_width="152dp"
                             android:layout_height="48dp"
                             android:text="Equipments"
@@ -255,7 +255,7 @@
                             app:layout_constraintTop_toBottomOf="@+id/tvExerciseTitle20" />
 
                         <Button
-                            android:id="@+id/equipmentsmondaygainplowerlegs2"
+                            android:id="@+id/equipmentsmondaygainday2"
                             android:layout_width="152dp"
                             android:layout_height="48dp"
                             android:text="Equipments"
@@ -364,7 +364,7 @@
                             app:layout_constraintTop_toBottomOf="@+id/tvExerciseTitle_1" />
 
                         <Button
-                            android:id="@+id/equipmentsmondaygainplowerlegs3"
+                            android:id="@+id/equipmentsmondaygainday3"
                             android:layout_width="152dp"
                             android:layout_height="48dp"
                             android:text="Equipments"
@@ -473,7 +473,7 @@
                             app:layout_constraintTop_toBottomOf="@+id/tvExerciseTitle_2" />
 
                         <Button
-                            android:id="@+id/equipmentsmondaygainplowerlegs4"
+                            android:id="@+id/equipmentsmondaygainday4"
                             android:layout_width="152dp"
                             android:layout_height="48dp"
                             android:text="Equipments"
@@ -583,7 +583,7 @@
                             app:layout_constraintTop_toBottomOf="@+id/tvExerciseTitle1" />
 
                         <Button
-                            android:id="@+id/equipmentsmondaygainplowerlegs5"
+                            android:id="@+id/equipmentsmondaygainday5"
                             android:layout_width="152dp"
                             android:layout_height="48dp"
                             android:text="Equipments"

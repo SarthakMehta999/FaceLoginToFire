@@ -4,10 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
-import android.view.View;
 
-import fiture.quiamco.com.homefiture.Category.Gain;
-import fiture.quiamco.com.homefiture.Category.Lose;
 import fiture.quiamco.com.homefiture.Category.Maintain;
 import fiture.quiamco.com.homefiture.R;
 
@@ -30,33 +27,9 @@ public class StartActivity extends AppCompatActivity {
 
 
     }
-    public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.gainCard:
-                gains();
-                break;
-
-            case R.id.loseCard:
-                loses();
-                break;
 
 
-            case R.id.maintainCard:
-                maintains();
-                break;
-        }
-    }
 
-    private void gains() {
-        Intent proc = new Intent(StartActivity.this,Gain.class);
-
-        startActivity(proc);
-    }
-
-    private void loses() {
-        Intent work = new Intent(StartActivity.this, Lose.class);
-        startActivity(work);
-    }
     private void maintains() {
         Intent work = new Intent(StartActivity.this, Maintain.class);
         startActivity(work);

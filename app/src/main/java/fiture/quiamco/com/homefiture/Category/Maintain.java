@@ -6,7 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
 import android.view.View;
 
-import fiture.quiamco.com.homefiture.Exercises.GainDay_2.GStep_1;
 import fiture.quiamco.com.homefiture.Exercises.Step_1;
 import fiture.quiamco.com.homefiture.R;
 
@@ -36,9 +35,9 @@ public class Maintain extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent inte = new Intent(Maintain.this,GStep_1.class);
+//                Intent inte = new Intent(Maintain.this,GStep_1.class);
 
-                startActivity(inte);
+//                startActivity(inte);
             }
         });
     }

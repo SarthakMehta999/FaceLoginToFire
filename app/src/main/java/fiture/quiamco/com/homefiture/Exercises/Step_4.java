@@ -1,6 +1,5 @@
 package fiture.quiamco.com.homefiture.Exercises;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.SystemClock;
@@ -10,7 +9,6 @@ import android.widget.TextView;
 
 import com.rilixtech.materialfancybutton.MaterialFancyButton;
 
-import fiture.quiamco.com.homefiture.Category.Gain;
 import fiture.quiamco.com.homefiture.R;
 
 public class Step_4 extends AppCompatActivity {
@@ -37,14 +35,14 @@ public class Step_4 extends AppCompatActivity {
         startButton = (MaterialFancyButton) findViewById(R.id.startButton);
         finish = (MaterialFancyButton) findViewById(R.id.btnFinish);
         finish.setVisibility(View.GONE );
-        finish.setOnClickListener(new View.OnClickListener() {
-
-            public void onClick(View view) {
-                Intent step = new Intent(Step_4.this,Gain.class);
-                startActivity(step);
-
-            }
-        });
+//        finish.setOnClickListener(new View.OnClickListener() {
+//
+//            public void onClick(View view) {
+//                Intent step = new Intent(Step_4.this,Gain.class);
+//                startActivity(step);
+//
+//            }
+//        });
 
         startButton.setOnClickListener(new View.OnClickListener() {
 

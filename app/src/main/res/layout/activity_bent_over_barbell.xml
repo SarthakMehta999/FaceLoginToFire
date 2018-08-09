@@ -80,7 +80,7 @@
     <pl.droidsonroids.gif.GifTextView
         android:layout_width="305dp"
         android:layout_height="165dp"
-        android:background="@drawable/dumbbellbenchpress"
+        android:background="@drawable/bentoverbarbellrow"
         android:layout_marginRight="8dp"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginLeft="8dp"

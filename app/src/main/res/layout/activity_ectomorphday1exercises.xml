@@ -36,7 +36,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Day 1 Chest/Triceps"
+            android:text="Day 1 Chest and Triceps"
             android:textAlignment="center"
             android:textSize="30sp"
             android:textStyle="bold" />

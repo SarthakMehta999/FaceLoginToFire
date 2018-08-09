@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="fiture.quiamco.com.homefiture.LoseExcercise.MonThursSatButtWorkouts.Instructions.InsBodyWeightSquat">
+    tools:context="fiture.quiamco.com.homefiture.WeeklyLoseChestpain.Day1.InsBodyWeightSquat">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/appBarLayout"

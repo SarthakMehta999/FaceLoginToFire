@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="fiture.quiamco.com.homefiture.LoseExcercise.MonThursSatButtWorkouts.BodyWeightSquat"
+    tools:context="fiture.quiamco.com.homefiture.WeeklyLoseChestpain.Day1.BodyWeightSquat"
     android:background="#ffffff">
 
     <android.support.design.widget.AppBarLayout
@@ -70,12 +70,13 @@
         android:src="@drawable/checked"
         app:cb_color="@color/textColor"
         android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
+        android:layout_marginRight="49dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginBottom="8dp"
         android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@+id/gifTextView3" />
+        app:layout_constraintTop_toBottomOf="@+id/gifTextView3"
+        app:layout_constraintVertical_bias="0.0" />
 
 
 

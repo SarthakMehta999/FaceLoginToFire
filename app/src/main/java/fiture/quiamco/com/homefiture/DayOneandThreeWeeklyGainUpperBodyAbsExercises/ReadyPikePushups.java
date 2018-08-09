@@ -7,6 +7,7 @@ import android.os.CountDownTimer;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
@@ -166,8 +167,12 @@ public class ReadyPikePushups extends AppCompatActivity {
                 countDownView.setProgress(progress, time);
                 //view.setVisibility(View.VISIBLE);
                 cancelTimerBt.setVisibility(View.GONE);
-                minutes=0;
-                seconds=59;
+                Log.d("Test", "0 tanan");
+                mTvSeconds.setText(seconds + "");
+                Intent intent = new Intent(ReadyPikePushups.this, TricepsDip.class);
+                startActivity(intent);
+                minutes = 0;
+                seconds = 59;
             }
         };
         countDownTimer.start(); // start timer
@@ -175,7 +180,7 @@ public class ReadyPikePushups extends AppCompatActivity {
         // hide softkeyboard
         View currentFocus = this.getCurrentFocus();
         if (currentFocus != null) {
-            InputMethodManager imm = (InputMethodManager)this.getSystemService(Context.INPUT_METHOD_SERVICE);
+            InputMethodManager imm = (InputMethodManager) this.getSystemService(Context.INPUT_METHOD_SERVICE);
             imm.hideSoftInputFromWindow(currentFocus.getWindowToken(), 0);
         }
     }

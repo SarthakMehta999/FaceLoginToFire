@@ -7,6 +7,7 @@ import android.os.CountDownTimer;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
@@ -45,7 +46,6 @@ public class Ready extends AppCompatActivity {
     private ImageView home;
 
     CircleButton finish;
-    MaterialFancyButton inst;
 
     int progress;
     int endTime;
@@ -82,8 +82,8 @@ public void onClick(View v) {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
-        finish = (CircleButton) findViewById(R.id.btnFinish);
-        finish.setVisibility(View.VISIBLE);
+//        finish = (CircleButton) findViewById(R.id.btnFinish);
+//        finish.setVisibility(View.VISIBLE);
         timerValue = (TextView) findViewById(R.id.timerValue);
         home = (ImageView) findViewById(R.id.homeIcon);
 
@@ -135,7 +135,7 @@ protected void startCountDown() {
 //        cancelTimerBt.setVisibility(View.VISIBLE); // show cancel button
 
         progress = 1;
-        endTime = 5; // up to finish time
+        endTime = 1; // up to finish time
         minutes = endTime-1;
         time= endTime*60;
 
@@ -173,23 +173,25 @@ public void onTick(long millisUntilFinished) {
 
 @Override
 public void onFinish() {
-        countDownView.setProgress(progress, time);
-        //view.setVisibility(View.VISIBLE);
-        finish.setVisibility(View.VISIBLE);
-        cancelTimerBt.setVisibility(View.GONE);
-        minutes=0;
-        seconds=59;
-        }
+    //view.setVisibility(View.VISIBLE);
+    cancelTimerBt.setVisibility(View.GONE);
+        Log.d("Test", "0 tanan");
+        mTvSeconds.setText(seconds + "");
+        Intent intent = new Intent(Ready.this, PikePushUps.class);
+        startActivity(intent);
+    minutes = 0;
+    seconds = 59;
+}
         };
-        countDownTimer.start(); // start timer
+    countDownTimer.start(); // start timer
 
-        // hide softkeyboard
-        View currentFocus = this.getCurrentFocus();
-        if (currentFocus != null) {
-        InputMethodManager imm = (InputMethodManager)this.getSystemService(Context.INPUT_METHOD_SERVICE);
+    // hide softkeyboard
+    View currentFocus = this.getCurrentFocus();
+    if (currentFocus != null) {
+        InputMethodManager imm = (InputMethodManager) this.getSystemService(Context.INPUT_METHOD_SERVICE);
         imm.hideSoftInputFromWindow(currentFocus.getWindowToken(), 0);
-        }
-        }
+    }
+}
 //    public void startTime(){
 //        startTime = SystemClock.uptimeMillis();
 //        customHandler.postDelayed(updateTimerThread, 0);

@@ -40,11 +40,11 @@ public class ExercisesPainInLegsDay1 extends AppCompatActivity {
                 Intent intent = new Intent(ExercisesPainInLegsDay1.this, fiture.quiamco.com.homefiture.GainChestpain.PushUp.class);
                 startActivity(intent);
 
-                equipments1 = (Button) findViewById(R.id.equipmentsmondaygainplowerlegs1);
-                equipments2 = (Button) findViewById(R.id.equipmentsmondaygainplowerlegs2);
-                equipments3 = (Button) findViewById(R.id.equipmentsmondaygainplowerlegs3);
-                equipments4 = (Button) findViewById(R.id.equipmentsmondaygainplowerlegs4);
-                equipments5 = (Button) findViewById(R.id.equipmentsmondaygainplowerlegs5);
+                equipments1 = (Button) findViewById(R.id.equipmentsmondaygainday1);
+                equipments2 = (Button) findViewById(R.id.equipmentsmondaygainday2);
+                equipments3 = (Button) findViewById(R.id.equipmentsmondaygainday3);
+                equipments4 = (Button) findViewById(R.id.equipmentsmondaygainday4);
+                equipments5 = (Button) findViewById(R.id.equipmentsmondaygainday5);
 
 
                 equipments1.setOnClickListener(new View.OnClickListener() {

@@ -3,15 +3,15 @@ package fiture.quiamco.com.homefiture.Ectomorph.Day2BackandBiceps;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
 import fiture.quiamco.com.homefiture.R;
 
-public class EctomorphDay2 extends AppCompatActivity {
+public class ectomorphday2exercises extends AppCompatActivity {
 
     Button start;
 
@@ -21,24 +21,20 @@ public class EctomorphDay2 extends AppCompatActivity {
     Button equipments4;
     Button equipments5;
 
-
-
-
     final Context context = this;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ectomorph_day2);
+        setContentView(R.layout.activity_ectomorphday2exercises);
 
-
-
-        start = (Button) findViewById(R.id.startBtn13);
+        start = (Button) findViewById(R.id.startBtnday2);
 
         start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(EctomorphDay2.this,WideGridPullUp.class);
+                Intent intent = new Intent(ectomorphday2exercises.this,WideGridPullUp.class);
                 startActivity(intent);
 
                 equipments1 = (Button) findViewById(R.id.equipmentstuesdayweeklyectomorph1);

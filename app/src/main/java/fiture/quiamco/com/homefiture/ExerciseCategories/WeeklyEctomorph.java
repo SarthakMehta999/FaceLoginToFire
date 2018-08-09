@@ -9,7 +9,7 @@ import android.widget.GridView;
 import android.widget.Toast;
 
 import fiture.quiamco.com.homefiture.Adapter.WeeklyExercisesAdapter;
-import fiture.quiamco.com.homefiture.Ectomorph.Day2BackandBiceps.EctomorphDay2;
+import fiture.quiamco.com.homefiture.Ectomorph.Day2BackandBiceps.ectomorphday2exercises;
 import fiture.quiamco.com.homefiture.Ectomorph.Day3LegandShoulders.Ectomorphday3exercises;
 import fiture.quiamco.com.homefiture.Ectomorph.HighRepAbDays.HighRepAbDays;
 import fiture.quiamco.com.homefiture.Ectomorph.LayoutEcto.ectomorphday1exercises;
@@ -42,7 +42,7 @@ public class WeeklyEctomorph extends AppCompatActivity {
 
                 else if (position == 1) {
 //                    user.setStatus("done");
-                    Intent defs = new Intent(WeeklyEctomorph.this, EctomorphDay2.class);
+                    Intent defs = new Intent(WeeklyEctomorph.this, ectomorphday2exercises.class);
                     startActivity(defs);
 
 
