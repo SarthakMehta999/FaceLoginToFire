@@ -13,7 +13,7 @@ public class Exercise  {
     public Exercise() {
     }
 
-    public Exercise(String exerciseName, String exerciseDesc, String exerciseImage, String exerciseVideo) {
+    public Exercise(String exerciseName, String exerciseDesc, String exerciseImage, String exerciseVideo, String ex) {
         this.exerciseName = exerciseName;
         this.exerciseDesc = exerciseDesc;
         this.exerciseImage = exerciseImage;
@@ -51,5 +51,7 @@ public class Exercise  {
     public void setExerciseVideo(String exerciseVideo) {
         this.exerciseVideo = exerciseVideo;
     }
+
+
 }
 

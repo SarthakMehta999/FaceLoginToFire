@@ -7,7 +7,6 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
 
-import fiture.quiamco.com.homefiture.Activities.ExercisesDay1;
 import fiture.quiamco.com.homefiture.Activities.ExercisesDay2;
 import fiture.quiamco.com.homefiture.Activities.ExercisesDay3;
 import fiture.quiamco.com.homefiture.Activities.ExercisesDay4;
@@ -15,6 +14,7 @@ import fiture.quiamco.com.homefiture.Adapter.WeeklyExercisesAdapter;
 import fiture.quiamco.com.homefiture.DayOneandThreeWeeklyGainUpperBodyAbsExercises.ExercisesDay5;
 import fiture.quiamco.com.homefiture.DayOneandThreeWeeklyGainUpperBodyAbsExercises.ExercisesDay6;
 import fiture.quiamco.com.homefiture.DayOneandThreeWeeklyGainUpperBodyAbsExercises.ExercisesDay7;
+import fiture.quiamco.com.homefiture.ExercisesActivity;
 import fiture.quiamco.com.homefiture.R;
 import fiture.quiamco.com.homefiture.models.User;
 
@@ -32,7 +32,7 @@ public class WeeklyGain extends AppCompatActivity {
                                     int position, long id) {
                 if (position == 0) {
 //                    user.setStatus("done");
-                 Intent def = new Intent(WeeklyGain.this, ExercisesDay1.class);
+                 Intent def = new Intent(WeeklyGain.this, ExercisesActivity.class);
                     startActivity(def);
 
 //                    Toast.makeText(Weekly.this, "" + position,

@@ -956,6 +956,8 @@
         <activity android:name=".GainChestpain.Rest2" />
         <activity android:name=".GainChestpain.Rest3" />
         <activity android:name=".WeeklyLoseChestpain.Day1.RestBodyWeightLoseChestP" />
+        <activity android:name=".ExercisesActivity" />
+        <activity android:name=".ViewExerciseDataActivity" />
         <activity android:name=".Ectomorph.Day2BackandBiceps.ectomorphday2exercises"></activity>
     </application>
 

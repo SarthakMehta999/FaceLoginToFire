@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/CardDay1"
+        android:layout_width="match_parent"
+        android:layout_height="-50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="180dp">
+
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/exerciseImg"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/pikepush"
+                android:scaleType="centerCrop"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="81dp"
+                android:layout_marginEnd="22dp"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@+id/tvExerciseTitle" />
+
+            <TextView
+                android:id="@+id/tvExerciseTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Title: "
+                android:textSize="16sp"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="65dp"
+                tools:layout_editor_absoluteY="25dp"
+                android:layout_above="@+id/exerciseImg"
+                android:layout_centerHorizontal="true" />
+
+
+            <TextView
+                android:id="@+id/tvExerciseDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Description: "
+                android:textSize="16sp"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="120dp"
+                tools:layout_editor_absoluteY="16dp"
+                android:layout_marginTop="12dp"
+                android:layout_below="@+id/tvExerciseTitle"
+                android:layout_alignStart="@+id/tvExerciseTitle" />
+
+
+            <Button
+                android:id="@+id/equipmentBtn"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="152dp"
+                android:layout_height="48dp"
+                android:text="Equipments"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15sp"
+                tools:layout_editor_absoluteX="123dp"
+                tools:layout_editor_absoluteY="110dp"
+                android:layout_alignBottom="@+id/exerciseImg"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="63dp" />
+
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

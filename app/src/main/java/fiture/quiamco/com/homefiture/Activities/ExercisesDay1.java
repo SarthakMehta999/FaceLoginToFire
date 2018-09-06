@@ -1,5 +1,6 @@
 package fiture.quiamco.com.homefiture.Activities;
 
+import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -74,10 +75,46 @@ public class ExercisesDay1 extends AppCompatActivity {
                     @Override
                     public void onCancelled(DatabaseError databaseError) {
 
+
                     }
                 });
+
+                Dialog dialog = new Dialog(ExercisesDay1.this);
+                dialog.setContentView(R.layout.custom_dialog_equipment);
+                Button mClose = (Button) dialog.findViewById(R.id.customDialogClose);
+
+
+
+                AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(context);
+                //set title
+                alertDialogBuilder.setTitle("Equipments:");
+                //set dialog message
+                alertDialogBuilder
+                        .setMessage("1.) Push up Bar Stand " + "\n" +
+                                "2.) Shape Push Up" + "\n" +
+                                "3.) Tony Horton’s PowerStands" + "\n" +
+                                "4.) Push Up Stand Machine ")
+                        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int id) {
+                                // if this button is clicked, close
+                                // current activity
+
+                            }
+                        });
+
+
+                // create alert dialog
+                AlertDialog alertDialog = alertDialogBuilder.create();
+                // show it
+                alertDialog.show();
+
+
+
             }
+
         });
+
 //
 //        equipments1.setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -123,9 +160,9 @@ public class ExercisesDay1 extends AppCompatActivity {
 //                    }
 //                });
 ////
-////                Dialog dialog = new Dialog(ExercisesDay1.this);
-////                dialog.setContentView(R.layout.custom_dialog_equipment);
-////                Button mClose = (Button) dialog.findViewById(R.id.customDialogClose);
+//                Dialog dialog = new Dialog(ExercisesDay1.this);
+//                dialog.setContentView(R.layout.custom_dialog_equipment);
+//                Button mClose = (Button) dialog.findViewById(R.id.customDialogClose);
 //
 //
 //
@@ -268,10 +305,10 @@ public class ExercisesDay1 extends AppCompatActivity {
                         .setMessage("1.)Dumbbell " + "\n" +
                                 "2.) Fitness Mat . ")
                         .setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int id) {
-                                // if this button is clicked, close
-                                // current activity
+                                @Override
+                                public void onClick(DialogInterface dialog, int id) {
+                                    // if this button is clicked, close
+                                    // current activity
 
                             }
                         });
