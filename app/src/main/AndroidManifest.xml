@@ -19,7 +19,7 @@
         android:roundIcon="@mipmap/fitureicon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activities.Splash2">
+        <activity android:name=".Activities.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -56,7 +56,7 @@
             android:theme="@style/AppTheme" />
         <activity android:name=".Activities.BMI" />
         <activity android:name=".Activities.Lifestyle" />
-        <activity android:name=".Activities.StartActivity" />
+        <!--<activity android:name=".Activities.StartActivity" />-->
         <activity android:name=".Category.Maintain" />
         <activity android:name=".Exercises.Step_1" />
         <activity android:name=".Exercises.Step_2" />
@@ -66,10 +66,10 @@
         <activity android:name=".Pedometer.Pedometer_Main" />
         <activity android:name=".Activities.SignupActivity" />
         <activity android:name=".Activities.ResetPasswordActivity" />
-        <activity android:name=".BaseOnBMI.Underweight.FoodPlan" />
-        <activity android:name=".BaseOnBMI.Underweight.Breakfast" />
-        <activity android:name=".BaseOnBMI.Underweight.Lunch" />
-        <activity android:name=".BaseOnBMI.Underweight.Dinner" />
+        <!--<activity android:name=".BaseOnBMI.Underweight.FoodPlan" />-->
+        <!--<activity android:name=".BaseOnBMI.Underweight.Breakfast" />-->
+        <!--<activity android:name=".BaseOnBMI.Underweight.Lunch" />-->
+        <!--<activity android:name=".BaseOnBMI.Underweight.Dinner" />-->
         <activity android:name=".Exercises.LoseHeavy" />
         <activity android:name=".Exercises.LoseMoreHeavy" />
         <activity android:name=".Exercises.LoseMostHeavy" />
@@ -951,7 +951,7 @@
         <activity android:name=".ShortnessOfBreathMaintain.Day2.ShortnessDay2" />
         <activity android:name=".ShortnessOfBreathMaintain.Day3.ShortnessDay3" />
         <activity android:name=".ExerciseCategories.WeeklyGainShortness" />
-        <activity android:name=".Activities.SplashActivity" />
+        <activity android:name=".Activities.Splash2" />
         <activity android:name=".GainChestpain.Rest1" />
         <activity android:name=".GainChestpain.Rest2" />
         <activity android:name=".GainChestpain.Rest3" />

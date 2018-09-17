@@ -26,7 +26,7 @@ import fiture.quiamco.com.homefiture.models.User;
 
 public class BMI extends AppCompatActivity {
     private TextInputEditText height;
-    private TextInputEditText weight,age;
+    private TextInputEditText weight,age,gender;
     private TextView result;
     private MaterialFancyButton proceed,calc;
     private User user;
@@ -34,7 +34,7 @@ public class BMI extends AppCompatActivity {
     private Infos infos;
     private String id;
     String heightStr;
-    String weightStr,ageStr;
+    String weightStr,ageStr,genderStr;
     String bmiLabel = "";
     String bmiStat;
 //    FirebaseDatabase database = FirebaseDatabase.getInstance();
@@ -55,12 +55,12 @@ public class BMI extends AppCompatActivity {
         String fname = sharedPreferences.getString("userFname","");
         String lname = sharedPreferences.getString("userLname","");
         String bday= sharedPreferences.getString("userBday","");
-        String gender = sharedPreferences.getString("userGender","");
+//        String gender = sharedPreferences.getString("userGender","");
         String email = sharedPreferences.getString("userEmail","");
         String pic = sharedPreferences.getString("userPic","");
         int points = sharedPreferences.getInt("samplePoint",1);
         Log.d("atayakayawa",points+"shit");
-        user = new User(fname,lname,bday,gender,email,pic,points);
+        user = new User(fname,lname,bday,genderStr,email,pic,points);
         userBmi = database.getReference("User_BMI");
 
         id = sharedPreferences.getString("userKey", "");
@@ -69,6 +69,7 @@ public class BMI extends AppCompatActivity {
         height = (TextInputEditText) findViewById(R.id.height);
         weight = (TextInputEditText) findViewById(R.id.weight);
         age = (TextInputEditText)findViewById(R.id.age);
+        gender = (TextInputEditText)findViewById(R.id.tvGender);
 //        result = (TextView) findViewById(R.id.result);
 //        result.setVisibility(View.VISIBLE);c
         calc = (MaterialFancyButton) findViewById(R.id.calc);
@@ -91,6 +92,7 @@ public class BMI extends AppCompatActivity {
             heightStr = height.getText().toString();
             weightStr = weight.getText().toString();
             ageStr = age.getText().toString();
+            genderStr = gender.getText().toString();
 
 
 //        String value1 = height.getText().toString();
@@ -103,6 +105,8 @@ public class BMI extends AppCompatActivity {
             if (height.getText().toString().trim().equals("") || weight.getText().toString().trim().equals("")) {
                 height.setError("Please Input Value");
                 weight.setError("Please Input Value");
+                age.setError("Please Input Value");
+                gender.setError("Please Input Value");
 
             }
  else {
@@ -150,6 +154,9 @@ public class BMI extends AppCompatActivity {
                     if (height.getText().toString().trim().equals("") || weight.getText().toString().trim().equals("")) {
                         height.setError("Please Input Value");
                         weight.setError("Please Input Value");
+                        age.setError("Please Input Value");
+                        gender.setError("Please Input Value");
+
                     } else {
                         Intent proc = new Intent(getApplication(), Lifestyle.class);
                         Bundle bundle = new Bundle();
@@ -169,8 +176,11 @@ public class BMI extends AppCompatActivity {
                 public void onClick(View v) {
 
                     if (height.getText().toString().trim().equals("") || weight.getText().toString().trim().equals("")) {
-                            height.setError("Please Input Value");
+                        height.setError("Please Input Value");
                         weight.setError("Please Input Value");
+                        age.setError("Please Input Value");
+                        gender.setError("Please Input Value");
+
                     } else {
 
                         Intent proc = new Intent(getApplication(), Lifestyle.class);
@@ -211,6 +221,9 @@ public class BMI extends AppCompatActivity {
                     if (height.getText().toString().trim().equals("") || weight.getText().toString().trim().equals("")) {
                         height.setError("Please Input Value");
                         weight.setError("Please Input Value");
+                        age.setError("Please Input Value");
+                        gender.setError("Please Input Value");
+
                     } else {
 
                         Intent proc = new Intent(getApplication(), Lifestyle.class);
@@ -253,6 +266,9 @@ public class BMI extends AppCompatActivity {
                     if (height.getText().toString().trim().equals("") || weight.getText().toString().trim().equals("")) {
                         height.setError("Please Input Value");
                         weight.setError("Please Input Value");
+                        age.setError("Please Input Value");
+                        gender.setError("Please Input Value");
+
                     } else {
 
                         Intent proc = new Intent(getApplication(), Lifestyle.class);
@@ -275,6 +291,9 @@ public class BMI extends AppCompatActivity {
                     if (height.getText().toString().trim().equals("") || weight.getText().toString().trim().equals("")) {
                         height.setError("Please Input Value");
                         weight.setError("Please Input Value");
+                        age.setError("Please Input Value");
+                        gender.setError("Please Input Value");
+
                     } else {
 
                         Intent proc = new Intent(getApplication(), Lifestyle.class);
@@ -296,6 +315,9 @@ public class BMI extends AppCompatActivity {
                     if (height.getText().toString().trim().equals("") || weight.getText().toString().trim().equals("")) {
                         height.setError("Please Input Value");
                         weight.setError("Please Input Value");
+                        age.setError("Please Input Value");
+                        gender.setError("Please Input Value");
+
                     } else {
 
                         Intent proc = new Intent(getApplication(),Lifestyle.class);
@@ -335,6 +357,7 @@ public class BMI extends AppCompatActivity {
         infos.setHeight(heightStr +""+ "cm");
         infos.setWeight(weightStr +""+ "kg");
         user.setBmiLabel(bmiLabel);
+        user.setGender(genderStr);
 
         SharedPreferences sharedPreferences = getSharedPreferences("FitureUser", Context.MODE_PRIVATE);
         final SharedPreferences.Editor editor = sharedPreferences.edit();
@@ -349,6 +372,7 @@ public class BMI extends AppCompatActivity {
         editor.putString("userBMI",String.valueOf(bmi));
         editor.putString("userBMILabel",bmiLabel);
         editor.putString("userAge",ageStr);
+        editor.putString("userGender",genderStr);
         editor.apply();
 
 

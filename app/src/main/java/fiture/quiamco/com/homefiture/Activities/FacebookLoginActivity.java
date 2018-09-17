@@ -37,7 +37,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.yasic.library.particletextview.View.ParticleTextView;
+
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -59,7 +59,7 @@ public class FacebookLoginActivity extends AppCompatActivity {
     private int mColor;
     private FirebaseAuth firebaseAuth;
     private FirebaseAuth.AuthStateListener firebaseAuthListner;
-    private ParticleTextView particleTextView;
+
 
 
     private AccessTokenTracker accessTokenTracker;
@@ -206,8 +206,8 @@ public class FacebookLoginActivity extends AppCompatActivity {
                                 email = object.getString("email");
                             if (object.has("birthday"))
                                 birthday = object.getString("birthday");
-                            if (object.has("gender"))
-                                gender = object.getString("gender");
+//                            if (object.has("gender"))
+//                                gender = object.getString("gender");
 
                             Log.d("birthdayCheck", birthday);
                             Intent main = new Intent(FacebookLoginActivity.this, Splash2.class);
@@ -226,7 +226,7 @@ public class FacebookLoginActivity extends AppCompatActivity {
                             user.setfName(firstName);
                             user.setlName(lastName);
                             user.setBirthDate(birthday);
-                            user.setGender(gender);
+//                            user.setGender(gender);
                             user.setEmail(email);
                             user.setImageUrl(profilePicture);
                             user.setUserPoints(10);
@@ -239,7 +239,7 @@ public class FacebookLoginActivity extends AppCompatActivity {
 
                             Log.d("sampleAsesd", userName);
                             editor.putString("userKey",userName);
-                            editor.putString("userGender",gender);
+//                            editor.putString("userGender",gender);
                             editor.putString("userEmail",email);
                             editor.putString("userPic",profilePicture);
                             editor.apply();
@@ -263,7 +263,7 @@ public class FacebookLoginActivity extends AppCompatActivity {
                 });
                 //Here we put the requested fields to be returned from the JSONObject
                 Bundle parameters = new Bundle();
-                parameters.putString("fields", "id, first_name, last_name, email, birthday, gender, picture.type(large)");
+                parameters.putString("fields", "id, first_name, last_name, email, birthday, picture.type(large)");
                 request.setParameters(parameters);
                 request.executeAsync();
 

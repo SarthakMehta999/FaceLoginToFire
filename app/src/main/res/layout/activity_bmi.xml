@@ -55,6 +55,29 @@
         android:ems="6"
         android:inputType="number|numberDecimal"
         android:textSize="20sp"/>
+
+    <TextView
+        android:text="Gender"
+        android:textColor="#F5F5F5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"/>
+
+    <android.support.design.widget.TextInputEditText
+        android:textColor="#F5F5F5"
+        android:id="@+id/tvGender"
+        android:textColorHint="#9E9E9E"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:hint="Male or Female"
+        android:ems="6"
+        android:inputType="text"
+        android:textSize="20sp"/>
     <TextView
         android:text="Weight"
         android:textColor="#F5F5F5"
