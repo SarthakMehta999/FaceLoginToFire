@@ -58,10 +58,13 @@
     <!--Radio Button Values-->
 
     <string name="light_rb">Lightly Active (1 - 2 times a month or less)</string>
-    <string name="chest_pain">Chest pain</string>
-    <string name="shortness_of_breath">Shortness of breath</string>
-    <string name="dizziness">Dizziness</string>
-    <string name="rapid_heartbeat">Rapid heartbeat</string>
+    <string name="chest_pain">Heart Disease</string>
+    <string name="arthritis">Arthritis</string>
+    <string name="Diabetes">Diabetes</string>
+    <string name="Obesity">Obesity</string>
+    <string name="Deconditioning">Deconditioning</string>
+    <string name="Asthma">Asthma</string>
+    <string name="Hypertension">Hypertension</string>
     <string name="none">None</string>
     <string name="maintain_weight">Maintain Weight</string>
     <string name="lose_weight">Lose Weight</string>

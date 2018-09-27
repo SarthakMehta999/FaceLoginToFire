@@ -958,7 +958,41 @@
         <activity android:name=".WeeklyLoseChestpain.Day1.RestBodyWeightLoseChestP" />
         <activity android:name=".ExercisesActivity" />
         <activity android:name=".ViewExerciseDataActivity" />
-        <activity android:name=".Ectomorph.Day2BackandBiceps.ectomorphday2exercises"></activity>
+        <activity android:name=".Ectomorph.Day2BackandBiceps.ectomorphday2exercises" />
+        <activity android:name=".ExercisesForDailyChallenges.DailyChallengesForGain" />
+        <activity android:name=".ExercisesForDailyChallenges.DailyChallengesForLose" />
+        <activity android:name=".ExercisesForDailyChallenges.DailyChallengesForMaintain" />
+        <activity android:name=".ExercisesForDailyChallenges.DailyChallengesForObeseClass1" />
+        <activity android:name=".ExercisesForDailyChallenges.DailyChallengesForObeseClass2" />
+        <activity android:name=".ExercisesForDailyChallenges.DailyChallengesForObeseClass3" />
+        <activity android:name=".ExercisesForDailyChallenges.DailyChallengesForEctomorphs" />
+        <activity android:name=".ExercisesForDailyChallenges.DailyChallengesForMesomorphs" />
+        <activity android:name=".ExercisesForDailyChallenges.DailyChallengesForEndomorphs" />
+        <activity android:name=".WeeklyFullBodyChallenge.Week1FullBodyChallenge" />
+        <activity android:name=".WeeklyFullBodyChallenge.Week2FullBodyChallenge" />
+        <activity android:name=".WeeklyFullBodyChallenge.Week3FullBodyChallenge" />
+        <activity android:name=".WeeklyFullBodyChallenge.Week4FullBodyChallenge" />
+        <activity android:name=".Week3FullBodyChallenge.Day1" />
+        <activity android:name=".Week3FullBodyChallenge.Day2" />
+        <activity android:name=".Week3FullBodyChallenge.Day3" />
+        <activity android:name=".Week3FullBodyChallenge.Day4" />
+        <activity android:name=".Week3FullBodyChallenge.Day5" />
+        <activity android:name=".Week3FullBodyChallenge.Day6" />
+        <activity android:name=".Week3FullBodyChallenge.Day7" />
+        <activity android:name=".Week4FullBodyChallenge.Day1" />
+        <activity android:name=".Week4FullBodyChallenge.Day2" />
+        <activity android:name=".Week4FullBodyChallenge.Day3" />
+        <activity android:name=".Week4FullBodyChallenge.Day4" />
+        <activity android:name=".Week4FullBodyChallenge.Day5" />
+        <activity android:name=".Week4FullBodyChallenge.Day6" />
+        <activity android:name=".Week4FullBodyChallenge.Day7" />
+        <activity android:name=".Adapter.DailyChallengeForGain" />
+        <activity android:name=".Adapter.DailyChallengeForLose" />
+        <activity android:name=".Adapter.DailyChallengesForMaintain" />
+        <activity android:name=".models.DailyChallengeModelForGain" />
+        <activity android:name=".models.DailyChallengeModelForLose" />
+        <activity android:name=".models.DailyChallengesModelForMaintain" />
+        <activity android:name=".Activities.EditProfile"></activity>
     </application>
 
 </manifest>

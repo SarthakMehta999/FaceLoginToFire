@@ -13,7 +13,7 @@
         xmlns:fancy="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="800dp"
+        android:layout_height="500dp"
         android:background="@drawable/backgroundgradient">
 
         <!--<android.support.constraint.Guideline-->
@@ -261,23 +261,66 @@
                 android:checked="true"
                 />
 
-            <CheckBox
-                android:id="@+id/rbtnShortness"
-                android:layout_below="@+id/rbtnChest"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/shortness_of_breath"
-                android:textColor="#F5F5F5"/>
+
             
 
             <CheckBox
-                android:id="@+id/rbtnPain"
+                android:id="@+id/rbtnArthritis"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Pain in the lower legs"
-                 android:textColor="#F5F5F5"
-                android:layout_below="@+id/rbtnShortness"
+                android:text="Arthritis"
+                android:textColor="#F5F5F5"
+                android:layout_below="@+id/rbtnChest"
                 />
+
+            <CheckBox
+                android:id="@+id/rbtnDiabetes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Diabetes"
+                android:textColor="#F5F5F5"
+                android:layout_below="@+id/rbtnArthritis"
+                />
+
+            <CheckBox
+                android:id="@+id/rbtnObesity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Obesity"
+                android:textColor="#F5F5F5"
+                android:layout_below="@+id/rbtnDiabetes"
+                />
+
+
+
+            <CheckBox
+                android:id="@+id/rbtndeconditioning"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Deconditioning"
+                android:textColor="#F5F5F5"
+                android:layout_below="@+id/rbtnObesity"
+                />
+
+            <CheckBox
+                android:id="@+id/rbtnasthma"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Asthma"
+                android:textColor="#F5F5F5"
+                android:layout_below="@+id/rbtndeconditioning"
+                />
+
+            <CheckBox
+                android:id="@+id/rbtnhypertension"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hypertension"
+                android:textColor="#F5F5F5"
+                android:layout_below="@+id/rbtnasthma"
+                />
+
+
 
             <CheckBox
                 android:id="@+id/rbtnNone"
@@ -285,7 +328,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/none"
                 android:textColor="#F5F5F5"
-                android:layout_below="@+id/rbtnPain"/>
+                android:layout_below="@+id/rbtnhypertension"/>
         </RelativeLayout>
         <com.rilixtech.materialfancybutton.MaterialFancyButton
             android:id="@+id/btnProceed"
@@ -293,7 +336,7 @@
             android:layout_height="40dp"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
-            android:layout_marginTop="602dp"
+            android:layout_marginTop="700dp"
             android:gravity="center_horizontal"
             android:text="@string/proceed"
 

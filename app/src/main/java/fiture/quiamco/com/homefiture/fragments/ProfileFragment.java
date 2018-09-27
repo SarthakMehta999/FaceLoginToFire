@@ -222,7 +222,7 @@ public class    ProfileFragment extends Fragment {
 //
 //        user = new User(fname, lname, bday, gender, email, pic, points, height, weight, BMI,bmiLabel);
 
-        recyclerViewDailyChallenge = (RecyclerView) rootView.findViewById(R.id.dailyChallenge);
+        recyclerViewDailyChallenge = (RecyclerView) rootView.findViewById(R.id.dailyChallengegain);
         recyclerViewDailyChallenge.setVisibility(View.GONE);
         dailyChallengeModels = new ArrayList<>();
         recyclerViewDailyChallenge.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));

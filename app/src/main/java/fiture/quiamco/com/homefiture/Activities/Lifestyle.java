@@ -36,7 +36,7 @@ public class Lifestyle extends AppCompatActivity {
     private MaterialFancyButton proceed;
     private RadioButton light, moderate, very, gain, lose, maintain;
     private RadioButton not;
-    private CheckBox rapid, chest, heart, pain, none, dizziness, shortness;
+    private CheckBox HeartDisease, Arthritis, Diabetes , obesity, highblood, deconditioning, asthma, hypertension,  none;
     private RadioGroup fitness, workout, goal;
     private User user;
     String value;
@@ -77,7 +77,7 @@ public class Lifestyle extends AppCompatActivity {
         String weight = sharedPreferences.getString("userWeight", "");
         String BMI = sharedPreferences.getString("userBMI", "");
         bmiLabel = sharedPreferences.getString("userBMILabel", "");
-        Log.d("atayakayawa", points + "shit");
+        Log.d("heyyyyy", points + "sh");
 
         Log.d("testingzz", "weight: " + weight);
         Log.d("testingzz", "height: " + height);
@@ -122,11 +122,15 @@ public class Lifestyle extends AppCompatActivity {
         //Physical Conditions
 
 
-        chest = (CheckBox) findViewById(R.id.rbtnChest);
+        HeartDisease = (CheckBox) findViewById(R.id.rbtnChest);
 
-        pain = (CheckBox) findViewById(R.id.rbtnPain);
+        Arthritis = (CheckBox) findViewById(R.id.rbtnArthritis);
+        Diabetes = (CheckBox) findViewById(R.id.rbtnDiabetes);
+        obesity = (CheckBox) findViewById(R.id.rbtnObesity);
+        deconditioning = (CheckBox) findViewById(R.id.rbtndeconditioning);
+        asthma = (CheckBox) findViewById(R.id.rbtnasthma);
+        hypertension = (CheckBox) findViewById(R.id.rbtnhypertension);
 
-        shortness = (CheckBox) findViewById(R.id.rbtnShortness);
         none = (CheckBox) findViewById(R.id.rbtnNone);
 
         none.setOnClickListener(new View.OnClickListener() {
@@ -134,25 +138,47 @@ public class Lifestyle extends AppCompatActivity {
             public void onClick(View v) {
                 if(none.isChecked()){
 
-                    chest.setChecked(false);
+                    HeartDisease.setChecked(false);
 
-                    pain.setChecked(false);
+                    Arthritis.setChecked(false);
 
-                    shortness.setChecked(false);
+                    Diabetes.setChecked(false);
+                    Diabetes.setChecked(false);
+
+                    obesity.setChecked(false);
+                    obesity.setChecked(false);
 
 
-                    chest.setClickable(false);
 
-                    pain.setClickable(false);
+                    deconditioning.setChecked(false);
 
-                    shortness.setClickable(false);
+                    deconditioning.setChecked(false);
+
+                    HeartDisease.setClickable(false);
+
+                    asthma.setClickable(false);
+                    asthma.setClickable(false);
+
+                    hypertension.setClickable(false);
+                    hypertension.setClickable(false);
                 }else{
 
-                    chest.setClickable(true);
+                    HeartDisease.setClickable(true);
 
-                    pain.setClickable(true);
 
-                    shortness.setClickable(true);
+
+                    Arthritis.setChecked(true);
+
+                    Diabetes.setChecked(true);
+
+                    obesity.setChecked(true);
+
+                    asthma.setClickable(true);
+                    hypertension.setClickable(true);
+
+
+
+                    deconditioning.setChecked(true);
                 }
             }
         });
@@ -283,11 +309,8 @@ public class Lifestyle extends AppCompatActivity {
 
         illnesses = new ArrayList<>();
 
-        if (chest.isChecked()) {
+        if (HeartDisease.isChecked()) {
             illnesses.add("chest pain");
-        }
-        if (shortness.isChecked()) {
-            illnesses.add("shortness of breath");
         }
 //        if (dizziness.isChecked()) {
 //            illnesses.add("dizziness");
@@ -298,8 +321,29 @@ public class Lifestyle extends AppCompatActivity {
 //        if (heart.isChecked()) {
 //            illnesses.add("heart murmur");
 //        }
-        if (pain.isChecked()) {
-            illnesses.add("pain in the lower legs");
+        if (Arthritis.isChecked()) {
+            illnesses.add("Arthritis");
+        }
+
+        if (Diabetes.isChecked()) {
+            illnesses.add("Diabetes");
+        }
+
+        if (obesity.isChecked()) {
+            illnesses.add("Obesity");
+
+        }
+
+        if (deconditioning.isChecked()) {
+            illnesses.add("Deconditioning");
+        }
+
+        if (deconditioning.isChecked()) {
+            illnesses.add("Asthma");
+        }
+
+        if (deconditioning.isChecked()) {
+            illnesses.add("Hypertension");
         }
         if (none.isChecked()) {
             illnesses.add("none");

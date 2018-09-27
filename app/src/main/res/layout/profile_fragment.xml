@@ -198,7 +198,7 @@
                     <!--android:layout_gravity="center"/>-->
 
                 <android.support.v7.widget.RecyclerView
-                    android:id="@+id/dailyChallenge"
+                    android:id="@+id/dailyChallengegain"
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
                 android:layout_marginTop="4dp">

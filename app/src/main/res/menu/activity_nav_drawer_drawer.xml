@@ -15,6 +15,16 @@
             android:id="@+id/pedometer"
             android:title="Pedometer" />
 
+        <item
+            android:id="@+id/EditProfile"
+            android:title="Edit Profile" />
+
+        <item
+            android:id="@+id/WorkoutSchedules"
+            android:title="Workout Plan" />
+
+
+
     </group>
 
 

@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         imageUrl = inBundle.getString("imageUrl");
         userId = inBundle.getString("userID");
 
-        recyclerViewDailyChallenge = (RecyclerView) findViewById(R.id.dailyChallenge);
+        recyclerViewDailyChallenge = (RecyclerView) findViewById(R.id.dailyChallengegain);
         dailyChallengeModels = new ArrayList<>();
         recyclerViewDailyChallenge.setLayoutManager(new LinearLayoutManager(getApplicationContext(),LinearLayoutManager.HORIZONTAL,false));
 //        setDailyChallenge();
